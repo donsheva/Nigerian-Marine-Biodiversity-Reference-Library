@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="About the Nigeria Marine Biodiversity Reference Library, the team behind it, and the research roadmap.">
+<meta name="author" content="Adelodun Odedere, NIOMR">
+<meta name="keywords" content="eDNA, metabarcoding, Nigeria, Gulf of Guinea, marine biodiversity, NIOMR, Niger Delta, Lagos Lagoon, reference library, barcoding">
+<meta property="og:title" content="About — Nigeria Marine Biodiversity Library">
+<meta property="og:description" content="A molecular reference library for coastal and marine biodiversity of the Gulf of Guinea. Gap analysis dashboard tracking sequence coverage across fish, nematodes, macrobenthos and more.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://envirobiotics.org">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="About — Nigeria Marine Biodiversity Library">
+<meta name="twitter:description" content="eDNA metabarcoding gap analysis for the Gulf of Guinea — EnviroBiotics.org">
+<meta name="theme-color" content="#0d6efd">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<title>About — Nigeria Marine Biodiversity Library</title>
+</head>
+<body data-page="about">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ═══ SITE HEADER ══════════════════════════════════════════════════════ -->
+<div class="site-header">
+  <div style="height:5px;background:linear-gradient(90deg,#0d6efd,#0c8599,#0F6E56,#0d6efd);background-size:300% 100%;animation:gradientSlide 6s linear infinite;"></div>
+  
+  
+  <div class="site-header-inner">
+
+    <!-- LEFT: logo + title -->
+    <div style="display:flex;align-items:flex-start;gap:18px;flex:1;min-width:260px;">
+      <!-- NMBL Mark — proper DNA double-helix + ocean waves, dark navy bg -->
+      <div style="width:64px;height:64px;border-radius:14px;background:linear-gradient(145deg,#0a2540 0%,#0d3a6e 100%);border:1.5px solid rgba(96,165,250,0.45);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;box-shadow:0 4px 16px rgba(13,110,253,0.3),inset 0 1px 0 rgba(255,255,255,0.08);">
+        <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Ocean wave — upper -->
+          <path d="M4 34 Q8.5 28 13 34 Q17.5 40 22 34 Q26.5 28 31 32 Q35 30 42 32" stroke="#60a5fa" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          <!-- Ocean wave — lower -->
+          <path d="M4 39 Q8.5 33 13 39 Q17.5 45 22 39 Q26.5 33 31 37" stroke="#2dd4bf" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.65"/>
+          <!-- DNA left strand -->
+          <path d="M14 4 Q20 10 14 16 Q8 22 14 28" stroke="#60a5fa" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          <!-- DNA right strand -->
+          <path d="M30 4 Q24 10 30 16 Q36 22 30 28" stroke="#34d399" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          <!-- Horizontal rungs -->
+          <line x1="14" y1="7.5" x2="30" y2="7.5" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+          <line x1="11" y1="13" x2="33" y2="13" stroke="rgba(255,255,255,0.45)" stroke-width="1.5"/>
+          <line x1="13" y1="18.5" x2="31" y2="18.5" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
+          <line x1="11" y1="24" x2="33" y2="24" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+          <!-- Node circles -->
+          <circle cx="14" cy="4" r="2.2" fill="#60a5fa"/>
+          <circle cx="30" cy="4" r="2.2" fill="#34d399"/>
+          <circle cx="14" cy="16" r="2.2" fill="#60a5fa"/>
+          <circle cx="30" cy="16" r="2.2" fill="#34d399"/>
+          <circle cx="14" cy="28" r="2.2" fill="#60a5fa"/>
+          <circle cx="30" cy="28" r="2.2" fill="#34d399"/>
+        </svg>
+      </div>
+      <div class="site-title-block">
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+          <div class="site-title" style="color:var(--navy);">Nigeria Marine Biodiversity Library</div>
+          <span style="font-size:11px;font-weight:800;color:#fff;background:linear-gradient(90deg,#0d6efd,#0c8599);padding:3px 10px;border-radius:6px;letter-spacing:0.07em;box-shadow:0 2px 8px rgba(13,110,253,0.35);">NMBL</span>
+        </div>
+        <div class="site-subtitle" style="margin-top:4px;">A Molecular Reference Framework for Coastal and Marine Biodiversity in the Gulf of Guinea</div>
+        <div class="site-meta" style="margin-top:8px;">
+          <span class="site-meta-pill">Gulf of Guinea</span>
+          <span class="site-meta-pill">Lagos Lagoon</span>
+          <span class="site-meta-pill">Niger Delta</span>
+          <span class="site-meta-pill">eDNA Metabarcoding</span>
+          <span style="display:inline-block;padding:3px 10px;border-radius:20px;background:var(--green-bg);border:0.5px solid var(--green);font-size:11px;font-weight:600;color:var(--green);">v12.5 · Gap Analysis</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: search bar at top, then domain + db references -->
+    <div class="site-badge-block" style="display:flex;flex-direction:column;gap:10px;min-width:280px;max-width:320px;">
+
+      <!-- Search bar — upper right -->
+      <div class="search-wrap" style="margin-top:0;max-width:100%;">
+        <div class="search-input-row">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="flex-shrink:0;opacity:0.45;color:var(--text2);">
+            <circle cx="6" cy="6" r="4.5" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="9.5" y1="9.5" x2="13" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <input type="text" id="global-search" placeholder="Search species or genus..." autocomplete="off"
+            oninput="onSearchInput(this.value)" onkeydown="onSearchKey(event)" />
+          <span class="search-clear" id="search-clear" onclick="clearSearch()" title="Clear">&#215;</span>
+        </div>
+        <div class="search-dropdown" id="search-dropdown"></div>
+      </div>
+
+      <!-- Domain + EnviroBiotics logo -->
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <!-- EnviroBiotics mark — globe meridians + DNA spiral -->
+          <div style="width:36px;height:36px;border-radius:50%;background:var(--green-bg);border:1.5px solid var(--green);display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(15,110,86,0.2);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Globe outer circle -->
+              <circle cx="12" cy="12" r="10" stroke="#0F6E56" stroke-width="1.5" fill="none"/>
+              <!-- Meridian arcs -->
+              <path d="M12 2 C15 6 15 18 12 22" stroke="#0F6E56" stroke-width="1" fill="none" opacity="0.5"/>
+              <path d="M12 2 C9 6 9 18 12 22" stroke="#0F6E56" stroke-width="1" fill="none" opacity="0.5"/>
+              <!-- Equator -->
+              <line x1="2" y1="12" x2="22" y2="12" stroke="#0F6E56" stroke-width="1" opacity="0.4"/>
+              <!-- DNA helix overlay -->
+              <path d="M8 5 Q12 8 8 11 Q4 14 8 17 Q12 20 8 23" stroke="#185FA5" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.85"/>
+              <circle cx="8" cy="5" r="1.2" fill="#185FA5"/>
+              <circle cx="8" cy="11" r="1.2" fill="#0c8599"/>
+              <circle cx="8" cy="17" r="1.2" fill="#185FA5"/>
+            </svg>
+          </div>
+          <div>
+            <div style="font-size:13px;font-weight:700;color:var(--text);letter-spacing:-0.01em;">EnviroBiotics.org</div>
+            <div style="font-size:10px;color:var(--text3);margin-top:1px;">domain — not yet live</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ═══ SITE NAVIGATION ══════════════════════════════════════════════ -->
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <div class="site-nav-group">
+      <a class="site-nav-btn" id="nav-database" href="index.html">Overview</a>
+    </div>
+    <div class="site-nav-group">
+      <a class="site-nav-btn" id="nav-home" href="gap-analysis.html">Gap Analysis</a>
+    </div>
+    <div class="site-nav-group">
+      <a class="site-nav-btn" id="nav-statistics" href="statistics.html">Statistics</a>
+    </div>
+    <div class="site-nav-group">
+      <a class="site-nav-btn" id="nav-citations" href="citations.html">Citations</a>
+    </div>
+    <div class="site-nav-group">
+      <a class="site-nav-btn" id="nav-gallery" href="gallery.html">Media Gallery</a>
+    </div>
+    <div class="site-nav-group">
+      <a class="site-nav-btn" id="nav-resources" href="resources.html">Resources</a>
+    </div>
+    <div class="site-nav-group">
+      <a class="site-nav-btn" id="nav-contact" href="contact.html">Contact &amp; Collaboration</a>
+    </div>
+    <div class="site-nav-group">
+      <a class="site-nav-btn" id="nav-about" href="about.html">About</a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ═══ REFERENCE DATABASES BAR ════════════════════════════════════════ -->
+<div style="background:var(--bg2);border-bottom:0.5px solid var(--border);padding:6px 0;overflow-x:auto;white-space:nowrap;">
+  <div style="max-width:1200px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;gap:6px;flex-wrap:nowrap;">
+    <span style="font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:0.06em;margin-right:4px;flex-shrink:0;">Reference databases:</span>
+    <a href="https://www.ncbi.nlm.nih.gov/nuccore/" target="_blank" style="font-size:11px;color:var(--blue);text-decoration:none;padding:2px 8px;background:var(--blue-bg);border-radius:20px;flex-shrink:0;">NCBI Nucleotide</a>
+    <a href="https://www.boldsystems.org" target="_blank" style="font-size:11px;color:var(--blue);text-decoration:none;padding:2px 8px;background:var(--blue-bg);border-radius:20px;flex-shrink:0;">BOLD Systems</a>
+    <a href="https://www.arb-silva.de/" target="_blank" style="font-size:11px;color:var(--purple);text-decoration:none;padding:2px 8px;background:var(--purple-bg);border-radius:20px;flex-shrink:0;">SILVA SSU rRNA</a>
+    <a href="https://www.marinespecies.org/" target="_blank" style="font-size:11px;color:var(--teal);text-decoration:none;padding:2px 8px;background:var(--teal-bg);border-radius:20px;flex-shrink:0;">WoRMS</a>
+    <a href="https://www.fishbase.se/" target="_blank" style="font-size:11px;color:var(--teal);text-decoration:none;padding:2px 8px;background:var(--teal-bg);border-radius:20px;flex-shrink:0;">FishBase</a>
+    <a href="https://obis.org/" target="_blank" style="font-size:11px;color:var(--green);text-decoration:none;padding:2px 8px;background:var(--green-bg);border-radius:20px;flex-shrink:0;">OBIS</a>
+    <a href="https://www.iucnredlist.org/" target="_blank" style="font-size:11px;color:var(--red);text-decoration:none;padding:2px 8px;background:var(--red-bg);border-radius:20px;flex-shrink:0;">IUCN Red List</a>
+    <a href="https://nemys.ugent.be/" target="_blank" style="font-size:11px;color:var(--amber);text-decoration:none;padding:2px 8px;background:var(--amber-bg);border-radius:20px;flex-shrink:0;">NeMys</a>
+    <a href="https://www.algaebase.org/" target="_blank" style="font-size:11px;color:var(--green);text-decoration:none;padding:2px 8px;background:var(--green-bg);border-radius:20px;flex-shrink:0;">AlgaeBase</a>
+    <a href="https://www.ebi.ac.uk/ena/" target="_blank" style="font-size:11px;color:var(--blue);text-decoration:none;padding:2px 8px;background:var(--blue-bg);border-radius:20px;flex-shrink:0;">ENA (EMBL)</a>
+    <a href="https://www.gbif.org/" target="_blank" style="font-size:11px;color:var(--green);text-decoration:none;padding:2px 8px;background:var(--green-bg);border-radius:20px;flex-shrink:0;">GBIF</a>
+  </div>
+</div>
+
+<!-- ═══ SPECIES POPUP CARD ══════════════════════════════════════════════ -->
+<div class="popup-overlay" id="popup-overlay" onclick="closePopupOnOverlay(event)">
+  <div class="popup-card" id="popup-card">
+    <div class="popup-header">
+      <div class="popup-icon" id="popup-icon"></div>
+      <div class="popup-title">
+        <h2 id="popup-name"></h2>
+        <p id="popup-common"></p>
+      </div>
+      <button class="popup-close" onclick="closePopup()">&#215;</button>
+    </div>
+    <div class="popup-body" id="popup-body"></div>
+    <div class="popup-notes" id="popup-notes"></div>
+    <div class="popup-footer" id="popup-footer"></div>
+  </div>
+</div>
+
+<div id="main-content">
+<div id="page-about" class="container">
+
+  <div class="page-hero">
+    <h1>About the Library</h1>
+    <p>The <strong>Nigeria Marine Biodiversity Library</strong> is a systematic initiative to build the first comprehensive, voucher-linked molecular barcode database for the coastal and marine species of the Gulf of Guinea, directly addressing a critical gap in global eDNA metabarcoding infrastructure.</p>
+    <p style="font-size:13px;color:var(--text2);margin-top:8px;">Nigeria's EEZ covers ~210,000 km² of the Gulf of Guinea, one of the most productive marine ecosystems in the Atlantic, supporting millions of livelihoods through artisanal and industrial fisheries, mangrove ecosystem services, and offshore energy operations. The Niger Delta holds the largest mangrove forest in Africa — over 1 million hectares, and the third largest in the world. This library is the molecular foundation that makes evidence-based management of that ecosystem possible.</p>
+    <div style="margin-top:1.25rem;padding:1rem 1.25rem;background:var(--blue-bg);border-left:4px solid var(--blue);border-radius:var(--radius);">
+      <p style="font-size:13px;color:var(--blue);line-height:1.75;margin:0;"><strong>Project Mission:</strong> A major limitation of environmental DNA (eDNA) metabarcoding in West Africa is the lack of regionally representative reference sequences for coastal and lagoon biodiversity. This project contributes to the development of a preliminary molecular reference library for Nigerian coastal ecosystems by generating validated sequences from dominant lagoon taxa, including fish, macrobenthos, and meiofauna. Establishing this reference framework will improve taxonomic assignment accuracy for future eDNA surveys in the Gulf of Guinea and support long-term biodiversity monitoring, conservation planning, and blue economy initiatives in Nigeria. The resulting reference sequences will be deposited in global databases such as NCBI and BOLD Systems to improve global coverage of West African marine biodiversity.</p>
+    </div>
+  </div>
+
+
+  <div class="section-head">Support This Research</div>
+  <div style="display:grid;grid-template-columns:2fr 1fr;gap:1rem;margin-bottom:1.5rem;">
+    <div class="accent-card">
+      <h3>💙 Donate to EnviroBiotics Research</h3>
+      <p>Your contribution directly funds field collection expeditions, sequencing reagents and laboratory consumables for building Nigeria's first open molecular reference library. Every donation — no matter the size — helps close the West African biodiversity gap in global eDNA databases.</p>
+      <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap;">
+        <a href="https://www.paypal.com/donate" target="_blank" style="padding:9px 20px;background:var(--blue);color:#fff;border-radius:var(--radius);text-decoration:none;font-size:13px;font-weight:500;">Donate to Project</a>
+        <a href="mailto:odedereao@niomr.gov.ng" style="padding:9px 20px;background:var(--bg);color:var(--blue);border:0.5px solid var(--blue);border-radius:var(--radius);text-decoration:none;font-size:13px;font-weight:500;">Contact for Bank Transfer</a>
+      </div>
+    </div>
+    <div class="info-card">
+      <h3>What donations fund</h3>
+      <p style="font-size:12px;line-height:1.8;color:var(--text2);">
+        🚤 Field collection day (boat hire): ~$150<br>
+        🧪 DNA extraction kit (50 samples): ~$200<br>
+        📦 Ethanol + tubes (100 samples): ~$40<br>
+        🖥️ Server hosting per year: ~$150
+      </p>
+    </div>
+  </div>
+
+  <div class="section-head">About the Library</div>
+  <div class="prose">
+    <p>Environmental DNA (eDNA) metabarcoding has transformed biodiversity monitoring worldwide. By filtering water or sediment, extracting trace DNA shed by organisms, and matching sequences against reference databases, researchers can detect hundreds of species simultaneously, without nets, traps, or direct observation. The approach is particularly powerful in tropical coastal systems where traditional survey methods are logistically challenging and where biodiversity is highest.</p>
+    <p>However, the effectiveness of eDNA metabarcoding is <strong>fundamentally limited by the completeness of reference sequence libraries</strong>. When an organism's DNA is detected in a sample, it can only be identified if a matching reference barcode exists in the database. If no reference exists, the organism produces a false negative: present in the water, present in the data, but invisible to science.</p>
+    <p>A systematic review of global eDNA literature (Manaf et al., 2025) confirmed that <strong>Sub-Saharan Africa, including Nigeria and the Gulf of Guinea, is critically under-represented</strong> in global reference databases. The West African coast, one of the most productive and commercially important marine ecosystems in the Atlantic, is essentially absent from the molecular record. This library exists to change that.</p>
+  </div>
+
+  <div class="three-col" style="margin-bottom:1.5rem;">
+    <div class="accent-card">
+      <h3>Nigeria's EEZ in numbers</h3>
+      <p>Approximately 210,000 km² of exclusive economic zone in the Gulf of Guinea. Over 900 km of coastline spanning Lagos, the Niger Delta, and the Cross River estuary. Home to one of the largest mangrove forests in Africa, patch coral reefs, and highly productive offshore upwelling zones supporting major pelagic fisheries.</p>
+    </div>
+    <div class="info-card">
+      <h3>Gulf of Guinea endemics — highest scientific value</h3>
+      <p>Several target species are endemic or near-endemic to the Gulf of Guinea — found nowhere else on Earth. <em>Pteroscion peli</em> (boe drum), <em>Lutjanus goreensis</em> (Gorean snapper), and <em>Scomberomorus tritor</em> (West African Spanish mackerel) have zero or near-zero sequences in global databases. These are the highest-priority targets because their barcodes do not exist anywhere — not just in Nigeria. Generating even one well-vouched barcode from each is a genuine global contribution.</p>
+    </div>
+    <div class="green-card">
+      <h3>Sargassum — an emerging monitoring priority</h3>
+      <p>Since 2011, massive <em>Sargassum</em> inundations have increasingly impacted Nigerian coastal waters, smothering nearshore fish nurseries and fouling fishing gear. Two species — <em>S. natans</em> and <em>S. fluitans</em> — dominate these blooms. Having rbcL reference sequences from the Gulf of Guinea enables eDNA-based early detection and source tracking of bloom events — directly relevant to NIOMR's coastal monitoring mandate.</p>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div class="accent-card">
+      <h3>The Reference Gap Problem</h3>
+      <p>A BOLD Systems search for Nematoda returns 132,070 specimen records globally. Only 79,150 have qualifying barcodes. Of these, West African records number in the dozens, and Nigerian coastal records are essentially zero. Every missing sequence is a species that eDNA metabarcoding cannot detect in Nigerian waters, regardless of the quality of fieldwork or laboratory methods.</p>
+    </div>
+    <div class="green-card">
+      <h3>Why This Library Matters</h3>
+      <p>Nigeria's EEZ covers approximately 210,000 km² of the Gulf of Guinea, supporting millions of livelihoods through artisanal and industrial fisheries, mangrove ecosystem services, and offshore energy operations. Effective environmental monitoring, biodiversity assessment, and compliance with the Kunming-Montreal Global Biodiversity Framework all require a functional molecular reference library. None currently exists for this region.</p>
+    </div>
+  </div>
+
+  <div class="section-head">Scope and Coverage</div>
+  <div class="three-col">
+    <div class="info-card">
+      <h3>Taxonomic scope</h3>
+      <ul>
+        <li>Coastal and estuarine fish (12S rRNA)</li>
+        <li>Offshore marine fish — pelagic and demersal</li>
+        <li>Elasmobranchs — sharks and rays</li>
+        <li>Macrobenthos — gastropods, bivalves, polychaetes, crabs</li>
+        <li>Meiofauna — free-living nematodes (18S + 28S)</li>
+        <li>Marine invertebrates — cephalopods, echinoderms</li>
+        <li>Seagrass and macroalgae (rbcL)</li>
+        <li>Marine and coastal mammals</li>
+        <li>Sea turtles</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h3>Geographic scope</h3>
+      <ul>
+        <li>Lagos Lagoon and coastal estuaries</li>
+        <li>Niger Delta mangrove and creek systems</li>
+        <li>Cross River estuary</li>
+        <li>Nigerian nearshore coastal zone (0–12 nm)</li>
+        <li>Nigerian EEZ offshore waters</li>
+        <li>Gulf of Guinea broadly — survey partners from Ghana, Cameroon, and Benin</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h3>Marker genes</h3>
+      <ul>
+        <li><strong>12S rRNA (MiFish-U/E)</strong> — fish eDNA metabarcoding standard</li>
+        <li><strong>COI (Leray-XT)</strong> — universal animal barcode; macrobenthos, invertebrates</li>
+        <li><strong>18S rRNA V1V2 (NF1/18Sr2b)</strong> — meiofauna, nematodes, protists</li>
+        <li><strong>28S rRNA D2D3</strong> — nematode species-level resolution</li>
+        <li><strong>rbcL</strong> — seagrass and macroalgae</li>
+        <li><strong>16S rRNA</strong> — marine mammals</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-head">Methods Overview</div>
+  <div class="two-col">
+    <div class="info-card">
+      <h3>Voucher-based sequencing</h3>
+      <p>All sequences in this library are generated from physical voucher specimens that are photographed and morphologically identified at the time of collection. For each specimen, GPS coordinates, collection date, habitat type, and collector name are recorded and stored alongside the sequence data. This metadata-linked approach is what distinguishes a reference library from a simple sequence database: it allows identifications to be verified, errors to be traced back to source, and sequences to be properly cited in publications.</p>
+      <p style="margin-top:8px;font-size:12px;color:var(--text3);">Note: This library is currently in development. Physical specimens are being collected and sequenced as part of ongoing fieldwork at NIOMR. Sequences will be deposited in BOLD Systems (project NGMBL) and NCBI GenBank as they are generated and quality-checked. No sequences have been formally deposited at this stage.</p>
+    </div>
+    <div class="info-card">
+      <h3>Nematode morphology + molecular approach — Niger Delta focus</h3>
+      <p>The Niger Delta is one of the most heavily oiled ecosystems on Earth, with decades of pipeline spills, well-blowouts, and chronic hydrocarbon seepage. Free-living nematodes are the most sensitive and abundant metazoan bioindicators of this contamination. The nematode-to-copepod (N:C) ratio rises sharply under organic enrichment and oil pollution — from a baseline below 50 in clean sediments, to values exceeding 1,000 at severely contaminated sites. For free-living nematodes, identification to genus level requires compound microscopy at 400–1000× magnification. Sediment cores are split: one half fixed in 4% formalin for morphological identification, one half frozen at −20°C for DNA extraction. Single specimens are photographed before individual DNA extraction and PCR amplification. This paired morphological-molecular approach produces the highest-quality nematode reference records.</p>
+    </div>
+  </div>
+
+  <div class="section-head">The Team</div>
+  <div class="info-card" style="max-width:600px;">
+    <h3>Principal Investigator</h3>
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;padding-bottom:14px;border-bottom:0.5px solid var(--border);">
+      <div style="width:52px;height:52px;border-radius:50%;background:var(--blue-bg);border:1px solid var(--blue);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:var(--blue);flex-shrink:0;">AO</div>
+      <div>
+        <div style="font-size:15px;font-weight:600;color:var(--text);">Adelodun Odedere</div>
+        <div style="font-size:13px;color:var(--text2);margin-top:2px;">Department of Biological Oceanography</div>
+        <div style="font-size:13px;color:var(--text2);"><a href="https://www.niomr.gov.ng" target="_blank" style="color:var(--blue);text-decoration:none;">Nigerian Institute for Oceanography and Marine Research (NIOMR)</a></div>
+        <div style="font-size:12px;color:var(--text3);margin-top:2px;">Federal Ministry of Marine and Blue Economy &nbsp;&middot;&nbsp; Lagos, Nigeria</div>
+      </div>
+    </div>
+    <p style="font-size:13px;color:var(--text2);line-height:1.7;">Research interests: marine biodiversity, eDNA metabarcoding, meiofaunal ecology, environmental monitoring, molecular reference library development for the Gulf of Guinea.</p>
+    <div style="margin-top:12px;">
+      <span class="collab-tag">eDNA Metabarcoding</span>
+      <span class="collab-tag">Meiofauna</span>
+      <span class="collab-tag">Nematology</span>
+      <span class="collab-tag">Biological Oceanography</span>
+      <span class="collab-tag">Marine Biodiversity</span>
+      <span class="collab-tag">Niger Delta &amp; Gulf of Guinea</span>
+      <span class="collab-tag">Microplastics</span>
+    </div>
+  </div>
+
+  <div class="info-card" style="max-width:600px;margin-top:1rem;">
+    <h3>Research Collaborator</h3>
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;padding-bottom:14px;border-bottom:0.5px solid var(--border);">
+      <div style="width:52px;height:52px;border-radius:50%;background:var(--teal-bg);border:1px solid var(--teal);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:var(--teal);flex-shrink:0;">BB</div>
+      <div>
+        <div style="font-size:15px;font-weight:600;color:var(--text);">Bassey O. Bassey, PhD</div>
+        <div style="font-size:13px;color:var(--text2);margin-top:2px;">Chief Research Officer, Biological Oceanography</div>
+        <div style="font-size:13px;color:var(--text2);"><a href="https://www.niomr.gov.ng" target="_blank" style="color:var(--blue);text-decoration:none;">Nigerian Institute for Oceanography and Marine Research (NIOMR)</a></div>
+      </div>
+    </div>
+    <p style="font-size:13px;color:var(--text2);line-height:1.7;">Research interests: benthic ecology, aquatic toxicology, hydrobiology, environmental assessment and consultancy, macrobenthic community structure as ecological stress indicators, meiofaunal ecology in the Gulf of Guinea, microplastic pollution in coastal marine systems.</p>
+    <div style="margin-top:12px;">
+      <span class="collab-tag">Benthic Ecology</span>
+      <span class="collab-tag">Aquatic Toxicology</span>
+      <span class="collab-tag">Hydrobiology</span>
+      <span class="collab-tag">Environmental Consultant</span>
+      <span class="collab-tag">Meiofauna</span>
+      <span class="collab-tag">Microplastics</span>
+    </div>
+  </div>
+
+
+  <div class="section-head">Connect &amp; Follow</div>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:1.5rem;">
+    <a href="https://www.linkedin.com/company/envirobiotics" target="_blank" style="display:flex;align-items:center;gap:8px;padding:10px 18px;background:var(--blue-bg);border:0.5px solid var(--blue);border-radius:var(--radius);color:var(--blue);text-decoration:none;font-size:13px;font-weight:500;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+      Follow on LinkedIn
+    </a>
+    <a href="https://x.com/EnviroBiotics" target="_blank" style="display:flex;align-items:center;gap:8px;padding:10px 18px;background:var(--bg2);border:0.5px solid var(--border2);border-radius:var(--radius);color:var(--text);text-decoration:none;font-size:13px;font-weight:500;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      Follow on X (Twitter)
+    </a>
+    <a href="https://orcid.org/" target="_blank" style="display:flex;align-items:center;gap:8px;padding:10px 18px;background:var(--green-bg);border:0.5px solid var(--green);border-radius:var(--radius);color:var(--green);text-decoration:none;font-size:13px;font-weight:500;">
+      🆔 ORCID Profile
+    </a>
+  </div>
+
+  <div class="section-head">Roadmap</div>
+  <div class="info-card">
+    <div class="timeline-item">
+      <div class="t-dot green"></div>
+      <div>
+        <div style="font-size:13px;font-weight:500;color:var(--text);">Phase 0 — Gap Analysis (Current)</div>
+        <div style="font-size:12px;color:var(--text2);margin-top:3px;">Systematic quantification of missing sequences for coastal and marine Nigerian taxa across NCBI, BOLD, and SILVA. This dashboard represents the current output.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="t-dot blue"></div>
+      <div>
+        <div style="font-size:13px;font-weight:500;color:var(--text);">Phase 1 — Fish Market Vouchers</div>
+        <div style="font-size:12px;color:var(--text2);margin-top:3px;">Tissue collection from Lagos fish markets (Mile 12, Oyingbo, Badore) targeting high-priority estuarine and coastal fish gaps. PCR with MiFish-U primers, Sanger sequencing, BOLD deposit.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="t-dot blue"></div>
+      <div>
+        <div style="font-size:13px;font-weight:500;color:var(--text);">Phase 2 — Niger Delta Sediment Survey</div>
+        <div style="font-size:12px;color:var(--text2);margin-top:3px;">Sediment core collection across a pollution gradient (clean reference → moderately impacted → heavily impacted oil spill sites). Nematode morphology + 18S/28S barcoding. N:C ratio pollution analysis.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="t-dot amber"></div>
+      <div>
+        <div style="font-size:13px;font-weight:500;color:var(--text);">Phase 3 — Macrobenthos and Marine Invertebrates</div>
+        <div style="font-size:12px;color:var(--text2);margin-top:3px;"><em>Tympanotonos fuscatus</em>, <em>Pachymelania</em> spp., mangrove crabs, bivalves. COI barcoding. Intertidal and subtidal quadrat surveys.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="t-dot amber"></div>
+      <div>
+        <div style="font-size:13px;font-weight:500;color:var(--text);">Phase 4 — Offshore Marine Species</div>
+        <div style="font-size:12px;color:var(--text2);margin-top:3px;">NIOMR research vessel trawl survey barcoding. Offshore demersal fish, Gulf of Guinea endemics, coral reef taxa.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="t-dot amber"></div>
+      <div>
+        <div style="font-size:13px;font-weight:500;color:var(--text);">Phase 5 — Public Library Launch</div>
+        <div style="font-size:12px;color:var(--text2);margin-top:3px;">EnviroBiotics.org goes live. Sequences publicly available via BOLD project NGMBL. Data paper submitted to <em>Scientific Data</em> (Nature Portfolio).</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+
+<!-- FOOTER -->
+<!-- Back to top button -->
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top" style="display:none;position:fixed;bottom:24px;right:24px;width:40px;height:40px;border-radius:50%;background:var(--blue);color:#fff;border:none;cursor:pointer;font-size:18px;z-index:500;box-shadow:0 4px 12px rgba(13,110,253,0.35);transition:opacity 0.2s,transform 0.2s;align-items:center;justify-content:center;">↑</button>
+<script>
+(function(){
+  const btn = document.getElementById('back-to-top');
+  window.addEventListener('scroll', function(){
+    if (window.scrollY > 400) {
+      btn.style.display = 'flex';
+      btn.style.opacity = '1';
+    } else {
+      btn.style.opacity = '0';
+      setTimeout(function(){ if(window.scrollY<=400) btn.style.display='none'; }, 200);
+    }
+  }, {passive:true});
+})();
+</script>
+
+<footer style="background:#0a2540; color:#fff; padding:1.5rem 0 1.25rem; margin-top:3rem;">
+  
+  <div class="footer-grid">
+    <div>
+      <div style="font-size:15px; font-weight:700; margin-bottom:4px; display:flex; align-items:center; gap:8px;">
+        <svg width="22" height="22" viewBox="0 0 28 28" fill="none" style="flex-shrink:0;"><circle cx="14" cy="14" r="13" fill="rgba(13,110,253,0.2)" stroke="#60a5fa" stroke-width="1"/><path d="M14 6 C18 6 22 10 22 14 C22 18 18 22 14 22" stroke="#60a5fa" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M10 9 Q14 12 10 15 Q6 18 10 21" stroke="#2dd4bf" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.8"/><circle cx="10" cy="9" r="1.5" fill="#60a5fa"/><circle cx="14" cy="13" r="1.5" fill="#2dd4bf"/><circle cx="10" cy="21" r="1.5" fill="#34d399"/></svg>
+        Nigeria Marine Biodiversity Library
+      </div>
+      <p style="font-size:11px; color:rgba(255,255,255,0.65); margin-bottom:10px; line-height:1.6;">A molecular reference framework for coastal and marine biodiversity<br>in the Gulf of Guinea. &copy; 2026 <a href="https://EnviroBiotics.org" target="_blank" style="color:#8cb4ff;">EnviroBiotics.org</a></p>
+      <div style="display:flex; gap:10px; margin-bottom:10px; font-size:12px; flex-wrap:wrap;">
+        <a href="https://www.linkedin.com/company/envirobiotics" target="_blank">LinkedIn</a>
+        &middot;
+        <a href="https://x.com/EnviroBiotics" target="_blank">X (Twitter)</a>
+        &middot;
+        <a href="https://www.researchgate.net/" target="_blank">ResearchGate</a>
+        &middot;
+        <a href="https://orcid.org/" target="_blank">ORCID</a>
+      </div>
+
+
+    </div>
+    <div>
+      <h4 style="font-size:13px; margin-bottom:6px; font-weight:600;">Support the Research</h4>
+      <p style="font-size:11px; color:rgba(255,255,255,0.65); margin-bottom:10px;">Help fund sequencing reagents and field expeditions in the Gulf of Guinea.</p>
+      <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:1rem;">
+        <a href="https://www.paypal.com/donate" target="_blank" style="display:inline-block; padding:8px 16px; background:#185FA5; color:#fff; border-radius:6px; font-weight:600; font-size:13px; text-decoration:none;">Donate to Project</a>
+        <a href="mailto:odedereao@niomr.gov.ng" style="display:inline-block; padding:8px 16px; background:rgba(255,255,255,0.1); color:#fff; border-radius:6px; font-weight:600; font-size:13px; text-decoration:none; border:1px solid rgba(255,255,255,0.2);">Bank Transfer</a>
+      </div>
+      <h4 style="font-size:13px; margin-bottom:6px; font-weight:600;">Newsletter</h4>
+<p style="font-size:12px; color:rgba(255,255,255,0.7);">Get notified when new sequences are deposited, publications released, or the site goes live.</p>
+      <form class="subscribe-box" onsubmit="handleSubscribe(event)">
+        <input type="email" id="footer-email" placeholder="your@email.com" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Nigeria Marine Biodiversity Library &middot; EnviroBiotics.org (coming soon)</span>
+    <span>Data sources: NCBI &middot; BOLD Systems &middot; SILVA &middot; WoRMS &middot; FishBase &middot; NeMys</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
