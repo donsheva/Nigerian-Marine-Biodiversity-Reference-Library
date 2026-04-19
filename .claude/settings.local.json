@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm -rf \"/c/Users/New User/Documents/Projects/Nigerian-Marine-Biodiversity-Reference-Library/Web\")",
+      "Bash(rm \"/c/Users/New User/Documents/Projects/Nigerian-Marine-Biodiversity-Reference-Library/index.html\")"
+    ]
+  }
+}
