@@ -1,0 +1,39 @@
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top" style="display:none;position:fixed;bottom:24px;right:24px;width:40px;height:40px;border-radius:50%;background:var(--blue);color:#fff;border:none;cursor:pointer;font-size:18px;z-index:500;box-shadow:0 4px 12px rgba(13,110,253,0.35);transition:opacity 0.2s,transform 0.2s;align-items:center;justify-content:center;">↑</button>
+
+<footer style="background:#0a2540; color:#fff; padding:1.5rem 0 1.25rem; margin-top:3rem;">
+
+  <div class="footer-grid">
+    <div>
+      <div style="font-size:15px; font-weight:700; margin-bottom:4px; display:flex; align-items:center; gap:8px;">
+        <svg width="22" height="22" viewBox="0 0 28 28" fill="none" style="flex-shrink:0;"><circle cx="14" cy="14" r="13" fill="rgba(13,110,253,0.2)" stroke="#60a5fa" stroke-width="1"/><path d="M14 6 C18 6 22 10 22 14 C22 18 18 22 14 22" stroke="#60a5fa" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M10 9 Q14 12 10 15 Q6 18 10 21" stroke="#2dd4bf" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.8"/><circle cx="10" cy="9" r="1.5" fill="#60a5fa"/><circle cx="14" cy="13" r="1.5" fill="#2dd4bf"/><circle cx="10" cy="21" r="1.5" fill="#34d399"/></svg>
+        Nigerian Marine Biodiversity Reference Library
+      </div>
+      <p style="font-size:11px; color:rgba(255,255,255,0.65); margin-bottom:10px; line-height:1.6;">A molecular reference framework for coastal and marine biodiversity<br>in the Gulf of Guinea. &copy; 2026 EnviroBiotics.org</p>
+      <div style="display:flex; gap:10px; margin-bottom:10px; font-size:12px; flex-wrap:wrap;">
+        <a href="https://www.linkedin.com/company/envirobiotics" target="_blank">LinkedIn</a>
+        &middot;
+        <a href="https://x.com/EnviroBiotics" target="_blank">X (Twitter)</a>
+        &middot;
+        <a href="https://github.com/donsheva/Nigerian-Marine-Biodiversity-Reference-Library" target="_blank">GitHub</a>
+        &middot;
+        <a href="https://doi.org/10.5281/zenodo.19201628" target="_blank">Zenodo DOI</a>
+      </div>
+    </div>
+    <div>
+      <h4 style="font-size:13px; margin-bottom:6px; font-weight:600;">Support the Research</h4>
+      <p style="font-size:11px; color:rgba(255,255,255,0.65); margin-bottom:10px;">Help fund sequencing reagents and field expeditions in the Gulf of Guinea.</p>
+      <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:1rem;">
+        <a href="https://www.paypal.com/donate" target="_blank" style="display:inline-block; padding:8px 16px; background:#185FA5; color:#fff; border-radius:6px; font-weight:600; font-size:13px; text-decoration:none;">Donate to Project</a>
+        <a href="mailto:ade@envirobiotics.org?subject=Bank%20Transfer%20Donation%20-%20NMBL&body=I%20would%20like%20to%20support%20the%20NMBL%20research%20via%20bank%20transfer.%20Please%20send%20me%20your%20bank%20details." style="display:inline-block; padding:8px 16px; background:rgba(255,255,255,0.1); color:#fff; border-radius:6px; font-weight:600; font-size:13px; text-decoration:none; border:1px solid rgba(255,255,255,0.2);">Bank Transfer</a>
+      </div>
+      <h4 style="font-size:13px; margin-bottom:6px; font-weight:600;">Newsletter</h4>
+      <p style="font-size:12px; color:rgba(255,255,255,0.7);">Get notified when new sequences are deposited, publications released, or the site goes live.</p>
+      <form class="subscribe-box" onsubmit="event.preventDefault(); nmblSubscribe();" aria-label="Newsletter subscription form">
+        <input type="email" id="footer-email" aria-label="Newsletter email address" placeholder="your@email.com" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div id="footer-sub-msg" style="display:none;margin-top:8px;font-size:11px;color:#34d399;">Thanks — your email client should now open with a pre-filled subscription request.</div>
+    </div>
+  </div>
+  <div class="footer-bottom"><span>&copy; 2026 Nigerian Marine Biodiversity Reference Library &middot; EnviroBiotics.org</span><span>Data sources: NCBI &middot; BOLD Systems &middot; SILVA &middot; WoRMS &middot; FishBase &middot; NeMys</span></div>
+</footer>
