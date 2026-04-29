@@ -1,1 +1,182 @@
-<!doctype html><title>placeholder</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Curated directory of marine biodiversity databases, government bodies, and training materials for West Africa.">
+  <meta name="author" content="Adelodun Odedere — EnviroBiotics.org">
+  <meta property="og:title" content="Resources — NMBL">
+  <meta property="og:description" content="Curated directory of marine biodiversity databases, government bodies, and training materials for West Africa.">
+  <meta property="og:url" content="https://envirobiotics.org/resources/">
+  <link rel="canonical" href="https://envirobiotics.org/resources/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <title>Resources — NMBL · EnviroBiotics</title>
+</head>
+<body>
+  <div id="site-header"></div>
+  <div id="site-nav"></div>
+
+  <div class="popup-overlay" id="popup-overlay" role="dialog" aria-modal="true" aria-labelledby="popup-name" onclick="closePopupOnOverlay(event)">
+    <div class="popup-card" id="popup-card">
+      <div class="popup-header">
+        <div class="popup-icon" id="popup-icon"></div>
+        <div class="popup-title">
+          <h2 id="popup-name"></h2>
+          <p id="popup-common"></p>
+        </div>
+        <button class="popup-close" onclick="closePopup()" aria-label="Close species details popup">&#215;</button>
+      </div>
+      <div class="popup-body" id="popup-body"></div>
+      <div class="popup-notes" id="popup-notes"></div>
+      <div class="popup-footer" id="popup-footer"></div>
+    </div>
+  </div>
+
+  <main class="container" id="main-content" role="main" tabindex="-1">
+
+    <div class="page-hero">
+      <h1>Resources</h1>
+      <p>A curated directory of databases, government institutions, policy frameworks, tools, and educational materials for marine biodiversity research, eDNA metabarcoding, and blue economy management in Nigeria and the Gulf of Guinea.</p>
+    </div>
+
+    <div class="section-head">Understanding Biological Classification</div>
+    <div class="info-card" style="margin-bottom:1.5rem;">
+      <h3>How Taxonomic Classification Works — The Hierarchy of Life</h3>
+      <p style="font-size:13px;color:var(--text2);line-height:1.7;margin-bottom:1rem;">Think of classification as a funnel moving from the broadest category to the most specific identifier. Every species has a unique two-part Latin name (genus + species) — a system invented by Carl Linnaeus in 1758 that scientists worldwide use today.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
+        <div>
+          <div style="font-size:11px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:12px;">The 8 Levels — from broadest to most specific</div>
+          <div style="display:flex;flex-direction:column;gap:4px;">
+            <div style="padding:8px 14px;background:var(--blue-bg);border-left:3px solid var(--blue);border-radius:0 6px 6px 0;font-size:12px;"><strong style="color:var(--blue);">Domain</strong> — <em style="color:var(--text2);">Eukarya</em> <span style="float:right;color:var(--text3);font-size:10px;">Broadest</span></div>
+            <div style="padding:8px 14px;background:var(--blue-bg);border-left:3px solid var(--blue);border-radius:0 6px 6px 0;font-size:12px;opacity:0.9;"><strong style="color:var(--blue);">Kingdom</strong> — <em style="color:var(--text2);">Animalia</em></div>
+            <div style="padding:8px 14px;background:var(--blue-bg);border-left:3px solid var(--blue);border-radius:0 6px 6px 0;font-size:12px;opacity:0.82;"><strong style="color:var(--blue);">Phylum</strong> — <em style="color:var(--text2);">Chordata</em></div>
+            <div style="padding:8px 14px;background:var(--blue-bg);border-left:3px solid var(--blue);border-radius:0 6px 6px 0;font-size:12px;opacity:0.74;"><strong style="color:var(--blue);">Class</strong> — <em style="color:var(--text2);">Mammalia</em></div>
+            <div style="padding:8px 14px;background:var(--blue-bg);border-left:3px solid var(--blue);border-radius:0 6px 6px 0;font-size:12px;opacity:0.66;"><strong style="color:var(--blue);">Order</strong> — <em style="color:var(--text2);">Primates</em></div>
+            <div style="padding:8px 14px;background:var(--blue-bg);border-left:3px solid var(--blue);border-radius:0 6px 6px 0;font-size:12px;opacity:0.58;"><strong style="color:var(--blue);">Family</strong> — <em style="color:var(--text2);">Hominidae</em></div>
+            <div style="padding:8px 14px;background:var(--green-bg);border-left:3px solid var(--green);border-radius:0 6px 6px 0;font-size:12px;"><strong style="color:var(--green);">Genus</strong> — <em style="color:var(--text2);">Homo</em></div>
+            <div style="padding:8px 14px;background:var(--green-bg);border-left:3px solid var(--green);border-radius:0 6px 6px 0;font-size:12px;"><strong style="color:var(--green);">Species</strong> — <em style="color:var(--text2);">sapiens</em> <span style="float:right;color:var(--text3);font-size:10px;">Most specific</span></div>
+          </div>
+          <div style="margin-top:12px;padding:10px 14px;background:var(--amber-bg);border-radius:var(--radius);font-size:12px;color:var(--amber);">
+            💡 <strong>Mnemonic:</strong> <strong>D</strong>ear <strong>K</strong>ing <strong>P</strong>hilip <strong>C</strong>ame <strong>O</strong>ver <strong>F</strong>or <strong>G</strong>ood <strong>S</strong>oup
+          </div>
+        </div>
+        <div>
+          <div style="font-size:11px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:12px;">Example — Bonga Shad (key species in this library)</div>
+          <div style="display:flex;flex-direction:column;gap:4px;">
+            <div style="padding:7px 12px;background:var(--bg2);border-radius:var(--radius);font-size:12px;display:flex;justify-content:space-between;"><span style="color:var(--text3);">Domain</span><span>Eukarya</span></div>
+            <div style="padding:7px 12px;background:var(--bg2);border-radius:var(--radius);font-size:12px;display:flex;justify-content:space-between;"><span style="color:var(--text3);">Kingdom</span><span>Animalia</span></div>
+            <div style="padding:7px 12px;background:var(--bg2);border-radius:var(--radius);font-size:12px;display:flex;justify-content:space-between;"><span style="color:var(--text3);">Phylum</span><span>Chordata</span></div>
+            <div style="padding:7px 12px;background:var(--bg2);border-radius:var(--radius);font-size:12px;display:flex;justify-content:space-between;"><span style="color:var(--text3);">Class</span><span>Actinopterygii</span></div>
+            <div style="padding:7px 12px;background:var(--bg2);border-radius:var(--radius);font-size:12px;display:flex;justify-content:space-between;"><span style="color:var(--text3);">Order</span><span>Clupeiformes</span></div>
+            <div style="padding:7px 12px;background:var(--bg2);border-radius:var(--radius);font-size:12px;display:flex;justify-content:space-between;"><span style="color:var(--text3);">Family</span><span>Clupeidae</span></div>
+            <div style="padding:7px 12px;background:var(--green-bg);border-radius:var(--radius);font-size:12px;display:flex;justify-content:space-between;"><span style="color:var(--green);font-weight:500;">Genus</span><span style="font-style:italic;">Ethmalosa</span></div>
+            <div style="padding:7px 12px;background:var(--green-bg);border-radius:var(--radius);font-size:12px;display:flex;justify-content:space-between;"><span style="color:var(--green);font-weight:500;">Species</span><span style="font-style:italic;">fimbriata</span></div>
+          </div>
+          <p style="font-size:11px;color:var(--text3);margin-top:8px;line-height:1.6;">Full name: <em>Ethmalosa fimbriata</em> (Bowdich, 1825). The italicised two-part name (binomial nomenclature) is internationally standardised and used identically whether you are in Lagos, London, or Tokyo.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:var(--green-bg);border:0.5px solid var(--green);border-radius:var(--radius-lg);padding:1rem 1.25rem;margin-bottom:1.5rem;display:flex;gap:14px;align-items:flex-start;">
+      <div style="font-size:28px;flex-shrink:0;">🌿</div>
+      <div>
+        <div style="font-size:13px;font-weight:600;color:var(--green);margin-bottom:4px;">The Niger Delta — Africa's Largest Mangrove Forest</div>
+        <p style="font-size:13px;color:var(--green);line-height:1.7;opacity:0.9;margin:0;">The Niger Delta holds the largest mangrove forest in Africa — covering over <strong>1 million hectares</strong> — and is the third largest mangrove ecosystem in the world. These forests are critical nursery grounds for fish, habitat for the endangered African manatee (<em>Trichechus senegalensis</em>), and the primary livelihood for millions of coastal Nigerians. Despite their ecological importance, the biodiversity of these mangroves remains almost entirely uncharacterised at the molecular level.</p>
+      </div>
+    </div>
+
+    <div class="section-head">BBNJ Agreement — Ocean Biodiversity Beyond National Jurisdiction</div>
+    <div class="info-card" style="margin-bottom:1.5rem;">
+      <h3>The High Seas Treaty (BBNJ, 2023)</h3>
+      <p style="font-size:13px;color:var(--text2);line-height:1.75;">In March 2023, UN member states adopted the historic <strong>Agreement on the Conservation and Sustainable Use of Marine Biological Diversity of Areas Beyond National Jurisdiction (BBNJ)</strong> — also known as the High Seas Treaty. This legally binding instrument covers the high seas, which constitute approximately 64% of the ocean surface and 95% of its volume, yet were previously largely unprotected. The BBNJ agreement establishes: (1) a framework for establishing marine protected areas on the high seas; (2) requirements for environmental impact assessments for high seas activities; (3) mechanisms for sharing benefits from the use of marine genetic resources; and (4) technology transfer and capacity-building provisions specifically aimed at developing nations, including West African coastal states.</p>
+      <p style="font-size:13px;color:var(--text2);line-height:1.75;margin-top:10px;">For Nigeria and the Gulf of Guinea region, the BBNJ agreement is particularly significant because: the Exclusive Economic Zones of Gulf of Guinea states border areas that will fall under BBNJ governance; the marine genetic resources provisions create legal frameworks for the type of molecular reference library work that EnviroBiotics is conducting; and the capacity-building mandates may generate funding opportunities for West African molecular biodiversity initiatives. Molecular reference libraries — the core output of this project — are precisely the type of scientific infrastructure needed to implement BBNJ monitoring commitments.</p>
+      <div style="margin-top:10px;">
+        <a href="https://www.un.org/bbnj/" target="_blank" style="font-size:12px;color:var(--blue);padding:4px 12px;background:var(--blue-bg);border:0.5px solid var(--blue);border-radius:20px;text-decoration:none;display:inline-block;">Read the BBNJ Agreement &#8599;</a>
+      </div>
+    </div>
+
+    <div class="section-head">National &amp; International Research Frameworks</div>
+    <div class="three-col" style="margin-bottom:1.5rem;">
+      <div class="info-card">
+        <h3>🏛️ Nigerian Government</h3>
+        <div style="font-size:12px;color:var(--text2);line-height:2.2;">
+          <a href="https://www.environment.gov.ng/" target="_blank" style="display:block;color:var(--blue);">Federal Ministry of Environment &#8599;</a>
+          <a href="https://www.marineblueeconomy.gov.ng/" target="_blank" style="display:block;color:var(--blue);">Fed. Ministry of Marine &amp; Blue Economy &#8599;</a>
+          <a href="https://www.niomr.gov.ng/" target="_blank" style="display:block;color:var(--blue);">NMBL — Oceanographic Research &#8599;</a>
+          <a href="https://nimr.gov.ng/" target="_blank" style="display:block;color:var(--blue);">Nigerian Institute for Medical Research &#8599;</a>
+          <a href="https://www.tetfund.gov.ng/" target="_blank" style="display:block;color:var(--blue);">TETFUND — Research Funding &#8599;</a>
+        </div>
+      </div>
+      <div class="info-card">
+        <h3>🧬 Sequence Databases</h3>
+        <div style="font-size:12px;color:var(--text2);line-height:2.2;">
+          <a href="https://www.ncbi.nlm.nih.gov/nuccore/" target="_blank" style="display:block;color:var(--blue);">NCBI Nucleotide &#8599;</a>
+          <a href="https://www.boldsystems.org" target="_blank" style="display:block;color:var(--blue);">BOLD Systems &#8599;</a>
+          <a href="https://www.arb-silva.de/" target="_blank" style="display:block;color:var(--purple);">SILVA SSU rRNA &#8599;</a>
+          <a href="https://www.ebi.ac.uk/ena/" target="_blank" style="display:block;color:var(--blue);">ENA (European Nucleotide Archive) &#8599;</a>
+          <a href="https://blast.ncbi.nlm.nih.gov/" target="_blank" style="display:block;color:var(--blue);">NCBI BLAST &#8599;</a>
+        </div>
+      </div>
+      <div class="info-card">
+        <h3>🐟 Biodiversity &amp; Taxonomy</h3>
+        <div style="font-size:12px;color:var(--text2);line-height:2.2;">
+          <a href="https://obis.org/" target="_blank" style="display:block;color:var(--green);">OBIS — Ocean Biodiversity &#8599;</a>
+          <a href="https://www.gbif.org/" target="_blank" style="display:block;color:var(--green);">GBIF &#8599;</a>
+          <a href="https://www.marinespecies.org/" target="_blank" style="display:block;color:var(--teal);">WoRMS — Marine Species &#8599;</a>
+          <a href="https://www.fishbase.se/" target="_blank" style="display:block;color:var(--teal);">FishBase &#8599;</a>
+          <a href="https://nemys.ugent.be/" target="_blank" style="display:block;color:var(--amber);">NeMys — Nematode Register &#8599;</a>
+          <a href="https://www.iucnredlist.org/" target="_blank" style="display:block;color:var(--red);">IUCN Red List &#8599;</a>
+        </div>
+      </div>
+      <div class="info-card">
+        <h3>🔬 eDNA &amp; Genomics Tools</h3>
+        <div style="font-size:12px;color:var(--text2);line-height:2.2;">
+          <a href="https://www.qiime2.org/" target="_blank" style="display:block;color:var(--blue);">QIIME2 — Microbiome Analysis &#8599;</a>
+          <a href="https://benjjneb.github.io/dada2/" target="_blank" style="display:block;color:var(--blue);">DADA2 — Amplicon Analysis &#8599;</a>
+          <a href="https://www.obitools.net/" target="_blank" style="display:block;color:var(--blue);">OBITools — eDNA Pipeline &#8599;</a>
+          <a href="https://cutadapt.readthedocs.io/" target="_blank" style="display:block;color:var(--blue);">Cutadapt — Primer Trimming &#8599;</a>
+          <a href="https://www.geneious.com/" target="_blank" style="display:block;color:var(--blue);">Geneious Prime &#8599;</a>
+        </div>
+      </div>
+      <div class="info-card">
+        <h3>🌊 Blue Economy &amp; Policy</h3>
+        <div style="font-size:12px;color:var(--text2);line-height:2.2;">
+          <a href="https://kunmingmontrealframework.org/" target="_blank" style="display:block;color:var(--green);">Kunming-Montreal GBF &#8599;</a>
+          <a href="https://www.cbd.int/" target="_blank" style="display:block;color:var(--green);">Convention on Biological Diversity &#8599;</a>
+          <a href="https://www.un.org/bbnj/" target="_blank" style="display:block;color:var(--blue);">BBNJ — High Seas Treaty &#8599;</a>
+          <a href="https://www.fao.org/fishery/en" target="_blank" style="display:block;color:var(--blue);">FAO Fisheries &amp; Aquaculture &#8599;</a>
+          <a href="https://www.imo.org/" target="_blank" style="display:block;color:var(--blue);">International Maritime Organization &#8599;</a>
+        </div>
+      </div>
+      <div class="info-card">
+        <h3>🌐 Environmental Domain Names for Sale</h3>
+        <div style="font-size:12px;color:var(--text2);line-height:1.7;margin-bottom:10px;">Domains available for environmental, biological and marine science initiatives, listed via <a href="https://vivanames.com" target="_blank" style="color:var(--blue);">VivaNames.com</a>:</div>
+        <div id="bb-domain-list" style="display:flex;flex-wrap:wrap;gap:6px;">
+          <a href="https://www.brandbucket.com/names/envirobionics" target="_blank" style="display:inline-block;padding:5px 12px;background:var(--blue-bg);color:var(--blue);border:1px solid var(--blue);border-radius:20px;font-size:12px;font-weight:600;text-decoration:none;">EnviroBionics.com</a>
+          <a href="https://www.brandbucket.com/profile/vivanames" target="_blank" style="display:inline-block;padding:5px 12px;background:var(--teal-bg);color:var(--teal);border:1px solid var(--teal);border-radius:20px;font-size:12px;font-weight:600;text-decoration:none;">InterBiotics.com</a>
+          <a href="https://www.brandbucket.com/profile/vivanames" target="_blank" style="display:inline-block;padding:5px 12px;background:var(--green-bg);color:var(--green);border:1px solid var(--green);border-radius:20px;font-size:12px;font-weight:600;text-decoration:none;">AppliedEnviro.com</a>
+          <a href="https://www.brandbucket.com/profile/vivanames" target="_blank" style="display:inline-block;padding:5px 12px;background:var(--amber-bg);color:var(--amber);border:1px solid var(--amber);border-radius:20px;font-size:12px;font-weight:600;text-decoration:none;">EnviroGraph.com</a>
+          <a href="https://www.brandbucket.com/profile/vivanames" target="_blank" style="display:inline-block;padding:5px 12px;background:var(--purple-bg);color:var(--purple);border:1px solid var(--purple);border-radius:20px;font-size:12px;font-weight:600;text-decoration:none;">EnviroBeacon.com</a>
+        </div>
+        <div style="margin-top:12px;padding-top:10px;border-top:0.5px solid var(--border);">
+          <a href="https://www.brandbucket.com/profile/vivanames" target="_blank" style="font-size:11px;color:var(--blue);text-decoration:none;">Browse all available domains at BrandBucket &#8599;</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="/assets/js/data.js"></script>
+  <script src="/assets/js/search.js"></script>
+  <script src="/assets/js/popup.js"></script>
+  <script src="/assets/js/contact.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/partials.js"></script>
+</body>
+</html>
