@@ -1,327 +1,323 @@
-# EnviroBiotics.org — Multi-Page Site Conversion Brief
+# CLAUDE.md — Multi-page Conversion Brief (v3.0)
 
-**For:** Claude Code (terminal agent)
-**From:** Adelodun Odedere, NMBL principal investigator
-**Source:** `nigeria_reflib_dashboard_v20.html` (313KB single-file dashboard)
-**Target:** Multi-page static site at envirobiotics.org, hosted on GitHub Pages
-**Repository:** `github.com/donsheva/Nigerian-Marine-Biodiversity-Reference-Library`
-**Domain registrar:** Porkbun
-
----
-
-## 1 · Goal in one sentence
-
-Split the v20 single-file dashboard into a multi-page static site where each top-nav tab becomes its own URL (`/`, `/database/`, `/gap-analysis/`, `/statistics/`, `/citations/`, `/gallery/`, `/resources/`, `/contact/`, `/about/`), so individual pages are linkable, indexable, and shareable — without breaking any of the existing interactive Gap Analysis, Statistics, search, or popup behaviour.
+**Project:** Nigerian Marine Biodiversity Reference Library (NMBL)
+**Repo:** github.com/donsheva/Nigerian-Marine-Biodiversity-Reference-Library
+**Source dashboard:** `nigeria_reflib_dashboard_v21.html` (canonical, at repo root)
+**Target deployment:** envirobiotics.org (custom domain via Porkbun → GitHub Pages — already live and serving the v21 single-file dashboard)
+**Brief version:** 3.0 — accurate to repo state as of commit `d9cb3dd`. Supersedes the v20-targeted brief and the earlier v21 draft (which assumed Phase 2 was a fresh start).
 
 ---
 
-## 2 · Non-negotiables
+## What this brief does
 
-These cannot regress during the split. If a change risks any of these, stop and ask.
-
-1. **All 132 taxa data arrays** (`VERTEBRATES`, `MEIOFAUNA_OTHER`, `NEMATODES`, `MACROBENTHOS`, `MARINE`, `ALL_TAXA`) must be loaded on every page where the global search bar appears (effectively every page). They live in one shared `data.js` so there is one source of truth.
-2. **The global search dropdown** in the header must work site-wide and route to the species' "home" page (Gap Analysis / Marine / Macrobenthos / Nematodes / etc.) when a result is clicked.
-3. **The classification logic** (`overallStatus`, `ncbiEffectiveStatus`, the 50% West African threshold) must remain intact and shared across pages — never duplicated.
-4. **The v20 design system** — Sora / DM Sans / DM Mono fonts, the navy-and-blue colour palette, all CSS variables (`--bg`, `--blue`, `--green-bg`, etc.), the shadow system, the badges — must be preserved exactly. Extract to one shared `styles.css`.
-5. **Single-source for the header, footer, and site nav.** These three components must be defined in one place and included on every page (server-side include is not available on Pages, so use a small JS shim or a build step — see §6).
-6. **No build pipeline required.** The site must work as plain HTML/CSS/JS that GitHub Pages can serve directly. No Webpack, no Vite, no React. (A small build script in `tools/` is acceptable if it just copies the shared partials at commit time — but the deployed output must be plain static files.)
-7. **The Zenodo DOI, GitHub repo link, and BOLD project NGMBL references** must remain prominent and clickable on Database, Citations, and Footer.
-8. **The keyboard shortcuts** (⌘K / Ctrl+K, `/`, Esc) must work on every page.
-9. **The v20 changelog block** stays at the top of `/database/` (the landing page).
+Continues the multi-page conversion from the partially-completed Phase 4 state.
+The single-file v21 dashboard is already serving live at envirobiotics.org via
+a redirect from `index.html`. The multi-page site exists in the repo but is
+not yet served — it will replace the single-file redirect once Phases 4–8
+are complete.
 
 ---
 
-## 3 · Target file structure
+## CRITICAL — read this section before any work
+
+The repo's `assets/js/data.js` was extracted in Phase 2 from the **v20**
+single-file dashboard, which used a different classification rule:
+
+- **v20 (retired):** `ncbi` is "present" if WA records ≥ 50% of global NCBI count
+- **v21 (live in the dashboard):** marker-specific absolute WA thresholds:
+  - COI ≥5
+  - 12S ≥3
+  - 18S ≥1
+  - 28S ≥1
+  - rbcL ≥3
+
+The function `ncbiEffectiveStatus` at line ~97 of `data.js` is the v20 version
+and **must be replaced** before any new pages are built that read it.
+Pre-computed `ncbi` fields on individual species records also need updating
+where v21 changes them.
+
+The canonical v21 source-of-truth lives at:
+- `nigeria_reflib_dashboard_v21.html` (lines 1379–1409 contain `WA_THRESHOLD`,
+  `ncbiEffectiveStatus`, `overallStatus`)
+- The 132-taxon arrays inside the v21 file's `<script>` block contain the
+  authoritative current `ncbi` / `overall` field values
+
+---
+
+## Repo state baseline (commit `d9cb3dd`)
 
 ```
-Nigerian-Marine-Biodiversity-Reference-Library/
-├── index.html                      → redirects to /database/ (or serves it directly)
-├── database/
-│   └── index.html                  → "The Database" overview (current default landing)
-├── gap-analysis/
-│   └── index.html                  → 6 sub-tabs: gap, all-taxa, marine, fish, macrobenthos, nematodes
-├── statistics/
-│   └── index.html                  → KPIs, donut, bar chart, priority leaderboard, IUCN crosstab, marker table
-├── citations/
-│   └── index.html
-├── gallery/
-│   └── index.html                  → Media gallery + identification keys (placeholder content)
-├── resources/
-│   └── index.html
-├── contact/
-│   └── index.html
-├── about/
-│   └── index.html
-│
-├── assets/
-│   ├── css/
-│   │   └── styles.css              → ALL styling, extracted from <style> blocks
-│   ├── js/
-│   │   ├── data.js                 → All five data arrays + ALL_TAXA + classification fns
-│   │   ├── search.js               → Global search index + dropdown + Cmd+K shortcut
-│   │   ├── render.js               → renderTable, renderMarineTable, renderFishTable, etc.
-│   │   ├── stats.js                → populateStatsPage, renderPriorityLeaderboard, renderIucnCrosstab
-│   │   ├── popup.js                → Species detail popup logic
-│   │   ├── partials.js             → Loads header.html / footer.html / nav.html into page
-│   │   └── nav.js                  → Active-page highlight in top nav, mobile menu toggle
-│   └── partials/
-│       ├── header.html             → <header> markup with logo, search, NMBL pill, DOI link
-│       ├── nav.html                → Top navigation with all 8 page links
-│       └── footer.html             → Footer with newsletter, donate, social, copyright
-│
-├── CNAME                           → contains the single line: envirobiotics.org
-├── 404.html                        → custom 404 styled to match
-├── robots.txt                      → allow all
-├── sitemap.xml                     → list every page with lastmod
-├── README.md                       → repository readme
-└── archive/
-    └── nigeria_reflib_dashboard_v20.html   → keep the original for reference
+✅ CNAME, .nojekyll, LICENSE, CITATION.cff, README.md, .gitignore — all in place
+✅ index.html — redirects root to nigeria_reflib_dashboard_v21.html (live)
+✅ nigeria_reflib_dashboard_v21.html — canonical, at root, ~323 KB
+✅ archive/, Data/, Scripts/ — preserved
+✅ Phase 1 scaffold: 8 page directories
+✅ Phase 2 asset extraction (PARTIAL):
+   - assets/css/styles.css
+   - assets/js/data.js          [CONTAINS v20 LOGIC — needs Phase 2.1 fix]
+   - assets/js/search.js
+   - assets/js/render.js
+   - assets/js/stats.js
+   - assets/js/popup.js
+   - assets/js/contact.js
+   - 3 HTML partials (header, nav, footer)
+✅ Phase 3 shared partials: header, nav, footer
+🟡 Phase 4 (in progress, 5 of 8 pages wired):
+   - about/index.html         ✅ wired (full content)
+   - citations/index.html     ✅ wired
+   - contact/index.html       ✅ wired
+   - gallery/index.html       ✅ wired
+   - resources/index.html     ✅ wired
+   - database/index.html      ❌ placeholder only — needs full Phase 4 build
+   - statistics/index.html    ❌ placeholder only — needs full Phase 4 build
+   - [third unwired page]     ❌ placeholder only — needs full Phase 4 build
+❌ Phase 5–8 not started
 ```
-
-**Why this layout.** Subfolder + `index.html` gives clean URLs (`envirobiotics.org/citations/`, not `/citations.html`), works with GitHub Pages without rewrites, and keeps the back button intuitive.
 
 ---
 
-## 4 · How shared partials work (without a build step)
+## Phase 2.1 — Migrate data.js from v20 to v21 (DO THIS FIRST)
 
-GitHub Pages does not run server-side includes. Two options — **pick one and apply it consistently:**
+Goal: `assets/js/data.js` must use v21 classification logic and v21-correct
+pre-computed status fields, sourced verbatim from the canonical
+`nigeria_reflib_dashboard_v21.html` file at the repo root.
 
-### Option A — JavaScript include (simpler, what I recommend)
+### Steps
 
-```html
-<!-- Each page contains, near the top of <body>: -->
-<div id="site-header"></div>
-<div id="site-nav"></div>
+1. **Open `nigeria_reflib_dashboard_v21.html` and locate lines 1379–1409.**
+   This contains `WA_THRESHOLD`, `ncbiEffectiveStatus`, and `overallStatus`.
+   Extract these verbatim — do not rewrite, do not "improve", do not change
+   the threshold values, do not change `>=` to `>`.
 
-<!-- And before </body>: -->
-<div id="site-footer"></div>
-<script src="/assets/js/partials.js"></script>
-```
+2. **Open `assets/js/data.js` and replace the v20 classification block.**
+   The v20 `ncbiEffectiveStatus` function (around line 97 — search for the
+   string `s.ncbi_global * 0.50` to find it) must be replaced with the v21
+   version. The `overallStatus` function may also need replacement; compare
+   with v21's version to confirm.
 
-`partials.js` does:
-```js
-(async () => {
-  const inject = async (id, file) => {
-    const r = await fetch(`/assets/partials/${file}`);
-    document.getElementById(id).innerHTML = await r.text();
-  };
-  await inject('site-header', 'header.html');
-  await inject('site-nav',    'nav.html');
-  await inject('site-footer', 'footer.html');
-  // Re-bind keyboard shortcuts and active-page highlight after partials land
-  if (window.bindGlobalKeyboard) window.bindGlobalKeyboard();
-  if (window.highlightActiveNav) window.highlightActiveNav();
-})();
-```
+3. **Update pre-computed `ncbi` fields on the 107 ALL_TAXA records.**
+   The v21 dashboard's runtime classification produces different `ncbi`
+   field values for some species than the pre-computed values currently in
+   data.js. Walk every species record and update the `ncbi` field to match
+   what the v21 file's classification produces for that species's
+   `ncbi_wa` count and marker.
 
-**Trade-off:** there's a tiny flash of unstyled content while partials load. Acceptable for v1; can be optimised later with HTTP/2 push or by inlining.
+4. **Run the verification gate before committing:**
+   - Load `data.js` in Node
+   - Classify all 107 records via the new `ncbiEffectiveStatus`
+   - Produce a list: `(species_name, marker, ncbi_wa, computed_status,
+     pre_computed_status_in_record)`
+   - For every record, computed_status MUST equal pre_computed_status. Any
+     mismatch means data.js is internally inconsistent — STOP and audit.
 
-### Option B — Pre-build step
+5. **Cross-check three known reclassifications.** For three well-known
+   species, confirm the multi-page data.js produces the same classification
+   as the live v21 dashboard:
+   - *Sardinella maderensis* — should be `partial` (was `present` in v20)
+   - *Rhizoprionodon acutus* — should be `absent` (was `partial` in v20)
+   - *Penaeus notialis* — should be `absent` (was `partial` in v20)
 
-A small Node script in `tools/build.js` reads each `index.html`, finds `<!-- include: header.html -->` markers, and writes the combined files back. Run before every commit. More moving parts, no FOUC, no JS dependency.
+   If any of these three differ, the migration has a bug — STOP and audit.
 
-**Recommendation: Option A for v1.** Switch to B only if SEO/perf testing flags FOUC as a problem.
+6. **Show the user `git diff assets/js/data.js` (full diff) and `git status`
+   before committing.** Wait for explicit approval before running
+   `git commit`.
 
----
-
-## 5 · Step-by-step task sequence
-
-Run these in order. Commit after each numbered step so a regression is easy to bisect.
-
-### Phase 1 — Repository setup
-
-1. **Clone the repo** if not already local.
-   ```bash
-   git clone https://github.com/donsheva/Nigerian-Marine-Biodiversity-Reference-Library.git
-   cd Nigerian-Marine-Biodiversity-Reference-Library
+7. **On approval, commit with message:**
    ```
-2. **Create the directory skeleton** from §3 (empty folders, empty placeholder `index.html` in each subfolder).
-3. **Move the v20 file into `archive/`** as the source of truth. Do not delete it.
-4. **Create `CNAME`** at the repo root with one line: `envirobiotics.org`
-5. **Create `.nojekyll`** at the repo root (empty file) — prevents Jekyll from processing the site.
-6. **Commit:** `chore: scaffold multi-page structure`
+   Phase 2.1: Migrate data.js from v20 to v21 classification rule
 
-### Phase 2 — Extract shared assets
-
-7. **Extract all CSS** from the `<style>` blocks in `archive/nigeria_reflib_dashboard_v20.html` into `assets/css/styles.css`. Keep all CSS variables, all rules, all media queries. Don't refactor — just move.
-8. **Extract the data arrays** (`VERTEBRATES`, `MEIOFAUNA_OTHER`, `NEMATODES`, `MACROBENTHOS`, `MARINE`, `ALL_TAXA`) plus the classification helpers (`iucnBadge`, `ncbiEffectiveStatus`, `overallStatus`) into `assets/js/data.js`. **Do not modify any data values.**
-9. **Extract the search functions** (`buildSearchIndex`, `onSearchInput`, `onSearchKey`, `clearSearch`, `positionDropdown`, `bindGlobalKeyboard` — name the keyboard binder so partials.js can call it) into `assets/js/search.js`.
-10. **Extract the popup functions** (`openPopup`, `closePopup`, `closePopupOnOverlay`) into `assets/js/popup.js`.
-11. **Extract the render functions** (`renderTable`, `renderMarineTable`, `renderFishTable`, `renderMacroTable`, `renderNemaTable`, `renderGroups`, `renderGapLists`, `updateStats`) into `assets/js/render.js`.
-12. **Extract the statistics functions** (`populateStatsPage`, `populateDbStats`, `priorityScore`, `priorityRationale`, `getPrioritySection`, `renderPriorityLeaderboard`, `renderIucnCrosstab`, `exportPriorityCSV`) into `assets/js/stats.js`.
-13. **Extract the page-switching functions** (`switchPage`, `switchTab`) — these can be removed entirely once the multi-page split is complete, but keep them temporarily for the gap-analysis sub-tabs (gap / all-taxa / marine / fish / macrobenthos / nematodes still tab-switch within `/gap-analysis/`).
-14. **Commit:** `refactor: extract shared CSS, data, search, render to /assets`
-
-### Phase 3 — Build the partials
-
-15. **Create `assets/partials/header.html`** — copy the `<header>` block from v20 verbatim. Make sure asset paths (none in header currently) use absolute paths (`/assets/...`) so they work from every subfolder.
-16. **Create `assets/partials/nav.html`** — copy the `<nav class="site-nav">` block, but rewrite the `onclick="switchPage(...)"` handlers as plain `<a href="...">` links to the new URLs. Add `data-page="database"` etc. attributes so `nav.js` can mark the active one.
-17. **Create `assets/partials/footer.html`** — copy the `<footer>` block verbatim, including the newsletter form, donate buttons, social links.
-18. **Create `assets/js/nav.js`** with `highlightActiveNav()` — reads the current path and adds `.nav-pg-active` to the matching `<a data-page>`.
-19. **Create `assets/js/partials.js`** as shown in §4 Option A.
-20. **Commit:** `feat: shared header, nav, footer partials`
-
-### Phase 4 — Build the pages, one at a time
-
-For each page below: create the file, paste the page's `<div id="page-XYZ" class="page-section container">...</div>` content from the v20 file, replace the surrounding scaffold with the new partial includes, link the JS files this page needs, and visually verify in the browser before moving on.
-
-21. **`database/index.html`** — landing page. Includes the v20 changelog block, "Why coverage matters", current coverage stats (uses `populateDbStats`), classification flowchart, data sources grid. JS needed: `data.js`, `render.js` (for stats), `popup.js`, `search.js`, `nav.js`, `partials.js`.
-22. **`gap-analysis/index.html`** — keep the 6 sub-tabs (`gap`, `species`, `marine`, `fish`, `macrobenthos`, `nematodes`) as in-page tabs since they share filtering UX. JS needed: all of the above plus the `switchTab` function.
-23. **`statistics/index.html`** — KPI grid, donut, bar chart, **Top Priority Sequencing Targets leaderboard**, **IUCN crosstab**, marker mini cards, marker table. JS needed: `data.js`, `stats.js`, `popup.js`, `search.js`, `partials.js`. Make sure `populateStatsPage()` is called on page load.
-24. **`citations/index.html`** — citation block, BibTeX, related publications. Keep the dynamic year/date from `_now`. JS needed: minimal — `data.js` (for header search to work), `search.js`, `partials.js`.
-25. **`gallery/index.html`** — placeholder cards as in v20. JS needed: minimal.
-26. **`resources/index.html`** — taxonomy primer, government bodies, data portals. JS needed: minimal.
-27. **`contact/index.html`** — contact form (still uses mailto), expertise tags, collaboration interests. JS needed: `submitContact()` from the original — extract to a small `assets/js/contact.js` for cleanliness.
-28. **`about/index.html`** — about content from v20.
-29. **`index.html` at root** — minimal redirect to `/database/`:
-   ```html
-   <!doctype html><meta charset="utf-8">
-   <title>EnviroBiotics — NMBL</title>
-   <meta http-equiv="refresh" content="0; url=/database/">
-   <link rel="canonical" href="https://envirobiotics.org/database/">
-   <p>Redirecting to <a href="/database/">the database</a>…</p>
+   - Replace ncbiEffectiveStatus with marker-specific WA thresholds
+     (COI >=5, 12S >=3, 18S >=1, 28S >=1, rbcL >=3)
+   - Update pre-computed ncbi fields on affected species
+   - Verified against canonical nigeria_reflib_dashboard_v21.html
+   - Three reclassifications confirmed: Sardinella maderensis (present ->
+     partial), Rhizoprionodon acutus (partial -> absent), Penaeus notialis
+     (partial -> absent)
    ```
-30. **Commit each page individually:** `feat: /database page`, `feat: /gap-analysis page`, etc.
 
-### Phase 5 — Search routing
+### Constraints for Phase 2.1
 
-31. **Update the search-result click handler** in `search.js` so clicking a result navigates to the right page with the species pre-selected. Convention: append `?focus=<species-name>` to the URL, then on page load that page reads the param and opens the popup.
-32. Map species → page:
-   - vertebrate (Fish, Elasmobranch, Mammal, Turtle, Crustacean) → `/gap-analysis/?focus=...&tab=fish` or `?tab=species`
-   - marine → `/gap-analysis/?focus=...&tab=marine`
-   - macrobenthos → `/gap-analysis/?focus=...&tab=macrobenthos`
-   - nematode → `/gap-analysis/?focus=...&tab=nematodes`
-   - meiofauna → `/gap-analysis/?focus=...&tab=species`
-33. **Commit:** `feat: search routing across pages`
-
-### Phase 6 — SEO + sharing
-
-34. **Update `<title>`, `<meta description>`, `<meta og:*>`, `<link canonical>`** on every page so each has a unique, page-specific value. The current v20 sets these once for the whole single-page; multi-page needs each to be tailored.
-35. **Generate `sitemap.xml`** with one `<url>` entry per page, `lastmod` set to today.
-36. **Create `robots.txt`** allowing all.
-37. **Create a styled `404.html`** matching the v20 design.
-38. **Commit:** `feat: SEO metadata, sitemap, 404`
-
-### Phase 7 — DNS + deploy
-
-39. **Push to GitHub:** `git push origin main`
-40. **Enable Pages** in repo Settings → Pages → Source: `main` branch, root folder.
-41. **Set custom domain:** Settings → Pages → Custom domain → enter `envirobiotics.org`. GitHub will commit the `CNAME` file (already in repo, so this just verifies).
-42. **At Porkbun**, in DNS Records for envirobiotics.org:
-    - **Delete any existing default A or CNAME records** for `@` and `www`.
-    - **Add four A records** for the apex (`@`):
-      - `185.199.108.153`
-      - `185.199.109.153`
-      - `185.199.110.153`
-      - `185.199.111.153`
-    - **Add one CNAME** for `www` pointing to `donsheva.github.io` (replace with your actual GitHub username).
-    - Optional but recommended: **AAAA records for IPv6**:
-      - `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153`
-43. **Wait 10–60 minutes** for DNS propagation. Check with:
-    ```bash
-    dig envirobiotics.org +noall +answer -t A
-    ```
-    Should return the four GitHub IPs.
-44. **In GitHub Pages settings, tick "Enforce HTTPS"** once the certificate is provisioned (Let's Encrypt — happens automatically; can take up to 24h, usually under 1h).
-45. **Verify:** browse to `https://envirobiotics.org/`, `/database/`, `/statistics/`, etc. Confirm:
-    - HTTPS works without warnings
-    - Search bar is present and functional on every page
-    - Cmd+K focuses search on every page
-    - Top Priority Sequencing Targets leaderboard renders on `/statistics/`
-    - IUCN crosstab renders on `/statistics/`
-    - Newsletter subscribe opens mail client to `ade@envirobiotics.org`
-46. **Smoke test on mobile** (Chrome dev tools, narrow viewport) — confirm KPI grids reflow, nav doesn't overflow, search dropdown isn't clipped.
+- DO NOT touch any other file in `assets/`. `styles.css`, `search.js`,
+  `render.js`, `stats.js`, `popup.js`, `contact.js`, and the partials are
+  all fine.
+- DO NOT touch `nigeria_reflib_dashboard_v21.html` — it is the canonical
+  source-of-truth and must remain untouched.
+- DO NOT start any Phase 4 work in the same commit. Phase 2.1 is one
+  focused commit.
 
 ---
 
-## 6 · Suggested Claude Code prompts (copy-paste ready)
+## Phase 4 — Build the three remaining pages
 
-Hand these to Claude Code one phase at a time. Don't paste them all at once.
+Only proceed once Phase 2.1 is committed and approved.
 
-### Prompt A — Phase 1 (scaffold)
+The three unwired pages are some combination of `database/`, `statistics/`,
+and one of `methodology/` or `gap-analysis/`. Run `dir` to confirm which
+directories exist as placeholders.
 
-> Read `archive/nigeria_reflib_dashboard_v20.html` to understand the structure. Then create the multi-page directory layout described in §3 of `BRIEF.md`: subfolder + `index.html` for each of database, gap-analysis, statistics, citations, gallery, resources, contact, about. Add `CNAME`, `.nojekyll`, root `index.html` redirect. Commit with message `chore: scaffold multi-page structure`.
+### `database/index.html`
 
-### Prompt B — Phase 2 (extract assets)
+This is the heart of the multi-page site — the interactive 107-taxon table.
+Build it to match the equivalent section of the v21 single-file dashboard:
 
-> Following §5 steps 7–13 of `BRIEF.md`, extract CSS, data, search, popup, render, and stats functions from `archive/nigeria_reflib_dashboard_v20.html` into the `assets/` folders. Do not modify any data values, classification logic, or CSS rules — this is a move-only refactor. After extraction, all five data arrays must be reachable from `window.ALL_TAXA` etc. for any page that loads `data.js`. Commit when done.
+- Search box (uses `search.js`'s `attachSearchHandler`)
+- Filters: by group, by status (present/partial/absent), by IUCN
+- Main table or card grid showing all 107 ALL_TAXA records
+- Status pills color-coded by `overallStatus()` from data.js
+- Click-through to a species detail popup (uses `popup.js`)
+- IUCN badge column (uses `iucnBadge()` from data.js)
+- Marker column showing COI / 12S / 18S / 28S / rbcL
+- WA record counts (NCBI WA / NCBI global / BOLD WA)
 
-### Prompt C — Phase 3 (partials)
+Render via the shared header, nav, and footer partials.
 
-> Build the three shared partials (`header.html`, `nav.html`, `footer.html`) and the loader `partials.js` per §4 Option A. Convert the `onclick="switchPage(...)"` handlers in `nav.html` to plain `<a href="/.../">` links with `data-page` attributes. Write `nav.js` with `highlightActiveNav()`. Commit.
+### `statistics/index.html`
 
-### Prompt D — Phase 4 (one prompt per page)
+Mirror the Statistics page from v21:
 
-> Build `database/index.html` per §5 step 21 of `BRIEF.md`. Copy the `<div id="page-database">` content from the v20 archive verbatim, wrap it in a fresh page scaffold with the partial-include divs, link the required JS files, and verify it renders by serving locally with `python3 -m http.server 8000`. Confirm the v20 changelog, the classification flowchart, and `populateDbStats()` all work. Commit.
+- Group coverage cards (one per taxonomic group: Fish, Elasmobranch,
+  Crustacean, etc.)
+- Top Priority Sequencing Targets leaderboard (weighted composite scoring,
+  CSV export — function lives in `stats.js`)
+- IUCN × coverage crosstab (highlights threatened taxa lacking references)
+- Coverage classification flowchart (the SVG decision tree from v21)
+- KPI grid (total taxa, % present, % absent, # nematodes)
 
-(Then repeat with the next page name.)
+### Third unwired page
 
-### Prompt E — Phase 5 (search routing)
+Confirm what it is — likely `methodology/` or `gap-analysis/`. If
+`methodology/`, port the methodology / classification rules section of v21.
+If `gap-analysis/`, port the introductory gap-analysis explainer + the v21
+changelog block.
 
-> Update `assets/js/search.js` so clicking a search result navigates to the species' home page using the URL convention `?focus=<species>&tab=<tab>` per §5 steps 31–32. On each gap-analysis sub-tab page, on `DOMContentLoaded`, read the URL params and if `focus` is set, switch to the named tab and call `openPopup` with the matching species. Commit.
+### Verification before commit
 
-### Prompt F — Phase 6 (SEO)
+For each page:
 
-> Audit every page's `<title>`, meta description, og:title, og:description, og:url, canonical link. Each must be unique and tailored to that page. Generate `sitemap.xml` with one entry per page, `lastmod` = today. Create `robots.txt`. Create `404.html` styled with the existing CSS. Commit.
+1. Open it in a local browser via `python -m http.server 8000` and check it renders without console errors.
+2. Verify partials load (header, nav, footer all visible).
+3. Verify data renders (table populated, stats numbers show, search works).
+4. Compare visually against the equivalent section of the live v21 dashboard at envirobiotics.org. Should look near-identical (same colours, same layout, same content).
 
-### Prompt G — Phase 7 (deploy)
-
-> Push to `main`. Walk me through enabling GitHub Pages and setting the custom domain. Then walk me through the Porkbun DNS changes step-by-step per §5 step 42 — I will execute them. Verify with `dig` after I report DNS is set.
-
----
-
-## 7 · Things to verify after each phase
-
-After Phase 2: open `archive/nigeria_reflib_dashboard_v20.html` in a browser locally — it must still work identically (I am keeping it as the rollback).
-
-After Phase 3: open `database/index.html` locally, view source, confirm the partials inject and the page looks like the v20 database page.
-
-After Phase 4: every page renders independently, search works on every page, no console errors.
-
-After Phase 5: clicking a search result on `/database/` navigates to `/gap-analysis/` with the right tab and popup open.
-
-After Phase 6: Lighthouse SEO score ≥ 95 on every page, no broken canonical links, sitemap parses.
-
-After Phase 7: `https://envirobiotics.org/database/` loads with valid certificate, all interactivity intact.
-
----
-
-## 8 · What NOT to do
-
-- **Do not refactor the data structure.** The 132-taxa arrays stay flat objects with the existing keys. Even the slightly-redundant `bold` vs `bold_silva` aliasing stays.
-- **Do not introduce a framework.** No React, no Vue, no Svelte, no Astro, no Next, no static-site generator.
-- **Do not switch CSS-in-JS or Tailwind.** Keep the hand-written CSS.
-- **Do not minify or fingerprint files.** Plain readable filenames.
-- **Do not delete `archive/nigeria_reflib_dashboard_v20.html`** — it stays as the canonical source until the multi-page version is verified live.
-- **Do not change any species data** in the arrays. There has been a history of silent data regressions; treat the arrays as read-only during the split.
-- **Do not change the classification thresholds.** The 50% West African rule, the ≥5 global sequence floor for non-absent NCBI status — both stay exactly as in v20.
+Show `git status` and a brief description of what was added before committing.
 
 ---
 
-## 9 · Expected timeline
+## Phase 5 — Visual parity check (30 min)
 
-If the work goes smoothly: **one focused afternoon, maybe two.**
+Open both the live v21 single-file dashboard at envirobiotics.org AND the
+local multi-page site (`python -m http.server 8000`) side-by-side. Verify:
 
-- Phases 1–3: ~30 minutes
-- Phase 4 (eight pages): ~90 minutes
-- Phase 5 (search routing): ~30 minutes
-- Phase 6 (SEO): ~20 minutes
-- Phase 7 (DNS + deploy): ~15 minutes of work + 1–24h of waiting for DNS and HTTPS provisioning
+- Colours match exactly (CSS custom properties carried over correctly)
+- The Top Priority Sequencing Targets leaderboard ranks the same species
+  in the same order
+- The IUCN × coverage crosstab cells contain the same taxon counts
+- The decision-tree flowchart renders identically
+- Search works on `database/` with the same fuzzy-match behaviour as v21
+- Keyboard shortcuts work
+- The status filter on `database/` returns exactly the same row counts as
+  the single-file dashboard
 
----
-
-## 10 · Reference values
-
-- **Apex A records:** `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-- **Apex AAAA records (IPv6, optional):** `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153`
-- **www CNAME target:** `donsheva.github.io` (your GitHub username)
-- **Domain:** `envirobiotics.org`
-- **Repo:** `github.com/donsheva/Nigerian-Marine-Biodiversity-Reference-Library`
-- **Zenodo DOI:** `10.5281/zenodo.19201628`
-- **BOLD project code:** `NGMBL`
-- **Subscribe destination email:** `ade@envirobiotics.org`
-- **Curator email (contact form):** `ade@envirobiotics.org`
+If any of these diverge, fix before Phase 6.
 
 ---
 
-*End of brief. Hand this to Claude Code, walk through one phase at a time, verify each commit before moving on.*
+## Phase 6 — Update README.md (10 min)
+
+Update the existing `README.md` to mention:
+
+- The site is live at envirobiotics.org
+- Citation block (already exists in CITATION.cff — link to it)
+- Brief structure-of-the-repo overview
+- Link to the canonical single-file dashboard for archival reference
+
+Don't rewrite from scratch — extend what's there.
+
+---
+
+## Phase 7 — Pre-deployment smoke test (15 min)
+
+Locally serve the site and run through this checklist:
+
+```bash
+python -m http.server 8000
+# open http://localhost:8000 in browser
+```
+
+- [ ] Homepage redirects to v21 (or to /database/, depending on Phase 8 decision below)
+- [ ] All 8 pages reachable from the nav menu
+- [ ] Data table on /database/ shows 107 taxa
+- [ ] Filtering by "absent" returns the expected count
+- [ ] Searching for "Capitella" returns *Capitella capitata*
+- [ ] Searching for "Sardinella maderensis" shows status = `partial` (key v21 reclassification — confirms Phase 2.1 worked end-to-end)
+- [ ] Statistics page priority leaderboard renders with all rows
+- [ ] Coverage flowchart renders
+- [ ] Mobile viewport (375px wide): nav menu collapses, table scrolls horizontally
+- [ ] Keyboard shortcut focuses search
+- [ ] Footer email link opens mail client
+
+---
+
+## Phase 8 — Switch the live site over (10 min)
+
+Once Phases 4–7 are complete and the multi-page site is verified working,
+the final commit changes `index.html`'s redirect target from
+`nigeria_reflib_dashboard_v21.html` to `/database/` (or to `/about/` if
+the about page is the better landing — discuss before deciding).
+
+```bash
+# Edit index.html — change the meta-refresh URL
+git add index.html
+git commit -m "Phase 8: switch live site from v21 single-file to multi-page"
+git push origin main
+```
+
+Wait 2–3 minutes for GitHub Pages to publish, then verify envirobiotics.org
+serves the multi-page site instead of the single-file dashboard.
+
+If anything regresses, revert with `git revert HEAD && git push` — the
+single-file v21 dashboard is back as the front door, and the multi-page
+work stays in the repo for further iteration.
+
+---
+
+## Conventions and constraints
+
+- **Edits to large files** (data.js, the v21 source HTML) must use
+  Python `content.replace()` for reliability, not `sed`.
+- **Validate every edit** with grep and file size check.
+- **Never modify `nigeria_reflib_dashboard_v21.html`.** It's the
+  canonical source-of-truth.
+- **Search dropdown**: must use `position: fixed` with a
+  `positionDropdown()` JS function, NOT `position: absolute`, to avoid
+  clipping by `overflow: hidden` on the sticky header.
+- **Fonts**: Sora, DM Sans, DM Mono. Loaded via Google Fonts in the
+  shared `<head>` partial.
+- **No build step.** Plain HTML/CSS/JS. No bundler, no transpilation,
+  no npm dependencies.
+
+---
+
+## What "done" looks like
+
+- envirobiotics.org loads the multi-page site (Phase 8 complete)
+- All 8 pages render correctly on desktop, tablet, and mobile
+- The single-file v21 dashboard remains accessible at
+  `/nigeria_reflib_dashboard_v21.html` for archival reference
+- The classification logic on the multi-page site exactly matches v21
+  (verified by Phase 2.1 verification gate and the Phase 7 smoke test)
+
+---
+
+## What's deferred (NOT part of this brief)
+
+- Confirming *Hypanus marianae* IUCN status (LC → VU update from earlier)
+- Uploading full NCBI query results
+- Running `bold_query_fallback.py` and uploading the CSV
+- Biodiversity Data Journal data paper preparation
+- GBIF IPT and OBIS registration
+- Logo integration in the header (waiting on the logo file)
+
+These are data-and-publication tasks. The multi-page conversion is
+infrastructure-and-presentation. Keep them separate to avoid scope creep.
