@@ -1,1 +1,241 @@
-<!doctype html><title>placeholder</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="eDNA metabarcoding gap analysis for the Gulf of Guinea — Nigerian Marine Biodiversity Reference Library v21 coverage explainer and changelog.">
+  <meta name="author" content="Adelodun Odedere — EnviroBiotics.org">
+  <meta property="og:title" content="Gap Analysis — NMBL · EnviroBiotics">
+  <meta property="og:description" content="eDNA metabarcoding gap analysis for the Gulf of Guinea — Nigerian Marine Biodiversity Reference Library.">
+  <meta property="og:url" content="https://envirobiotics.org/gap-analysis/">
+  <link rel="canonical" href="https://envirobiotics.org/gap-analysis/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <title>Gap Analysis — NMBL · EnviroBiotics</title>
+</head>
+<body>
+  <div id="site-header"></div>
+  <div id="site-nav"></div>
+
+  <div class="popup-overlay" id="popup-overlay" role="dialog" aria-modal="true" aria-labelledby="popup-name" onclick="closePopupOnOverlay(event)">
+    <div class="popup-card" id="popup-card">
+      <div class="popup-header">
+        <div class="popup-icon" id="popup-icon"></div>
+        <div class="popup-title">
+          <h2 id="popup-name"></h2>
+          <p id="popup-common"></p>
+        </div>
+        <button class="popup-close" onclick="closePopup()" aria-label="Close species details popup">&#215;</button>
+      </div>
+      <div class="popup-body" id="popup-body"></div>
+      <div class="popup-notes" id="popup-notes"></div>
+      <div class="popup-footer" id="popup-footer"></div>
+    </div>
+  </div>
+
+  <main class="container" id="main-content" role="main" tabindex="-1">
+
+    <div class="page-hero">
+      <h1>Gap Analysis</h1>
+      <p>A live gap analysis dashboard tracking the molecular barcode coverage of Nigerian coastal and marine biodiversity across all major taxonomic groups. Updated as new sequences are generated and deposited.</p>
+      <p style="font-size:13px;color:var(--text2);margin-top:8px;">Nigeria's EEZ covers ~210,000 km² of the Gulf of Guinea. A major limitation for eDNA-based biodiversity monitoring is the absence of regionally representative reference sequences — without them, even a perfect metabarcoding protocol cannot reliably assign Nigerian specimens. This page explains the gap, how coverage is classified, and how the library is addressing it.</p>
+    </div>
+
+    <!-- ── v21 changelog ── -->
+    <details style="background:linear-gradient(135deg,var(--green-bg),var(--blue-bg));border:1px solid var(--green);border-radius:var(--radius-lg);padding:0.75rem 1.25rem;margin-bottom:0.75rem;" open>
+      <summary style="cursor:pointer;font-size:13px;font-weight:700;color:var(--navy);list-style:none;display:flex;align-items:center;gap:10px;">
+        <span style="font-size:10px;font-weight:800;color:#fff;background:linear-gradient(90deg,#0a6b4e,#0d6efd);padding:3px 9px;border-radius:6px;letter-spacing:0.07em;">NEW IN v21</span>
+        <span>Methodology update — marker-specific WA thresholds</span>
+        <span style="margin-left:auto;font-size:11px;color:var(--text2);font-weight:500;">Released April 2026</span>
+      </summary>
+      <div style="margin-top:12px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;">
+        <div style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius);padding:10px 12px;">
+          <div style="font-size:11px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">★ Classification rule rewritten</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.6;">The v20 "WA ≥50% of global NCBI" ratio is <strong>retired</strong>. Classification now uses <strong>marker-specific absolute WA record thresholds</strong> — COI ≥5, 12S ≥3, 18S ≥1, 28S ≥1, rbcL ≥3 — chosen to reflect the intraspecific variation needed for reliable identification with each marker.</div>
+        </div>
+        <div style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius);padding:10px 12px;">
+          <div style="font-size:11px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">⚠ Scope change — WA-absent now means absent</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.6;">A species with global records but <strong>zero West African records</strong> is now classified NCBI-<strong style="color:var(--red)">absent</strong> for the regional reference library. Global coverage no longer rescues regional gaps. This affects <em>Tursiops truncatus</em>, <em>Chelonia mydas</em>, <em>Dermochelys coriacea</em>, <em>Lepidochelys olivacea</em>, <em>Carcharhinus leucas</em>, <em>Rhizoprionodon acutus</em>, <em>Parapenaeus longirostris</em>, and others.</div>
+        </div>
+        <div style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius);padding:10px 12px;">
+          <div style="font-size:11px;font-weight:700;color:var(--amber);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">Δ Reclassification summary</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.6;">Three overall-status changes under the new rule: <em>Sardinella maderensis</em> present → partial; <em>Rhizoprionodon acutus</em> and <em>Penaeus notialis</em> partial → absent. Several NCBI-level statuses corrected upward (<em>P. elongatus</em>, <em>Sphyrna lewini</em>) or downward (all turtles, cetaceans, and deep-water shrimps with zero WA records).</div>
+        </div>
+        <div style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius);padding:10px 12px;">
+          <div style="font-size:11px;font-weight:700;color:var(--purple);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">⚡ UI updates</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.6;">Decision-tree flowchart redrawn with a three-stage logic (any WA? → meets threshold? → both databases?) and a marker-threshold legend. All PRESENT/PARTIAL/ABSENT definition cards, Statistics page copy, coverage legend, and species-level notes updated to match. Stale v18/v20 references corrected.</div>
+        </div>
+        <div style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius);padding:10px 12px;">
+          <div style="font-size:11px;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">🔬 Scientific rationale</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.6;">The 50% ratio was mathematically unstable for data-rich species (a fish with 80/400 WA records failed despite operational sufficiency, while a species with 2/2 passed). Absolute marker-specific thresholds align classification with the real question: "can we reliably identify a Nigerian specimen from existing reference data?" Global counts are retained as context but no longer classify.</div>
+        </div>
+        <div style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius);padding:10px 12px;">
+          <div style="font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">🛡 Audit trail</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.6;">Species entries previously flagged as "present" with ratio-inflated status (e.g. <em>Sardinella maderensis</em> at 2/2 = 100%) have been reviewed and corrected. Critical gaps, well-covered, and partial coverage lists reconciled. Priority flags adjusted where overall status changed.</div>
+        </div>
+      </div>
+    </details>
+
+    <!-- ── v20 changelog ── -->
+    <details style="background:linear-gradient(135deg,var(--blue-bg),var(--teal-bg));border:1px solid var(--blue);border-radius:var(--radius-lg);padding:0.75rem 1.25rem;margin-bottom:1.5rem;">
+      <summary style="cursor:pointer;font-size:13px;font-weight:700;color:var(--navy);list-style:none;display:flex;align-items:center;gap:10px;">
+        <span style="font-size:10px;font-weight:800;color:#fff;background:linear-gradient(90deg,#0d6efd,#0c8599);padding:3px 9px;border-radius:6px;letter-spacing:0.07em;">v20 HISTORY</span>
+        <span>What shipped in v20</span>
+        <span style="margin-left:auto;font-size:11px;color:var(--text2);font-weight:500;">Released April 2026</span>
+      </summary>
+      <div style="margin-top:12px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;">
+        <div style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius);padding:10px 12px;">
+          <div style="font-size:11px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">★ Headline feature</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.55;"><strong>Top Priority Sequencing Targets</strong> leaderboard on the Statistics page — ranked list weighted by absence, IUCN status, and ecological priority. The funder-ready answer to "what should we sequence next?"</div>
+        </div>
+        <div style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius);padding:10px 12px;">
+          <div style="font-size:11px;font-weight:700;color:var(--purple);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">+ New view</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.55;"><strong>IUCN × coverage crosstab</strong> on the Statistics page — surfaces threatened taxa (VU/EN/CR) that lack reference barcodes.</div>
+        </div>
+        <div style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius);padding:10px 12px;">
+          <div style="font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">+ New view</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.55;"><strong>Coverage classification flowchart</strong> — visual decision tree for the present / partial / absent assignment (updated in v21 to reflect marker-specific WA thresholds). See the <a href="/statistics/" style="color:var(--green);">Statistics page</a> for the full flowchart.</div>
+        </div>
+        <div style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius);padding:10px 12px;">
+          <div style="font-size:11px;font-weight:700;color:var(--amber);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">⚡ UX improvement</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.55;"><strong>Keyboard shortcuts</strong> — press <kbd style="background:var(--bg2);border:0.5px solid var(--border2);padding:1px 5px;border-radius:3px;font-family:'DM Mono',monospace;font-size:10px;">⌘K</kbd> / <kbd style="background:var(--bg2);border:0.5px solid var(--border2);padding:1px 5px;border-radius:3px;font-family:'DM Mono',monospace;font-size:10px;">Ctrl+K</kbd> or <kbd style="background:var(--bg2);border:0.5px solid var(--border2);padding:1px 5px;border-radius:3px;font-family:'DM Mono',monospace;font-size:10px;">/</kbd> to focus search, <kbd style="background:var(--bg2);border:0.5px solid var(--border2);padding:1px 5px;border-radius:3px;font-family:'DM Mono',monospace;font-size:10px;">Esc</kbd> to dismiss.</div>
+        </div>
+        <div style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius);padding:10px 12px;">
+          <div style="font-size:11px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">🐛 Bug fixes</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.55;">Removed duplicate Cloudflare email script (loaded 3× before); fixed broken email placeholders on Gallery and Bank Transfer; consolidated duplicate back-to-top buttons; repaired truncated newsletter handler.</div>
+        </div>
+        <div style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius);padding:10px 12px;">
+          <div style="font-size:11px;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">📐 Responsive</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.55;">Statistics KPI grids now use <code style="font-size:11px;background:var(--bg2);padding:1px 4px;border-radius:3px;">auto-fit</code> layout — no longer cramped on tablets and phones.</div>
+        </div>
+      </div>
+    </details>
+
+    <div class="two-col" style="margin-bottom:1.5rem;">
+      <div class="accent-card">
+        <h3>Why coverage matters</h3>
+        <p>Every species in the "absent" column could represent a false negative in any eDNA metabarcoding study conducted in Nigerian waters. The animal or plant may be present, its DNA may be in your sample, and your PCR may amplify it perfectly — but without a matching reference barcode, your analysis software returns nothing. This dashboard makes the scale of that problem visible and actionable.</p>
+      </div>
+      <div class="info-card">
+        <h3>Gulf of Guinea endemics — priority targets</h3>
+        <p><em>Pteroscion peli</em> (boe drum), <em>Lutjanus goreensis</em> (Gorean snapper), <em>Scomberomorus tritor</em> (West African Spanish mackerel), and <em>Strombus latus</em> (West African stromb) are among several species with zero sequences anywhere in global databases. Each represents a publishable first-barcode contribution. <em>Tympanotonos fuscatus</em> — the most commercially important macroinvertebrate in the Niger Delta — has partial global coverage but zero Nigeria-specific records.</p>
+      </div>
+    </div>
+
+    <div class="section-head">Current coverage statistics</div>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:1.5rem;" id="db-stats-grid">
+      <div class="db-stat"><div class="big-number" id="db-total">—</div><div class="big-label">Total taxa assessed</div></div>
+      <div class="db-stat"><div class="big-number" style="color:var(--green);" id="db-present">—</div><div style="font-size:11px;color:var(--green);opacity:0.8;" id="db-present-pct"></div><div class="big-label">Have sequences</div></div>
+      <div class="db-stat"><div class="big-number" style="color:var(--red);" id="db-absent">—</div><div style="font-size:11px;color:var(--red);opacity:0.8;" id="db-absent-pct"></div><div class="big-label">Priority gaps (absent)</div></div>
+      <div class="db-stat"><div class="big-number" style="color:var(--amber);" id="db-partial">—</div><div style="font-size:11px;color:var(--amber);opacity:0.8;" id="db-partial-pct"></div><div class="big-label">Partial coverage</div></div>
+      <div class="db-stat"><div class="big-number" style="color:var(--purple);" id="db-nema">—</div><div style="font-size:11px;color:var(--purple);opacity:0.8;" id="db-nema-note">genera tracked</div><div class="big-label">Nematodes</div></div>
+    </div>
+
+    <div class="section-head">What is in this database</div>
+    <div class="two-col" style="margin-bottom:1.5rem;">
+      <div class="info-card">
+        <h3>Taxonomic groups covered</h3>
+        <ul>
+          <li><strong>Fish (estuarine + coastal)</strong> — 16 priority species, 12S rRNA marker</li>
+          <li><strong>Elasmobranchs</strong> — sharks and rays of the Nigerian coast</li>
+          <li><strong>Marine pelagic fish</strong> — tuna, mackerel, swordfish, billfish</li>
+          <li><strong>Marine demersal fish</strong> — offshore snappers, groupers, dentex</li>
+          <li><strong>Coral reef and hard substrate</strong> — corals, sea urchins, holothurians</li>
+          <li><strong>Macrobenthos</strong> — <em>Tympanotonos</em>, <em>Pachymelania</em>, bivalves, polychaetes, mangrove crabs</li>
+          <li><strong>Nematodes</strong> — 25 genera across 8 orders, 18S + 28S</li>
+          <li><strong>Meiofauna</strong> — copepods, ostracods, foraminifera</li>
+          <li><strong>Seagrass &amp; macroalgae</strong> — including <em>Sargassum</em> bloom species</li>
+          <li><strong>Marine mammals</strong> — including African manatee, Atlantic humpback dolphin</li>
+          <li><strong>Sea turtles</strong> — all three nesting species</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>How to use this database</h3>
+        <p>The <a href="/database/" style="color:var(--blue);">Database page</a> shows every species in one searchable, sortable table with filters by group, marker, status, and priority. Use the search bar to find any species instantly.</p>
+        <p>The <a href="/statistics/" style="color:var(--blue);">Statistics page</a> shows live KPI cards, the Top Priority Sequencing Targets leaderboard, the IUCN × coverage crosstab, and the classification decision-tree flowchart.</p>
+        <p>All data can be <strong>exported as CSV</strong> from the Database and Statistics pages for use in your own analysis or grant proposal.</p>
+        <div style="margin-top:14px;padding:10px 12px;background:var(--bg2);border-radius:var(--radius);border-left:3px solid var(--blue);">
+          <div style="font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:5px;">Cite this database</div>
+          <p style="font-size:12px;color:var(--text2);font-style:italic;line-height:1.7;margin:0;">Odedere, A.O. (<span id="cite-year">2026</span>). <em>Nigerian Marine Biodiversity Reference Library: A molecular reference framework for the coastal and marine biodiversity of the Gulf of Guinea.</em> Available at: EnviroBiotics.org [accessed <span id="cite-date"></span>]. doi:<a href="https://doi.org/10.5281/zenodo.19201628" target="_blank" style="color:var(--blue);">10.5281/zenodo.19201628</a></p>
+          <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap;">
+            <a href="https://doi.org/10.5281/zenodo.19201628" target="_blank" style="font-size:11px;display:inline-flex;align-items:center;gap:5px;padding:4px 10px;background:var(--green-bg);border:0.5px solid rgba(10,107,78,0.2);border-radius:6px;color:var(--green);text-decoration:none;font-weight:600;">📦 Zenodo DOI</a>
+            <a href="https://github.com/donsheva/Nigerian-Marine-Biodiversity-Reference-Library" target="_blank" style="font-size:11px;display:inline-flex;align-items:center;gap:5px;padding:4px 10px;background:var(--bg2);border:0.5px solid var(--border2);border-radius:6px;color:var(--text2);text-decoration:none;font-weight:600;"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg> GitHub Repository</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-head">The regional gap — why Nigeria?</div>
+    <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem 1.5rem;margin-bottom:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+      <p style="font-size:13px;color:var(--text2);line-height:1.75;margin-bottom:12px;">eDNA metabarcoding is increasingly used for fisheries stock assessment, MPA monitoring, and invasive species detection. Its accuracy depends entirely on the quality and regional representativeness of the reference database. Global databases like NCBI Nucleotide and BOLD Systems are disproportionately populated by specimens from North America, Europe, and East Asia — West African coastal taxa are dramatically underrepresented. A sequence identified as <em>Penaeus notialis</em> (the most commercially important shrimp in Nigeria) may never be correctly assigned in a Nigerian water sample, because the 45 global COI records come from Mediterranean and Atlantic fisheries, not West Africa.</p>
+      <p style="font-size:13px;color:var(--text2);line-height:1.75;margin-bottom:12px;">This library directly addresses that gap by: (1) systematically identifying which species are covered and which are not, using the regional classification rule described above; (2) generating new Nigerian voucher sequences and depositing them in BOLD under project code NGMBL; and (3) publishing the reference framework as a citable data paper to catalyse parallel efforts across the Gulf of Guinea.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:14px;">
+        <div style="background:var(--red-bg);border:1px solid var(--red);border-radius:var(--radius);padding:12px 14px;text-align:center;">
+          <div style="font-size:28px;font-weight:800;color:var(--red);" id="ga-absent">—</div>
+          <div style="font-size:11px;color:var(--red);font-weight:600;text-transform:uppercase;letter-spacing:0.04em;margin-top:4px;">Taxa with zero WA sequences</div>
+        </div>
+        <div style="background:var(--amber-bg);border:1px solid var(--amber);border-radius:var(--radius);padding:12px 14px;text-align:center;">
+          <div style="font-size:28px;font-weight:800;color:var(--amber);" id="ga-partial">—</div>
+          <div style="font-size:11px;color:var(--amber);font-weight:600;text-transform:uppercase;letter-spacing:0.04em;margin-top:4px;">Taxa with partial WA coverage</div>
+        </div>
+        <div style="background:var(--green-bg);border:1px solid var(--green);border-radius:var(--radius);padding:12px 14px;text-align:center;">
+          <div style="font-size:28px;font-weight:800;color:var(--green);" id="ga-present">—</div>
+          <div style="font-size:11px;color:var(--green);font-weight:600;text-transform:uppercase;letter-spacing:0.04em;margin-top:4px;">Taxa with reliable WA coverage</div>
+        </div>
+        <div style="background:var(--purple-bg);border:1px solid var(--purple);border-radius:var(--radius);padding:12px 14px;text-align:center;">
+          <div style="font-size:28px;font-weight:800;color:var(--purple);" id="ga-iucn">—</div>
+          <div style="font-size:11px;color:var(--purple);font-weight:600;text-transform:uppercase;letter-spacing:0.04em;margin-top:4px;">Threatened taxa (CR/EN/VU) with gaps</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:14px 18px;background:var(--bg2);border-radius:var(--radius);border-left:4px solid var(--blue);margin-bottom:1.5rem;">
+      <p style="font-size:13px;color:var(--text2);margin:0;line-height:1.7;">
+        <strong>Explore the data:</strong> &nbsp;
+        <a href="/database/" style="color:var(--blue);font-weight:600;">Browse all 107 taxa →</a> &nbsp;·&nbsp;
+        <a href="/statistics/" style="color:var(--blue);font-weight:600;">View statistics &amp; priority targets →</a> &nbsp;·&nbsp;
+        <a href="/resources/" style="color:var(--blue);font-weight:600;">Download scripts &amp; raw data →</a>
+      </p>
+    </div>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="/assets/js/data.js"></script>
+  <script src="/assets/js/stats.js"></script>
+  <script src="/assets/js/search.js"></script>
+  <script src="/assets/js/popup.js"></script>
+  <script src="/assets/js/contact.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/partials.js"></script>
+  <script>
+    const _months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    const _now = new Date();
+    const _citeDate = _now.getDate() + ' ' + _months[_now.getMonth()] + ' ' + _now.getFullYear();
+
+    document.addEventListener('DOMContentLoaded', function () {
+      populateDbStats();
+      const yearEl = document.getElementById('cite-year');
+      const dateEl = document.getElementById('cite-date');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+      if (dateEl) dateEl.textContent = _citeDate;
+
+      // Populate gap summary counters
+      const absent  = ALL_TAXA.filter(s => overallStatus(s) === 'absent').length;
+      const partial = ALL_TAXA.filter(s => overallStatus(s) === 'partial').length;
+      const present = ALL_TAXA.filter(s => overallStatus(s) === 'present').length;
+      const iucnGap = (typeof VERTEBRATES !== 'undefined' ? VERTEBRATES : ALL_TAXA.filter(s => s.iucn))
+                        .filter(s => ['CR','EN','VU'].includes(s.iucn) && overallStatus(s) !== 'present').length;
+      const ga = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
+      ga('ga-absent', absent);
+      ga('ga-partial', partial);
+      ga('ga-present', present);
+      ga('ga-iucn', iucnGap);
+    });
+  </script>
+</body>
+</html>

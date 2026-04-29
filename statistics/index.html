@@ -1,1 +1,341 @@
-<!doctype html><title>placeholder</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Live database coverage statistics for the Nigerian Marine Biodiversity Reference Library — KPIs, priority targets, IUCN cross-tab, and marker coverage.">
+  <meta name="author" content="Adelodun Odedere — EnviroBiotics.org">
+  <meta property="og:title" content="Statistics — NMBL · EnviroBiotics">
+  <meta property="og:description" content="Live coverage statistics for the Nigerian Marine Biodiversity Reference Library.">
+  <meta property="og:url" content="https://envirobiotics.org/statistics/">
+  <link rel="canonical" href="https://envirobiotics.org/statistics/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <title>Statistics — NMBL · EnviroBiotics</title>
+</head>
+<body>
+  <div id="site-header"></div>
+  <div id="site-nav"></div>
+
+  <div class="popup-overlay" id="popup-overlay" role="dialog" aria-modal="true" aria-labelledby="popup-name" onclick="closePopupOnOverlay(event)">
+    <div class="popup-card" id="popup-card">
+      <div class="popup-header">
+        <div class="popup-icon" id="popup-icon"></div>
+        <div class="popup-title">
+          <h2 id="popup-name"></h2>
+          <p id="popup-common"></p>
+        </div>
+        <button class="popup-close" onclick="closePopup()" aria-label="Close species details popup">&#215;</button>
+      </div>
+      <div class="popup-body" id="popup-body"></div>
+      <div class="popup-notes" id="popup-notes"></div>
+      <div class="popup-footer" id="popup-footer"></div>
+    </div>
+  </div>
+
+  <main class="container" id="main-content" role="main" tabindex="-1">
+
+    <div class="page-hero">
+      <h1>Statistics</h1>
+      <p>Live database coverage statistics for the Nigerian Marine Biodiversity Reference Library. Coverage is computed dynamically from the data arrays — all stats update automatically when classifications change. <strong>Present</strong> requires West African records meeting the marker threshold (COI ≥5, 12S ≥3, 18S ≥1, 28S ≥1, rbcL ≥3) in both NCBI and BOLD/SILVA. <strong>Absent</strong> = zero WA records in both databases. Coverage reflects regional (West African) reference availability, not global sequence count.</p>
+    </div>
+
+    <!-- QUICK KPI CARDS -->
+    <div id="stats-kpi-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:1.5rem;"></div>
+
+    <!-- DONUT + BAR CHARTS -->
+    <div style="display:grid;grid-template-columns:1fr 2fr;gap:12px;margin-bottom:1.5rem;">
+      <div style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+        <div style="font-size:11px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:12px;">Overall Global Coverage</div>
+        <svg id="donut-chart" viewBox="0 0 140 140" width="140" height="140" style="display:block;margin:0 auto;overflow:visible;"></svg>
+        <div id="donut-legend" style="display:flex;justify-content:center;gap:10px;margin-top:10px;flex-wrap:wrap;"></div>
+      </div>
+      <div style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;">
+        <div style="font-size:11px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:12px;">Priority Gaps (Absent taxa) by Taxonomic Group</div>
+        <div id="gap-bar-chart" style="display:flex;flex-direction:column;gap:5px;"></div>
+      </div>
+    </div>
+
+    <!-- ★ TOP PRIORITY SEQUENCING TARGETS -->
+    <div class="section-head" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+      <span>★ Top Priority Sequencing Targets</span>
+      <span style="font-size:10px;font-weight:800;color:#fff;background:linear-gradient(90deg,#0d6efd,#0c8599);padding:2px 8px;border-radius:5px;letter-spacing:0.06em;">NEW v20</span>
+    </div>
+    <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem 1.5rem;margin-bottom:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:14px;flex-wrap:wrap;">
+        <div style="flex:1;min-width:260px;">
+          <p style="font-size:12.5px;color:var(--text2);line-height:1.65;margin:0;">
+            A weighted ranking of taxa most in need of new voucher sequencing. Score = base priority (high=3, med=2, low=1) + absent overall (+3) + IUCN threatened (CR=4, EN=3, VU=2, NT=1) + zero global records (+2) + Nigerian commercial/ecological priority (+1). The top entries are the strongest candidates for grant proposals or first-barcode publications.
+          </p>
+        </div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
+          <label style="font-size:11px;color:var(--text2);">Filter:</label>
+          <select id="prio-filter-group" onchange="renderPriorityLeaderboard()" style="font-size:12px;padding:5px 8px;border:0.5px solid var(--border2);border-radius:6px;background:var(--bg);">
+            <option value="all">All groups</option>
+            <option value="vertebrate">Vertebrates</option>
+            <option value="macrobenthos">Macrobenthos</option>
+            <option value="marine">Marine species</option>
+            <option value="meiofauna">Meiofauna</option>
+          </select>
+          <select id="prio-filter-status" onchange="renderPriorityLeaderboard()" style="font-size:12px;padding:5px 8px;border:0.5px solid var(--border2);border-radius:6px;background:var(--bg);">
+            <option value="all">All statuses</option>
+            <option value="absent">Absent only</option>
+            <option value="partial">Partial only</option>
+          </select>
+          <button onclick="exportPriorityCSV()" style="font-size:11px;padding:5px 10px;background:var(--blue);color:#fff;border:none;border-radius:6px;cursor:pointer;font-weight:600;">Export CSV</button>
+        </div>
+      </div>
+      <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:12.5px;">
+          <thead>
+            <tr style="background:var(--bg2);border-bottom:2px solid var(--border);">
+              <th style="padding:8px 10px;text-align:center;font-size:10px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:0.05em;width:36px;">#</th>
+              <th style="padding:8px 10px;text-align:left;font-size:10px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:0.05em;">Species</th>
+              <th style="padding:8px 10px;text-align:left;font-size:10px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:0.05em;">Group</th>
+              <th style="padding:8px 10px;text-align:center;font-size:10px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:0.05em;">Marker</th>
+              <th style="padding:8px 10px;text-align:center;font-size:10px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:0.05em;">Status</th>
+              <th style="padding:8px 10px;text-align:center;font-size:10px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:0.05em;">IUCN</th>
+              <th style="padding:8px 10px;text-align:center;font-size:10px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:0.05em;" title="Composite score">Score</th>
+              <th style="padding:8px 10px;text-align:left;font-size:10px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:0.05em;">Why prioritise</th>
+            </tr>
+          </thead>
+          <tbody id="priority-tbody">
+            <tr><td colspan="8" style="padding:20px;text-align:center;color:var(--text3);">Loading priority targets...</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-top:10px;font-size:11px;color:var(--text3);font-style:italic;">Showing top 15 — use the dropdowns to refine. <strong>Highest score</strong> = highest priority.</div>
+    </div>
+
+    <!-- IUCN × COVERAGE CROSSTAB -->
+    <div class="section-head" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+      <span>IUCN Status × Reference Coverage</span>
+      <span style="font-size:10px;font-weight:800;color:#fff;background:linear-gradient(90deg,#0d6efd,#0c8599);padding:2px 8px;border-radius:5px;letter-spacing:0.06em;">NEW v20</span>
+    </div>
+    <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem 1.5rem;margin-bottom:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+      <p style="font-size:12.5px;color:var(--text2);line-height:1.65;margin-bottom:14px;">
+        The conservation-urgency view: IUCN-listed threatened species (Vulnerable, Endangered, Critically Endangered) cross-tabulated against reference coverage. <strong>Threatened taxa with absent or partial coverage cannot be reliably monitored by eDNA</strong> — a gap with direct consequences for fisheries policy, MPA management, and CITES reporting.
+      </p>
+      <div id="iucn-crosstab-container" style="overflow-x:auto;"></div>
+      <div id="iucn-flagged-list" style="margin-top:14px;"></div>
+    </div>
+
+    <!-- MARKER MINI CARDS -->
+    <div id="marker-kpi-row" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px;margin-bottom:1.5rem;"></div>
+
+    <div class="section-head">Database records</div>
+    <div style="overflow-x:auto;margin-bottom:1.5rem;">
+      <table style="width:100%;border-collapse:collapse;font-size:13px;min-width:600px;">
+        <thead>
+          <tr style="background:var(--bg2);border-bottom:1px solid var(--border);">
+            <th style="padding:10px 14px;text-align:left;font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:0.05em;">Taxonomic group</th>
+            <th style="padding:10px 14px;text-align:center;font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;">Taxa tracked</th>
+            <th style="padding:10px 14px;text-align:center;font-size:11px;font-weight:600;color:var(--green);text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;" title="Sequences found in BOTH NCBI and BOLD/SILVA globally">Present (global)</th>
+            <th style="padding:10px 14px;text-align:center;font-size:11px;font-weight:600;color:var(--amber);text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;" title="Sequences in one database only or lacking West African records">Partial (WA gap)</th>
+            <th style="padding:10px 14px;text-align:center;font-size:11px;font-weight:600;color:var(--red);text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;" title="Zero West African records in both NCBI and BOLD/SILVA — undetectable in Nigerian eDNA">Absent (0 WA)</th>
+            <th style="padding:10px 14px;text-align:center;font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;">Global coverage %</th>
+          </tr>
+        </thead>
+        <tbody id="stats-tbody">
+          <tr><td colspan="7" style="padding:20px;text-align:center;color:var(--text3);">Loading statistics...</td></tr>
+        </tbody>
+        <tfoot id="stats-tfoot"></tfoot>
+      </table>
+    </div>
+
+    <div style="background:var(--bg2);border-radius:var(--radius);padding:12px 16px;margin-bottom:1.5rem;font-size:12px;color:var(--text2);">
+      <strong>Column definitions:</strong> &nbsp;
+      <strong>Taxa tracked</strong> — all species/genera assessed in this dashboard. &nbsp;
+      <strong style="color:var(--green)">Present (regional)</strong> — taxa with qualifying barcodes in BOTH NCBI AND BOLD/SILVA, with WA records meeting the marker threshold (COI ≥5, 12S ≥3, 18S ≥1, 28S ≥1, rbcL ≥3). &nbsp;
+      <strong style="color:var(--amber)">Partial (regional gap)</strong> — WA records exist but fall below marker threshold, or only one database covered. &nbsp;
+      <strong style="color:var(--red)">Absent (WA gap)</strong> — zero West African records in both NCBI and BOLD/SILVA; highest priority for new barcoding regardless of global availability. &nbsp;
+      <strong>Regional coverage %</strong> — percentage of taxa with at least one qualifying WA barcode record across both databases.
+    </div>
+
+    <div class="section-head">Marker gene coverage</div>
+    <div style="overflow-x:auto;margin-bottom:1.5rem;">
+      <table style="width:100%;border-collapse:collapse;font-size:13px;">
+        <thead>
+          <tr style="background:var(--bg2);border-bottom:1px solid var(--border);">
+            <th style="padding:10px 14px;text-align:left;font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;">Marker gene</th>
+            <th style="padding:10px 14px;text-align:left;font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:0.05em;min-width:200px;">Target groups</th>
+            <th style="padding:10px 14px;text-align:left;font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:0.05em;min-width:160px;">Primers used</th>
+            <th style="padding:10px 14px;text-align:left;font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:0.05em;min-width:130px;">Primary database</th>
+            <th style="padding:10px 14px;text-align:center;font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;">Taxa tracked</th>
+            <th style="padding:10px 14px;text-align:center;font-size:11px;font-weight:600;color:var(--green);text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;">With barcode</th>
+            <th style="padding:10px 14px;text-align:center;font-size:11px;font-weight:600;color:var(--red);text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;">Gaps</th>
+            <th style="padding:10px 14px;text-align:center;font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;">Coverage</th>
+          </tr>
+        </thead>
+        <tbody id="marker-tbody">
+          <tr><td colspan="8" style="padding:20px;text-align:center;color:var(--text3);">Loading...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Classification flowchart -->
+    <div class="section-head">📊 Data Sources — How Coverage Is Determined</div>
+    <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem 1.5rem;margin-bottom:1rem;box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:8px;">
+        <div style="font-size:13px;font-weight:700;color:var(--navy);">Classification decision tree</div>
+        <div style="font-size:11px;color:var(--text3);">Applied to every species at render time — no manual classification</div>
+      </div>
+      <svg viewBox="0 0 900 430" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;max-width:100%;font-family:'Sora',sans-serif;">
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#3d4f63"/>
+          </marker>
+        </defs>
+
+        <!-- Root: query -->
+        <rect x="350" y="10" width="200" height="58" rx="8" fill="#091e38" stroke="#091e38"/>
+        <text x="450" y="33" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">Query species</text>
+        <text x="450" y="51" text-anchor="middle" fill="#cfd8e3" font-size="10.5">NCBI + BOLD + SILVA (WA filter)</text>
+
+        <!-- Decision 1: any WA records? -->
+        <line x1="450" y1="68" x2="450" y2="92" stroke="#3d4f63" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <polygon points="450,95 560,140 450,185 340,140" fill="#fef3e0" stroke="#7d4a06" stroke-width="1.2"/>
+        <text x="450" y="132" text-anchor="middle" fill="#7d4a06" font-size="11.5" font-weight="700">Any West African</text>
+        <text x="450" y="147" text-anchor="middle" fill="#7d4a06" font-size="11.5" font-weight="700">NCBI records?</text>
+        <text x="450" y="161" text-anchor="middle" fill="#7d4a06" font-size="10">(WA_NCBI ≥ 1)</text>
+
+        <!-- NO branch → ABSENT -->
+        <line x1="340" y1="140" x2="205" y2="140" stroke="#3d4f63" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <text x="272" y="132" text-anchor="middle" fill="#3d4f63" font-size="11" font-weight="600">No</text>
+        <rect x="40" y="115" width="165" height="50" rx="8" fill="#fceaea" stroke="#9b2525" stroke-width="1.5"/>
+        <text x="122" y="138" text-anchor="middle" fill="#9b2525" font-size="13" font-weight="800">✗ ABSENT</text>
+        <text x="122" y="155" text-anchor="middle" fill="#9b2525" font-size="10">No regional reference</text>
+
+        <!-- YES branch → Decision 2 -->
+        <line x1="560" y1="140" x2="680" y2="140" stroke="#3d4f63" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <text x="620" y="132" text-anchor="middle" fill="#3d4f63" font-size="11" font-weight="600">Yes</text>
+
+        <!-- Decision 2: WA records ≥ marker threshold? -->
+        <polygon points="785,95 895,140 785,185 680,140" fill="#e8f1ff" stroke="#1462e8" stroke-width="1.2"/>
+        <text x="785" y="130" text-anchor="middle" fill="#1462e8" font-size="11" font-weight="700">WA records meet</text>
+        <text x="785" y="144" text-anchor="middle" fill="#1462e8" font-size="11" font-weight="700">marker threshold?</text>
+        <text x="785" y="158" text-anchor="middle" fill="#1462e8" font-size="10">(COI≥5 · 12S≥3 · 18S≥1)</text>
+
+        <!-- NO branch (below threshold) → PARTIAL -->
+        <path d="M 785 185 L 785 215 L 450 215 L 450 245" fill="none" stroke="#3d4f63" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <text x="620" y="208" text-anchor="middle" fill="#3d4f63" font-size="11" font-weight="600">No (below threshold)</text>
+
+        <!-- YES branch (meets threshold) → Decision 3 -->
+        <line x1="895" y1="140" x2="895" y2="260" stroke="#3d4f63" stroke-width="1.5"/>
+        <text x="875" y="200" text-anchor="middle" fill="#3d4f63" font-size="11" font-weight="600">Yes</text>
+
+        <!-- Decision 3: both DBs? -->
+        <polygon points="785,265 895,310 785,355 675,310" fill="#e0f5ed" stroke="#0a6b4e" stroke-width="1.2"/>
+        <text x="785" y="302" text-anchor="middle" fill="#0a6b4e" font-size="11" font-weight="700">Records in both</text>
+        <text x="785" y="316" text-anchor="middle" fill="#0a6b4e" font-size="11" font-weight="700">NCBI and BOLD?</text>
+
+        <!-- arrow from yes branch down into diamond -->
+        <line x1="895" y1="260" x2="895" y2="310" stroke="#3d4f63" stroke-width="0"/>
+        <path d="M 895 260 L 895 275" fill="none" stroke="#3d4f63" stroke-width="1.5"/>
+
+        <!-- D3 YES → PRESENT (down) -->
+        <line x1="785" y1="355" x2="785" y2="385" stroke="#3d4f63" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <text x="805" y="373" text-anchor="middle" fill="#3d4f63" font-size="11" font-weight="600">Yes</text>
+        <rect x="715" y="385" width="140" height="40" rx="8" fill="#e0f5ed" stroke="#0a6b4e" stroke-width="1.5"/>
+        <text x="785" y="403" text-anchor="middle" fill="#0a6b4e" font-size="13" font-weight="800">✓ PRESENT</text>
+        <text x="785" y="418" text-anchor="middle" fill="#0a6b4e" font-size="10">Reliable regional ID</text>
+
+        <!-- D3 NO → PARTIAL (left, joins partial box) -->
+        <path d="M 675 310 L 540 310 L 540 275" fill="none" stroke="#3d4f63" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <text x="608" y="302" text-anchor="middle" fill="#3d4f63" font-size="11" font-weight="600">No (one DB only)</text>
+
+        <!-- PARTIAL output box -->
+        <rect x="370" y="245" width="160" height="50" rx="8" fill="#fef3e0" stroke="#7d4a06" stroke-width="1.5"/>
+        <text x="450" y="268" text-anchor="middle" fill="#7d4a06" font-size="13" font-weight="800">~ PARTIAL</text>
+        <text x="450" y="285" text-anchor="middle" fill="#7d4a06" font-size="10">Regional data insufficient</text>
+      </svg>
+      <div style="margin-top:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;">
+        <div style="background:var(--bg2);border-radius:var(--radius);padding:8px 12px;font-size:11px;color:var(--text2);"><strong style="color:var(--blue);">COI</strong> ≥5 WA records<br><span style="font-size:10px;color:var(--text3);">Fast-evolving animal barcode</span></div>
+        <div style="background:var(--bg2);border-radius:var(--radius);padding:8px 12px;font-size:11px;color:var(--text2);"><strong style="color:var(--blue);">12S</strong> ≥3 WA records<br><span style="font-size:10px;color:var(--text3);">Vertebrate eDNA marker</span></div>
+        <div style="background:var(--bg2);border-radius:var(--radius);padding:8px 12px;font-size:11px;color:var(--text2);"><strong style="color:var(--blue);">18S</strong> ≥1 WA record<br><span style="font-size:10px;color:var(--text3);">Genus-level, conserved</span></div>
+        <div style="background:var(--bg2);border-radius:var(--radius);padding:8px 12px;font-size:11px;color:var(--text2);"><strong style="color:var(--blue);">28S</strong> ≥1 WA record<br><span style="font-size:10px;color:var(--text3);">Genus-level metazoan</span></div>
+        <div style="background:var(--bg2);border-radius:var(--radius);padding:8px 12px;font-size:11px;color:var(--text2);"><strong style="color:var(--blue);">rbcL</strong> ≥3 WA records<br><span style="font-size:10px;color:var(--text3);">Plants/algae barcode</span></div>
+      </div>
+      <div style="margin-top:10px;padding:10px 12px;background:var(--bg2);border-radius:var(--radius);font-size:11.5px;color:var(--text2);line-height:1.6;">
+        <strong>Worked examples.</strong> <em>Sardinella aurita</em> has 4 WA 12S records (≥3, meets threshold) and BOLD WA records confirmed — overall <strong style="color:var(--green)">present</strong>. <em>Drepane africana</em> has 2 WA 12S records (below the threshold of 3) — <strong style="color:var(--amber)">partial</strong>, more regional barcodes needed. <em>Tursiops truncatus</em> has 42 global COI records but zero West African records — NCBI is <strong style="color:var(--red)">absent</strong> for the regional library regardless of global abundance; BOLD WA-present keeps overall status <strong style="color:var(--amber)">partial</strong>. This is the key shift from v20: global coverage no longer rescues a species with zero regional sequences.
+      </div>
+    </div>
+
+    <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem 1.5rem;margin-bottom:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;">
+        <div style="display:flex;align-items:flex-start;gap:10px;background:var(--green-bg);border:1px solid var(--green);border-radius:var(--radius);padding:10px 14px;flex:1;min-width:220px;">
+          <span style="background:var(--green-bg);color:var(--green);padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;border:1px solid var(--green);white-space:nowrap;flex-shrink:0;">✓ PRESENT</span>
+          <span style="font-size:12px;color:var(--text2);line-height:1.5;">Qualifying barcodes in <strong>both</strong> NCBI <strong>and</strong> BOLD/SILVA, with <strong>WA records meeting the marker threshold</strong> (COI ≥5, 12S ≥3, 18S ≥1, 28S ≥1, rbcL ≥3). Reliably detectable for Nigerian eDNA — though Nigeria-specific sequences remain preferred.</span>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:10px;background:var(--amber-bg);border:1px solid var(--amber);border-radius:var(--radius);padding:10px 14px;flex:1;min-width:220px;">
+          <span style="background:var(--amber-bg);color:var(--amber);padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;border:1px solid var(--amber);white-space:nowrap;flex-shrink:0;">~ PARTIAL</span>
+          <span style="font-size:12px;color:var(--text2);line-height:1.5;">WA records exist but fall <strong>below the marker threshold</strong>, or sequences exist in only one database. Identification possible but not robust — more regional barcodes needed.</span>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:10px;background:var(--red-bg);border:1px solid var(--red);border-radius:var(--radius);padding:10px 14px;flex:1;min-width:220px;">
+          <span style="background:var(--red-bg);color:var(--red);padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;border:1px solid var(--red);white-space:nowrap;flex-shrink:0;">✗ ABSENT</span>
+          <span style="font-size:12px;color:var(--text2);line-height:1.5;"><strong>Zero West African records in both NCBI and BOLD/SILVA.</strong> No regional reference sequence exists for this taxon — undetectable in Nigerian eDNA surveys regardless of global availability. Highest priority for new voucher collection and barcoding.</span>
+        </div>
+      </div>
+      <p style="font-size:12px;color:var(--text2);line-height:1.7;margin-bottom:14px;">Coverage status is derived by cross-referencing each taxon against the following 10 global databases. A taxon is classified <strong style="color:var(--green)">present</strong> when qualifying barcodes exist in both NCBI and BOLD/SILVA <em>with West African records meeting the marker-specific threshold</em> (COI ≥5, 12S ≥3, 18S ≥1, 28S ≥1, rbcL ≥3); <strong style="color:var(--amber)">partial</strong> when WA records exist but fall below the marker threshold, or when only one database is covered; and <strong style="color:var(--red)">absent</strong> when zero WA records exist in both NCBI and BOLD/SILVA. <strong>Thresholds reflect the intraspecific variation needed for reliable identification with each marker</strong> — fast-evolving barcodes like COI require more replicate sequences to capture haplotype diversity, while conserved ribosomal markers (18S, 28S) used for genus-level work are operationally useful with a single well-curated reference. <strong>Classification is WA-specific: a taxon with global records but zero West African sequences is an "absent" gap in the regional reference library, regardless of global coverage.</strong></p>
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;">
+        <div style="background:var(--blue-bg);border:0.5px solid var(--blue);border-radius:var(--radius);padding:8px 10px;"><div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:3px;">NCBI Nucleotide</div><div style="font-size:10px;color:var(--text2);line-height:1.5;">Primary sequence database. 12S, COI, 18S, 28S, rbcL queries via Entrez API.</div></div>
+        <div style="background:var(--blue-bg);border:0.5px solid var(--blue);border-radius:var(--radius);padding:8px 10px;"><div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:3px;">BOLD Systems v5</div><div style="font-size:10px;color:var(--text2);line-height:1.5;">COI barcode library (v5, 2024+). Geographic filter: Nigeria, Ghana, Cameroon, Benin, Togo, Senegal, Guinea, Côte d'Ivoire, Liberia.</div></div>
+        <div style="background:var(--purple-bg);border:0.5px solid var(--purple);border-radius:var(--radius);padding:8px 10px;"><div style="font-size:11px;font-weight:700;color:var(--purple);margin-bottom:3px;">SILVA SSU rRNA</div><div style="font-size:10px;color:var(--text2);line-height:1.5;">Most comprehensive 18S rRNA database. Used for nematodes, meiofauna, protists.</div></div>
+        <div style="background:var(--teal-bg);border:0.5px solid var(--teal);border-radius:var(--radius);padding:8px 10px;"><div style="font-size:11px;font-weight:700;color:var(--teal);margin-bottom:3px;">WoRMS / FishBase</div><div style="font-size:10px;color:var(--text2);line-height:1.5;">Taxonomy authority &amp; accepted names. IUCN status and regional checklists.</div></div>
+        <div style="background:var(--green-bg);border:0.5px solid var(--green);border-radius:var(--radius);padding:8px 10px;"><div style="font-size:11px;font-weight:700;color:var(--green);margin-bottom:3px;">NeMys / OBIS / GBIF</div><div style="font-size:10px;color:var(--text2);line-height:1.5;">Nematode taxonomy (NeMys); occurrence records (OBIS/GBIF) for Gulf of Guinea.</div></div>
+        <div style="background:var(--green-bg);border:0.5px solid var(--green);border-radius:var(--radius);padding:8px 10px;"><div style="font-size:11px;font-weight:700;color:var(--green);margin-bottom:3px;">AlgaeBase / ENA</div><div style="font-size:10px;color:var(--text2);line-height:1.5;">Macroalgae &amp; seagrass taxonomy; supplementary sequences via ENA/EMBL.</div></div>
+        <div style="background:var(--red-bg);border:0.5px solid var(--red);border-radius:var(--radius);padding:8px 10px;"><div style="font-size:11px;font-weight:700;color:var(--red);margin-bottom:3px;">IUCN Red List</div><div style="font-size:10px;color:var(--text2);line-height:1.5;">Conservation status for all vertebrates, elasmobranchs, sea turtles, and marine mammals.</div></div>
+      </div>
+    </div>
+
+    <!-- Web statistics -->
+    <div class="section-head">Web statistics</div>
+    <div class="info-card" style="margin-bottom:1rem;">
+      <p style="font-size:13px;color:var(--text3);font-style:italic;margin-bottom:12px;">Web analytics will be recorded once the NMBL site goes live. The table below will be populated monthly.</p>
+      <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:var(--bg2);border-bottom:1px solid var(--border);">
+              <th style="padding:10px 14px;text-align:left;font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:0.05em;">Month</th>
+              <th style="padding:10px 14px;text-align:center;font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:0.05em;">Unique visitors</th>
+              <th style="padding:10px 14px;text-align:center;font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:0.05em;">Number of visits</th>
+              <th style="padding:10px 14px;text-align:center;font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:0.05em;">Pages viewed</th>
+              <th style="padding:10px 14px;text-align:center;font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:0.05em;">Hits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:0.5px solid var(--border);">
+              <td style="padding:10px 14px;color:var(--text2);">April 2026</td>
+              <td style="padding:10px 14px;text-align:center;color:var(--text3);font-style:italic;">—</td>
+              <td style="padding:10px 14px;text-align:center;color:var(--text3);font-style:italic;">—</td>
+              <td style="padding:10px 14px;text-align:center;color:var(--text3);font-style:italic;">—</td>
+              <td style="padding:10px 14px;text-align:center;color:var(--text3);font-style:italic;">—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:11px;color:var(--text3);margin-top:8px;">Web statistics include webservice usage and undetectable AI bots. Unique visitor counts use cookie-based identification where permitted.</p>
+    </div>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="/assets/js/data.js"></script>
+  <script src="/assets/js/render.js"></script>
+  <script src="/assets/js/stats.js"></script>
+  <script src="/assets/js/search.js"></script>
+  <script src="/assets/js/popup.js"></script>
+  <script src="/assets/js/contact.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/partials.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      populateStatsPage();
+    });
+  </script>
+</body>
+</html>
