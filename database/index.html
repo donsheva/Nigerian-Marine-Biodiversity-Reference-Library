@@ -8,6 +8,9 @@
   <meta property="og:title" content="The Database — NMBL · EnviroBiotics">
   <meta property="og:description" content="Live gap analysis dashboard: barcode coverage for Nigerian coastal and marine biodiversity across all major taxonomic groups.">
   <meta property="og:url" content="https://envirobiotics.org/database/">
+  <meta property="og:image" content="https://envirobiotics.org/assets/images/og-image.svg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <link rel="canonical" href="https://envirobiotics.org/database/">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -91,7 +94,8 @@
         <div style="font-size:13px;font-weight:700;color:var(--navy);">Classification decision tree</div>
         <div style="font-size:11px;color:var(--text3);">Applied to every species at render time — no manual classification</div>
       </div>
-      <svg viewBox="0 0 900 430" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;max-width:100%;font-family:'Sora',sans-serif;">
+      <svg viewBox="0 0 900 430" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;max-width:100%;font-family:'Sora',sans-serif;" role="img" aria-label="Coverage classification decision tree: species with zero West African NCBI records are classified Absent; species with WA records but below the marker threshold (COI 5, 12S 3, 18S 1, 28S 1, rbcL 3) are Partial; species meeting the threshold in both NCBI and BOLD are Present.">
+        <title>Coverage classification decision tree</title>
         <defs>
           <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
             <path d="M 0 0 L 10 5 L 0 10 z" fill="#3d4f63"/>
@@ -201,7 +205,7 @@
 
     <!-- ═══ KEY INSIGHTS & SCIENTIFIC FINDINGS ═══════════════════════════════ -->
     <div class="section-head">Key Insights &amp; Scientific Findings</div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:1.5rem;">
+    <div class="two-col">
       <div style="background:var(--red-bg);border:1px solid var(--red);border-radius:var(--radius-lg);padding:1.25rem;">
         <div style="font-size:12px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px;">🔴 Critical Gaps — Zero West African Reference Records</div>
         <ul style="font-size:12px;color:var(--text);line-height:2;padding-left:16px;margin:0;">
@@ -293,7 +297,7 @@
     </div>
 
     <div style="margin-top:1.5rem;">
-      <a href="/gap-analysis/" class="submit-btn">Open Gap Analysis Dashboard &#8594;</a>
+      <a href="/gap-analysis/" style="display:inline-flex;align-items:center;gap:8px;padding:11px 24px;background:var(--blue);color:#fff;border-radius:var(--radius);text-decoration:none;font-size:13px;font-weight:600;transition:opacity 0.15s;" onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">Open Gap Analysis Dashboard &#8594;</a>
     </div>
 
   </main>
