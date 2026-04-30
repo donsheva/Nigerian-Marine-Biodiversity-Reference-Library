@@ -20,22 +20,6 @@
   <div id="site-header"></div>
   <div id="site-nav"></div>
 
-  <div class="popup-overlay" id="popup-overlay" role="dialog" aria-modal="true" aria-labelledby="popup-name" onclick="closePopupOnOverlay(event)">
-    <div class="popup-card" id="popup-card">
-      <div class="popup-header">
-        <div class="popup-icon" id="popup-icon"></div>
-        <div class="popup-title">
-          <h2 id="popup-name"></h2>
-          <p id="popup-common"></p>
-        </div>
-        <button class="popup-close" onclick="closePopup()" aria-label="Close species details popup">&#215;</button>
-      </div>
-      <div class="popup-body" id="popup-body"></div>
-      <div class="popup-notes" id="popup-notes"></div>
-      <div class="popup-footer" id="popup-footer"></div>
-    </div>
-  </div>
-
   <main class="container" id="main-content" role="main" tabindex="-1">
 
     <div class="page-hero">
@@ -63,159 +47,254 @@
       <div class="db-stat"><div class="big-number" style="color:var(--purple);" id="db-nema">—</div><div style="font-size:11px;color:var(--purple);opacity:0.8;" id="db-nema-note">genera tracked</div><div class="big-label">Nematodes</div></div>
     </div>
 
-    <!-- Verification banner -->
-    <div style="background:var(--green-bg);border:1px solid var(--green);border-radius:var(--radius);padding:10px 14px;margin-bottom:1rem;font-size:12px;color:var(--green);display:flex;align-items:flex-start;gap:10px;">
-      <span style="font-size:16px;flex-shrink:0;">✅</span>
-      <div>
-        <strong>Data verified from live database queries — March 2026</strong><br>
-        NCBI Nucleotide: queried via Biopython Entrez (50 priority West African taxa — v1 query). Remaining 57 taxa: status based on published literature. BOLD Systems (v5): API currently unavailable — query pending. Geographic filter when run: Nigeria, Ghana, Cameroon, Benin, Togo, Senegal, Guinea, Côte d'Ivoire, Liberia. Run bold_query_fallback.py locally for full BOLD verification.
-        Coverage classification (v21, marker-specific): <strong>Present</strong> = WA records meet marker threshold (COI ≥5, 12S ≥3, 18S ≥1, 28S ≥1, rbcL ≥3) in both NCBI and BOLD/SILVA · <strong>Partial</strong> = WA records present but below threshold, or only one database covered · <strong>Absent</strong> = zero WA records in both databases.
+    <div class="section-head">What is in this database</div>
+    <div class="two-col">
+      <div class="info-card">
+        <h3>Taxonomic groups covered</h3>
+        <ul>
+          <li><strong>Fish (estuarine + coastal)</strong> — 16 priority species, 12S rRNA marker</li>
+          <li><strong>Elasmobranchs</strong> — sharks and rays of the Nigerian coast</li>
+          <li><strong>Marine pelagic fish</strong> — tuna, mackerel, swordfish, billfish</li>
+          <li><strong>Marine demersal fish</strong> — offshore snappers, groupers, dentex</li>
+          <li><strong>Coral reef and hard substrate</strong> — corals, sea urchins, holothurians</li>
+          <li><strong>Macrobenthos</strong> — <em>Tympanotonos</em>, <em>Pachymelania</em>, bivalves, polychaetes, mangrove crabs</li>
+          <li><strong>Nematodes</strong> — 25 genera across 8 orders, 18S + 28S</li>
+          <li><strong>Meiofauna</strong> — copepods, ostracods, foraminifera</li>
+          <li><strong>Seagrass &amp; macroalgae</strong> — including <em>Sargassum</em> bloom species</li>
+          <li><strong>Marine mammals</strong> — including African manatee, Atlantic humpback dolphin</li>
+          <li><strong>Sea turtles</strong> — all three nesting species</li>
+        </ul>
       </div>
-    </div>
-
-    <!-- Clickable KPI stats (used by goToTaxa) -->
-    <div class="stat-grid">
-      <div class="stat" onclick="goToTaxa('all','all')" title="View all taxa">
-        <div class="stat-label">Total taxa</div><div class="stat-val" id="s-total">—</div>
-        <div style="font-size:10px;color:var(--text3);margin-top:3px;">click to view all →</div>
-      </div>
-      <div class="stat" onclick="goToTaxa('all','present')" title="View taxa with sequences">
-        <div class="stat-label">Sequences found</div><div class="stat-val green" id="s-present">—</div>
-        <div style="font-size:10px;color:var(--text3);margin-top:3px;">click to view →</div>
-      </div>
-      <div class="stat" onclick="goToTaxa('all','absent')" title="View priority gaps">
-        <div class="stat-label">Priority gaps</div><div class="stat-val red" id="s-absent">—</div>
-        <div style="font-size:10px;color:var(--text3);margin-top:3px;">click to view →</div>
-      </div>
-      <div class="stat" onclick="goToTaxa('all','partial')" title="View partial coverage taxa">
-        <div class="stat-label">Sequence coverage</div><div class="stat-val amber" id="s-pct">—</div>
-        <div style="font-size:10px;color:var(--text3);margin-top:3px;">click for partial →</div>
-      </div>
-      <div class="stat" onclick="goToTaxa('Nematode','all')" title="View nematode genera">
-        <div class="stat-label">Nematode genera</div><div class="stat-val purple" id="s-nema" style="font-size:28px;">—</div>
-        <div style="font-size:10px;color:var(--text3);margin-top:3px;">click to view →</div>
-      </div>
-    </div>
-
-    <div class="section-label" role="heading" aria-level="2">Coverage by taxon group</div>
-    <div class="group-grid" id="group-grid"></div>
-
-    <div class="card" style="margin-bottom:12px;">
-      <div class="section-label" role="heading" aria-level="2" style="margin-bottom:8px;">Top priority gaps — fish &amp; vertebrates (zero sequences globally)</div>
-      <div class="gap-list" id="gap-list-vert"></div>
-    </div>
-
-    <div class="card">
-      <div class="section-label" role="heading" aria-level="2" style="margin-bottom:8px;">Top priority gaps — nematodes (zero Nigeria/West Africa sequences)</div>
-      <div class="gap-list" id="gap-list-nema"></div>
-    </div>
-
-    <button class="export-btn" onclick="exportCSV()" aria-label="Export gap report as CSV" style="margin-bottom:1.5rem;">Export full gap report as CSV</button>
-
-    <!-- ═══ ALL TAXA TABLE ═══════════════════════════════════════════ -->
-    <div id="tab-species" class="panel active">
-
-      <div style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:1rem 1.25rem;margin-bottom:1rem;">
-        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
-          <div>
-            <div style="font-size:11px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;">Coastal fish context</div>
-            <p style="font-size:12px;color:var(--text2);line-height:1.7;">The Niger Delta and Gulf of Guinea coastal zone supports one of Africa's largest small-scale fisheries, with estimated annual artisanal landings exceeding 700,000 tonnes (FAO, 2020). Key species include <em>Ethmalosa fimbriata</em> (bonga shad), which continues to account for approximately 41.8% of the artisanal catch by weight in the Lagos Lagoon (Oladipo et al., 2025).</p>
-          </div>
-          <div>
-            <div style="font-size:11px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;">Reference library gap — West Africa</div>
-            <p style="font-size:12px;color:var(--text2);line-height:1.7;">A global review of eDNA metabarcoding studies found that Sub-Saharan Africa has the lowest regional representation in molecular reference databases of any tropical region (Manaf et al., 2025, <em>Molecular Ecology Resources</em>). False negatives in eDNA surveys are therefore disproportionately common in West African biodiversity assessments.</p>
-          </div>
-          <div>
-            <div style="font-size:11px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;">MiFish 12S — the global standard</div>
-            <p style="font-size:12px;color:var(--text2);line-height:1.7;">The MiFish primer set (Miya et al., 2015, <em>Royal Society Open Science</em>) targets a ~170bp region of the mitochondrial 12S rRNA gene and can detect over 230 fish species simultaneously from a single 2L water sample. It is now the most widely adopted fish eDNA marker globally, with reference sequences for over 7,000 species — but fewer than 50 from the Gulf of Guinea specifically.</p>
-          </div>
+      <div class="info-card">
+        <h3>How to use this database</h3>
+        <p>The <strong>Gap Analysis tab</strong> gives an overview of sequence coverage across all taxonomic groups. Click any stat card or group card to filter the full species list.</p>
+        <p>The <strong>All Taxa tab</strong> shows every species in one searchable, sortable table with filters by group, marker, status, and priority. Use the search bar at the top of the page to find any species instantly.</p>
+        <p>The dedicated <strong>Marine Species</strong>, <strong>Macrobenthos</strong>, and <strong>Nematodes</strong> tabs each provide deeper views of their groups with group-specific filters and ecological context.</p>
+        <p>All data can be <strong>exported as CSV</strong> from each tab for use in your own analysis or grant proposal.</p>
+        <div style="margin-top:14px;padding:10px 12px;background:var(--bg2);border-radius:var(--radius);border-left:3px solid var(--blue);">
+          <div style="font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:5px;">Cite this database</div>
+          <p style="font-size:12px;color:var(--text2);font-style:italic;line-height:1.7;margin:0;">Odedere, A.O. (<span id="cite-year">2026</span>). <em>Nigerian Marine Biodiversity Reference Library: A molecular reference framework for the coastal and marine biodiversity of the Gulf of Guinea.</em> Available at: EnviroBiotics.org [accessed <span id="cite-date">30 March 2026</span>]. doi:<a href="https://doi.org/10.5281/zenodo.19201628" target="_blank" style="color:var(--blue);">10.5281/zenodo.19201628</a></p>
+        <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap;">
+          <a href="https://doi.org/10.5281/zenodo.19201628" target="_blank" style="font-size:11px;display:inline-flex;align-items:center;gap:5px;padding:4px 10px;background:var(--green-bg);border:0.5px solid rgba(10,107,78,0.2);border-radius:6px;color:var(--green);text-decoration:none;font-weight:600;">📦 Zenodo DOI</a>
+          <a href="https://github.com/donsheva/Nigerian-Marine-Biodiversity-Reference-Library" target="_blank" style="font-size:11px;display:inline-flex;align-items:center;gap:5px;padding:4px 10px;background:var(--bg2);border:0.5px solid var(--border2);border-radius:6px;color:var(--text2);text-decoration:none;font-weight:600;"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg> GitHub Repository</a>
+        </div>
         </div>
       </div>
-
-      <div id="active-filter-bar" class="active-filter-bar">
-        <span id="active-filter-text"></span>
-        <button class="clear-filter-btn" onclick="clearFilters()">Clear filter ×</button>
-      </div>
-
-      <div class="controls">
-        <input id="search-in" placeholder="Search name, common name, order..." oninput="renderTable()" />
-        <select id="filt-status" onchange="renderTable()">
-          <option value="all">All statuses</option>
-          <option value="absent">Gaps only</option>
-          <option value="partial">Partial coverage</option>
-          <option value="present">Has sequences</option>
-        </select>
-        <select id="filt-group" onchange="renderTable()">
-          <option value="all">All groups</option>
-          <optgroup label="Vertebrates">
-            <option value="Fish">Fish</option>
-            <option value="Elasmobranch">Elasmobranchs</option>
-            <option value="Crustacean">Crustaceans</option>
-            <option value="Mammal">Marine mammals</option>
-            <option value="Turtle">Sea turtles</option>
-          </optgroup>
-          <optgroup label="Marine">
-            <option value="Marine-Pelagic">Pelagic fish (offshore)</option>
-            <option value="Marine-Demersal">Demersal fish (offshore)</option>
-            <option value="Marine-Reef">Coral reef &amp; hard substrate</option>
-            <option value="Marine-Invertebrate">Marine invertebrates</option>
-            <option value="Marine-Plants">Seagrass &amp; macroalgae</option>
-            <option value="Marine-Mammal">Offshore marine mammals</option>
-          </optgroup>
-          <optgroup label="Macrobenthos">
-            <option value="Gastropod">Gastropods</option>
-            <option value="Bivalve">Bivalves</option>
-            <option value="Polychaete">Polychaetes</option>
-            <option value="Crustacean-macro">Crabs &amp; macro-crustaceans</option>
-          </optgroup>
-          <optgroup label="Meiofauna">
-            <option value="Nematode">Nematodes</option>
-            <option value="Meiofauna">Other meiofauna</option>
-          </optgroup>
-          <optgroup label="Other">
-            <option value="Protist">Protists</option>
-          </optgroup>
-        </select>
-        <select id="filt-marker" onchange="renderTable()">
-          <option value="all">All markers</option>
-          <option value="12S">12S rRNA</option>
-          <option value="18S">18S rRNA</option>
-          <option value="28S">28S rRNA</option>
-          <option value="COI">COI</option>
-          <option value="rbcL">rbcL (plants/algae)</option>
-        </select>
-        <select id="filt-priority" onchange="renderTable()">
-          <option value="all">All priorities</option>
-          <option value="high">High priority</option>
-          <option value="med">Medium</option>
-          <option value="low">Low priority</option>
-        </select>
-      </div>
-
-      <div class="card" style="padding:0;overflow:hidden;"><div class="table-wrap">
-        <table>
-          <thead><tr>
-            <th class="sortable" onclick="sortBy('name')">Taxon</th>
-            <th>Common / role</th>
-            <th>Group</th>
-            <th>Marker</th>
-            <th>NCBI <span style="font-weight:400;opacity:0.7;">(global/WA)</span></th>
-            <th>BOLD / SILVA</th>
-            <th>IUCN</th>
-            <th class="sortable" onclick="sortBy('priority')">Priority</th>
-            <th>Ecological notes</th>
-          </tr></thead>
-          <tbody id="species-tbody" aria-label="All taxa data"></tbody>
-        </table>
-      </div>
-      <div style="padding:10px 12px;font-size:12px;color:var(--text2);border-top:0.5px solid var(--border);">
-        Showing <span id="row-count">—</span> taxa
-      </div>
-      </div>
-
-      <button class="export-btn" onclick="exportCSV()">Export as CSV</button>
     </div>
-    <!-- end #tab-species -->
+
+    <!-- ═══ DATA SOURCES & COVERAGE METHODOLOGY ═══════════════════════════ -->
+    <div class="section-head">📊 Data Sources — How Coverage Is Determined</div>
+
+    <!-- ── Classification flowchart ── -->
+    <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem 1.5rem;margin-bottom:1rem;box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:8px;">
+        <div style="font-size:13px;font-weight:700;color:var(--navy);">Classification decision tree</div>
+        <div style="font-size:11px;color:var(--text3);">Applied to every species at render time — no manual classification</div>
+      </div>
+      <svg viewBox="0 0 900 430" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;max-width:100%;font-family:'Sora',sans-serif;">
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#3d4f63"/>
+          </marker>
+        </defs>
+
+        <!-- Root: query -->
+        <rect x="350" y="10" width="200" height="58" rx="8" fill="#091e38" stroke="#091e38"/>
+        <text x="450" y="33" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">Query species</text>
+        <text x="450" y="51" text-anchor="middle" fill="#cfd8e3" font-size="10.5">NCBI + BOLD + SILVA (WA filter)</text>
+
+        <!-- Decision 1: any WA records? -->
+        <line x1="450" y1="68" x2="450" y2="92" stroke="#3d4f63" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <polygon points="450,95 560,140 450,185 340,140" fill="#fef3e0" stroke="#7d4a06" stroke-width="1.2"/>
+        <text x="450" y="132" text-anchor="middle" fill="#7d4a06" font-size="11.5" font-weight="700">Any West African</text>
+        <text x="450" y="147" text-anchor="middle" fill="#7d4a06" font-size="11.5" font-weight="700">NCBI records?</text>
+        <text x="450" y="161" text-anchor="middle" fill="#7d4a06" font-size="10">(WA_NCBI ≥ 1)</text>
+
+        <!-- NO branch → ABSENT -->
+        <line x1="340" y1="140" x2="205" y2="140" stroke="#3d4f63" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <text x="272" y="132" text-anchor="middle" fill="#3d4f63" font-size="11" font-weight="600">No</text>
+        <rect x="40" y="115" width="165" height="50" rx="8" fill="#fceaea" stroke="#9b2525" stroke-width="1.5"/>
+        <text x="122" y="138" text-anchor="middle" fill="#9b2525" font-size="13" font-weight="800">✗ ABSENT</text>
+        <text x="122" y="155" text-anchor="middle" fill="#9b2525" font-size="10">No regional reference</text>
+
+        <!-- YES branch → Decision 2 -->
+        <line x1="560" y1="140" x2="680" y2="140" stroke="#3d4f63" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <text x="620" y="132" text-anchor="middle" fill="#3d4f63" font-size="11" font-weight="600">Yes</text>
+
+        <!-- Decision 2: WA records ≥ marker threshold? -->
+        <polygon points="785,95 895,140 785,185 680,140" fill="#e8f1ff" stroke="#1462e8" stroke-width="1.2"/>
+        <text x="785" y="130" text-anchor="middle" fill="#1462e8" font-size="11" font-weight="700">WA records meet</text>
+        <text x="785" y="144" text-anchor="middle" fill="#1462e8" font-size="11" font-weight="700">marker threshold?</text>
+        <text x="785" y="158" text-anchor="middle" fill="#1462e8" font-size="10">(COI≥5 · 12S≥3 · 18S≥1)</text>
+
+        <!-- NO branch (below threshold) → PARTIAL -->
+        <path d="M 785 185 L 785 215 L 450 215 L 450 245" fill="none" stroke="#3d4f63" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <text x="620" y="208" text-anchor="middle" fill="#3d4f63" font-size="11" font-weight="600">No (below threshold)</text>
+
+        <!-- YES branch (meets threshold) → Decision 3 -->
+        <line x1="895" y1="140" x2="895" y2="260" stroke="#3d4f63" stroke-width="1.5"/>
+        <text x="875" y="200" text-anchor="middle" fill="#3d4f63" font-size="11" font-weight="600">Yes</text>
+
+        <!-- Decision 3: both DBs? -->
+        <polygon points="785,265 895,310 785,355 675,310" fill="#e0f5ed" stroke="#0a6b4e" stroke-width="1.2"/>
+        <text x="785" y="302" text-anchor="middle" fill="#0a6b4e" font-size="11" font-weight="700">Records in both</text>
+        <text x="785" y="316" text-anchor="middle" fill="#0a6b4e" font-size="11" font-weight="700">NCBI and BOLD?</text>
+
+        <!-- arrow from yes branch down into diamond -->
+        <line x1="895" y1="260" x2="895" y2="310" stroke="#3d4f63" stroke-width="0"/>
+        <path d="M 895 260 L 895 275" fill="none" stroke="#3d4f63" stroke-width="1.5"/>
+
+        <!-- D3 YES → PRESENT (down) -->
+        <line x1="785" y1="355" x2="785" y2="385" stroke="#3d4f63" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <text x="805" y="373" text-anchor="middle" fill="#3d4f63" font-size="11" font-weight="600">Yes</text>
+        <rect x="715" y="385" width="140" height="40" rx="8" fill="#e0f5ed" stroke="#0a6b4e" stroke-width="1.5"/>
+        <text x="785" y="403" text-anchor="middle" fill="#0a6b4e" font-size="13" font-weight="800">✓ PRESENT</text>
+        <text x="785" y="418" text-anchor="middle" fill="#0a6b4e" font-size="10">Reliable regional ID</text>
+
+        <!-- D3 NO → PARTIAL (left, joins partial box) -->
+        <path d="M 675 310 L 540 310 L 540 275" fill="none" stroke="#3d4f63" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <text x="608" y="302" text-anchor="middle" fill="#3d4f63" font-size="11" font-weight="600">No (one DB only)</text>
+
+        <!-- PARTIAL output box -->
+        <rect x="370" y="245" width="160" height="50" rx="8" fill="#fef3e0" stroke="#7d4a06" stroke-width="1.5"/>
+        <text x="450" y="268" text-anchor="middle" fill="#7d4a06" font-size="13" font-weight="800">~ PARTIAL</text>
+        <text x="450" y="285" text-anchor="middle" fill="#7d4a06" font-size="10">Regional data insufficient</text>
+      </svg>
+      <div style="margin-top:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;">
+        <div style="background:var(--bg2);border-radius:var(--radius);padding:8px 12px;font-size:11px;color:var(--text2);"><strong style="color:var(--blue);">COI</strong> ≥5 WA records<br><span style="font-size:10px;color:var(--text3);">Fast-evolving animal barcode</span></div>
+        <div style="background:var(--bg2);border-radius:var(--radius);padding:8px 12px;font-size:11px;color:var(--text2);"><strong style="color:var(--blue);">12S</strong> ≥3 WA records<br><span style="font-size:10px;color:var(--text3);">Vertebrate eDNA marker</span></div>
+        <div style="background:var(--bg2);border-radius:var(--radius);padding:8px 12px;font-size:11px;color:var(--text2);"><strong style="color:var(--blue);">18S</strong> ≥1 WA record<br><span style="font-size:10px;color:var(--text3);">Genus-level, conserved</span></div>
+        <div style="background:var(--bg2);border-radius:var(--radius);padding:8px 12px;font-size:11px;color:var(--text2);"><strong style="color:var(--blue);">28S</strong> ≥1 WA record<br><span style="font-size:10px;color:var(--text3);">Genus-level metazoan</span></div>
+        <div style="background:var(--bg2);border-radius:var(--radius);padding:8px 12px;font-size:11px;color:var(--text2);"><strong style="color:var(--blue);">rbcL</strong> ≥3 WA records<br><span style="font-size:10px;color:var(--text3);">Plants/algae barcode</span></div>
+      </div>
+      <div style="margin-top:10px;padding:10px 12px;background:var(--bg2);border-radius:var(--radius);font-size:11.5px;color:var(--text2);line-height:1.6;">
+        <strong>Worked examples.</strong> <em>Sardinella aurita</em> has 4 WA 12S records (≥3, meets threshold) and BOLD WA records confirmed — overall <strong style="color:var(--green)">present</strong>. <em>Drepane africana</em> has 2 WA 12S records (below the threshold of 3) — <strong style="color:var(--amber)">partial</strong>, more regional barcodes needed. <em>Tursiops truncatus</em> has 42 global COI records but zero West African records — NCBI is <strong style="color:var(--red)">absent</strong> for the regional library regardless of global abundance; BOLD WA-present keeps overall status <strong style="color:var(--amber)">partial</strong>. This is the key shift from v20: global coverage no longer rescues a species with zero regional sequences.
+      </div>
+    </div>
+
+    <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem 1.5rem;margin-bottom:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;">
+        <div style="display:flex;align-items:flex-start;gap:10px;background:var(--green-bg);border:1px solid var(--green);border-radius:var(--radius);padding:10px 14px;flex:1;min-width:220px;">
+          <span style="background:var(--green-bg);color:var(--green);padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;border:1px solid var(--green);white-space:nowrap;flex-shrink:0;">✓ PRESENT</span>
+          <span style="font-size:12px;color:var(--text2);line-height:1.5;">Qualifying barcodes in <strong>both</strong> NCBI <strong>and</strong> BOLD/SILVA, with <strong>WA records meeting the marker threshold</strong> (COI ≥5, 12S ≥3, 18S ≥1, 28S ≥1, rbcL ≥3). Reliably detectable for Nigerian eDNA — though Nigeria-specific sequences remain preferred.</span>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:10px;background:var(--amber-bg);border:1px solid var(--amber);border-radius:var(--radius);padding:10px 14px;flex:1;min-width:220px;">
+          <span style="background:var(--amber-bg);color:var(--amber);padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;border:1px solid var(--amber);white-space:nowrap;flex-shrink:0;">~ PARTIAL</span>
+          <span style="font-size:12px;color:var(--text2);line-height:1.5;">WA records exist but fall <strong>below the marker threshold</strong>, or sequences exist in only one database. Identification possible but not robust — more regional barcodes needed.</span>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:10px;background:var(--red-bg);border:1px solid var(--red);border-radius:var(--radius);padding:10px 14px;flex:1;min-width:220px;">
+          <span style="background:var(--red-bg);color:var(--red);padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;border:1px solid var(--red);white-space:nowrap;flex-shrink:0;">✗ ABSENT</span>
+          <span style="font-size:12px;color:var(--text2);line-height:1.5;"><strong>Zero West African records in both NCBI and BOLD/SILVA.</strong> No regional reference sequence exists for this taxon — undetectable in Nigerian eDNA surveys regardless of global availability. Highest priority for new voucher collection and barcoding.</span>
+        </div>
+      </div>
+      <p style="font-size:12px;color:var(--text2);line-height:1.7;margin-bottom:14px;">Coverage status is derived by cross-referencing each taxon against the following 10 global databases. A taxon is classified <strong style="color:var(--green)">present</strong> when qualifying barcodes exist in both NCBI and BOLD/SILVA <em>with West African records meeting the marker-specific threshold</em> (COI ≥5, 12S ≥3, 18S ≥1, 28S ≥1, rbcL ≥3); <strong style="color:var(--amber)">partial</strong> when WA records exist but fall below the marker threshold, or when only one database is covered; and <strong style="color:var(--red)">absent</strong> when zero WA records exist in both NCBI and BOLD/SILVA. <strong>Thresholds reflect the intraspecific variation needed for reliable identification with each marker</strong> — fast-evolving barcodes like COI require more replicate sequences to capture haplotype diversity, while conserved ribosomal markers (18S, 28S) used for genus-level work are operationally useful with a single well-curated reference. <strong>Classification is WA-specific: a taxon with global records but zero West African sequences is an "absent" gap in the regional reference library, regardless of global coverage.</strong></p>
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;">
+        <div style="background:var(--blue-bg);border:0.5px solid var(--blue);border-radius:var(--radius);padding:8px 10px;"><div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:3px;">NCBI Nucleotide</div><div style="font-size:10px;color:var(--text2);line-height:1.5;">Primary sequence database. 12S, COI, 18S, 28S, rbcL queries via Entrez API.</div></div>
+        <div style="background:var(--blue-bg);border:0.5px solid var(--blue);border-radius:var(--radius);padding:8px 10px;"><div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:3px;">BOLD Systems v5</div><div style="font-size:10px;color:var(--text2);line-height:1.5;">COI barcode library (v5, 2024+). Geographic filter: Nigeria, Ghana, Cameroon, Benin, Togo, Senegal, Guinea, Côte d'Ivoire, Liberia.</div></div>
+        <div style="background:var(--purple-bg);border:0.5px solid var(--purple);border-radius:var(--radius);padding:8px 10px;"><div style="font-size:11px;font-weight:700;color:var(--purple);margin-bottom:3px;">SILVA SSU rRNA</div><div style="font-size:10px;color:var(--text2);line-height:1.5;">Most comprehensive 18S rRNA database. Used for nematodes, meiofauna, protists.</div></div>
+        <div style="background:var(--teal-bg);border:0.5px solid var(--teal);border-radius:var(--radius);padding:8px 10px;"><div style="font-size:11px;font-weight:700;color:var(--teal);margin-bottom:3px;">WoRMS / FishBase</div><div style="font-size:10px;color:var(--text2);line-height:1.5;">Taxonomy authority &amp; accepted names. IUCN status and regional checklists.</div></div>
+        <div style="background:var(--green-bg);border:0.5px solid var(--green);border-radius:var(--radius);padding:8px 10px;"><div style="font-size:11px;font-weight:700;color:var(--green);margin-bottom:3px;">NeMys / OBIS / GBIF</div><div style="font-size:10px;color:var(--text2);line-height:1.5;">Nematode taxonomy (NeMys); occurrence records (OBIS/GBIF) for Gulf of Guinea.</div></div>
+        <div style="background:var(--green-bg);border:0.5px solid var(--green);border-radius:var(--radius);padding:8px 10px;"><div style="font-size:11px;font-weight:700;color:var(--green);margin-bottom:3px;">AlgaeBase / ENA</div><div style="font-size:10px;color:var(--text2);line-height:1.5;">Macroalgae &amp; seagrass taxonomy; supplementary sequences via ENA/EMBL.</div></div>
+        <div style="background:var(--red-bg);border:0.5px solid var(--red);border-radius:var(--radius);padding:8px 10px;"><div style="font-size:11px;font-weight:700;color:var(--red);margin-bottom:3px;">IUCN Red List</div><div style="font-size:10px;color:var(--text2);line-height:1.5;">Conservation status for all vertebrates, elasmobranchs, sea turtles, and marine mammals.</div></div>
+      </div>
+    </div>
+
+    <!-- ═══ KEY INSIGHTS & SCIENTIFIC FINDINGS ═══════════════════════════════ -->
+    <div class="section-head">Key Insights &amp; Scientific Findings</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:1.5rem;">
+      <div style="background:var(--red-bg);border:1px solid var(--red);border-radius:var(--radius-lg);padding:1.25rem;">
+        <div style="font-size:12px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px;">🔴 Critical Gaps — Zero West African Reference Records</div>
+        <ul style="font-size:12px;color:var(--text);line-height:2;padding-left:16px;margin:0;">
+          <li>All <span id="critical-nema-count">25</span> nematode genera tracked — <strong>0 Nigeria sequences</strong> for all (18S and 28S)</li>
+          <li><em>Cynoglossus senegalensis</em> (Senegalese tonguesole) — zero records, abundant bycatch</li>
+          <li>Gulf of Guinea endemics (<em>Pteroscion peli</em>, <em>Lutjanus goreensis</em>, <em>Lutjanus agennes</em>) — <strong>zero records globally</strong></li>
+          <li><em>Tursiops truncatus</em>, <em>Carcharhinus leucas</em> — well-barcoded globally (42 and 7 records) but <strong>zero West African sequences</strong>; undetectable in Nigerian eDNA without regional vouchers</li>
+          <li><em>Sea turtles</em> (<em>Chelonia mydas</em>, <em>Dermochelys coriacea</em>, <em>Lepidochelys olivacea</em>) — nest on Nigerian beaches, <strong>zero WA 12S records</strong></li>
+          <li><em>Penaeus notialis</em> (pink shrimp, largest commercial fishery) — 45 global COI but <strong>zero WA</strong>; major regional gap</li>
+          <li><em>Sesarma huzardi</em>, <em>Goniopsis pelii</em>, <em>Egeria radiata</em> — staple seafood, <strong>zero records</strong></li>
+          <li><em>Strombus latus</em> (West African stromb, endemic) — <strong>zero records</strong></li>
+        </ul>
+      </div>
+      <div style="background:var(--green-bg);border:1px solid var(--green);border-radius:var(--radius-lg);padding:1.25rem;">
+        <div style="font-size:12px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px;">✅ Well-Covered Taxa — Regional Reference Sufficient</div>
+        <ul style="font-size:12px;color:var(--text);line-height:2;padding-left:16px;margin:0;">
+          <li><em>Sardinella aurita</em> — 4 WA 12S records (meets threshold of 3); BOLD WA confirmed</li>
+          <li><em>Mugil cephalus</em> (flathead mullet) — 27 WA 12S records; cosmopolitan and excellently covered</li>
+          <li><em>Sphyrna lewini</em> (scalloped hammerhead) — 4 WA 12S records meeting threshold (NCBI); BOLD partial keeps overall partial, but NCBI-regional is sufficient</li>
+          <li><em>Pseudotolithus elongatus</em> (bobo croaker) — 3 WA 12S records meets threshold in NCBI; BOLD absent → overall partial but NCBI-regional is sufficient</li>
+        </ul>
+        <div style="margin-top:8px;font-size:10px;color:var(--text3);font-style:italic;line-height:1.5;">Note: "well-covered" here means the WA reference library is sufficient for that marker — not that the species is abundantly studied worldwide.</div>
+      </div>
+      <div style="background:var(--amber-bg);border:1px solid var(--amber);border-radius:var(--radius-lg);padding:1.25rem;">
+        <div style="font-size:12px;font-weight:700;color:var(--amber);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px;">⚠️ Partial Coverage — Regional Data Below Threshold</div>
+        <ul style="font-size:12px;color:var(--text);line-height:2;padding-left:16px;margin:0;">
+          <li><em>Ethmalosa fimbriata</em> (bonga shad, #1 commercial pelagic) — 2 WA 12S records, <strong>below threshold of 3</strong>; BOLD absent</li>
+          <li><em>Sardinella maderensis</em> — 2 WA 12S records (below threshold); BOLD WA confirmed</li>
+          <li><em>Pseudotolithus senegalensis</em> (cassava croaker) — 2 WA 12S records (below threshold); BOLD absent</li>
+          <li><em>Drepane africana</em> (African sicklefish) — 2 WA 12S records (below threshold of 3); BOLD absent</li>
+          <li><em>Polydactylus quadrifilis</em>, <em>Galeoides decadactylus</em>, <em>Elops lacerta</em> — 1–2 WA 12S records each; below threshold</li>
+          <li><em>Arius latiscutatus</em> (rough-head sea catfish) — 2 WA 12S records; below threshold</li>
+          <li><em>Callinectes amnicola</em> (Lagos lagoon swimming crab) — 1 WA COI record; below threshold of 5</li>
+          <li><em>Macrobrachium vollenhovenii</em> (African river prawn) — 1 WA COI record; below threshold</li>
+          <li><em>Tympanotonos fuscatus</em> (Niger Delta periwinkle) — NCBI partial; zero Nigeria-specific</li>
+        </ul>
+      </div>
+      <div style="background:var(--blue-bg);border:1px solid var(--blue);border-radius:var(--radius-lg);padding:1.25rem;">
+        <div style="font-size:12px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px;">📊 Data Interpretation &amp; Integrity Notes</div>
+        <ul style="font-size:12px;color:var(--text);line-height:2;padding-left:16px;margin:0;">
+          <li><strong>Classification is regional:</strong> "present" means West African records meet the marker threshold — not global availability</li>
+          <li><strong>Zero WA = absent</strong>, regardless of how well-studied the species is globally (major shift from v20)</li>
+          <li><strong>Nematode 0 values</strong> are real — NCBI, BOLD, and SILVA all return zero Nigeria/WA records</li>
+          <li><strong>SILVA is more complete</strong> than NCBI for 18S nematode sequences</li>
+          <li><strong>IUCN statuses</strong> sourced from IUCN Red List (2024); subject to revision</li>
+          <li>Dashboard v21 — run Python scripts locally to update with live database counts</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-head">Marker gene guide</div>
+    <div class="three-col">
+      <div class="info-card">
+        <h3><span style="background:var(--blue-bg);color:var(--blue);padding:2px 8px;border-radius:20px;font-size:11px;">12S rRNA</span> &nbsp;Fish and vertebrates</h3>
+        <p>The MiFish universal primer set (MiFish-U/E) amplifies a ~170bp region of the 12S ribosomal RNA gene. It is the global standard for fish eDNA metabarcoding — highly sensitive, works from both water-column eDNA and tissue extracts, and directly comparable to thousands of published datasets.</p>
+      </div>
+      <div class="info-card">
+        <h3><span style="background:var(--amber-bg);color:var(--amber);padding:2px 8px;border-radius:20px;font-size:11px;">COI</span> &nbsp;Animals and invertebrates</h3>
+        <p>Cytochrome oxidase I is the universal animal barcode — the primary marker of the BOLD Systems database. The Leray-XT primers amplify a ~313bp region suitable for metabarcoding. Used here for macrobenthos (gastropods, bivalves, polychaetes, crabs), marine invertebrates, and marine mammals.</p>
+      </div>
+      <div class="info-card">
+        <h3><span style="background:var(--purple-bg);color:var(--purple);padding:2px 8px;border-radius:20px;font-size:11px;">18S rRNA</span> &nbsp;Meiofauna and protists</h3>
+        <p>The V1V2 hypervariable region of the 18S small subunit ribosomal RNA gene is the primary marker for meiofauna metabarcoding. Primers NF1 / 18Sr2b amplify across free-living nematodes, copepods, and protists. Sequences are classified against the SILVA SSU reference database.</p>
+      </div>
+    </div>
+
+    <div class="section-head">Emerging priorities</div>
+    <div class="three-col">
+      <div class="green-card">
+        <h3>Sargassum bloom monitoring</h3>
+        <p>Since 2011, catastrophic <em>Sargassum</em> inundations have struck Nigerian coastal waters annually. Two species dominate: <em>Sargassum natans</em> and <em>S. fluitans</em>. Having rbcL reference sequences from Gulf of Guinea populations enables eDNA-based early warning detection — tracking bloom approach before physical landfall — and source attribution studies to understand whether bloom material originates from the open Atlantic or local coastal populations. This is an active monitoring need for NMBL.</p>
+      </div>
+      <div class="info-card">
+        <h3>Niger Delta sediment eDNA</h3>
+        <p>Sediment eDNA from the Niger Delta captures the meiofaunal community — principally free-living nematodes — whose composition changes measurably and predictably under hydrocarbon contamination. The nematode-to-copepod (N:C) ratio is a well-validated pollution index. With a West African nematode reference library, these indices can be computed from eDNA data rather than requiring time-consuming microscopy — transforming Niger Delta pollution monitoring for regulators, oil companies, and community stakeholders alike.</p>
+      </div>
+      <div class="info-card">
+        <h3>Offshore EEZ biodiversity</h3>
+        <p>Nigeria's ~210,000 km² EEZ remains almost entirely uncharacterised at the molecular level. Gulf of Guinea endemic fish species — demersal groupers, snappers, croakers unique to this ecosystem — have never been barcoded. As Nigeria expands its Blue Economy policy framework and deepwater oil operations, baseline molecular biodiversity data for the EEZ becomes essential for impact assessment, fisheries management, and international reporting under the Kunming-Montreal Global Biodiversity Framework.</p>
+      </div>
+    </div>
+
+    <div class="section-head">Data deposition and access</div>
+    <div class="two-col">
+      <div class="accent-card">
+        <h3>Public repositories</h3>
+        <p>All sequences generated by this project are deposited in: <strong>BOLD Systems</strong> (project NGMBL — Nigerian Marine Biodiversity Reference Library), <strong>NCBI GenBank</strong> with full voucher metadata, and <strong>SILVA</strong> (for 18S sequences). All deposits are open access with no embargo.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:1.5rem;">
+      <a href="/gap-analysis/" class="submit-btn">Open Gap Analysis Dashboard &#8594;</a>
+    </div>
 
   </main>
 
@@ -230,26 +309,8 @@
   <script src="/assets/js/nav.js"></script>
   <script src="/assets/js/partials.js"></script>
   <script>
-    // On this page only the All Taxa panel exists.
-    // Override switchTab so popup footer tab-buttons don't hide the table.
-    const _origSwitchTab = window.switchTab;
-    window.switchTab = function(id) {
-      const panel = document.getElementById('tab-species');
-      if (panel) panel.classList.add('active');
-      if (id === 'species' && typeof _origSwitchTab === 'function') _origSwitchTab('species');
-    };
-
-    // _citeDate used by populateDbStats in stats.js
-    const _months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-    const _now = new Date();
-    const _citeDate = _now.getDate() + ' ' + _months[_now.getMonth()] + ' ' + _now.getFullYear();
-
     document.addEventListener('DOMContentLoaded', function () {
       populateDbStats();
-      updateStats();
-      renderGroups();
-      renderGapLists();
-      renderTable();
     });
   </script>
 </body>
