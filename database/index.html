@@ -31,6 +31,50 @@
       <p>A live gap analysis dashboard tracking the molecular barcode coverage of Nigerian coastal and marine biodiversity across all major taxonomic groups. Updated as new sequences are generated and deposited.</p>
     </div>
 
+    <!-- ── Changelog / audit trail ── -->
+    <details style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:0.75rem 1.25rem;margin-bottom:1.25rem;">
+      <summary style="cursor:pointer;list-style:none;display:flex;align-items:center;gap:10px;justify-content:space-between;font-size:13px;font-weight:600;color:var(--navy);">
+        <span style="display:flex;align-items:center;gap:8px;">
+          <span style="font-size:10px;background:var(--bg3);color:var(--text2);padding:2px 8px;border-radius:20px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;">Changelog</span>
+          Version history &amp; audit trail
+        </span>
+        <span style="font-size:11px;color:var(--text3);font-weight:400;">v20 – v21 · click to expand</span>
+      </summary>
+
+      <div style="margin-top:14px;display:flex;flex-direction:column;gap:8px;">
+
+        <!-- v21 -->
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+          <div style="flex-shrink:0;padding-top:1px;">
+            <span style="display:inline-block;font-size:10px;font-weight:800;color:#fff;background:linear-gradient(90deg,#0a6b4e,#0d6efd);padding:3px 9px;border-radius:6px;letter-spacing:0.06em;white-space:nowrap;">v21 · Apr 2026</span>
+          </div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.85;">
+            <span style="color:var(--blue);font-weight:700;">★</span> <strong>Classification rule rewritten</strong> — v20's WA ≥50% of global ratio retired. Now uses marker-specific absolute WA thresholds: COI ≥5 · 12S ≥3 · 18S ≥1 · 28S ≥1 · rbcL ≥3.<br>
+            <span style="color:var(--red);font-weight:700;">⚠</span> <strong>WA-zero = absent</strong> — zero West African records now always classifies as Absent, regardless of global count. Affects all turtles, cetaceans, and several deep-water species.<br>
+            <span style="color:var(--amber);font-weight:700;">Δ</span> <strong>3 reclassifications</strong> — <em>Sardinella maderensis</em> present→partial; <em>Rhizoprionodon acutus</em> and <em>Penaeus notialis</em> partial→absent.<br>
+            <span style="color:var(--purple);font-weight:700;">⚡</span> Decision flowchart redrawn; all PRESENT / PARTIAL / ABSENT definitions and statistics copy updated to match.
+          </div>
+        </div>
+
+        <div style="height:1px;background:var(--border);margin:2px 0;"></div>
+
+        <!-- v20 -->
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+          <div style="flex-shrink:0;padding-top:1px;">
+            <span style="display:inline-block;font-size:10px;font-weight:800;color:#fff;background:linear-gradient(90deg,#0d6efd,#0c8599);padding:3px 9px;border-radius:6px;letter-spacing:0.06em;white-space:nowrap;">v20 · Apr 2026</span>
+          </div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.85;">
+            <span style="color:var(--blue);font-weight:700;">★</span> <strong>Priority Sequencing Targets</strong> leaderboard added to Statistics — weighted composite score (absence + IUCN + ecological priority), CSV export.<br>
+            <span style="color:var(--green);font-weight:700;">+</span> IUCN × coverage crosstab — threatened taxa (VU/EN/CR) cross-tabulated against reference coverage.<br>
+            <span style="color:var(--green);font-weight:700;">+</span> Classification decision tree (flowchart) first added; updated in v21.<br>
+            <span style="font-weight:700;">⌨</span> Keyboard shortcuts: <kbd style="background:var(--bg2);border:0.5px solid var(--border2);padding:1px 5px;border-radius:3px;font-size:10px;font-family:'DM Mono',monospace;">⌘K</kbd> / <kbd style="background:var(--bg2);border:0.5px solid var(--border2);padding:1px 5px;border-radius:3px;font-size:10px;font-family:'DM Mono',monospace;">Ctrl+K</kbd> or <kbd style="background:var(--bg2);border:0.5px solid var(--border2);padding:1px 5px;border-radius:3px;font-size:10px;font-family:'DM Mono',monospace;">/</kbd> to focus search.<br>
+            <span style="color:var(--red);font-weight:700;">🐛</span> Fixed duplicate scripts, broken email placeholders, and duplicate UI elements.
+          </div>
+        </div>
+
+      </div>
+    </details>
+
     <div class="two-col" style="margin-bottom:1.5rem;">
       <div class="accent-card">
         <h3>Why coverage matters</h3>

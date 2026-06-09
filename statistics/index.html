@@ -186,21 +186,65 @@
       <p>The decision tree, marker thresholds, and database sources that underpin all statistics on this page are documented on the <a href="/database/" style="font-weight:700;color:var(--blue);text-decoration:none;">Database page</a>. Classifications are computed dynamically at render time from the data arrays — no manual overrides.</p>
     </div>
 
-    <!-- Web statistics -->
+    <!-- Web statistics — GoatCounter live counters -->
     <div class="section-head">Web statistics</div>
-    <div class="info-card" style="margin-bottom:1rem;">
-      <p style="font-size:13px;color:var(--text2);margin-bottom:12px;">Live visitor data requires a third-party analytics service. Since the site is now live, the recommended setup is <strong>GoatCounter</strong> — free for open-source projects, no cookies, GDPR-compliant, one script tag. Once installed, a public stats counter can be embedded here.</p>
-      <div style="background:var(--bg2);border-radius:var(--radius);padding:12px 16px;font-size:12px;color:var(--text2);line-height:1.8;">
-        <strong>To enable live stats:</strong><br>
-        1. Create a free account at <strong>goatcounter.com</strong> (free for open-source / non-commercial sites)<br>
-        2. Add your site — you'll receive a unique code (e.g. <code style="background:var(--bg3);padding:1px 5px;border-radius:3px;font-size:11px;">nmbl</code>)<br>
-        3. Add one line to <code style="background:var(--bg3);padding:1px 5px;border-radius:3px;font-size:11px;">assets/partials/footer.html</code>:<br>
-        <code style="display:block;background:#0d1117;color:#c9d1d9;border-radius:var(--radius);padding:10px 12px;margin-top:6px;font-size:11px;white-space:pre;">&lt;script data-goatcounter="https://YOUR-CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"&gt;&lt;/script&gt;</code>
-        4. Replace <code style="background:var(--bg3);padding:1px 5px;border-radius:3px;font-size:11px;">YOUR-CODE</code> with your GoatCounter site code<br>
-        5. Visitor counts and page views will appear in your GoatCounter dashboard and can be made public
+    <div style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem 1.5rem;margin-bottom:1rem;box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:8px;">
+        <div style="font-size:11px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:0.06em;">Page views · all time</div>
+        <a href="https://nmbrl.goatcounter.com" target="_blank" rel="noopener" style="font-size:11px;color:var(--text3);text-decoration:none;display:flex;align-items:center;gap:4px;" title="View full GoatCounter dashboard">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          GoatCounter dashboard
+        </a>
       </div>
-      <p style="font-size:11px;color:var(--text3);margin-top:10px;">Alternative: Google Analytics 4 (free, more detailed but requires a Google account and consent banner for EU visitors). GoatCounter requires neither.</p>
+      <div id="gc-stats-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;">
+        <div class="gc-card" data-path="/database/"><div class="big-number gc-count" style="font-size:22px;">—</div><div class="big-label">Database</div></div>
+        <div class="gc-card" data-path="/gap-analysis/"><div class="big-number gc-count" style="font-size:22px;">—</div><div class="big-label">Gap Analysis</div></div>
+        <div class="gc-card" data-path="/statistics/"><div class="big-number gc-count" style="font-size:22px;">—</div><div class="big-label">Statistics</div></div>
+        <div class="gc-card" data-path="/about/"><div class="big-number gc-count" style="font-size:22px;">—</div><div class="big-label">About</div></div>
+        <div class="gc-card" data-path="/citations/"><div class="big-number gc-count" style="font-size:22px;">—</div><div class="big-label">Citations</div></div>
+        <div class="gc-card" style="border:1px solid var(--blue);background:var(--blue-bg);">
+          <div class="big-number" id="gc-total" style="font-size:22px;color:var(--blue);">—</div>
+          <div class="big-label" style="color:var(--blue);opacity:0.8;">Total views</div>
+        </div>
+      </div>
+      <p style="font-size:11px;color:var(--text3);margin-top:10px;">Tracked by <a href="https://www.goatcounter.com" target="_blank" rel="noopener" style="color:var(--text3);">GoatCounter</a> — no cookies, GDPR-compliant. Counts update on each page load.</p>
     </div>
+    <style>
+      .gc-card { background:var(--bg2);border:0.5px solid var(--border);border-radius:var(--radius);padding:12px 14px; }
+    </style>
+    <script>
+      (function() {
+        var BASE = 'https://nmbrl.goatcounter.com/counter/';
+        var cards = document.querySelectorAll('.gc-card[data-path]');
+        var total = 0; var loaded = 0;
+
+        function toNum(s) {
+          return parseInt((s || '0').replace(/,/g, ''), 10) || 0;
+        }
+
+        cards.forEach(function(card) {
+          var path = card.getAttribute('data-path');
+          var countEl = card.querySelector('.gc-count');
+          // GoatCounter public counter API: /counter/{path-without-leading-slash}.json
+          var encoded = encodeURIComponent(path);
+          fetch(BASE + encoded + '.json')
+            .then(function(r) { return r.ok ? r.json() : {count:'—'}; })
+            .then(function(d) {
+              var n = toNum(d.count);
+              countEl.textContent = d.count || '—';
+              total += n;
+              loaded++;
+              if (loaded === cards.length) {
+                document.getElementById('gc-total').textContent = total.toLocaleString();
+              }
+            })
+            .catch(function() {
+              countEl.textContent = '—';
+              loaded++;
+            });
+        });
+      })();
+    </script>
 
   </main>
 
