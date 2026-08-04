@@ -22,15 +22,17 @@ function renderGroups() {
   groupOrder.forEach(gr => {
     const sp = ALL_TAXA.filter(s => s.group===gr);
     if (!sp.length) return;
-    const pct = Math.round(sp.filter(s=>overallStatus(s)==="present").length/sp.length*100);
-    const gaps = sp.filter(s=>overallStatus(s)==="absent").length;
+    const present = sp.filter(s=>overallStatus(s)==="present").length;
+    const partial = sp.filter(s=>overallStatus(s)==="partial").length;
+    const gaps    = sp.filter(s=>overallStatus(s)==="absent").length;
+    const pct = Math.round((present + partial) / sp.length * 100);
     const col = pct>=60?"#1D9E75":pct>=30?"#BA7517":"#E24B4A";
     const card = document.createElement("div");
     card.className = "group-card";
     card.title = `Click to view all ${gr} taxa`;
     card.innerHTML = `
-      <div class="group-row"><span class="group-name">${gr}</span><span style="font-size:13px;color:${col};font-weight:600;">${pct}%</span></div>
-      <div class="group-sub">${sp.length} taxa · <span style="color:var(--red)">${gaps} gaps</span></div>
+      <div class="group-row"><span class="group-name">${gr}</span><span style="font-size:13px;color:${col};font-weight:600;">${pct}% <span style="font-size:9px;font-weight:500;opacity:0.7;">covered</span></span></div>
+      <div class="group-sub">${sp.length} taxa · <span style="color:var(--red)">${gaps} absent</span>${partial ? ` · <span style="color:var(--amber)">${partial} partial</span>` : ''}</div>
       <div class="progress-bar"><div class="progress-fill" style="width:${pct}%;background:${col};"></div></div>
       <div style="font-size:10px;color:var(--text3);margin-top:6px;">click to view taxa →</div>`;
     card.onclick = () => goToTaxa(gr, "all");

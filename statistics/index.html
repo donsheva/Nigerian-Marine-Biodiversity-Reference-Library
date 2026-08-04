@@ -140,7 +140,7 @@
             <th style="padding:10px 14px;text-align:center;font-size:11px;font-weight:600;color:var(--green);text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;" title="Sequences found in BOTH NCBI and BOLD/SILVA globally">Present (global)</th>
             <th style="padding:10px 14px;text-align:center;font-size:11px;font-weight:600;color:var(--amber);text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;" title="Sequences in one database only or lacking West African records">Partial (WA gap)</th>
             <th style="padding:10px 14px;text-align:center;font-size:11px;font-weight:600;color:var(--red);text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;" title="Zero West African records in both NCBI and BOLD/SILVA — undetectable in Nigerian eDNA">Absent (0 WA)</th>
-            <th style="padding:10px 14px;text-align:center;font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;">Global coverage %</th>
+            <th style="padding:10px 14px;text-align:center;font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;" title="% of taxa fully present — WA records meeting the marker threshold in both NCBI and BOLD/SILVA (partial taxa not counted)">% Fully present</th>
           </tr>
         </thead>
         <tbody id="stats-tbody">
@@ -156,7 +156,7 @@
       <strong style="color:var(--green)">Present (regional)</strong> — taxa with qualifying barcodes in BOTH NCBI AND BOLD/SILVA, with WA records meeting the marker threshold (COI ≥5, 12S ≥3, 18S ≥1, 28S ≥1, rbcL ≥3). &nbsp;
       <strong style="color:var(--amber)">Partial (regional gap)</strong> — WA records exist but fall below marker threshold, or only one database covered. &nbsp;
       <strong style="color:var(--red)">Absent (WA gap)</strong> — zero West African records in both NCBI and BOLD/SILVA; highest priority for new barcoding regardless of global availability. &nbsp;
-      <strong>Regional coverage %</strong> — percentage of taxa with at least one qualifying WA barcode record across both databases.
+      <strong>% Fully present</strong> — percentage of taxa meeting the full PRESENT threshold (WA records in both NCBI and BOLD/SILVA). Partial taxa (some data but below threshold) are not counted here — see the Partial column.
     </div>
 
     <div class="section-head">Marker gene coverage</div>
