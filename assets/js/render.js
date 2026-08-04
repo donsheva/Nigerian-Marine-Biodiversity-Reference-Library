@@ -8,7 +8,8 @@ function updateStats() {
   document.getElementById("s-total").textContent   = total;
   document.getElementById("s-present").textContent = present;
   document.getElementById("s-absent").textContent  = absent;
-  document.getElementById("s-pct").textContent     = Math.round(present/total*100)+"%";
+  const partial = ALL_TAXA.filter(s => overallStatus(s)==="partial").length;
+  document.getElementById("s-pct").textContent     = partial;
   document.getElementById("s-nema").textContent    = NEMATODES.length;
 }
 

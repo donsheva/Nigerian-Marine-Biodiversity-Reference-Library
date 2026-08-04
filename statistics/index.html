@@ -137,7 +137,7 @@
           <tr style="background:var(--bg2);border-bottom:1px solid var(--border);">
             <th style="padding:10px 14px;text-align:left;font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:0.05em;">Taxonomic group</th>
             <th style="padding:10px 14px;text-align:center;font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;">Taxa tracked</th>
-            <th style="padding:10px 14px;text-align:center;font-size:11px;font-weight:600;color:var(--green);text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;" title="Sequences found in BOTH NCBI and BOLD/SILVA globally">Present (global)</th>
+            <th style="padding:10px 14px;text-align:center;font-size:11px;font-weight:600;color:var(--green);text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;" title="WA records meeting marker threshold in both NCBI and BOLD/SILVA">Present (WA)</th>
             <th style="padding:10px 14px;text-align:center;font-size:11px;font-weight:600;color:var(--amber);text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;" title="Sequences in one database only or lacking West African records">Partial (WA gap)</th>
             <th style="padding:10px 14px;text-align:center;font-size:11px;font-weight:600;color:var(--red);text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;" title="Zero West African records in both NCBI and BOLD/SILVA — undetectable in Nigerian eDNA">Absent (0 WA)</th>
             <th style="padding:10px 14px;text-align:center;font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;" title="% of taxa fully present — WA records meeting the marker threshold in both NCBI and BOLD/SILVA (partial taxa not counted)">% Fully present</th>
@@ -183,7 +183,7 @@
     <!-- Classification methodology lives on the Database page -->
     <div class="accent-card" style="margin-bottom:1.5rem;">
       <h3>Coverage classification methodology</h3>
-      <p>The decision tree, marker thresholds, and database sources that underpin all statistics on this page are documented on the <a href="/database/" style="font-weight:700;color:var(--blue);text-decoration:none;">Database page</a>. Classifications are computed dynamically at render time from the data arrays — no manual overrides.</p>
+      <p>The decision tree, marker thresholds, and database sources that underpin all statistics on this page are documented on the <a href="/database/" style="font-weight:700;color:var(--blue);text-decoration:none;">Coverage page</a>. Classifications are computed dynamically at render time from the data arrays — no manual overrides.</p>
     </div>
 
     <!-- Web statistics — GoatCounter live counters -->
@@ -197,11 +197,14 @@
         </a>
       </div>
       <div id="gc-stats-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;">
-        <div class="gc-card" data-path="/database/"><div class="big-number gc-count" style="font-size:22px;">—</div><div class="big-label">Database</div></div>
-        <div class="gc-card" data-path="/gap-analysis/"><div class="big-number gc-count" style="font-size:22px;">—</div><div class="big-label">Gap Analysis</div></div>
+        <div class="gc-card" data-path="/database/"><div class="big-number gc-count" style="font-size:22px;">—</div><div class="big-label">Coverage</div></div>
+        <div class="gc-card" data-path="/gap-analysis/"><div class="big-number gc-count" style="font-size:22px;">—</div><div class="big-label">Database</div></div>
         <div class="gc-card" data-path="/statistics/"><div class="big-number gc-count" style="font-size:22px;">—</div><div class="big-label">Statistics</div></div>
         <div class="gc-card" data-path="/about/"><div class="big-number gc-count" style="font-size:22px;">—</div><div class="big-label">About</div></div>
         <div class="gc-card" data-path="/citations/"><div class="big-number gc-count" style="font-size:22px;">—</div><div class="big-label">Citations</div></div>
+        <div class="gc-card" data-path="/gallery/"><div class="big-number gc-count" style="font-size:22px;">—</div><div class="big-label">Gallery</div></div>
+        <div class="gc-card" data-path="/resources/"><div class="big-number gc-count" style="font-size:22px;">—</div><div class="big-label">Resources</div></div>
+        <div class="gc-card" data-path="/contact/"><div class="big-number gc-count" style="font-size:22px;">—</div><div class="big-label">Contact</div></div>
         <div class="gc-card" style="border:1px solid var(--blue);background:var(--blue-bg);">
           <div class="big-number" id="gc-total" style="font-size:22px;color:var(--blue);">—</div>
           <div class="big-label" style="color:var(--blue);opacity:0.8;">Total views</div>

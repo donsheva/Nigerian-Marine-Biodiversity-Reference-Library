@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="eDNA metabarcoding gap analysis for the Gulf of Guinea — Nigerian Marine Biodiversity Reference Library interactive taxa database.">
   <meta name="author" content="Adelodun Odedere — EnviroBiotics.org">
-  <meta property="og:title" content="Gap Analysis — NMBL · EnviroBiotics">
-  <meta property="og:description" content="eDNA metabarcoding gap analysis for the Gulf of Guinea — Nigerian Marine Biodiversity Reference Library.">
+  <meta property="og:title" content="Database — NMBL · EnviroBiotics">
+  <meta property="og:description" content="Interactive species database — molecular barcode coverage for Nigerian coastal and marine taxa across NCBI, BOLD, and SILVA.">
   <meta property="og:url" content="https://envirobiotics.org/gap-analysis/">
   <meta property="og:image" content="https://envirobiotics.org/assets/images/og-image.svg">
   <meta property="og:image:width" content="1200">
@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/styles.css">
-  <title>Gap Analysis — NMBL · EnviroBiotics</title>
+  <title>Database — NMBL · EnviroBiotics</title>
   <script data-goatcounter="https://nmbrl.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
@@ -58,7 +58,7 @@
       <div style="background:linear-gradient(135deg,var(--blue-bg),var(--teal-bg));border:1px solid var(--blue);border-radius:var(--radius-lg);padding:1rem 1.25rem;margin-bottom:1.25rem;display:flex;align-items:center;gap:14px;">
         <div style="font-size:28px;flex-shrink:0;">🔬</div>
         <div>
-          <div style="font-size:13px;font-weight:700;color:var(--blue);margin-bottom:3px;">Live Gap Analysis — Nigerian Marine Biodiversity Reference Library &nbsp;<span style="font-size:10px;font-weight:600;background:var(--blue);color:#fff;padding:1px 7px;border-radius:10px;vertical-align:middle;">v21</span></div>
+          <div style="font-size:13px;font-weight:700;color:var(--blue);margin-bottom:3px;">Live Database — Nigerian Marine Biodiversity Reference Library &nbsp;<span style="font-size:10px;font-weight:600;background:var(--blue);color:#fff;padding:1px 7px;border-radius:10px;vertical-align:middle;">v21</span></div>
           <p style="font-size:12px;color:var(--text2);line-height:1.6;margin:0;">Tracking molecular barcode coverage for the Gulf of Guinea. Click any stat card or group below to filter the full species list. Taxa with <span style="background:var(--red-bg);color:var(--red);padding:1px 6px;border-radius:3px;font-weight:600;font-size:11px;">absent</span> status are undetectable in any eDNA survey — these are the highest priority for new voucher sequencing.</p>
         </div>
       </div>
@@ -84,8 +84,8 @@
           <div style="font-size:10px;color:var(--text3);margin-top:3px;">click to view →</div>
         </div>
         <div class="stat" onclick="goToTaxa('all','partial')" title="View partial coverage taxa">
-          <div class="stat-label">Sequence coverage</div><div class="stat-val amber" id="s-pct">—</div>
-          <div style="font-size:10px;color:var(--text3);margin-top:3px;">click for partial →</div>
+          <div class="stat-label">Partial coverage</div><div class="stat-val amber" id="s-pct">—</div>
+          <div style="font-size:10px;color:var(--text3);margin-top:3px;">click to view →</div>
         </div>
         <div class="stat" onclick="goToTaxa('Nematode','all')" title="View nematode genera">
           <div class="stat-label">Nematode genera</div><div class="stat-val purple" id="s-nema" style="font-size:28px;">—</div>
