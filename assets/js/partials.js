@@ -22,7 +22,7 @@
 
   // Build global search index now that header search input is in the DOM
   if (typeof buildSearchIndex === 'function') {
-    window.SEARCH_INDEX = buildSearchIndex();
+    SEARCH_INDEX = buildSearchIndex();
   }
 
   // Bind keyboard shortcuts (Cmd/Ctrl+K, /, Esc)

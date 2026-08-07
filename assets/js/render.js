@@ -26,7 +26,7 @@ function renderGroups() {
     const present = sp.filter(s=>overallStatus(s)==="present").length;
     const partial = sp.filter(s=>overallStatus(s)==="partial").length;
     const gaps    = sp.filter(s=>overallStatus(s)==="absent").length;
-    const pct = Math.round((present + partial) / sp.length * 100);
+    const pct = Math.round(present / sp.length * 100);
     const col = pct>=60?"#1D9E75":pct>=30?"#BA7517":"#E24B4A";
     const card = document.createElement("div");
     card.className = "group-card";

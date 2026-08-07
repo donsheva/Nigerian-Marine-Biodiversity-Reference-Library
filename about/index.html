@@ -240,74 +240,186 @@
     </div>
 
     <div class="section-head">Version History</div>
+    <p class="vh-note">Reverse chronological — click any entry to expand. Dates for v11–v19 are derived from source-file timestamps; no internal release dates were recorded before v20.</p>
 
-    <details style="background:linear-gradient(135deg,var(--green-bg),var(--blue-bg));border:1px solid var(--green);border-radius:var(--radius-lg);padding:0.75rem 1.25rem;margin-bottom:0.75rem;" open>
-      <summary style="cursor:pointer;font-size:13px;font-weight:700;color:var(--navy);list-style:none;display:flex;align-items:center;gap:10px;">
-        <span style="font-size:10px;font-weight:800;color:#fff;background:linear-gradient(90deg,#0a6b4e,#0d6efd);padding:3px 9px;border-radius:6px;letter-spacing:0.07em;">NEW IN v21</span>
-        <span>Methodology update — marker-specific WA thresholds</span>
-        <span style="margin-left:auto;font-size:11px;color:var(--text2);font-weight:500;">Released April 2026</span>
-      </summary>
-      <div style="margin-top:12px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;">
-        <div style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius);padding:10px 12px;">
-          <div style="font-size:11px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">★ Classification rule rewritten</div>
-          <div style="font-size:12px;color:var(--text2);line-height:1.6;">The v20 "WA ≥50% of global NCBI" ratio is <strong>retired</strong>. Classification now uses <strong>marker-specific absolute WA record thresholds</strong> — COI ≥5, 12S ≥3, 18S ≥1, 28S ≥1, rbcL ≥3 — chosen to reflect the intraspecific variation needed for reliable identification with each marker.</div>
-        </div>
-        <div style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius);padding:10px 12px;">
-          <div style="font-size:11px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">⚠ Scope change — WA-absent now means absent</div>
-          <div style="font-size:12px;color:var(--text2);line-height:1.6;">A species with global records but <strong>zero West African records</strong> is now classified NCBI-<strong style="color:var(--red)">absent</strong> for the regional reference library. Global coverage no longer rescues regional gaps. This affects <em>Tursiops truncatus</em>, <em>Chelonia mydas</em>, <em>Dermochelys coriacea</em>, <em>Lepidochelys olivacea</em>, <em>Carcharhinus leucas</em>, <em>Rhizoprionodon acutus</em>, <em>Parapenaeus longirostris</em>, and others.</div>
-        </div>
-        <div style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius);padding:10px 12px;">
-          <div style="font-size:11px;font-weight:700;color:var(--amber);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">Δ Reclassification summary</div>
-          <div style="font-size:12px;color:var(--text2);line-height:1.6;">Three overall-status changes under the new rule: <em>Sardinella maderensis</em> present → partial; <em>Rhizoprionodon acutus</em> and <em>Penaeus notialis</em> partial → absent. Several NCBI-level statuses corrected upward (<em>P. elongatus</em>, <em>Sphyrna lewini</em>) or downward (all turtles, cetaceans, and deep-water shrimps with zero WA records).</div>
-        </div>
-        <div style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius);padding:10px 12px;">
-          <div style="font-size:11px;font-weight:700;color:var(--purple);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">⚡ UI updates</div>
-          <div style="font-size:12px;color:var(--text2);line-height:1.6;">Decision-tree flowchart redrawn with a three-stage logic (any WA? → meets threshold? → both databases?) and a marker-threshold legend. All PRESENT/PARTIAL/ABSENT definition cards, Statistics page copy, coverage legend, and species-level notes updated to match. Stale v18/v20 references corrected.</div>
-        </div>
-        <div style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius);padding:10px 12px;">
-          <div style="font-size:11px;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">🔬 Scientific rationale</div>
-          <div style="font-size:12px;color:var(--text2);line-height:1.6;">The 50% ratio was mathematically unstable for data-rich species (a fish with 80/400 WA records failed despite operational sufficiency, while a species with 2/2 passed). Absolute marker-specific thresholds align classification with the real question: "can we reliably identify a Nigerian specimen from existing reference data?" Global counts are retained as context but no longer classify.</div>
-        </div>
-        <div style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius);padding:10px 12px;">
-          <div style="font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">🛡 Audit trail</div>
-          <div style="font-size:12px;color:var(--text2);line-height:1.6;">Species entries previously flagged as "present" with ratio-inflated status (e.g. <em>Sardinella maderensis</em> at 2/2 = 100%) have been reviewed and corrected. Critical gaps, well-covered, and partial coverage lists reconciled. Priority flags adjusted where overall status changed.</div>
-        </div>
-      </div>
-    </details>
+    <style>
+      .vh-note { font-size:11px; color:var(--text3); font-style:italic; margin:-8px 0 12px; }
+      .vh-list { display:flex; flex-direction:column; gap:6px; margin-bottom:1.5rem; }
+      .vh-entry { background:var(--bg); border:0.5px solid var(--border); border-radius:var(--radius); overflow:hidden; }
+      .vh-entry summary { cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px; padding:10px 14px; font-size:13px; }
+      .vh-entry summary::-webkit-details-marker { display:none; }
+      .vh-badge { flex-shrink:0; font-size:9.5px; font-weight:800; color:#fff; padding:3px 8px; border-radius:6px; letter-spacing:0.05em; white-space:nowrap; }
+      .vh-heading { flex:1; font-weight:600; color:var(--navy); }
+      .vh-date { flex-shrink:0; font-size:11px; color:var(--text3); font-weight:500; white-space:nowrap; }
+      .vh-body { padding:0 14px 12px 14px; font-size:12px; color:var(--text2); line-height:1.7; border-top:0.5px solid var(--border); margin-top:2px; padding-top:10px; }
+      .vh-body ul { margin:4px 0 0; padding-left:18px; }
+      .vh-body li { margin-bottom:6px; }
+      .vh-body p { margin:0 0 8px; }
+      .vh-body p:last-child { margin-bottom:0; }
+    </style>
 
-    <details style="background:linear-gradient(135deg,var(--blue-bg),var(--teal-bg));border:1px solid var(--blue);border-radius:var(--radius-lg);padding:0.75rem 1.25rem;margin-bottom:1.5rem;">
-      <summary style="cursor:pointer;font-size:13px;font-weight:700;color:var(--navy);list-style:none;display:flex;align-items:center;gap:10px;">
-        <span style="font-size:10px;font-weight:800;color:#fff;background:linear-gradient(90deg,#0d6efd,#0c8599);padding:3px 9px;border-radius:6px;letter-spacing:0.07em;">v20 HISTORY</span>
-        <span>What shipped in v20</span>
-        <span style="margin-left:auto;font-size:11px;color:var(--text2);font-weight:500;">Released April 2026</span>
-      </summary>
-      <div style="margin-top:12px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;">
-        <div style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius);padding:10px 12px;">
-          <div style="font-size:11px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">★ Headline feature</div>
-          <div style="font-size:12px;color:var(--text2);line-height:1.55;"><strong>Top Priority Sequencing Targets</strong> leaderboard on the Statistics page — ranked list weighted by absence, IUCN status, and ecological priority. The funder-ready answer to "what should we sequence next?"</div>
+    <div class="vh-list">
+
+      <details class="vh-entry" open>
+        <summary>
+          <span class="vh-badge" style="background:linear-gradient(90deg,#3d4f63,#091e38);">PATCH</span>
+          <span class="vh-heading">Coverage %, search, and analytics widget fixes</span>
+          <span class="vh-date">Aug 2026</span>
+        </summary>
+        <div class="vh-body">
+          <ul>
+            <li><strong>Coverage-by-group percentages corrected</strong> — the "% covered" figure on each taxon-group card on the Database page previously counted <em>partial</em>-coverage species toward the percentage. It now counts only <em>present</em> (full-coverage) species, matching the methodology described above. Several group percentages dropped sharply as a result — e.g. sea turtles from a misleading 100% to an accurate 0% (all three species are partial, none present).</li>
+            <li><strong>Global search fixed</strong> — a variable-scoping bug meant the page-wide search index was built but never actually connected to the search box after the header loaded, so every query (e.g. "African manatee") returned zero results regardless of what existed in the database.</li>
+            <li><strong>GoatCounter visitor-count widget fixed</strong> — the Statistics page's per-page view counters were requesting a malformed API URL (incorrectly percent-encoding the page path). Corrected to match GoatCounter's counter API format. Note: the widget also requires the "allow visitor counter" setting to be enabled in the GoatCounter account before counts will display.</li>
+          </ul>
         </div>
-        <div style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius);padding:10px 12px;">
-          <div style="font-size:11px;font-weight:700;color:var(--purple);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">+ New view</div>
-          <div style="font-size:12px;color:var(--text2);line-height:1.55;"><strong>IUCN × coverage crosstab</strong> on the Statistics page — surfaces threatened taxa (VU/EN/CR) that lack reference barcodes.</div>
+      </details>
+
+      <details class="vh-entry">
+        <summary>
+          <span class="vh-badge" style="background:linear-gradient(90deg,#3d4f63,#091e38);">SITE UPDATE</span>
+          <span class="vh-heading">Nav rename — "Gap Analysis" became "Database"</span>
+          <span class="vh-date">Aug 2026</span>
+        </summary>
+        <div class="vh-body">
+          <p>The interactive species-table page (<code>/gap-analysis/</code>) was relabeled <strong>"Database"</strong> in the site navigation, and the classification-methodology page (<code>/database/</code>) was relabeled <strong>"Coverage"</strong> — the two pages previously shared the confusingly similar labels "Gap Analysis" and "Database" for unrelated content.</p>
         </div>
-        <div style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius);padding:10px 12px;">
-          <div style="font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">+ New view</div>
-          <div style="font-size:12px;color:var(--text2);line-height:1.55;"><strong>Coverage classification flowchart</strong> on the Statistics page — visual decision tree for the present / partial / absent assignment (updated in v21 to reflect marker-specific WA thresholds).</div>
+      </details>
+
+      <details class="vh-entry">
+        <summary>
+          <span class="vh-badge" style="background:linear-gradient(90deg,#0a6b4e,#0d6efd);">v21</span>
+          <span class="vh-heading">Classification rule rewritten — marker-specific WA thresholds</span>
+          <span class="vh-date">Apr 2026</span>
+        </summary>
+        <div class="vh-body">
+          <ul>
+            <li><strong>Classification rule rewritten.</strong> The v14–v20 "WA ≥50% of global NCBI" ratio is retired. Classification now uses marker-specific absolute WA record thresholds — COI ≥5, 12S ≥3, 18S ≥1, 28S ≥1, rbcL ≥3 — chosen to reflect the intraspecific variation needed for reliable identification with each marker.</li>
+            <li><strong>Scope change — WA-absent now means absent.</strong> A species with global records but zero West African records is now classified NCBI-absent for the regional reference library. Global coverage no longer rescues regional gaps. Affects <em>Tursiops truncatus</em>, <em>Chelonia mydas</em>, <em>Dermochelys coriacea</em>, <em>Lepidochelys olivacea</em>, <em>Carcharhinus leucas</em>, <em>Rhizoprionodon acutus</em>, <em>Parapenaeus longirostris</em>, and others.</li>
+            <li><strong>Reclassification summary.</strong> Three overall-status changes under the new rule: <em>Sardinella maderensis</em> present → partial; <em>Rhizoprionodon acutus</em> and <em>Penaeus notialis</em> partial → absent. Several NCBI-level statuses corrected upward (<em>P. elongatus</em>, <em>Sphyrna lewini</em>) or downward (all turtles, cetaceans, and deep-water shrimps with zero WA records).</li>
+            <li><strong>UI updates.</strong> Decision-tree flowchart redrawn with three-stage logic (any WA? → meets threshold? → both databases?) and a marker-threshold legend. All status definitions, Statistics copy, and species-level notes updated to match.</li>
+            <li><strong>Scientific rationale.</strong> The 50% ratio was mathematically unstable for data-rich species (a fish with 80/400 WA records failed despite operational sufficiency, while a species with 2/2 passed). Absolute marker-specific thresholds align classification with the real question: "can we reliably identify a Nigerian specimen from existing reference data?"</li>
+          </ul>
         </div>
-        <div style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius);padding:10px 12px;">
-          <div style="font-size:11px;font-weight:700;color:var(--amber);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">⚡ UX improvement</div>
-          <div style="font-size:12px;color:var(--text2);line-height:1.55;"><strong>Keyboard shortcuts</strong> — press <kbd style="background:var(--bg2);border:0.5px solid var(--border2);padding:1px 5px;border-radius:3px;font-family:'DM Mono',monospace;font-size:10px;">⌘K</kbd> / <kbd style="background:var(--bg2);border:0.5px solid var(--border2);padding:1px 5px;border-radius:3px;font-family:'DM Mono',monospace;font-size:10px;">Ctrl+K</kbd> or <kbd style="background:var(--bg2);border:0.5px solid var(--border2);padding:1px 5px;border-radius:3px;font-family:'DM Mono',monospace;font-size:10px;">/</kbd> to focus search, <kbd style="background:var(--bg2);border:0.5px solid var(--border2);padding:1px 5px;border-radius:3px;font-family:'DM Mono',monospace;font-size:10px;">Esc</kbd> to dismiss.</div>
+      </details>
+
+      <details class="vh-entry">
+        <summary>
+          <span class="vh-badge" style="background:linear-gradient(90deg,#0d6efd,#0c8599);">v20</span>
+          <span class="vh-heading">Priority leaderboard, IUCN crosstab, and keyboard shortcuts</span>
+          <span class="vh-date">Apr 2026</span>
+        </summary>
+        <div class="vh-body">
+          <ul>
+            <li><strong>Top Priority Sequencing Targets</strong> leaderboard added to the Statistics page — ranked list weighted by absence, IUCN status, and ecological priority.</li>
+            <li><strong>IUCN × coverage crosstab</strong> added — surfaces threatened taxa (VU/EN/CR) that lack reference barcodes.</li>
+            <li><strong>Coverage classification flowchart</strong> added — visual decision tree for the present/partial/absent assignment (redrawn in v21 for marker-specific thresholds).</li>
+            <li><strong>Keyboard shortcuts</strong> — ⌘K / Ctrl+K or / to focus search, Esc to dismiss.</li>
+            <li><strong>Bug fixes</strong> — removed a duplicate Cloudflare email script, fixed broken email placeholders, consolidated duplicate back-to-top buttons, repaired a truncated newsletter handler.</li>
+          </ul>
         </div>
-        <div style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius);padding:10px 12px;">
-          <div style="font-size:11px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">🐛 Bug fixes</div>
-          <div style="font-size:12px;color:var(--text2);line-height:1.55;">Removed duplicate Cloudflare email script (loaded 3× before); fixed broken email placeholders on Gallery and Bank Transfer; consolidated duplicate back-to-top buttons; repaired truncated newsletter handler.</div>
+      </details>
+
+      <details class="vh-entry">
+        <summary>
+          <span class="vh-badge" style="background:linear-gradient(90deg,#7a27a0,#3d4f63);">v19</span>
+          <span class="vh-heading">envirobiotics.org deployment prep</span>
+          <span class="vh-date">Mar 2026</span>
+        </summary>
+        <div class="vh-body">
+          <p>Added canonical URL, Open Graph image, and <code>robots</code> meta targeting the envirobiotics.org domain; replaced the NIOMR institutional affiliation with EnviroBiotics.org in author metadata. Added a skip-to-content link, refined focus-visible styling, sticky nav with backdrop blur, and reworked table header styling.</p>
         </div>
-        <div style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius);padding:10px 12px;">
-          <div style="font-size:11px;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">📐 Responsive</div>
-          <div style="font-size:12px;color:var(--text2);line-height:1.55;">Statistics KPI grids now use <code style="font-size:11px;background:var(--bg2);padding:1px 4px;border-radius:3px;">auto-fit</code> layout — no longer cramped on tablets and phones.</div>
+      </details>
+
+      <details class="vh-entry">
+        <summary>
+          <span class="vh-badge" style="background:linear-gradient(90deg,#7a27a0,#3d4f63);">v18</span>
+          <span class="vh-heading">Project renamed to NMBL</span>
+          <span class="vh-date">Mar 2026</span>
+        </summary>
+        <div class="vh-body">
+          <p>Site identity changed from "Nigeria Marine Biodiversity Library" to <strong>"Nigerian Marine Biodiversity Reference Library"</strong> — the name still in use today. The dark inline header introduced in v17 was reverted to a light header plus a separate sticky nav bar — the direct ancestor of today's split header/nav partials.</p>
         </div>
-      </div>
-    </details>
+      </details>
+
+      <details class="vh-entry">
+        <summary>
+          <span class="vh-badge" style="background:linear-gradient(90deg,#7a27a0,#3d4f63);">v17</span>
+          <span class="vh-heading">Header rebuilt as a dark inline nav + search bar</span>
+          <span class="vh-date">Mar 2026</span>
+        </summary>
+        <div class="vh-body">
+          <p>Replaced the light two-row header with a single dark navy bar containing inline pill navigation and a search field built into the header itself (global search had existed since ~v13; this changed only where it lived). Added DM Sans to the font stack.</p>
+        </div>
+      </details>
+
+      <details class="vh-entry">
+        <summary>
+          <span class="vh-badge" style="background:linear-gradient(90deg,#7a27a0,#3d4f63);">v16</span>
+          <span class="vh-heading">New crest logo; stale version label removed</span>
+          <span class="vh-date">Mar 2026</span>
+        </summary>
+        <div class="vh-body">
+          <p>Replaced the simple DNA-helix icon with a circular Nigerian-flag-coloured crest and a separate wordmark. Removed a header badge that had been hardcoded to read "v12.5 · Gap Analysis" and had gone stale since v13.</p>
+        </div>
+      </details>
+
+      <details class="vh-entry">
+        <summary>
+          <span class="vh-badge" style="background:linear-gradient(90deg,#7a27a0,#3d4f63);">v15</span>
+          <span class="vh-heading">Zenodo DOI added; dead nav tabs removed</span>
+          <span class="vh-date">Mar 2026</span>
+        </summary>
+        <div class="vh-body">
+          <p>Removed two nav buttons ("Python scripts", "Workflow") that had had no corresponding page content since at least v14. Added the project's Zenodo DOI (10.5281/zenodo.19201628), replacing a "to be assigned" placeholder. Added skeleton loaders, focus-visible rings, and mobile breakpoints.</p>
+        </div>
+      </details>
+
+      <details class="vh-entry">
+        <summary>
+          <span class="vh-badge" style="background:linear-gradient(90deg,#7a27a0,#3d4f63);">v14</span>
+          <span class="vh-heading">Full visual redesign; classification switched to a WA/global ratio</span>
+          <span class="vh-date">Mar 2026</span>
+        </summary>
+        <div class="vh-body">
+          <p>Site-wide re-theme — fonts switched to Sora/DM Mono, new colour palette and shadow system — the direct origin of the design still used today. Also replaced the absolute-count NCBI classification rule introduced in v12 with a ratio rule (WA records ≥50% of global records). This is the same ratio rule retired in v21: it shipped here in v14 and remained unchanged for six versions before v21 replaced it with marker-specific thresholds.</p>
+        </div>
+      </details>
+
+      <details class="vh-entry">
+        <summary>
+          <span class="vh-badge" style="background:linear-gradient(90deg,#7a27a0,#3d4f63);">v13</span>
+          <span class="vh-heading">BOLD Systems v5 re-query; page-load race fixed</span>
+          <span class="vh-date">Mar 2026</span>
+        </summary>
+        <div class="vh-body">
+          <p>Numerous species' BOLD status and notes updated from "API unavailable (v4)" to live BOLD v5 query results — several flipped from absent to partial/present, including <em>Sardinella maderensis</em>, <em>Mugil cephalus</em>, <em>Tursiops truncatus</em>, and all three sea turtles. Fixed a bug where the database tab could render before the page had finished loading.</p>
+        </div>
+      </details>
+
+      <details class="vh-entry">
+        <summary>
+          <span class="vh-badge" style="background:linear-gradient(90deg,#7a27a0,#3d4f63);">v12</span>
+          <span class="vh-heading">Dynamic NCBI classification introduced</span>
+          <span class="vh-date">Mar 2026</span>
+        </summary>
+        <div class="vh-body">
+          <p>Replaced fully static, pre-computed per-species NCBI status fields with the first runtime classification function (absent below 5 global records, present with any WA records, otherwise partial). Added "Key Insights & Scientific Findings" and "Data Sources" sections; removed a "Brand Identity & Logos" section.</p>
+        </div>
+      </details>
+
+      <details class="vh-entry">
+        <summary>
+          <span class="vh-badge" style="background:linear-gradient(90deg,#7a27a0,#3d4f63);">v11</span>
+          <span class="vh-heading">Publications page merged into Resources</span>
+          <span class="vh-date">Mar 2026</span>
+        </summary>
+        <div class="vh-body">
+          <p>The standalone "Publications" nav tab was removed; its content was folded into the Resources page instead.</p>
+        </div>
+      </details>
+
+    </div>
 
   </main>
 

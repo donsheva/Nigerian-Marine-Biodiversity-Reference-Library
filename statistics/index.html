@@ -228,9 +228,9 @@
         cards.forEach(function(card) {
           var path = card.getAttribute('data-path');
           var countEl = card.querySelector('.gc-count');
-          // GoatCounter public counter API: /counter/{path-without-leading-slash}.json
-          var encoded = encodeURIComponent(path);
-          fetch(BASE + encoded + '.json')
+          // GoatCounter public counter API: /counter/{full-path-with-leading-slash}.json
+          // (slashes must stay literal — do NOT encodeURIComponent the whole path)
+          fetch(BASE + path + '.json')
             .then(function(r) { return r.ok ? r.json() : {count:'—'}; })
             .then(function(d) {
               var n = toNum(d.count);
