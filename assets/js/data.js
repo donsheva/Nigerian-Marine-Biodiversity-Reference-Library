@@ -125,6 +125,27 @@ function overallStatus(s) {
   return "partial";
 }
 
+// Shared classification helpers — used by search.js (loaded on every page)
+// as well as render.js's group-specific tables, so they live here in data.js
+// rather than render.js.
+function macroStatus(s) {
+  if(s.ncbi==="absent"&&s.bold==="absent") return "absent";
+  if(s.ncbi==="present"&&s.bold==="present") return "present";
+  return "partial";
+}
+
+function marineStatus(s) {
+  if(s.ncbi==="absent"&&s.bold==="absent") return "absent";
+  if(s.ncbi==="present"&&s.bold==="present") return "present";
+  return "partial";
+}
+
+function nemaGapStatus(n) {
+  if(n.global18s===0) return "unsequenced";
+  if(n.ng18s===0)     return "nigeria-gap";
+  return "present";
+}
+
 // ─── MACROBENTHOS DATA ─────────────────────────────────────────────────────
 // priority species flagged with star for highlighting
 const MACROBENTHOS = [
@@ -221,6 +242,8 @@ const MARINE = [
   {name:"Balaenoptera brydei",      common:"Bryde's whale",           group:"Marine-Mammal",   marker:"COI", ncbi:"present", bold:"partial", priority:"med",  notes:"Resident in Gulf of Guinea; WA gap"},
   {name:"Orcinus orca",             common:"Killer whale",            group:"Marine-Mammal",   marker:"COI", ncbi:"present", bold:"present", priority:"low",  notes:"Thousands of global GenBank/BOLD records; not queried directly — run v2 script to confirm", genbank:"NC_023889", boldTaxon:"Orcinus orca"},
 ];
+
+const GULF_ENDEMICS = ["Scomberomorus tritor","Dentex angolensis","Pteroscion peli","Lutjanus goreensis","Strombus latus","Balaenoptera brydei"];
 
 // Add marine species into ALL_TAXA
 MARINE.forEach(s => {

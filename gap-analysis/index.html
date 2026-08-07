@@ -24,22 +24,6 @@
   <div id="site-header"></div>
   <div id="site-nav"></div>
 
-  <div class="popup-overlay" id="popup-overlay" role="dialog" aria-modal="true" aria-labelledby="popup-name" onclick="closePopupOnOverlay(event)">
-    <div class="popup-card" id="popup-card">
-      <div class="popup-header">
-        <div class="popup-icon" id="popup-icon"></div>
-        <div class="popup-title">
-          <h2 id="popup-name"></h2>
-          <p id="popup-common"></p>
-        </div>
-        <button class="popup-close" onclick="closePopup()" aria-label="Close species details popup">&#215;</button>
-      </div>
-      <div class="popup-body" id="popup-body"></div>
-      <div class="popup-notes" id="popup-notes"></div>
-      <div class="popup-footer" id="popup-footer"></div>
-    </div>
-  </div>
-
   <main class="container" id="main-content" role="main" tabindex="-1">
 
     <div style="margin-bottom:1rem;"></div>
@@ -542,6 +526,16 @@
       renderFishTable();
       renderMacroTable();
       renderNemaTable();
+
+      // Deep-link support: popups on other pages send users here with
+      // ?q=, ?group=&status=, or ?tab= when they can't apply the action locally.
+      const params = new URLSearchParams(location.search);
+      const q = params.get('q');
+      const group = params.get('group');
+      const tab = params.get('tab');
+      if (q) goToSearch(q);
+      else if (group) goToTaxa(group, params.get('status') || 'all');
+      else if (tab) switchTab(tab);
     });
   </script>
 </body>

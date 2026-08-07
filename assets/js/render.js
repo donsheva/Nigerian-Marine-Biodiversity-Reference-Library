@@ -170,12 +170,6 @@ function sortNemaBy(col) {
   renderNemaTable();
 }
 
-function nemaGapStatus(n) {
-  if(n.global18s===0) return "unsequenced";
-  if(n.ng18s===0)     return "nigeria-gap";
-  return "present";
-}
-
 function renderNemaTable() {
   const q  = document.getElementById("nema-search").value.toLowerCase();
   const fo = document.getElementById("nema-order").value;
@@ -298,12 +292,6 @@ function sortMacroBy(col) {
   renderMacroTable();
 }
 
-function macroStatus(s) {
-  if(s.ncbi==="absent"&&s.bold==="absent") return "absent";
-  if(s.ncbi==="present"&&s.bold==="present") return "present";
-  return "partial";
-}
-
 function renderMacroTable() {
   const q  = document.getElementById("macro-search").value.toLowerCase();
   const fg = document.getElementById("macro-group").value;
@@ -352,18 +340,10 @@ function exportMacroCSV() {
 }
 
 // ─── MARINE TABLE ──────────────────────────────────────────────────────────
-const GULF_ENDEMICS = ["Scomberomorus tritor","Dentex angolensis","Pteroscion peli","Lutjanus goreensis","Strombus latus","Balaenoptera brydei"];
-
 let marSortCol="priority", marSortDir=1;
 function sortMarineBy(col) {
   if(marSortCol===col) marSortDir*=-1; else{marSortCol=col;marSortDir=1;}
   renderMarineTable();
-}
-
-function marineStatus(s) {
-  if(s.ncbi==="absent"&&s.bold==="absent") return "absent";
-  if(s.ncbi==="present"&&s.bold==="present") return "present";
-  return "partial";
 }
 
 function renderMarineTable() {

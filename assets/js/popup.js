@@ -86,10 +86,24 @@ function openPopup(idx) {
     const bUrl = 'https://www.boldsystems.org/index.php/Taxbrowser_Taxonpage?taxon=' + encodeURIComponent(bTaxon);
     boldLink = '<a href="' + bUrl + '" target="_blank" class="popup-action" style="text-decoration:none;background:var(--blue-bg);color:var(--blue);border-color:rgba(20,98,232,0.3);">🔗 BOLD: ' + bTaxon + '</a>';
   }
+  // goToTaxa/switchTab/goToSearch only work on the /gap-analysis/ page (the
+  // only page with the filter/tab/table markup they operate on). From any
+  // other page, send the user there instead of calling undefined functions.
+  const hasTaxaTable = !!document.getElementById('filt-group');
+  const gotoGroupAction  = hasTaxaTable
+    ? "closePopup();goToTaxa('" + s.group.replace(/'/g, "\\'") + "','all')"
+    : "location.href='/gap-analysis/?group=" + encodeURIComponent(s.group) + "&status=all'";
+  const openTabAction    = hasTaxaTable
+    ? "closePopup();switchTab('" + s.tab + "')"
+    : "location.href='/gap-analysis/?tab=" + encodeURIComponent(s.tab) + "'";
+  const searchTableAction = hasTaxaTable
+    ? "closePopup();goToSearch('" + s.name.replace(/'/g, "\\'") + "')"
+    : "location.href='/gap-analysis/?q=" + encodeURIComponent(s.name) + "'";
+
   const pfooter = document.getElementById('popup-footer'); if (pfooter) pfooter.innerHTML =
-      '<button class="popup-action" onclick="closePopup();goToTaxa(\'' + s.group + '\',\'all\')">View group in All Taxa</button>'
-    + '<button class="popup-action" onclick="closePopup();switchTab(\'' + s.tab + '\')">Open ' + tabLabel + ' tab</button>'
-    + '<button class="popup-action" onclick="closePopup();goToSearch(\'' + s.name.replace(/'/g, "\\'") + '\')">Search in table</button>'
+      '<button class="popup-action" onclick="' + gotoGroupAction + '">View group in All Taxa</button>'
+    + '<button class="popup-action" onclick="' + openTabAction + '">Open ' + tabLabel + ' tab</button>'
+    + '<button class="popup-action" onclick="' + searchTableAction + '">Search in table</button>'
     + gbLink + boldLink;
 
   if (overlay) overlay.classList.add('open');

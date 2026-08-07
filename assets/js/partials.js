@@ -20,6 +20,19 @@
   await inject('site-nav',    'nav.html');
   await inject('site-footer', 'footer.html');
 
+  // Inject the species popup overlay (shared across all pages, since global
+  // search — which opens it — lives in the header on every page). Skipped if
+  // a page already defines it inline.
+  if (!document.getElementById('popup-overlay')) {
+    try {
+      const r = await fetch('/assets/partials/popup.html');
+      if (!r.ok) throw new Error(r.status);
+      document.body.insertAdjacentHTML('beforeend', await r.text());
+    } catch (err) {
+      console.warn('partials.js: could not load popup.html', err);
+    }
+  }
+
   // Build global search index now that header search input is in the DOM
   if (typeof buildSearchIndex === 'function') {
     SEARCH_INDEX = buildSearchIndex();
