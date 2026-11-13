@@ -17,8 +17,10 @@ function populateDbStats() {
   // Populate cite date in database page
   const citeEl = document.getElementById('cite-date');
   const yearEl = document.getElementById('cite-year');
+  const _d = new Date();
+  const _citeDate = _d.getDate() + ' ' + ['January','February','March','April','May','June','July','August','September','October','November','December'][_d.getMonth()] + ' ' + _d.getFullYear();
   if (citeEl) citeEl.textContent = _citeDate;
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  if (yearEl) yearEl.textContent = _d.getFullYear();
 }
 
 function populateStatsPage() {
