@@ -70,7 +70,7 @@
       </div>
       <div class="info-card">
         <h3>Gulf of Guinea endemics — highest scientific value</h3>
-        <p>Several target species are endemic or near-endemic to the Gulf of Guinea — found nowhere else on Earth. <em>Pteroscion peli</em> (boe drum), <em>Lutjanus goreensis</em> (Gorean snapper), and <em>Scomberomorus tritor</em> (West African Spanish mackerel) have zero or near-zero sequences in global databases. These are the highest-priority targets because their barcodes do not exist anywhere — not just in Nigeria. Generating even one well-vouched barcode from each is a genuine global contribution.</p>
+        <p>Several target species are endemic or near-endemic to the Gulf of Guinea — found nowhere else on Earth. <em>Pteroscion peli</em> (boe drum), <em>Lutjanus goreensis</em> (Gorean snapper), and <em>Scomberomorus tritor</em> (West African Spanish mackerel) have little or no reference coverage anywhere: <em>P. peli</em> has no 12S sequence in NCBI or BOLD, and <em>L. goreensis</em> and <em>S. tritor</em> have only 2 and 4 global 12S records, all from Guinea-Bissau (v22, Nov 2026). None has been barcoded from Nigerian waters. Generating even one well-vouched Nigerian barcode from each is a genuine contribution.</p>
       </div>
       <div class="green-card">
         <h3>Sargassum — an emerging monitoring priority</h3>
@@ -261,6 +261,25 @@
     <div class="vh-list">
 
       <details class="vh-entry" open>
+        <summary>
+          <span class="vh-badge" style="background:linear-gradient(90deg,#b45309,#0a6b4e);">v22</span>
+          <span class="vh-heading">Full database re-run, query corrections and nematode recount</span>
+          <span class="vh-date">Nov 2026</span>
+        </summary>
+        <div class="vh-body">
+          <ul>
+            <li><strong>Why.</strong> An external fact-check of the published gap analysis found complete mitochondrial genomes in GenBank for <em>Sousa teuszii</em> and <em>Trichechus senegalensis</em>, which earlier versions reported as having zero records. Tracing the cause led to a full audit and re-run of every taxon.</li>
+            <li><strong>Mitogenomes now counted.</strong> v1–v21 marker searches matched the record title only (e.g. <code>12S[Title]</code>), so mitochondrial and chloroplast genomes — which contain COI, 12S and rbcL — were never counted. v22 includes them and excludes RefSeq duplicates.</li>
+            <li><strong>West African filter corrected.</strong> NCBI has no <code>[Country]</code> search field; earlier queries were silently run against all fields (so "Guinea" also matched Papua New Guinea). WA records are now counted from each record's GenBank country field (BOLD: country/ocean), Mauritania to Cameroon plus Cabo Verde.</li>
+            <li><strong>Full coverage.</strong> All 107 species and higher taxa re-queried in NCBI and BOLD v5 — including 57 that had previously been classified from published literature — and all 25 nematode genera re-counted in SILVA SSU r144 / LSU r138.2.</li>
+            <li><strong>Nematode figures replaced.</strong> The stored global nematode counts (e.g. <em>Chromadora</em> 4,200 18S) could not be reproduced from SILVA at any rank, NCBI or NeMys and have been replaced with SILVA genus counts (<em>Chromadora</em>: 6). WA counts remain zero for all 25 genera.</li>
+            <li><strong>Result.</strong> Across all 132 taxa: absent 28 → 67, partial 94 → 61, present 10 → 4. No Nigerian 12S record exists for any fish tracked. Classification thresholds are unchanged from v21.</li>
+            <li><strong>Audit trail.</strong> Query code, raw results, before/after tables and an audit report are in the GitHub repository (<code>Scripts/nmbl_v22_rerun_browser.js</code>, <code>Data/v22/</code>). Every earlier version remains in the repository history.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="vh-entry">
         <summary>
           <span class="vh-badge" style="background:linear-gradient(90deg,#3d4f63,#091e38);">PATCH</span>
           <span class="vh-heading">Coverage %, search, and analytics widget fixes</span>

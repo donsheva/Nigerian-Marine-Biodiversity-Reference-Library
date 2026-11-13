@@ -38,10 +38,26 @@
           <span style="font-size:10px;background:var(--bg3);color:var(--text2);padding:2px 8px;border-radius:20px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;">Changelog</span>
           Version history &amp; audit trail
         </span>
-        <span style="font-size:11px;color:var(--text3);font-weight:400;">v20 – v21 · click to expand</span>
+        <span style="font-size:11px;color:var(--text3);font-weight:400;">v20 – v22 · click to expand</span>
       </summary>
 
       <div style="margin-top:14px;display:flex;flex-direction:column;gap:8px;">
+
+        <!-- v22 -->
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+          <div style="flex-shrink:0;padding-top:1px;">
+            <span style="display:inline-block;font-size:10px;font-weight:800;color:#fff;background:linear-gradient(90deg,#b45309,#0a6b4e);padding:3px 9px;border-radius:6px;letter-spacing:0.06em;white-space:nowrap;">v22 · Nov 2026</span>
+          </div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.85;">
+            <span style="color:var(--blue);font-weight:700;">★</span> <strong>Full re-run of NCBI and BOLD</strong> — all 132 taxa re-queried; 57 taxa previously classified from literature now have live counts.<br>
+            <span style="color:var(--red);font-weight:700;">🐛</span> <strong>Mitogenomes now counted</strong> — earlier marker searches matched the record title only and missed complete/partial mitochondrial genomes (and chloroplast genomes for rbcL). Raised in an external fact-check of the <em>Sousa teuszii</em> and <em>Trichechus senegalensis</em> records.<br>
+            <span style="color:var(--red);font-weight:700;">🐛</span> <strong>West African filter corrected</strong> — NCBI does not support a <code>[Country]</code> search field and had silently searched all fields (so "Guinea" also matched Papua New Guinea). WA records are now counted from the GenBank country field itself.<br>
+            <span style="color:var(--red);font-weight:700;">🐛</span> <strong>Nematode genus counts replaced</strong> — the stored 18S/28S global figures (e.g. <em>Chromadora</em> 4,200) could not be reproduced from SILVA (genus, family, order or class), NCBI or NeMys, and have been replaced with SILVA SSU r144 / LSU r138.2 genus counts (<em>Chromadora</em>: 6). West African counts for all 25 genera are zero, confirming the published finding.<br>
+            <span style="color:var(--amber);font-weight:700;">Δ</span> <strong>66 overall reclassifications</strong> across all 132 taxa — absent 28→67, partial 94→61, present 10→4 (64 among the 107 species/higher taxa, 2 among nematode genera). Full before/after tables and audit report in <code>Data/v22/</code>. Classification thresholds unchanged from v21.
+          </div>
+        </div>
+
+        <div style="height:1px;background:var(--border);margin:2px 0;"></div>
 
         <!-- v21 -->
         <div style="display:flex;gap:12px;align-items:flex-start;">
@@ -82,7 +98,7 @@
       </div>
       <div class="info-card">
         <h3>Gulf of Guinea endemics — priority targets</h3>
-        <p><em>Pteroscion peli</em> (boe drum), <em>Lutjanus goreensis</em> (Gorean snapper), <em>Scomberomorus tritor</em> (West African Spanish mackerel), and <em>Strombus latus</em> (West African stromb) are among several species with zero sequences anywhere in global databases. Each represents a publishable first-barcode contribution. <em>Tympanotonos fuscatus</em> — the most commercially important macroinvertebrate in the Niger Delta — has partial global coverage but zero Nigeria-specific records.</p>
+        <p><em>Pteroscion peli</em> (boe drum) has no 12S sequence anywhere in NCBI or BOLD. <em>Lutjanus goreensis</em> (Gorean snapper) and <em>Scomberomorus tritor</em> (West African Spanish mackerel) have only 2 and 4 global 12S records, all from a single Guinea-Bissau dataset, and <em>Strombus latus</em> (West African stromb) has 3 global COI records, 2 from Senegal. None of these endemics has been barcoded from Nigerian waters — each Nigerian voucher is a publishable first regional record. <em>Tympanotonos fuscatus</em> — the most commercially important macroinvertebrate in the Niger Delta — has 3 West African COI records (Ghana, Gambia) but none from Nigeria.</p>
       </div>
     </div>
 
@@ -217,7 +233,7 @@
         <div style="background:var(--bg2);border-radius:var(--radius);padding:8px 12px;font-size:11px;color:var(--text2);"><strong style="color:var(--blue);">rbcL</strong> ≥3 WA records<br><span style="font-size:10px;color:var(--text3);">Plants/algae barcode</span></div>
       </div>
       <div style="margin-top:10px;padding:10px 12px;background:var(--bg2);border-radius:var(--radius);font-size:11.5px;color:var(--text2);line-height:1.6;">
-        <strong>Worked examples.</strong> <em>Sardinella aurita</em> has 4 WA 12S records (≥3, meets threshold) and BOLD WA records confirmed — overall <strong style="color:var(--green)">present</strong>. <em>Drepane africana</em> has 2 WA 12S records (below the threshold of 3) — <strong style="color:var(--amber)">partial</strong>, more regional barcodes needed. <em>Tursiops truncatus</em> has 42 global COI records but zero West African records — NCBI is <strong style="color:var(--red)">absent</strong> for the regional library regardless of global abundance; BOLD WA-present keeps overall status <strong style="color:var(--amber)">partial</strong>. This is the key shift from v20: global coverage no longer rescues a species with zero regional sequences.
+        <strong>Worked examples (v22 data).</strong> <em>Pseudotolithus elongatus</em> has 3 WA 12S records in both NCBI and BOLD (≥3, meets threshold) — overall <strong style="color:var(--green)">present</strong>. <em>Drepane africana</em> has 2 WA 12S records (below the threshold of 3) — <strong style="color:var(--amber)">partial</strong>, more regional barcodes needed. <em>Tursiops truncatus</em> has 239 global COI records in NCBI (168 in BOLD) but zero West African records — <strong style="color:var(--red)">absent</strong> for the regional library regardless of global abundance. This is the key shift from v20: global coverage no longer rescues a species with zero regional sequences.
       </div>
     </div>
 
@@ -238,9 +254,9 @@
       </div>
       <p style="font-size:12px;color:var(--text2);line-height:1.7;margin-bottom:14px;">Coverage status is derived by cross-referencing each taxon against the following 10 global databases. A taxon is classified <strong style="color:var(--green)">present</strong> when qualifying barcodes exist in both NCBI and BOLD/SILVA <em>with West African records meeting the marker-specific threshold</em> (COI ≥5, 12S ≥3, 18S ≥1, 28S ≥1, rbcL ≥3); <strong style="color:var(--amber)">partial</strong> when WA records exist but fall below the marker threshold, or when only one database is covered; and <strong style="color:var(--red)">absent</strong> when zero WA records exist in both NCBI and BOLD/SILVA. <strong>Thresholds reflect the intraspecific variation needed for reliable identification with each marker</strong> — fast-evolving barcodes like COI require more replicate sequences to capture haplotype diversity, while conserved ribosomal markers (18S, 28S) used for genus-level work are operationally useful with a single well-curated reference. <strong>Classification is WA-specific: a taxon with global records but zero West African sequences is an "absent" gap in the regional reference library, regardless of global coverage.</strong></p>
       <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;">
-        <div style="background:var(--blue-bg);border:0.5px solid var(--blue);border-radius:var(--radius);padding:8px 10px;"><div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:3px;">NCBI Nucleotide</div><div style="font-size:10px;color:var(--text2);line-height:1.5;">Primary sequence database. 12S, COI, 18S, 28S, rbcL queries via Entrez API.</div></div>
-        <div style="background:var(--blue-bg);border:0.5px solid var(--blue);border-radius:var(--radius);padding:8px 10px;"><div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:3px;">BOLD Systems v5</div><div style="font-size:10px;color:var(--text2);line-height:1.5;">COI barcode library (v5, 2024+). Geographic filter: Nigeria, Ghana, Cameroon, Benin, Togo, Senegal, Guinea, Côte d'Ivoire, Liberia.</div></div>
-        <div style="background:var(--purple-bg);border:0.5px solid var(--purple);border-radius:var(--radius);padding:8px 10px;"><div style="font-size:11px;font-weight:700;color:var(--purple);margin-bottom:3px;">SILVA SSU rRNA</div><div style="font-size:10px;color:var(--text2);line-height:1.5;">Most comprehensive 18S rRNA database. Used for nematodes, meiofauna, protists.</div></div>
+        <div style="background:var(--blue-bg);border:0.5px solid var(--blue);border-radius:var(--radius);padding:8px 10px;"><div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:3px;">NCBI Nucleotide</div><div style="font-size:10px;color:var(--text2);line-height:1.5;">Primary sequence database. 12S, COI, 18S, 28S, rbcL via E-utilities; includes mitochondrial/chloroplast genomes; WA from the GenBank country field.</div></div>
+        <div style="background:var(--blue-bg);border:0.5px solid var(--blue);border-radius:var(--radius);padding:8px 10px;"><div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:3px;">BOLD Systems v5</div><div style="font-size:10px;color:var(--text2);line-height:1.5;">COI barcode library (v5, 2024+). WA counts from the country/ocean field, Mauritania to Cameroon plus Cabo Verde, queried per country.</div></div>
+        <div style="background:var(--purple-bg);border:0.5px solid var(--purple);border-radius:var(--radius);padding:8px 10px;"><div style="font-size:11px;font-weight:700;color:var(--purple);margin-bottom:3px;">SILVA SSU rRNA</div><div style="font-size:10px;color:var(--text2);line-height:1.5;">Most comprehensive rRNA database. Source of nematode genus counts (SSU r144, LSU r138.2).</div></div>
         <div style="background:var(--teal-bg);border:0.5px solid var(--teal);border-radius:var(--radius);padding:8px 10px;"><div style="font-size:11px;font-weight:700;color:var(--teal);margin-bottom:3px;">WoRMS / FishBase</div><div style="font-size:10px;color:var(--text2);line-height:1.5;">Taxonomy authority &amp; accepted names. IUCN status and regional checklists.</div></div>
         <div style="background:var(--bg2);border:0.5px solid var(--border2);border-radius:var(--radius);padding:8px 10px;"><div style="font-size:11px;font-weight:700;color:var(--text);margin-bottom:3px;">NeMys / OBIS / GBIF</div><div style="font-size:10px;color:var(--text2);line-height:1.5;">Nematode taxonomy (NeMys); occurrence records (OBIS/GBIF) for Gulf of Guinea.</div></div>
         <div style="background:var(--bg2);border:0.5px solid var(--border2);border-radius:var(--radius);padding:8px 10px;"><div style="font-size:11px;font-weight:700;color:var(--text);margin-bottom:3px;">AlgaeBase / ENA</div><div style="font-size:10px;color:var(--text2);line-height:1.5;">Macroalgae &amp; seagrass taxonomy; supplementary sequences via ENA/EMBL.</div></div>
@@ -254,38 +270,38 @@
       <div style="background:var(--red-bg);border:1px solid var(--red);border-radius:var(--radius-lg);padding:1.25rem;">
         <div style="font-size:12px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px;">🔴 Critical Gaps — Zero West African Reference Records</div>
         <ul style="font-size:12px;color:var(--text);line-height:2;padding-left:16px;margin:0;">
-          <li>All <span id="critical-nema-count">25</span> nematode genera tracked — <strong>0 Nigeria sequences</strong> for all (18S and 28S)</li>
-          <li><em>Cynoglossus senegalensis</em> (Senegalese tonguesole) — zero records, abundant bycatch</li>
-          <li>Gulf of Guinea endemics (<em>Pteroscion peli</em>, <em>Lutjanus goreensis</em>, <em>Lutjanus agennes</em>) — <strong>zero records globally</strong></li>
-          <li><em>Tursiops truncatus</em>, <em>Carcharhinus leucas</em> — well-barcoded globally (42 and 7 records) but <strong>zero West African sequences</strong>; undetectable in Nigerian eDNA without regional vouchers</li>
-          <li><em>Sea turtles</em> (<em>Chelonia mydas</em>, <em>Dermochelys coriacea</em>, <em>Lepidochelys olivacea</em>) — nest on Nigerian beaches, <strong>zero WA 12S records</strong></li>
-          <li><em>Penaeus notialis</em> (pink shrimp, largest commercial fishery) — 45 global COI but <strong>zero WA</strong>; major regional gap</li>
-          <li><em>Sesarma huzardi</em>, <em>Goniopsis pelii</em>, <em>Egeria radiata</em> — staple seafood, <strong>zero records</strong></li>
-          <li><em>Strombus latus</em> (West African stromb, endemic) — <strong>zero records</strong></li>
+          <li>All <span id="critical-nema-count">25</span> nematode genera tracked — <strong>0 West African or Nigerian sequences</strong> for all (18S and 28S); global SILVA SSU counts range from 0 to 182 per genus</li>
+          <li><em>Cynoglossus senegalensis</em> (Senegalese tonguesole) — 1 global 12S record, zero WA; abundant bycatch</li>
+          <li>Gulf of Guinea endemics — <em>Pteroscion peli</em> <strong>zero 12S records globally</strong>; <em>Lutjanus agennes</em> zero in NCBI (1 WA record in BOLD); <em>Dentex angolensis</em> 1 global record, zero WA</li>
+          <li><em>Tursiops truncatus</em>, <em>Mugil cephalus</em>, <em>Sphyrna lewini</em> — well-barcoded globally (239 COI, 64 and 102 12S records) but <strong>zero West African sequences</strong>; undetectable in Nigerian eDNA without regional vouchers</li>
+          <li><em>Sea turtles</em> (<em>Chelonia mydas</em>, <em>Dermochelys coriacea</em>, <em>Lepidochelys olivacea</em>) — nest on Nigerian beaches, 8–20 global 12S records each but <strong>zero WA</strong></li>
+          <li><em>Penaeus notialis</em> (pink shrimp, largest commercial fishery) — 50 global COI in NCBI (16 in BOLD) but <strong>zero WA</strong>; major regional gap</li>
+          <li><em>Sesarma huzardi</em>, <em>Egeria radiata</em> — staple seafood, <strong>zero records anywhere</strong> (<em>Goniopsis pelii</em> has a single Ghanaian COI record)</li>
+          <li><em>Trichechus senegalensis</em> (African manatee) — <strong>zero WA records</strong>; one partial mitogenome globally (Republic of the Congo). <em>Sousa teuszii</em> has only one (a Senegal mitogenome)</li>
         </ul>
       </div>
       <div style="background:var(--green-bg);border:1px solid var(--green);border-radius:var(--radius-lg);padding:1.25rem;">
         <div style="font-size:12px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px;">✅ Well-Covered Taxa — Regional Reference Sufficient</div>
         <ul style="font-size:12px;color:var(--text);line-height:2;padding-left:16px;margin:0;">
-          <li><em>Sardinella aurita</em> — 4 WA 12S records (meets threshold of 3); BOLD WA confirmed</li>
-          <li><em>Mugil cephalus</em> (flathead mullet) — 27 WA 12S records; cosmopolitan and excellently covered</li>
-          <li><em>Sphyrna lewini</em> (scalloped hammerhead) — 4 WA 12S records meeting threshold (NCBI); BOLD partial keeps overall partial, but NCBI-regional is sufficient</li>
-          <li><em>Pseudotolithus elongatus</em> (bobo croaker) — 3 WA 12S records meets threshold in NCBI; BOLD absent → overall partial but NCBI-regional is sufficient</li>
+          <li><em>Pseudotolithus elongatus</em> (bobo croaker) — 3 WA 12S records in NCBI and BOLD; meets threshold</li>
+          <li><em>Scomberomorus tritor</em> (West African Spanish mackerel) — 3 WA 12S records in NCBI and BOLD; meets threshold</li>
+          <li><em>Epinephelus aeneus</em> (white grouper) — 3 WA 12S records in NCBI and BOLD; meets threshold</li>
+          <li>Polychaeta (higher taxon) — 99 WA COI records in NCBI and 132 in BOLD (incl. Nigeria)</li><li>All three fish above draw their WA records from a single Guinea-Bissau 12S dataset — <strong>no Nigerian 12S record exists for any fish tracked</strong></li>
         </ul>
         <div style="margin-top:8px;font-size:10px;color:var(--text3);font-style:italic;line-height:1.5;">Note: "well-covered" here means the WA reference library is sufficient for that marker — not that the species is abundantly studied worldwide.</div>
       </div>
       <div style="background:var(--amber-bg);border:1px solid var(--amber);border-radius:var(--radius-lg);padding:1.25rem;">
         <div style="font-size:12px;font-weight:700;color:var(--amber);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px;">⚠️ Partial Coverage — Regional Data Below Threshold</div>
         <ul style="font-size:12px;color:var(--text);line-height:2;padding-left:16px;margin:0;">
-          <li><em>Ethmalosa fimbriata</em> (bonga shad, #1 commercial pelagic) — 2 WA 12S records, <strong>below threshold of 3</strong>; BOLD absent</li>
-          <li><em>Sardinella maderensis</em> — 2 WA 12S records (below threshold); BOLD WA confirmed</li>
-          <li><em>Pseudotolithus senegalensis</em> (cassava croaker) — 2 WA 12S records (below threshold); BOLD absent</li>
-          <li><em>Drepane africana</em> (African sicklefish) — 2 WA 12S records (below threshold of 3); BOLD absent</li>
+          <li><em>Ethmalosa fimbriata</em> (bonga shad, #1 commercial pelagic) — 2 WA 12S records (Guinea-Bissau), <strong>below threshold of 3</strong></li>
+          <li><em>Sardinella maderensis</em>, <em>Sardinella aurita</em> — 2 and 1 WA 12S records (below threshold)</li>
+          <li><em>Pseudotolithus senegalensis</em> (cassava croaker) — 2 WA 12S records (below threshold); none in BOLD</li>
+          <li><em>Drepane africana</em> (African sicklefish), <em>Lutjanus goreensis</em> — 2 WA 12S records each (below threshold of 3)</li>
           <li><em>Polydactylus quadrifilis</em>, <em>Galeoides decadactylus</em>, <em>Elops lacerta</em> — 1–2 WA 12S records each; below threshold</li>
-          <li><em>Arius latiscutatus</em> (rough-head sea catfish) — 2 WA 12S records; below threshold</li>
+          <li><em>Arius latiscutatus</em> (rough-head sea catfish) — 2 WA 12S records; below threshold; <em>Carcharhinus leucas</em> — 375 global 12S but only 1 WA (Sierra Leone)</li>
           <li><em>Callinectes amnicola</em> (Lagos lagoon swimming crab) — 1 WA COI record; below threshold of 5</li>
-          <li><em>Macrobrachium vollenhovenii</em> (African river prawn) — 1 WA COI record; below threshold</li>
-          <li><em>Tympanotonos fuscatus</em> (Niger Delta periwinkle) — NCBI partial; zero Nigeria-specific</li>
+          <li><em>Macrobrachium vollenhovenii</em> (African river prawn) — 2 WA COI records, both from Nigeria; below threshold of 5</li>
+          <li><em>Tympanotonos fuscatus</em> (Niger Delta periwinkle) — 3 WA COI records (Ghana, Gambia); zero Nigeria-specific. <em>Pachymelania aurita</em> and <em>P. fusca</em> — Nigerian COI records in BOLD only (5 and 3)</li>
         </ul>
       </div>
       <div style="background:var(--blue-bg);border:1px solid var(--blue);border-radius:var(--radius-lg);padding:1.25rem;">
@@ -293,10 +309,10 @@
         <ul style="font-size:12px;color:var(--text);line-height:2;padding-left:16px;margin:0;">
           <li><strong>Classification is regional:</strong> "present" means West African records meet the marker threshold — not global availability</li>
           <li><strong>Zero WA = absent</strong>, regardless of how well-studied the species is globally (major shift from v20)</li>
-          <li><strong>Nematode 0 values</strong> are real — NCBI, BOLD, and SILVA all return zero Nigeria/WA records</li>
-          <li><strong>SILVA is more complete</strong> than NCBI for 18S nematode sequences</li>
+          <li><strong>Nematode 0 values</strong> are real — no INSDC (GenBank/ENA) record for any of the 25 genera carries a West African country; SILVA is built from INSDC, so its WA count is also zero</li>
+          <li><strong>Nematode global counts</strong> are SILVA SSU r144 / LSU r138.2 genus-level counts (organism-name match); v21 figures could not be reproduced from any source and were replaced in v22</li><li><strong>WA counts are conservative:</strong> a record counts only if its GenBank/BOLD country field names a West African state (Mauritania–Cameroon, Cabo Verde)</li>
           <li><strong>IUCN statuses</strong> sourced from IUCN Red List (2024); subject to revision</li>
-          <li>Dashboard v21 — run Python scripts locally to update with live database counts</li>
+          <li>Dashboard v22 — live counts from NCBI, BOLD v5 and SILVA, 13 Nov 2026; query code and raw results in the GitHub repository (<code>Scripts/</code>, <code>Data/v22/</code>)</li>
         </ul>
       </div>
     </div>

@@ -1,0 +1,108 @@
+taxon,marker,ncbi_global_v21,ncbi_wa_v21,ncbi_global_v22,ncbi_wa_v22,ncbi_nigeria_v22,bold_global_v22,bold_wa_v22,bold_nigeria_v22,wa_countries_ncbi,ncbi_status_v21,ncbi_status_v22,bold_status_v21,bold_status_v22,overall_v21,overall_v22
+Ethmalosa fimbriata,12S,2,2,3,2,0,2,2,0,Guinea-Bissau 2,partial,partial,absent,partial,partial,partial
+Sardinella maderensis,12S,2,2,3,2,0,2,2,0,Guinea-Bissau 2,partial,partial,present,partial,partial,partial
+Sardinella aurita,12S,8,4,12,1,0,1,1,0,Guinea-Bissau 1,present,partial,present,partial,present,partial
+Pseudotolithus senegalensis,12S,2,2,2,2,0,0,0,0,Guinea-Bissau 2,partial,partial,absent,absent,partial,partial
+Pseudotolithus elongatus,12S,3,3,4,3,0,3,3,0,Guinea-Bissau 3,present,present,absent,present,partial,present
+Cynoglossus senegalensis,12S,0,0,1,0,0,0,0,0,,absent,absent,absent,absent,absent,absent
+Galeoides decadactylus,12S,1,1,2,1,0,1,1,0,Guinea-Bissau 1,partial,partial,absent,partial,partial,partial
+Polydactylus quadrifilis,12S,2,2,3,2,0,2,2,0,Guinea-Bissau 2,partial,partial,absent,partial,partial,partial
+Lutjanus agennes,12S,0,0,0,0,0,1,1,0,,absent,absent,absent,partial,absent,partial
+Arius latiscutatus,12S,3,2,3,2,0,0,0,0,Guinea-Bissau 2,partial,partial,absent,absent,partial,partial
+Brachydeuterus auritus,12S,0,0,0,0,0,1,1,0,,absent,absent,absent,partial,absent,partial
+Pomadasys jubelini,12S,0,0,0,0,0,2,2,0,,absent,absent,absent,partial,absent,partial
+Elops lacerta,12S,1,1,1,1,0,1,1,0,Guinea-Bissau 1,partial,partial,absent,partial,partial,partial
+Drepane africana,12S,5,2,5,2,0,2,2,0,Guinea-Bissau 2,partial,partial,absent,partial,partial,partial
+Mugil cephalus,12S,53,27,64,0,0,3,0,0,,present,absent,present,absent,present,absent
+Chrysichthys nigrodigitatus,12S,1,1,2,1,0,1,1,0,Guinea-Bissau 1,partial,partial,absent,partial,partial,partial
+Rhizoprionodon acutus,12S,1,0,2,0,0,0,0,0,,absent,absent,absent,absent,absent,absent
+Rhinobatos rhinobatos,12S,0,0,0,0,0,1,1,0,,absent,absent,absent,partial,absent,partial
+Hypanus marianae,12S,0,0,29,0,0,0,0,0,,absent,absent,absent,absent,absent,absent
+Carcharhinus leucas,12S,7,0,375,1,0,0,0,0,Sierra Leone 1,absent,partial,partial,absent,partial,partial
+Sphyrna lewini,12S,25,4,102,0,0,0,0,0,,present,absent,partial,absent,partial,absent
+Penaeus notialis,COI,45,0,50,0,0,16,0,0,,absent,absent,absent,absent,absent,absent
+Callinectes amnicola,COI,1,1,3,1,0,3,1,0,Ghana 1,partial,partial,absent,partial,partial,partial
+Parapenaeus longirostris,COI,25,0,29,0,0,38,1,0,,absent,absent,partial,partial,partial,partial
+Macrobrachium vollenhovenii,COI,1,1,3,2,2,3,2,2,Nigeria 2,partial,partial,absent,partial,partial,partial
+Trichechus senegalensis,COI,0,0,1,0,0,0,0,0,,absent,absent,absent,absent,absent,absent
+Sousa teuszii,COI,0,0,1,1,0,0,0,0,Senegal 1,absent,partial,absent,absent,absent,partial
+Tursiops truncatus,COI,42,0,239,0,0,168,0,0,,absent,absent,present,absent,partial,absent
+Chelonia mydas,12S,11,0,20,0,0,0,0,0,,absent,absent,partial,absent,partial,absent
+Dermochelys coriacea,12S,7,0,10,0,0,0,0,0,,absent,absent,partial,absent,partial,absent
+Lepidochelys olivacea,12S,3,0,8,0,0,0,0,0,,absent,absent,partial,absent,partial,absent
+Harpacticoida,18S,,,1499,0,0,150,0,0,,partial,absent,absent,absent,partial,absent
+Ostracoda,COI,,,5594,3,0,7018,3,0,Cape Verde 3,partial,partial,absent,partial,partial,partial
+Tardigrada,18S,,,3762,0,0,2306,0,0,,partial,absent,absent,absent,partial,absent
+Gastrotricha,18S,,,874,0,0,575,0,0,,absent,absent,absent,absent,absent,absent
+Kinorhyncha,18S,,,112,0,0,96,0,0,,absent,absent,absent,absent,absent,absent
+Foraminifera,18S,,,21519,0,0,0,0,0,,partial,absent,absent,absent,partial,absent
+Ciliophora,18S,,,20109,137,0,0,0,0,"Cameroon 36, Benin 97, Cape Verde 1, Guinea 1, Sierra Leone 1, Ghana 1",partial,present,absent,absent,partial,partial
+Bacillariophyta,18S,,,17068,17,16,326,0,0,"Senegal 1, Nigeria 16",partial,present,absent,absent,partial,partial
+Polychaeta,COI,,,33820,99,4,51528,132,9,"Guinea-Bissau 4, Mauritania 8, Senegal 3, Guinea 3, Nigeria 4, Cape Verde 74, Sierra Leone 1, Ghana 2",partial,present,absent,present,partial,present
+Tympanotonos fuscatus,COI,,,3,3,0,0,0,0,"Gambia 1, Ghana 2",partial,partial,absent,absent,partial,partial
+Tympanotonos radula,COI,,,0,0,0,0,0,0,,absent,absent,absent,absent,absent,absent
+Pachymelania aurita,COI,,,0,0,0,5,5,5,,absent,absent,absent,present,absent,partial
+Pachymelania fusca,COI,,,0,0,0,3,3,3,,absent,absent,absent,partial,absent,partial
+Telescopium telescopium,COI,,,51,0,0,50,0,0,,partial,absent,partial,absent,partial,absent
+Neritina glabrata,COI,,,0,0,0,0,0,0,,absent,absent,absent,absent,absent,absent
+Lanistes varicus,COI,,,2,0,0,0,0,0,,partial,absent,absent,absent,partial,absent
+Crassostrea gasar,COI,,,32,0,0,0,0,0,,partial,absent,absent,absent,partial,absent
+Egeria radiata,COI,,,0,0,0,0,0,0,,absent,absent,absent,absent,absent,absent
+Senilia senilis,COI,,,1,1,0,0,0,0,Senegal 1,partial,partial,partial,absent,partial,partial
+Mytilaster minimus,COI,,,17,0,0,17,0,0,,partial,absent,absent,absent,partial,absent
+Corbula trigona,COI,,,0,0,0,0,0,0,,absent,absent,absent,absent,absent,absent
+Sphaerium nodicostatum,COI,,,0,0,0,0,0,0,,absent,absent,absent,absent,absent,absent
+Capitella capitata,COI,19,0,29,0,0,57,0,0,,absent,absent,absent,absent,absent,absent
+Nereis diversicolor,COI,,,418,0,0,0,0,0,,present,absent,partial,absent,partial,absent
+Perinereis cultrifera,COI,,,67,0,0,67,0,0,,partial,absent,absent,absent,partial,absent
+Marphysa sanguinea,COI,,,48,0,0,45,0,0,,partial,absent,absent,absent,partial,absent
+Sabella pavonina,COI,,,6,0,0,14,0,0,,partial,absent,absent,absent,partial,absent
+Hydroides elegans,COI,,,63,0,0,55,0,0,,present,absent,partial,absent,partial,absent
+Uca tangeri,COI,,,6,4,0,0,0,0,"Guinea-Bissau 3, Ghana 1",partial,partial,absent,absent,partial,partial
+Uca inversa,COI,,,42,0,0,0,0,0,,absent,absent,absent,absent,absent,absent
+Sesarma huzardi,COI,,,0,0,0,0,0,0,,absent,absent,absent,absent,absent,absent
+Goniopsis pelii,COI,,,1,1,0,1,1,0,Ghana 1,partial,partial,absent,partial,partial,partial
+Cardisoma armatum,COI,,,2,1,1,2,1,1,Nigeria 1,partial,partial,absent,partial,partial,partial
+Callinectes pallidus,COI,,,3,1,0,1,1,0,Ghana 1,absent,partial,absent,partial,absent,partial
+Thunnus albacares,12S,,,22,1,0,0,0,0,Senegal 1,present,partial,present,absent,present,partial
+Katsuwonus pelamis,12S,,,18,0,0,0,0,0,,present,absent,present,absent,present,absent
+Thunnus obesus,12S,,,168,0,0,0,0,0,,present,absent,present,absent,present,absent
+Xiphias gladius,12S,,,13,0,0,0,0,0,,present,absent,partial,absent,partial,absent
+Coryphaena hippurus,12S,,,24,0,0,1,0,0,,present,absent,partial,absent,partial,absent
+Scomber japonicus,12S,,,28,0,0,4,0,0,,present,absent,present,absent,present,absent
+Scomberomorus tritor,12S,,,4,3,0,3,3,0,Guinea-Bissau 3,partial,present,absent,present,partial,present
+Caranx hippos,12S,,,6,0,0,0,0,0,,partial,absent,absent,absent,partial,absent
+Trichiurus lepturus,12S,,,23,1,0,1,1,0,Guinea-Bissau 1,present,partial,partial,partial,partial,partial
+Dentex angolensis,12S,,,1,0,0,0,0,0,,absent,absent,absent,absent,absent,absent
+Pagellus bellottii,12S,,,4,0,0,0,0,0,,partial,absent,absent,absent,partial,absent
+Epinephelus aeneus,12S,,,7,3,0,3,3,0,Guinea-Bissau 3,partial,present,absent,present,partial,present
+Sparus caeruleostictus,12S,,,0,0,0,0,0,0,,partial,absent,absent,absent,partial,absent
+Pseudupeneus prayensis,12S,,,0,0,0,0,0,0,,absent,absent,absent,absent,absent,absent
+Pteroscion peli,12S,,,0,0,0,0,0,0,,absent,absent,absent,absent,absent,absent
+Pomadasys rogerii,12S,,,1,1,0,0,0,0,Guinea-Bissau 1,absent,partial,absent,absent,absent,partial
+Lutjanus goreensis,12S,,,2,2,0,4,4,0,Guinea-Bissau 2,partial,partial,absent,present,partial,partial
+Acropora palmata,COI,,,33,0,0,5,0,0,,present,absent,partial,absent,partial,absent
+Porites porites,COI,,,4,0,0,4,0,0,,present,absent,partial,absent,partial,absent
+Holothuria atra,COI,,,401,0,0,400,0,0,,present,absent,partial,absent,partial,absent
+Holothuria scabra,COI,,,205,0,0,104,0,0,,present,absent,partial,absent,partial,absent
+Diadema antillarum,COI,,,15,0,0,14,0,0,,present,absent,partial,absent,partial,absent
+Echinometra lucunter,COI,,,74,3,0,53,3,0,Senegal 3,present,partial,partial,partial,partial,partial
+Ophiura ophiura,COI,,,46,0,0,71,0,0,,present,absent,partial,absent,partial,absent
+Octopus vulgaris,COI,,,605,13,0,727,0,0,Cape Verde 13,present,present,present,absent,present,partial
+Sepia officinalis,COI,,,518,0,0,402,0,0,,present,absent,partial,absent,partial,absent
+Loligo vulgaris,COI,,,218,0,0,237,0,0,,present,absent,partial,absent,partial,absent
+Charonia variegata,COI,,,1,0,0,1,0,0,,partial,absent,absent,absent,partial,absent
+Strombus latus,COI,,,3,2,0,1,0,0,Senegal 2,absent,partial,absent,absent,absent,partial
+Murex brandaris,COI,,,4,0,0,0,0,0,,partial,absent,absent,absent,partial,absent
+Penaeus kerathurus,COI,,,112,0,0,115,0,0,,present,absent,partial,absent,partial,absent
+Halophila stipulacea,rbcL,,,17,0,0,5,0,0,,present,absent,absent,absent,partial,absent
+Thalassia testudinum,rbcL,,,127,0,0,2,0,0,,present,absent,absent,absent,partial,absent
+Sargassum natans,rbcL,,,4,0,0,2,0,0,,present,absent,partial,absent,partial,absent
+Sargassum fluitans,rbcL,,,8,0,0,1,0,0,,present,absent,partial,absent,partial,absent
+Ulva lactuca,rbcL,,,241,6,0,64,0,0,Senegal 6,present,present,absent,absent,partial,partial
+Gracilaria corticata,rbcL,,,13,0,0,1,0,0,,partial,absent,absent,absent,partial,absent
+Megaptera novaeangliae,COI,,,34,0,0,30,0,0,,present,absent,present,absent,present,absent
+Physeter macrocephalus,COI,,,106,0,0,4,0,0,,present,absent,present,absent,present,absent
+Stenella frontalis,COI,,,24,0,0,23,0,0,,present,absent,partial,absent,partial,absent
+Balaenoptera brydei,COI,,,39,0,0,36,0,0,,present,absent,partial,absent,partial,absent
+Orcinus orca,COI,,,180,0,0,169,0,0,,present,absent,present,absent,present,absent
