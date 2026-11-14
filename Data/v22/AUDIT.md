@@ -66,3 +66,83 @@ Species-level details are in `species_before_after_v21_v22.csv`; nematodes are i
 | `species_before_after_v21_v22.csv` | v21 vs v22 counts and statuses for the 107 species and higher taxa |
 | `nematode_genera_v21_v22.csv` | v21 vs v22 counts for the 25 nematode genera |
 | `../../Scripts/nmbl_v22_rerun_browser.js` | Query code used |
+
+---
+
+# v22.1 — Accepted-name re-query and independent reproduction (14 November 2026)
+
+## Trigger
+
+v22 left 19 taxa with no BOLD records. Checking every species and genus name against the World Register of Marine Species (WoRMS REST API) showed that 13 species were listed under superseded names. Records filed under the accepted name had never been counted.
+
+## Method
+
+The whole dataset was re-run with a stand-alone Python script, `Scripts/nmbl_v22_requery.py`, on the PI's own computer (14 Nov 2026, 11:30–11:59 WAT). The script used Biopython Entrez for NCBI, the BOLD v5 API, the SILVA search service and the WoRMS REST API. Query logic was identical to v22, with one change: each name was resolved through WoRMS, and species with a superseded name were queried under **both** names:
+* NCBI: `("old"[Organism] OR "accepted"[Organism])`.
+* BOLD: sum of the two names.
+
+Raw outputs are in `Data/v22.1/`: results JSON and CSV, nematode CSV and run log.
+
+## Name corrections (WoRMS)
+
+| Site name | Accepted name | WoRMS status |
+|---|---|---|
+| *Arius latiscutatus* | *Carlarius latiscutatus* | unaccepted |
+| *Sesarma huzardi* | *Guinearma huzardi* | superseded combination |
+| *Uca tangeri* | *Afruca tangeri* | superseded combination |
+| *Uca inversa* | *Cranuca inversa* | superseded combination |
+| *Nereis diversicolor* | *Hediste diversicolor* | superseded original combination |
+| *Crassostrea gasar* | *Crassostrea tulipa* | junior subjective synonym |
+| *Egeria radiata* | *Galatea paradoxa* | unaccepted |
+| *Neritina glabrata* | *Vitta glabrata* | unaccepted |
+| *Corbula trigona* | *Potamocorbula adusta* | junior homonym |
+| *Sparus caeruleostictus* | *Pagrus caeruleostictus* | unaccepted |
+| *Strombus latus* | *Thetystrombus latus* | unaccepted |
+| *Murex brandaris* | *Bolinus brandaris* | superseded combination |
+| *Tympanotonos radula* | *Tympanotonos fuscatus* | unaccepted (synonym; duplicates the *T. fuscatus* entry) |
+
+Other WoRMS notes, with no effect on counts:
+* *Penaeus notialis* and *P. kerathurus* are subgenus forms only.
+* *Balaenoptera brydei* is a *taxon inquirendum*.
+* *Sphaerium nodicostatum* is not in WoRMS (freshwater).
+* *Quadricoma* is now *Tricoma (Quadricoma)*; 0 records under either name.
+
+Site display names are unchanged pending a PI decision. Each affected record carries `accepted_name` and a note that its counts include both names.
+
+## Reclassifications (5)
+
+| Taxon | v22 | v22.1 | Basis |
+|---|---|---|---|
+| *Sesarma huzardi* (*Guinearma huzardi*) | absent | **present** | NCBI 35 global / 33 WA COI (Cameroon 16, Ghana 14, Gambia 3); BOLD 35 / 33 |
+| *Sparus caeruleostictus* (*Pagrus caeruleostictus*) | absent | partial | NCBI 3 / 3 WA 12S (Guinea-Bissau 2, Ghana 1); BOLD 2 / 2 |
+| *Egeria radiata* (*Galatea paradoxa*) | absent | partial | NCBI 2 / 2 WA COI (Ghana) |
+| *Corbula trigona* (*Potamocorbula adusta*) | absent | partial | BOLD 2 / 2 WA COI, both Nigeria |
+| *Tympanotonos radula* (= *T. fuscatus*) | absent | partial | NCBI 3 / 3 WA COI (Ghana, Gambia) |
+
+Count-only changes with no change in status:
+* *Arius latiscutatus*: BOLD 0 → 2 WA.
+* *Uca tangeri*: BOLD 0 → 1 WA.
+* *Uca inversa*: BOLD 0 → 46 global.
+* *Crassostrea gasar*: BOLD 0 → 54 global.
+* *Strombus latus*: BOLD 1 → 3 global / 2 WA.
+* *Murex brandaris*: BOLD 0 → 3 global.
+* *Nereis diversicolor*: BOLD 0 → 366 global.
+
+**Totals (132 taxa):** absent 67 → 62, partial 61 → 65, present 4 → 5.
+
+## Independent reproduction
+
+* **Species:** 94 of 106 reproduced v22 exactly. *Nereis diversicolor* is excluded from this comparison because it was re-queried separately. Of the 12 differences, 11 come from the name corrections; Ciliophora rose from 20,109 to 20,113 global, reflecting new NCBI deposits between runs.
+* **Nematodes:** all 25 genera reproduced exactly, both the SILVA SSU/LSU counts and the NCBI 18S/28S counts (WA = 0 throughout).
+* **Invariant checks:** no WA count exceeds its global count and no Nigeria count exceeds its WA count, in NCBI or BOLD (0 violations).
+* **Stored data:** all 107 species records in `data.js` match the script output exactly (0 mismatches), and every stored status equals the status computed from its counts (0 mismatches).
+
+## Headline figures (v22.1; replaces the earlier "32% of vertebrates with zero public sequences")
+
+The 32% figure could not be reproduced from any version of the data. On v22.1 data, for the 49 vertebrate taxa tracked (fish, elasmobranchs, turtles, marine mammals):
+* **4%** (2/49) have no reference sequence for their eDNA marker anywhere in NCBI or BOLD: *Pteroscion peli* and *Pseudupeneus prayensis*.
+* **51%** (25/49) have no West African reference sequence in either database.
+* **6%** (3/49) meet the regional threshold.
+* **0%** (0/49) have a Nigerian reference sequence.
+
+Across all 107 species and higher taxa, only 7 have any Nigerian record in NCBI or BOLD: *Macrobrachium vollenhovenii*, Bacillariophyta, Polychaeta, *Pachymelania aurita*, *P. fusca*, *Corbula trigona* (*Potamocorbula adusta*) and *Cardisoma armatum*.

@@ -38,10 +38,24 @@
           <span style="font-size:10px;background:var(--bg3);color:var(--text2);padding:2px 8px;border-radius:20px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;">Changelog</span>
           Version history &amp; audit trail
         </span>
-        <span style="font-size:11px;color:var(--text3);font-weight:400;">v20 – v22 · click to expand</span>
+        <span style="font-size:11px;color:var(--text3);font-weight:400;">v20 – v22.1 · click to expand</span>
       </summary>
 
       <div style="margin-top:14px;display:flex;flex-direction:column;gap:8px;">
+
+        <!-- v22.1 -->
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+          <div style="flex-shrink:0;padding-top:1px;">
+            <span style="display:inline-block;font-size:10px;font-weight:800;color:#fff;background:linear-gradient(90deg,#0c8599,#0a6b4e);padding:3px 9px;border-radius:6px;letter-spacing:0.06em;white-space:nowrap;">v22.1 · Nov 2026</span>
+          </div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.85;">
+            <span style="color:var(--red);font-weight:700;">🐛</span> <strong>Outdated species names corrected in queries</strong> — every name was checked against WoRMS; 13 species listed under superseded names (e.g. <em>Sesarma huzardi</em> → <em>Guinearma huzardi</em>, <em>Nereis diversicolor</em> → <em>Hediste diversicolor</em>, <em>Egeria radiata</em> → <em>Galatea paradoxa</em>) are now queried under both names. Records filed under the accepted name had been missed.<br>
+            <span style="color:var(--amber);font-weight:700;">Δ</span> <strong>5 reclassifications</strong> — <em>Sesarma huzardi</em> absent → present (33 WA COI records); <em>Sparus caeruleostictus</em>, <em>Egeria radiata</em>, <em>Corbula trigona</em> (2 Nigerian records) and <em>Tympanotonos radula</em> absent → partial. Across all 132 taxa: absent 67→62, partial 61→65, present 4→5.<br>
+            <span style="color:var(--blue);font-weight:700;">★</span> <strong>Independent reproduction</strong> — the full dataset was re-run with a stand-alone Python script (Biopython Entrez, BOLD v5 API, SILVA, WoRMS). 94 of 106 species reproduced v22 exactly; every difference is explained by the name corrections or new NCBI deposits. All 25 nematode genera reproduced exactly. Script: <code>Scripts/nmbl_v22_requery.py</code>; results and log: <code>Data/v22.1/</code>.
+          </div>
+        </div>
+
+        <div style="height:1px;background:var(--border);margin:2px 0;"></div>
 
         <!-- v22 -->
         <div style="display:flex;gap:12px;align-items:flex-start;">
@@ -98,7 +112,7 @@
       </div>
       <div class="info-card">
         <h3>Gulf of Guinea endemics — priority targets</h3>
-        <p><em>Pteroscion peli</em> (boe drum) has no 12S sequence anywhere in NCBI or BOLD. <em>Lutjanus goreensis</em> (Gorean snapper) and <em>Scomberomorus tritor</em> (West African Spanish mackerel) have only 2 and 4 global 12S records, all from a single Guinea-Bissau dataset, and <em>Strombus latus</em> (West African stromb) has 3 global COI records, 2 from Senegal. None of these endemics has been barcoded from Nigerian waters — each Nigerian voucher is a publishable first regional record. <em>Tympanotonos fuscatus</em> — the most commercially important macroinvertebrate in the Niger Delta — has 3 West African COI records (Ghana, Gambia) but none from Nigeria.</p>
+        <p><em>Pteroscion peli</em> (boe drum) has no 12S sequence anywhere in NCBI or BOLD. <em>Lutjanus goreensis</em> (Gorean snapper) and <em>Scomberomorus tritor</em> (West African Spanish mackerel) have only 2 and 4 global 12S records, all from a single Guinea-Bissau dataset, and <em>Strombus latus</em> (= <em>Thetystrombus latus</em>, West African stromb) has 3 global COI records, 2 from Senegal. None of these endemics has been barcoded from Nigerian waters — each Nigerian voucher is a publishable first regional record. <em>Tympanotonos fuscatus</em> — the most commercially important macroinvertebrate in the Niger Delta — has 3 West African COI records (Ghana, Gambia) but none from Nigeria.</p>
       </div>
     </div>
 
@@ -276,7 +290,7 @@
           <li><em>Tursiops truncatus</em>, <em>Mugil cephalus</em>, <em>Sphyrna lewini</em> — well-barcoded globally (239 COI, 64 and 102 12S records) but <strong>zero West African sequences</strong>; undetectable in Nigerian eDNA without regional vouchers</li>
           <li><em>Sea turtles</em> (<em>Chelonia mydas</em>, <em>Dermochelys coriacea</em>, <em>Lepidochelys olivacea</em>) — nest on Nigerian beaches, 8–20 global 12S records each but <strong>zero WA</strong></li>
           <li><em>Penaeus notialis</em> (pink shrimp, largest commercial fishery) — 50 global COI in NCBI (16 in BOLD) but <strong>zero WA</strong>; major regional gap</li>
-          <li><em>Sesarma huzardi</em>, <em>Egeria radiata</em> — staple seafood, <strong>zero records anywhere</strong> (<em>Goniopsis pelii</em> has a single Ghanaian COI record)</li>
+          <li><em>Neritina glabrata</em> (= <em>Vitta glabrata</em>), <em>Pseudupeneus prayensis</em>, <em>Sphaerium nodicostatum</em> — <strong>zero records anywhere</strong> in NCBI or BOLD, under current or former names</li>
           <li><em>Trichechus senegalensis</em> (African manatee) — <strong>zero WA records</strong>; one partial mitogenome globally (Republic of the Congo). <em>Sousa teuszii</em> has only one (a Senegal mitogenome)</li>
         </ul>
       </div>
@@ -286,7 +300,7 @@
           <li><em>Pseudotolithus elongatus</em> (bobo croaker) — 3 WA 12S records in NCBI and BOLD; meets threshold</li>
           <li><em>Scomberomorus tritor</em> (West African Spanish mackerel) — 3 WA 12S records in NCBI and BOLD; meets threshold</li>
           <li><em>Epinephelus aeneus</em> (white grouper) — 3 WA 12S records in NCBI and BOLD; meets threshold</li>
-          <li>Polychaeta (higher taxon) — 99 WA COI records in NCBI and 132 in BOLD (incl. Nigeria)</li><li>All three fish above draw their WA records from a single Guinea-Bissau 12S dataset — <strong>no Nigerian 12S record exists for any fish tracked</strong></li>
+          <li><em>Sesarma huzardi</em> (accepted name <em>Guinearma huzardi</em>, mangrove crab) — 33 WA COI records (Cameroon, Ghana, Gambia) in NCBI and BOLD; found only by querying the accepted name (v22.1)</li><li>Polychaeta (higher taxon) — 99 WA COI records in NCBI and 132 in BOLD (incl. Nigeria)</li><li>All three fish above draw their WA records from a single Guinea-Bissau 12S dataset — <strong>no Nigerian 12S record exists for any fish tracked</strong></li>
         </ul>
         <div style="margin-top:8px;font-size:10px;color:var(--text3);font-style:italic;line-height:1.5;">Note: "well-covered" here means the WA reference library is sufficient for that marker — not that the species is abundantly studied worldwide.</div>
       </div>
@@ -298,7 +312,7 @@
           <li><em>Pseudotolithus senegalensis</em> (cassava croaker) — 2 WA 12S records (below threshold); none in BOLD</li>
           <li><em>Drepane africana</em> (African sicklefish), <em>Lutjanus goreensis</em> — 2 WA 12S records each (below threshold of 3)</li>
           <li><em>Polydactylus quadrifilis</em>, <em>Galeoides decadactylus</em>, <em>Elops lacerta</em> — 1–2 WA 12S records each; below threshold</li>
-          <li><em>Arius latiscutatus</em> (rough-head sea catfish) — 2 WA 12S records; below threshold; <em>Carcharhinus leucas</em> — 375 global 12S but only 1 WA (Sierra Leone)</li>
+          <li><em>Egeria radiata</em> (= <em>Galatea paradoxa</em>, volute clam) — 2 Ghanaian COI records; <em>Corbula trigona</em> (= <em>Potamocorbula adusta</em>) — 2 Nigerian COI records in BOLD; <em>Sparus caeruleostictus</em> (= <em>Pagrus caeruleostictus</em>) — 3 WA 12S records in NCBI, 2 in BOLD. All were absent until queried under accepted names (v22.1)</li><li><em>Arius latiscutatus</em> (= <em>Carlarius latiscutatus</em>, rough-head sea catfish) — 2 WA 12S records; below threshold; <em>Carcharhinus leucas</em> — 375 global 12S but only 1 WA (Sierra Leone)</li>
           <li><em>Callinectes amnicola</em> (Lagos lagoon swimming crab) — 1 WA COI record; below threshold of 5</li>
           <li><em>Macrobrachium vollenhovenii</em> (African river prawn) — 2 WA COI records, both from Nigeria; below threshold of 5</li>
           <li><em>Tympanotonos fuscatus</em> (Niger Delta periwinkle) — 3 WA COI records (Ghana, Gambia); zero Nigeria-specific. <em>Pachymelania aurita</em> and <em>P. fusca</em> — Nigerian COI records in BOLD only (5 and 3)</li>
@@ -312,7 +326,7 @@
           <li><strong>Nematode 0 values</strong> are real — no INSDC (GenBank/ENA) record for any of the 25 genera carries a West African country; SILVA is built from INSDC, so its WA count is also zero</li>
           <li><strong>Nematode global counts</strong> are SILVA SSU r144 / LSU r138.2 genus-level counts (organism-name match); v21 figures could not be reproduced from any source and were replaced in v22</li><li><strong>WA counts are conservative:</strong> a record counts only if its GenBank/BOLD country field names a West African state (Mauritania–Cameroon, Cabo Verde)</li>
           <li><strong>IUCN statuses</strong> sourced from IUCN Red List (2024); subject to revision</li>
-          <li>Dashboard v22 — live counts from NCBI, BOLD v5 and SILVA, 13 Nov 2026; query code and raw results in the GitHub repository (<code>Scripts/</code>, <code>Data/v22/</code>)</li>
+          <li>Dashboard v22.1 — live counts from NCBI, BOLD v5 and SILVA, 13–14 Nov 2026, queried under current and accepted (WoRMS) names; query code and raw results in the GitHub repository (<code>Scripts/</code>, <code>Data/v22/</code>)</li>
         </ul>
       </div>
     </div>

@@ -262,6 +262,23 @@
 
       <details class="vh-entry" open>
         <summary>
+          <span class="vh-badge" style="background:linear-gradient(90deg,#0c8599,#0a6b4e);">v22.1</span>
+          <span class="vh-heading">Accepted-name re-query and independent reproduction</span>
+          <span class="vh-date">Nov 2026</span>
+        </summary>
+        <div class="vh-body">
+          <ul>
+            <li><strong>Why.</strong> v22 left 19 species with no BOLD records. Checking every name against the World Register of Marine Species (WoRMS) showed that 13 were listed under superseded names, so records filed under the accepted name were never counted.</li>
+            <li><strong>Names corrected in queries:</strong> <em>Arius latiscutatus</em> → <em>Carlarius latiscutatus</em>; <em>Sesarma huzardi</em> → <em>Guinearma huzardi</em>; <em>Uca tangeri</em> → <em>Afruca tangeri</em>; <em>Uca inversa</em> → <em>Cranuca inversa</em>; <em>Nereis diversicolor</em> → <em>Hediste diversicolor</em>; <em>Crassostrea gasar</em> → <em>C. tulipa</em>; <em>Egeria radiata</em> → <em>Galatea paradoxa</em>; <em>Neritina glabrata</em> → <em>Vitta glabrata</em>; <em>Corbula trigona</em> → <em>Potamocorbula adusta</em>; <em>Sparus caeruleostictus</em> → <em>Pagrus caeruleostictus</em>; <em>Strombus latus</em> → <em>Thetystrombus latus</em>; <em>Murex brandaris</em> → <em>Bolinus brandaris</em>; <em>Tympanotonos radula</em> → synonym of <em>T. fuscatus</em>. Each species is now queried under both names; site names are unchanged for now.</li>
+            <li><strong>Result.</strong> 5 reclassifications: <em>Sesarma huzardi</em> absent → present (33 West African COI records from Cameroon, Ghana and Gambia); <em>Sparus caeruleostictus</em>, <em>Egeria radiata</em>, <em>Corbula trigona</em> and <em>Tympanotonos radula</em> absent → partial. Across all 132 taxa: absent 67 → 62, partial 61 → 65, present 4 → 5.</li>
+            <li><strong>Independent reproduction.</strong> The whole dataset was re-run with a stand-alone Python script (Biopython Entrez for NCBI, the BOLD v5 API, SILVA and WoRMS) on a separate computer. 94 of 106 species and all 25 nematode genera reproduced the v22 counts exactly; every difference is explained by the name corrections or by new NCBI deposits.</li>
+            <li><strong>Audit trail.</strong> Script <code>Scripts/nmbl_v22_requery.py</code>; results, log and before/after table in <code>Data/v22.1/</code>; details in <code>Data/v22/AUDIT.md</code>.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="vh-entry">
+        <summary>
           <span class="vh-badge" style="background:linear-gradient(90deg,#b45309,#0a6b4e);">v22</span>
           <span class="vh-heading">Full database re-run, query corrections and nematode recount</span>
           <span class="vh-date">Nov 2026</span>
