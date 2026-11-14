@@ -33,8 +33,8 @@ function buildSearchIndex() {
   }));
   NEMATODES.forEach(n => idx.push({
     name:n.genus, common:n.role.split(";")[0].trim(), group:"Nematode",
-    marker:"18S", ncbi:n.ng18s>0?"present":n.global18s>0?"partial":"absent",
-    bold:n.wa18s>0?"partial":"absent",
+    marker:"18S", ncbi:n.wa18s>=1?"present":"absent",
+    bold:n.wa18s>=1?"present":"absent",
     priority:n.ng18s===0&&n.global18s>0?"high":n.global18s===0?"high":"med",
     notes:n.role, status:nemaGapStatus(n), section:"nematode", tab:"nematodes",
     extra:{order:n.order, response:n.response, global18s:n.global18s, ng18s:n.ng18s}
@@ -53,7 +53,7 @@ function onSearchInput(val) {
   if (q.length < 2) { dd.classList.remove('open'); return; }
 
   const results = SEARCH_INDEX.filter(s =>
-    s.name.toLowerCase().includes(q) || s.common.toLowerCase().includes(q)
+    nameMatches(s.name, q) || s.common.toLowerCase().includes(q)
   ).slice(0, 30);
 
   if (!results.length) {
@@ -88,7 +88,7 @@ function onSearchInput(val) {
             + thumbHtml
             + '<div class="sri-icon" style="background:' + ibg + ';color:' + icol + ';">' + init + '</div>'
             + '<div class="sri-text">'
-            +   '<div class="sri-name">' + item.name + '</div>'
+            +   '<div class="sri-name">' + displayName(item.name) + '</div>'
             +   '<div class="sri-meta">' + item.common + ' &middot; ' + item.group + (item.extra && item.extra.endemic ? ' <span style="color:var(--blue);font-size:10px;font-weight:600;">GoG endemic</span>' : '') + '</div>'
             + '</div>'
             + '<span class="sri-badge" style="background:' + stBg + ';color:' + stCol + ';">' + item.status + '</span>'

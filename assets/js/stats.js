@@ -308,7 +308,7 @@ function renderPriorityLeaderboard() {
     const common    = s.common ? ' <span style="font-size:10.5px;color:var(--text3);">(' + s.common + ')</span>' : '';
     return '<tr style="border-bottom:0.5px solid var(--border);">'
       + '<td style="padding:8px 10px;text-align:center;font-weight:800;color:' + rankColor + ';font-size:13px;">' + (i + 1) + '</td>'
-      + '<td style="padding:8px 10px;"><span style="font-style:italic;color:var(--navy);font-weight:600;">' + s.name + '</span>' + common + '</td>'
+      + '<td style="padding:8px 10px;"><span style="font-style:italic;color:var(--navy);font-weight:600;">' + displayName(s.name) + '</span>' + common + '</td>'
       + '<td style="padding:8px 10px;font-size:11px;color:var(--text2);">' + groupTag + '</td>'
       + '<td style="padding:8px 10px;text-align:center;font-size:10.5px;color:var(--text2);font-family:\'DM Mono\',monospace;">' + (s.marker || '—') + '</td>'
       + '<td style="padding:8px 10px;text-align:center;">' + statusBadge(s._ov) + '</td>'
@@ -447,7 +447,7 @@ function renderIucnCrosstab() {
         const ovBg  = ov === 'absent' ? 'var(--red-bg)' : 'var(--amber-bg)';
         return '<span style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;background:var(--bg);border:0.5px solid ' + ovCol + ';border-radius:6px;font-size:11.5px;">'
              + iucnBadge(s.iucn)
-             + '<span style="font-style:italic;color:var(--navy);font-weight:600;">' + s.name + '</span>'
+             + '<span style="font-style:italic;color:var(--navy);font-weight:600;">' + displayName(s.name) + '</span>'
              + (s.common ? '<span style="color:var(--text3);">(' + s.common + ')</span>' : '')
              + '<span style="background:' + ovBg + ';color:' + ovCol + ';padding:1px 6px;border-radius:10px;font-size:9.5px;font-weight:700;">' + ov.toUpperCase() + '</span>'
              + '</span>';

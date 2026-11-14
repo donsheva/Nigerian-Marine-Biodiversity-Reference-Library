@@ -26,8 +26,8 @@ const VERTEBRATES = [
   {name:"Callinectes amnicola",        common:"Swimming crab",            group:"Crustacean",  marker:"COI", ncbi:"partial", bold:"partial", priority:"high",iucn:"DD",location:"Lagos Lagoon",habitat:"Estuarine/Lagoon",notes:"Dominant brachyuran. v22.1 (Nov 2026): NCBI 3 global / 1 WA COI (Ghana 1); BOLD 3 global / 1 WA.",ncbi_global:3,ncbi_wa:1,ncbi_ng:0,bold_global:3,bold_wa:1,bold_ng:0,eco_notes:"Dominant brachyuran"},
   {name:"Parapenaeus longirostris",    common:"Deep-water rose shrimp",   group:"Crustacean",  marker:"COI", ncbi:"absent",bold:"partial",priority:"med", iucn:"LC",location:"Gulf of Guinea",habitat:"Offshore/Deep",notes:"v22.1 (Nov 2026): NCBI 29 global / 0 WA COI; BOLD 38 global / 1 WA.",ncbi_global:29,ncbi_wa:0,ncbi_ng:0,bold_global:38,bold_wa:1,bold_ng:0,eco_notes:"",boldTaxon:"Parapenaeus longirostris"},
   {name:"Macrobrachium vollenhovenii", common:"African river prawn",      group:"Crustacean",  marker:"COI", ncbi:"partial",bold:"partial", priority:"med", iucn:"LC",location:"Niger Delta",habitat:"Freshwater/Estuarine",notes:"Estuarine/freshwater overlap. v22.1 (Nov 2026): NCBI 3 global / 2 WA COI (Nigeria 2); BOLD 3 global / 2 WA.",ncbi_global:3,ncbi_wa:2,ncbi_ng:2,bold_global:3,bold_wa:2,bold_ng:2,eco_notes:"Estuarine/freshwater overlap"},
-  {name:"Trichechus senegalensis",     common:"African manatee",          group:"Mammal",      marker:"COI", ncbi:"absent",bold:"absent", priority:"high",iucn:"VU",location:"Lagos Lagoon",habitat:"Lagoon/Mangrove/Riverine",notes:"CITES I; data-deficient in Nigeria. v22.1 (Nov 2026): NCBI 1 global / 0 WA COI; BOLD 0 global / 0 WA (no BOLD records found).",ncbi_global:1,ncbi_wa:0,ncbi_ng:0,bold_global:0,bold_wa:0,bold_ng:0,eco_notes:"CITES I; data-deficient in Nigeria"},
-  {name:"Sousa teuszii",               common:"Atlantic humpback dolphin",group:"Mammal",      marker:"COI", ncbi:"partial",bold:"absent", priority:"high",iucn:"CR",location:"Gulf of Guinea",habitat:"Coastal/Marine",notes:"Critically endangered; GoG endemic. v22.1 (Nov 2026): NCBI 1 global / 1 WA COI (Senegal 1); BOLD 0 global / 0 WA (no BOLD records found).",ncbi_global:1,ncbi_wa:1,ncbi_ng:0,bold_global:0,bold_wa:0,bold_ng:0,eco_notes:"Critically endangered; GoG endemic"},
+  {name:"Trichechus senegalensis",     common:"African manatee",          group:"Mammal",      marker:"COI", ncbi:"absent",bold:"absent", priority:"high",iucn:"VU",location:"Lagos Lagoon",habitat:"Lagoon/Mangrove/Riverine",notes:"CITES Appendix I; data-deficient in Nigeria. One partial mitochondrial genome in GenBank (MW073827; Republic of the Congo, outside the West African filter), which contains both COI and 12S. So the species has one COI and one 12S reference sequence globally and none from West Africa or Nigeria. No BOLD records. Earlier versions (to v21) reported zero because searches matched the marker name in record titles only and missed mitogenomes (corrected in v22). v22.1 (Nov 2026): NCBI 1 global / 0 WA COI; BOLD 0 global / 0 WA.",ncbi_global:1,ncbi_wa:0,ncbi_ng:0,bold_global:0,bold_wa:0,bold_ng:0,eco_notes:"",genbank:"MW073827"},
+  {name:"Sousa teuszii",               common:"Atlantic humpback dolphin",group:"Mammal",      marker:"COI", ncbi:"partial",bold:"absent", priority:"high",iucn:"CR",location:"Gulf of Guinea",habitat:"Coastal/Marine",notes:"Critically endangered; Gulf of Guinea endemic. One complete mitochondrial genome in GenBank (MN365274; RefSeq copy NC_045404): vouchered specimen USNM:MAMM:605133, Senegal, 2018. A mitogenome contains both COI and 12S, so the species has exactly one COI and one 12S reference sequence — West African, but none from Nigeria. No BOLD records. Earlier versions (to v21) reported zero because searches matched the marker name in record titles only and missed mitogenomes (corrected in v22). v22.1 (Nov 2026): NCBI 1 global / 1 WA COI (Senegal 1); BOLD 0 global / 0 WA.",ncbi_global:1,ncbi_wa:1,ncbi_ng:0,bold_global:0,bold_wa:0,bold_ng:0,eco_notes:"",genbank:"MN365274"},
   {name:"Tursiops truncatus",          common:"Bottlenose dolphin",       group:"Mammal",      marker:"COI", ncbi:"absent",bold:"absent",priority:"med", iucn:"LC",location:"Gulf of Guinea",habitat:"Coastal/Offshore",notes:"v22.1 (Nov 2026): NCBI 239 global / 0 WA COI; BOLD 168 global / 0 WA.",ncbi_global:239,ncbi_wa:0,ncbi_ng:0,bold_global:168,bold_wa:0,bold_ng:0,eco_notes:"",genbank:"AF055847",boldTaxon:"Tursiops truncatus"},
   {name:"Chelonia mydas",              common:"Green sea turtle",         group:"Turtle",      marker:"12S", ncbi:"absent",bold:"absent",priority:"med", iucn:"EN",location:"Gulf of Guinea",habitat:"Marine/Nesting beaches",notes:"v22.1 (Nov 2026): NCBI 20 global / 0 WA 12S; BOLD 0 global / 0 WA.",ncbi_global:20,ncbi_wa:0,ncbi_ng:0,bold_global:0,bold_wa:0,bold_ng:0,eco_notes:"",genbank:"AJ238583",boldTaxon:"Chelonia mydas"},
   {name:"Dermochelys coriacea",        common:"Leatherback turtle",       group:"Turtle",      marker:"12S", ncbi:"absent",bold:"absent",priority:"med", iucn:"VU",location:"Gulf of Guinea",habitat:"Marine/Offshore",notes:"v22.1 (Nov 2026): NCBI 10 global / 0 WA 12S; BOLD 0 global / 0 WA.",ncbi_global:10,ncbi_wa:0,ncbi_ng:0,bold_global:0,bold_wa:0,bold_ng:0,eco_notes:"",genbank:"AJ131457",boldTaxon:"Dermochelys coriacea"},
@@ -82,8 +82,10 @@ const ALL_TAXA = [
   ...MEIOFAUNA_OTHER.map(s => ({name:s.name, common:s.common, group:s.group, marker:s.marker,
     ncbi:s.ncbi, bold_silva:s.bold, priority:s.priority, notes:s.notes, section:"meiofauna"})),
   ...NEMATODES.map(n => ({name:n.genus, common:n.role.split(";")[0].trim(), group:"Nematode",
-    marker:"18S", ncbi: n.ng18s>0?"present": n.global18s>0?"partial":"absent",
-    bold_silva: n.wa18s>0?"partial":"absent",
+    // v22.1: same v21 rule as all other taxa — status follows West African records (18S threshold >= 1).
+    // SILVA is built from INSDC, so its WA count equals the NCBI WA count (wa18s).
+    marker:"18S", ncbi_wa:n.wa18s, ncbi: n.wa18s>=1?"present":"absent",
+    bold_silva: n.wa18s>=1?"present":"absent",
     priority: n.ng18s===0&&n.global18s>0?"high": n.global18s===0?"high":"med",
     notes:n.role, section:"nematode"})),
 ];
@@ -153,7 +155,7 @@ function nemaGapStatus(n) {
 const MACROBENTHOS = [
   // GASTROPODS — Potamididae (mangrove/estuarine snails)
   {name:"Tympanotonos fuscatus",   common:"Mud periwinkle / Isam", group:"Gastropod", habitat:"mangrove",   marker:"COI", ncbi:"partial",bold:"absent", priority:"high", star:true,  notes:"v22.1 (Nov 2026): NCBI 3 global / 3 WA COI (Gambia 1, Ghana 2); BOLD 0 global / 0 WA (no BOLD records found).",ncbi_global:3,ncbi_wa:3,ncbi_ng:0,bold_global:0,bold_wa:0,bold_ng:0},
-  {name:"Tympanotonos radula",     common:"Radula periwinkle",     group:"Gastropod", habitat:"mangrove",   marker:"COI", ncbi:"partial", bold:"absent", priority:"high", star:false, notes:"v22.1 (Nov 2026): NCBI 3 global / 3 WA COI (Gambia 1, Ghana 2); BOLD 0 global / 0 WA (no BOLD records found). Accepted name (WoRMS): Tympanotonos fuscatus — counts include both names.",ncbi_global:3,ncbi_wa:3,ncbi_ng:0,bold_global:0,bold_wa:0,bold_ng:0,accepted_name:"Tympanotonos fuscatus"},
+  {name:"Tympanotonos radula",     common:"Radula periwinkle",     group:"Gastropod", habitat:"mangrove",   marker:"COI", ncbi:"partial", bold:"absent", priority:"high", star:false, notes:"Synonym of Tympanotonos fuscatus (WoRMS) — same species; counts are identical to the T. fuscatus entry and should not be added to it. v22.1 (Nov 2026): NCBI 3 global / 3 WA COI (Gambia 1, Ghana 2); BOLD 0 global / 0 WA (no BOLD records found).",ncbi_global:3,ncbi_wa:3,ncbi_ng:0,bold_global:0,bold_wa:0,bold_ng:0,synonym_of:"Tympanotonos fuscatus"},
   {name:"Pachymelania aurita",     common:"Eared mud snail",       group:"Gastropod", habitat:"estuarine",  marker:"COI", ncbi:"absent",bold:"present", priority:"high", star:true,  notes:"v22.1 (Nov 2026): NCBI 0 global / 0 WA COI; BOLD 5 global / 5 WA.",ncbi_global:0,ncbi_wa:0,ncbi_ng:0,bold_global:5,bold_wa:5,bold_ng:5},
   {name:"Pachymelania fusca",      common:"Fusca mud snail",       group:"Gastropod", habitat:"estuarine",  marker:"COI", ncbi:"absent", bold:"partial", priority:"high", star:false, notes:"v22.1 (Nov 2026): NCBI 0 global / 0 WA COI; BOLD 3 global / 3 WA.",ncbi_global:0,ncbi_wa:0,ncbi_ng:0,bold_global:3,bold_wa:3,bold_ng:3},
   {name:"Telescopium telescopium", common:"Telescope snail",       group:"Gastropod", habitat:"mangrove",   marker:"COI", ncbi:"absent",bold:"absent",priority:"med",  star:false, notes:"Mangrove gastropod; some Indo-Pacific records. v22.1 (Nov 2026): NCBI 51 global / 0 WA COI; BOLD 50 global / 0 WA.",ncbi_global:51,ncbi_wa:0,ncbi_ng:0,bold_global:50,bold_wa:0,bold_ng:0},
@@ -258,3 +260,22 @@ const ALL_FISH = [
   ...VERTEBRATES.filter(s => s.group === "Fish").map(s => ({...s, habitatType:"estuarine"})),
   ...MARINE.filter(s => s.group === "Marine-Pelagic" || s.group === "Marine-Demersal").map(s => ({...s, habitatType:"marine"})),
 ];
+
+
+// ─── NAMES (v22.1) ─────────────────────────────────────────────────────────
+// Site names are kept as record keys. Where WoRMS gives a different accepted name,
+// the accepted name is displayed with the site name as a synonym.
+const NAME_INFO = {};
+[VERTEBRATES, MACROBENTHOS, MARINE, MEIOFAUNA_OTHER].forEach(arr => arr.forEach(s => {
+  if (s.accepted_name || s.synonym_of) NAME_INFO[s.name] = {accepted: s.accepted_name || null, synonymOf: s.synonym_of || null};
+}));
+function displayName(name) {
+  const i = NAME_INFO[name];
+  if (!i) return name;
+  if (i.synonymOf) return name + ' <span class="syn-note">(synonym of <em>' + i.synonymOf + '</em>)</span>';
+  return i.accepted + ' <span class="syn-note">(syn. <em>' + name + '</em>)</span>';
+}
+function nameMatches(name, q) {
+  const i = NAME_INFO[name];
+  return name.toLowerCase().includes(q) || !!(i && i.accepted && i.accepted.toLowerCase().includes(q));
+}

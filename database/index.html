@@ -38,10 +38,24 @@
           <span style="font-size:10px;background:var(--bg3);color:var(--text2);padding:2px 8px;border-radius:20px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;">Changelog</span>
           Version history &amp; audit trail
         </span>
-        <span style="font-size:11px;color:var(--text3);font-weight:400;">v20 – v22.1 · click to expand</span>
+        <span style="font-size:11px;color:var(--text3);font-weight:400;">v20 – v22.2 · click to expand</span>
       </summary>
 
       <div style="margin-top:14px;display:flex;flex-direction:column;gap:8px;">
+
+        <!-- v22.2 -->
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+          <div style="flex-shrink:0;padding-top:1px;">
+            <span style="display:inline-block;font-size:10px;font-weight:800;color:#fff;background:linear-gradient(90deg,#0d6efd,#0c8599);padding:3px 9px;border-radius:6px;letter-spacing:0.06em;white-space:nowrap;">v22.2 · Nov 2026</span>
+          </div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.85;">
+            <span style="color:var(--amber);font-weight:700;">Δ</span> <strong>One classification rule for every taxon</strong> — nematode genera had used a separate rule ("partial" whenever any sequence existed anywhere). They now follow the same v21 rule as all other taxa: status depends on West African records (18S ≥1). With zero West African 18S records for all 25 genera, all 25 are absent (23 were partial). Across all 132 taxa: absent 62→85, partial 65→42, present 5.<br>
+            <span style="color:var(--blue);font-weight:700;">★</span> <strong>Accepted names displayed</strong> — the 12 species with a newer WoRMS name now show the accepted name, with the site name as a synonym (e.g. <em>Guinearma huzardi</em> (syn. <em>Sesarma huzardi</em>)); search finds either name. <em>Tympanotonos radula</em> is marked as a synonym of <em>T. fuscatus</em>; its records are the same as that entry's.<br>
+            <span style="color:var(--blue);font-weight:700;">★</span> <strong>Marine mammal records clarified</strong> — <em>Sousa teuszii</em> and <em>Trichechus senegalensis</em> now name their mitochondrial genomes (MN365274; MW073827), state that each contains both COI and 12S, and link directly to GenBank.
+          </div>
+        </div>
+
+        <div style="height:1px;background:var(--border);margin:2px 0;"></div>
 
         <!-- v22.1 -->
         <div style="display:flex;gap:12px;align-items:flex-start;">
@@ -326,7 +340,7 @@
           <li><strong>Nematode 0 values</strong> are real — no INSDC (GenBank/ENA) record for any of the 25 genera carries a West African country; SILVA is built from INSDC, so its WA count is also zero</li>
           <li><strong>Nematode global counts</strong> are SILVA SSU r144 / LSU r138.2 genus-level counts (organism-name match); v21 figures could not be reproduced from any source and were replaced in v22</li><li><strong>WA counts are conservative:</strong> a record counts only if its GenBank/BOLD country field names a West African state (Mauritania–Cameroon, Cabo Verde)</li>
           <li><strong>IUCN statuses</strong> sourced from IUCN Red List (2024); subject to revision</li>
-          <li>Dashboard v22.1 — live counts from NCBI, BOLD v5 and SILVA, 13–14 Nov 2026, queried under current and accepted (WoRMS) names; query code and raw results in the GitHub repository (<code>Scripts/</code>, <code>Data/v22/</code>)</li>
+          <li>Dashboard v22.2 — live counts from NCBI, BOLD v5 and SILVA, 13–14 Nov 2026, queried under current and accepted (WoRMS) names; query code and raw results in the GitHub repository (<code>Scripts/</code>, <code>Data/v22/</code>)</li>
         </ul>
       </div>
     </div>

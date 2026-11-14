@@ -20,7 +20,7 @@ function openPopup(idx) {
 
   const pName = document.getElementById('popup-name');
   const pCommon = document.getElementById('popup-common');
-  if (pName) pName.textContent = s.name;
+  if (pName) pName.innerHTML = (typeof displayName === 'function') ? displayName(s.name) : s.name;
   if (pCommon) pCommon.textContent = s.common;
 
 

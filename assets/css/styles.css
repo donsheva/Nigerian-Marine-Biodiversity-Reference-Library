@@ -544,3 +544,7 @@ button, .submit-btn, .export-btn { cursor: pointer; font-family: inherit; transi
   .tab { display: none; }
   .panel { display: block !important; }
 }
+
+/* v22.1: accepted-name display — site name shown as synonym */
+.syn-note { font-style: normal; font-weight: 400; font-size: 10px; color: var(--text2); white-space: normal; }
+.syn-note em { font-style: italic; }

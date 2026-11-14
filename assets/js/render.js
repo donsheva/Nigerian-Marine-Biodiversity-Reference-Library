@@ -80,7 +80,7 @@ function clearFilters() {
 function renderGapLists() {
   const vertGaps = VERTEBRATES.filter(s=>overallStatus({...s,bold_silva:s.bold})==="absent"&&s.priority==="high");
   document.getElementById("gap-list-vert").innerHTML = vertGaps.map(s=>
-    `<span class="gap-item" style="cursor:pointer;" onclick="goToSearch('${s.name}')" title="Click to view in All taxa">— <em>${s.name}</em> (${s.common}) →</span>`).join("");
+    `<span class="gap-item" style="cursor:pointer;" onclick="goToSearch('${s.name}')" title="Click to view in All taxa">— <em>${displayName(s.name)}</em> (${s.common}) →</span>`).join("");
   const nemaGaps = NEMATODES.filter(n=>n.ng18s===0&&n.global18s>0).slice(0,10);
   document.getElementById("gap-list-nema").innerHTML = nemaGaps.map(n=>
     `<span class="gap-item" style="cursor:pointer;" onclick="goToSearch('${n.genus}')" title="Click to view in All taxa">— <em>${n.genus}</em> (${n.order}) →</span>`).join("");
@@ -119,7 +119,7 @@ function renderTable() {
 
   let data = ALL_TAXA.filter(s => {
     const st=overallStatus(s);
-    return (q===""||s.name.toLowerCase().includes(q)||s.common.toLowerCase().includes(q)||s.notes.toLowerCase().includes(q))
+    return (q===""||nameMatches(s.name,q)||s.common.toLowerCase().includes(q)||s.notes.toLowerCase().includes(q))
       &&(fs==="all"||st===fs)&&(fg==="all"||s.group===fg)
       &&(fm==="all"||s.marker===fm)&&(fp==="all"||s.priority===fp);
   });
@@ -147,7 +147,7 @@ function renderTable() {
       ? `<br><span onclick="switchTab('marine')" style="font-size:10px;color:var(--blue);cursor:pointer;text-decoration:underline;">→ Marine tab</span>`
       : "";
     return `<tr>
-      <td class="species-name">${s.name}${nemaLink}${marineLink}</td>
+      <td class="species-name">${displayName(s.name)}${nemaLink}${marineLink}</td>
       <td style="font-size:11px;color:var(--text2);max-width:140px;">${s.common}</td>
       <td><span class="badge ${groupClass(s.group)}">${s.group}</span></td>
       <td><span class="badge ${markerClass(s.marker)}">${s.marker}</span></td>
@@ -248,7 +248,7 @@ function renderFishTable() {
   let data = ALL_FISH.filter(s => {
     const st = s.group==="Fish" ? overallStatus({...s,bold_silva:s.bold}) : marineStatus(s);
     const htMatch = fh==="all" || (fh==="marine"&&s.habitatType==="marine") || (fh==="estuarine"&&s.habitatType==="estuarine");
-    return (q===""||s.name.toLowerCase().includes(q)||s.common.toLowerCase().includes(q))
+    return (q===""||nameMatches(s.name,q)||s.common.toLowerCase().includes(q))
       &&(fs==="all"||st===fs)&&(fp==="all"||s.priority===fp)&&htMatch;
   });
   data.sort((a,b)=>fishSortCol==="priority"?fishSortDir*(priO[a.priority]-priO[b.priority]):fishSortDir*a.name.localeCompare(b.name));
@@ -262,7 +262,7 @@ function renderFishTable() {
     const pri=s.priority==="high"?`<span class="priority-high">high</span>`:s.priority==="med"?`<span class="priority-med">med</span>`:`<span class="priority-low">low</span>`;
     const grpLabel=s.group.replace("Marine-","");
     return `<tr>
-      <td class="species-name">${s.name}</td>
+      <td class="species-name">${displayName(s.name)}</td>
       <td style="font-size:11px;color:var(--text2);">${s.common}</td>
       <td><span class="badge marker-12s" style="font-size:10px;">${grpLabel}</span></td>
       <td><span class="badge ${markerClass(s.marker)}">${s.marker}</span></td>
@@ -300,7 +300,7 @@ function renderMacroTable() {
 
   const priO = {high:0,med:1,low:2};
   let data = MACROBENTHOS.filter(s =>
-    (q===""||s.name.toLowerCase().includes(q)||s.common.toLowerCase().includes(q))
+    (q===""||nameMatches(s.name,q)||s.common.toLowerCase().includes(q))
     &&(fg==="all"||s.group===fg)
     &&(fh==="all"||s.habitat===fh)
     &&(fs==="all"||macroStatus(s)===fs)
@@ -319,7 +319,7 @@ function renderMacroTable() {
     const starMark = s.star ? `<span style="color:var(--amber);font-size:12px;margin-right:3px;">&#9733;</span>` : "";
     const rowStyle = s.star ? "background:var(--amber-bg);" : "";
     return `<tr style="${rowStyle}">
-      <td class="species-name">${starMark}${s.name}</td>
+      <td class="species-name">${starMark}${displayName(s.name)}</td>
       <td style="font-size:11px;color:var(--text2);">${s.common}</td>
       <td><span class="badge meio-tag">${s.group}</span></td>
       <td><span style="font-size:11px;${habitatColor(s.habitat)}">${s.habitat}</span></td>
@@ -354,7 +354,7 @@ function renderMarineTable() {
   const priO = {high:0,med:1,low:2};
 
   let data = MARINE.filter(s =>
-    (q===""||s.name.toLowerCase().includes(q)||s.common.toLowerCase().includes(q))
+    (q===""||nameMatches(s.name,q)||s.common.toLowerCase().includes(q))
     &&(fg==="all"||s.group===fg)
     &&(fs==="all"||marineStatus(s)===fs)
     &&(fp==="all"||s.priority===fp)
@@ -372,7 +372,7 @@ function renderMarineTable() {
     const rowStyle = endemic ? "background:var(--blue-bg);" : "";
     const endemicMark = endemic ? `<span style="font-size:10px;color:var(--blue);margin-left:4px;">GoG endemic</span>` : "";
     return `<tr style="${rowStyle}">
-      <td class="species-name">${s.name}${endemicMark}</td>
+      <td class="species-name">${displayName(s.name)}${endemicMark}</td>
       <td style="font-size:11px;color:var(--text2);">${s.common}</td>
       <td><span class="badge marker-12s" style="font-size:10px;">${groupLabel(s.group)}</span></td>
       <td><span class="badge ${markerClass(s.marker)}">${s.marker}</span></td>
@@ -385,9 +385,9 @@ function renderMarineTable() {
 
   // Fill gap summary cards
   const demGaps = MARINE.filter(s=>s.group==="Marine-Demersal"&&marineStatus(s)==="absent");
-  document.getElementById("marine-gap-demersal").innerHTML = demGaps.map(s=>`<em>${s.name}</em> — ${s.common}`).join("<br>") || "None";
+  document.getElementById("marine-gap-demersal").innerHTML = demGaps.map(s=>`<em>${displayName(s.name)}</em> — ${s.common}`).join("<br>") || "None";
   const pelGaps = MARINE.filter(s=>(s.group==="Marine-Pelagic"||s.group==="Marine-Reef")&&marineStatus(s)==="absent");
-  document.getElementById("marine-gap-pelagic").innerHTML = pelGaps.map(s=>`<em>${s.name}</em> — ${s.common}`).join("<br>") || "None";
+  document.getElementById("marine-gap-pelagic").innerHTML = pelGaps.map(s=>`<em>${displayName(s.name)}</em> — ${s.common}`).join("<br>") || "None";
 }
 
 function exportMarineCSV() {

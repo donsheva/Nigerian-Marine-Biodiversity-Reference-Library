@@ -146,3 +146,26 @@ The 32% figure could not be reproduced from any version of the data. On v22.1 da
 * **0%** (0/49) have a Nigerian reference sequence.
 
 Across all 107 species and higher taxa, only 7 have any Nigerian record in NCBI or BOLD: *Macrobrachium vollenhovenii*, Bacillariophyta, Polychaeta, *Pachymelania aurita*, *P. fusca*, *Corbula trigona* (*Potamocorbula adusta*) and *Cardisoma armatum*.
+
+---
+
+# v22.2 — One classification rule, accepted names displayed (14 November 2026)
+
+PI decisions on the open items from v22.1:
+
+1. **Nematode classification brought into line with the v21 rule.** Nematode genera previously used a separate rule, recorded under "Known limitations" in v22: global sequences > 0 gave "partial". They now use the same rule as every other taxon: status depends on West African records, with an 18S threshold of ≥1, and the SILVA WA count equals the INSDC WA count. All 25 genera have 0 WA 18S records and are therefore **absent** (23 were partial before). No counts changed.
+   * **Totals (132 taxa):** absent 62 → 85, partial 65 → 42, present 5 → 5.
+   * The Nematodes tab's own descriptive labels ("unsequenced", "Nigeria gap") are unchanged.
+2. **Accepted names displayed.** Records keep their site name as the internal key, while the 12 species with a different WoRMS accepted name are displayed under the accepted name, with the site name shown as a synonym. Search matches either name (`displayName()` and `nameMatches()` in `data.js`).
+3. ***Tympanotonos radula* marked as a synonym of *T. fuscatus*.** It is kept in the list, displayed as "(synonym of *Tympanotonos fuscatus*)", and its note states that its records are the same as the *T. fuscatus* entry's and must not be added to them. **It still counts as a separate taxon in the 132 totals; removing it would make 131.**
+
+In addition, the *Sousa teuszii* and *Trichechus senegalensis* records now give the mitogenome accession, voucher and country, state that a mitogenome contains both COI and 12S, and link directly to GenBank (MN365274 and MW073827). No counts changed.
+
+## Site review (14 Nov 2026)
+
+| Check | Result |
+|---|---|
+| Internal links | No broken links. The analytics script is loaded from an external `//` URL, which is a false positive. |
+| JavaScript | All files parse. `data.js` loads, every stored status matches its counts, and the totals reconcile to 132. |
+| HTML structure | Edited pages have balanced tags. |
+| Stale statements | Remaining "v21" mentions refer correctly to the classification rule. The "NEW v21" badges on the Statistics page are historical. The citation example on the Citations page has a fixed "accessed 20 April 2026" date, which is cosmetic. |
