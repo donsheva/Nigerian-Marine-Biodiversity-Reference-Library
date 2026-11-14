@@ -52,6 +52,8 @@ function openPopup(idx) {
     const fmt = (g, w, n) => (g < 0 ? 'not queried' : g.toLocaleString() + ' global · ' + w + ' West Africa · ' + n + ' Nigeria');
     rows.push(['NCBI ' + s.marker + ' records', fmt(rec.ncbi_global, rec.ncbi_wa, rec.ncbi_ng || 0)]);
     if (rec.bold_global !== undefined) rows.push(['BOLD ' + s.marker + ' records', fmt(rec.bold_global, rec.bold_wa, rec.bold_ng || 0)]);
+    // Total records for any gene, so a marker count of 1 is not read as "1 record in total"
+    if (rec.ncbi_all !== undefined) rows.push(['All NCBI records (any gene)', rec.ncbi_all.toLocaleString() + ' <span style="color:var(--text3);font-size:10.5px;">(' + s.marker + ' is the eDNA marker tracked)</span>']);
   }
   const nrec = s.section === 'nematode' ? NEMATODES.find(n => n.genus === s.name) : null;
   if (nrec) rows.push(['West African 18S / 28S', nrec.wa18s + ' / ' + (nrec.wa28s || 0) + (nrec.wa18s === 0 ? ' &mdash; <span style="color:var(--red);font-weight:500;">priority gap</span>' : '')]);

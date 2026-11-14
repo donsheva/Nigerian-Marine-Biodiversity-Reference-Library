@@ -173,3 +173,32 @@ In addition, the *Sousa teuszii* and *Trichechus senegalensis* records now give 
 | Leaderboard label fix | The Statistics priority leaderboard labelled every absent taxon "zero refs", although absent means zero **West African** records (e.g. *Sphyrna lewini* has 102 global). The label now reads "zero WA refs". |
 | Search and pop-up test | The global search was tested on Gap Analysis, Statistics and About pages (jsdom; typing queries, clicking results). Search by site name, accepted name and common name works (e.g. "Sesarma" and "guinearma" both find the same record; "manatee" finds *Trichechus senegalensis*); no-match queries show a "No taxa found" message. Four pop-up defects were found and fixed: (1) nematode pop-ups showed the internal label "nigeria-gap" as the overall status, so they now show absent/present under the v21 rule; (2) NCBI/BOLD buttons searched the outdated name only, so they now search all names on NCBI and the accepted name on BOLD; (3) the NCBI search button added a marker word that can miss mitogenome records, so it is now organism-only; (4) pop-ups showed status only, so they now show NCBI and BOLD record counts (global, West Africa, Nigeria). The NCBI button now also appears for any taxon with NCBI records, not only "present" ones. |
 
+
+## v22.3 — decision tree and wording corrections (14 Nov 2026)
+
+No data or classification changed (132 taxa: absent 85, partial 42, present 5).
+
+**Decision tree (Coverage page).** The previous SVG showed: "Any West African NCBI records? No → ABSENT; Yes → meets threshold? → records in both NCBI and BOLD? → PRESENT/PARTIAL". This did not match `overallStatus()` in `assets/js/data.js`, which scores NCBI and BOLD/SILVA separately (0 = absent, 1 to T−1 = partial, ≥T = present) and combines them (absent+absent = absent, present+present = present, otherwise partial). Status combinations across the 132 taxa:
+
+| NCBI / BOLD | → overall | n |
+|---|---|---|
+| absent / absent | absent | 85 |
+| partial / partial | partial | 19 |
+| partial / absent | partial | 9 |
+| absent / partial | partial | 7 |
+| present / absent | partial | 4 |
+| present / present | present | 5 |
+| absent / present | partial | 1 |
+| present / partial | partial | 1 |
+| partial / present | partial | 1 |
+
+The 8 taxa with absent NCBI but partial/present BOLD would have been "absent" under the old diagram; the table was always right. Stored BOLD statuses were re-checked against the threshold rule: 0 mismatches. The new diagram's outcome counts are filled in from `overallStatus()` at page load (jsdom test: 85/42/5 of 132, no script errors). The diagram was also visually broken (right-hand diamond clipped at the viewBox edge, unarrowed connector).
+
+**Wording.**
+- "undetectable in Nigerian eDNA" (Coverage ×2, Gap Analysis, Statistics tooltip) → no West African reference; assignments rely on non-regional sequences where these exist. E.g. *Tursiops truncatus* has 239 global NCBI COI records; it can be assigned, but not checked against local haplotypes.
+- Coverage data-sources text: "cross-referencing … 10 global databases" (list actually names 11, and only 3 feed the classification) → NCBI, BOLD and SILVA compute status; the others supply names, occurrences, IUCN status.
+- Worked examples re-checked against data.js: *P. elongatus* 12S NCBI 3 WA / BOLD 3 WA → present; *D. africana* 2 WA → partial; *T. truncatus* 239/168 global, 0 WA → absent; *M. cephalus* 64 12S, *S. lewini* 102 12S, 0 WA → absent; nematode SSU range 0–182 (Terschellingia 182). All correct.
+- Citations: self-citation author format "Odedere, A.O."; Odedere & Rufai (2026) RSMS 103:105586 listed under publications. The "accessed" date was already filled in automatically (fallback text only).
+- About: 16S rRNA marker line clarified (planned field marker; coverage tracked with COI); roadmap Phase 5 no longer says the website "launches".
+
+**Still unverified on the About page (flagged to the curator):** BOLD Nematoda "132,070 specimen records … 79,150 with barcodes"; N:C ratio "<50 … >1,000"; EEZ "~210,000 km²".

@@ -21,10 +21,20 @@ Part 2 - the 25 nematode genera:
      search service used by its website (legatum.arb-silva.de). SILVA is built from
      INSDC, so its WA count equals the NCBI WA count.
 
+Part 3 - completeness checks (v22.3):
+  7. For every species/higher taxon: the total number of NCBI Nucleotide records for
+     ANY gene (organism only, all names, RefSeq excluded) - shown on the site so a
+     marker count of 1 is not mistaken for "1 record in total".
+  8. Marine mammals (Sousa, Trichechus): genus-level search for every NCBI record with
+     a West African country, whatever species name it is filed under (catches records
+     filed as "Sousa sp." / "Trichechus sp." or under other names). Each record is listed.
+
 Outputs (in the current folder):
   nmbl_v22_requery_results.csv   one row per taxon
   nmbl_v22_requery_results.json  same, plus WA accession numbers (species and nematodes)
   nmbl_v22_nematodes_results.csv one row per nematode genus
+  nmbl_v22_all_records.csv       total NCBI records (any gene) per taxon
+  nmbl_v22_mammal_wa_check.csv   every West African Sousa / Trichechus record in NCBI
   nmbl_v22_requery.log           progress log
 
 Takes about 25-40 minutes without an NCBI API key (10-15 with one). Safe to re-run:
@@ -272,6 +282,60 @@ if __name__ == "__main__":
             a, b = r["ncbi_18s"], r["ncbi_28s"]
             w.writerow([g, r["worms"], "; ".join(r["names_queried"]), r["silva_ssu_r144"], r["silva_lsu_r138_2"],
                         a["global"], a["wa"], a["ng"], b["global"], b["wa"], b["ng"]])
+
+    # ---- Part 3a: total NCBI records, any gene ----
+    for i, (sp, m) in enumerate(TAXA, 1):
+        key = "ALLREC:" + sp
+        if key in cache or sp not in cache:
+            continue
+        try:
+            names = cache[sp]["names_queried"]
+            org = "(" + " OR ".join(f'"{n}"[Organism]' for n in names) + ")"
+            total, _ = esearch_count(f"{org} NOT srcdb_refseq[Properties]")
+            cache[key] = {"taxon": sp, "ncbi_all_records": total}
+            json.dump(cache, open(cache_f, "w", encoding="utf-8"), ensure_ascii=False)
+            log(f"[A{i:3}/{len(TAXA)}] {sp:<30} all NCBI records (any gene): {total}")
+        except Exception as e:
+            log(f"[A{i:3}/{len(TAXA)}] {sp}: FAILED {e} (re-run the script to retry)")
+
+    # ---- Part 3b: marine mammals, genus-level West African records ----
+    for genus in ["Sousa", "Trichechus"]:
+        key = "MAMMALWA:" + genus
+        if key in cache:
+            continue
+        try:
+            total, ids = esearch_count(f'"{genus}"[Organism] NOT srcdb_refseq[Properties] AND {NAMEQ}', retmax=10000)
+            rows = []
+            for i in range(0, len(ids), 200):
+                def go():
+                    h = Entrez.esummary(db="nucleotide", id=",".join(ids[i:i+200]), retmode="json")
+                    data = json.loads(h.read()); h.close(); return data
+                data = retry(go); time.sleep(PAUSE)
+                res = data.get("result", {})
+                for uid in res.get("uids", []):
+                    d = res[uid]
+                    st = (d.get("subtype") or "").split("|"); sn = (d.get("subname") or "").split("|")
+                    ctry = sn[st.index("country")].split(":")[0].strip() if "country" in st else ""
+                    if WA_RE.match(ctry):
+                        rows.append({"accession": d.get("accessionversion"), "organism": d.get("organism"),
+                                     "country": sn[st.index("country")], "length": d.get("slen"), "title": d.get("title")})
+            cache[key] = {"genus": genus, "candidates": total, "wa_records": rows}
+            json.dump(cache, open(cache_f, "w", encoding="utf-8"), ensure_ascii=False)
+            log(f"[M] {genus}: {len(rows)} West African records in NCBI (any species name, any gene)")
+            for r in rows:
+                log(f"      {r['accession']}  {r['organism']}  {r['country']}  {r['length']} bp  {r['title'][:70]}")
+        except Exception as e:
+            log(f"[M] {genus}: FAILED {e} (re-run the script to retry)")
+
+    with open("nmbl_v22_all_records.csv", "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f); w.writerow(["taxon", "ncbi_all_records_any_gene"])
+        for sp, _ in TAXA:
+            r = cache.get("ALLREC:" + sp); w.writerow([sp, r["ncbi_all_records"] if r else "NOT QUERIED"])
+    with open("nmbl_v22_mammal_wa_check.csv", "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f); w.writerow(["genus", "accession", "organism", "country", "length_bp", "title"])
+        for genus in ["Sousa", "Trichechus"]:
+            for r in (cache.get("MAMMALWA:" + genus) or {}).get("wa_records", []):
+                w.writerow([genus, r["accession"], r["organism"], r["country"], r["length"], r["title"]])
 
     with open("nmbl_v22_requery_results.json", "w", encoding="utf-8") as f:
         json.dump(cache, f, ensure_ascii=False, indent=1)

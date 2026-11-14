@@ -124,7 +124,7 @@
           <li><strong>18S rRNA V1V2 (NF1/18Sr2b)</strong> — meiofauna, nematodes, protists</li>
           <li><strong>28S rRNA D2D3</strong> — nematode species-level resolution</li>
           <li><strong>rbcL</strong> — seagrass and macroalgae</li>
-          <li><strong>16S rRNA</strong> — marine mammals</li>
+          <li><strong>16S rRNA</strong> — marine mammals (planned field marker; reference coverage on this site is currently tracked with COI)</li>
         </ul>
       </div>
     </div>
@@ -234,7 +234,7 @@
         <div class="t-dot amber"></div>
         <div>
           <div style="font-size:13px;font-weight:500;color:var(--text);">Phase 5 — Public Library Launch</div>
-          <div style="font-size:12px;color:var(--text2);margin-top:3px;">NMBL website launches. Sequences publicly available via BOLD project NGMBL. Data paper submitted to <em>Biodiversity Data Journal</em> (Pensoft) or <em>Scientific Data</em> (Nature Portfolio).</div>
+          <div style="font-size:12px;color:var(--text2);margin-top:3px;">Reference sequences publicly released via BOLD project NGMBL and NCBI GenBank (the website itself is already live). Data paper submitted to <em>Biodiversity Data Journal</em> (Pensoft) or <em>Scientific Data</em> (Nature Portfolio).</div>
         </div>
       </div>
     </div>
@@ -261,6 +261,20 @@
     <div class="vh-list">
 
       <details class="vh-entry" open>
+        <summary>
+          <span class="vh-badge" style="background:linear-gradient(90deg,#0d6efd,#0c8599);">v22.3</span>
+          <span class="vh-heading">Decision tree and wording corrected</span>
+          <span class="vh-date">Nov 2026</span>
+        </summary>
+        <div class="vh-body">
+          <ul>
+            <li><strong>Decision tree corrected.</strong> The Coverage page diagram showed a single NCBI-first path in which no West African NCBI record meant "absent". The site's code scores NCBI and BOLD (SILVA for nematodes) separately and combines them; 8 taxa with West African records in BOLD only are partial, as the table always showed. The diagram now matches the code, and its counts are computed from the data.</li>
+            <li><strong>"Undetectable" removed.</strong> Absent taxa lack a West African reference; they are not necessarily undetectable, because eDNA reads can still be assigned against non-regional sequences where these exist. Wording corrected on the Coverage, Gap Analysis and Statistics pages.</li>
+            <li><strong>Data sources.</strong> The Coverage page now states that classification uses NCBI, BOLD and SILVA only; WoRMS, FishBase, NeMys, OBIS, GBIF, AlgaeBase, ENA and IUCN supply names, occurrences and conservation status. Citations: author format standardised and Odedere &amp; Rufai (2026) listed. About: 16S marker note and roadmap Phase 5 wording corrected. No classification changed.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="vh-entry">
         <summary>
           <span class="vh-badge" style="background:linear-gradient(90deg,#0d6efd,#0c8599);">v22.2</span>
           <span class="vh-heading">One classification rule, accepted names displayed</span>

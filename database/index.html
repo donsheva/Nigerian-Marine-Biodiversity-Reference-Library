@@ -38,10 +38,23 @@
           <span style="font-size:10px;background:var(--bg3);color:var(--text2);padding:2px 8px;border-radius:20px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;">Changelog</span>
           Version history &amp; audit trail
         </span>
-        <span style="font-size:11px;color:var(--text3);font-weight:400;">v20 – v22.2 · click to expand</span>
+        <span style="font-size:11px;color:var(--text3);font-weight:400;">v20 – v22.3 · click to expand</span>
       </summary>
 
       <div style="margin-top:14px;display:flex;flex-direction:column;gap:8px;">
+
+        <!-- v22.3 -->
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+          <div style="flex-shrink:0;padding-top:1px;">
+            <span style="display:inline-block;font-size:10px;font-weight:800;color:#fff;background:linear-gradient(90deg,#0d6efd,#0c8599);padding:3px 9px;border-radius:6px;letter-spacing:0.06em;white-space:nowrap;">v22.3 · Nov 2026</span>
+          </div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.85;">
+            <span style="color:var(--red);font-weight:700;">✕</span> <strong>Decision tree corrected</strong> — the previous diagram sent any taxon with no West African NCBI record straight to "absent". The code has always scored NCBI and BOLD separately and then combined them, so 8 taxa with West African records in BOLD only were correctly shown as partial in the table but would have been absent by the diagram. The diagram is redrawn to match the code, and its outcome counts are now calculated from the data.<br>
+            <span style="color:var(--amber);font-weight:700;">Δ</span> <strong>Wording</strong> — "absent" taxa were described as "undetectable" in eDNA. Corrected: they have no West African reference, so assignments rely on non-regional sequences where these exist. The data-sources text now states that only NCBI, BOLD and SILVA feed the classification. No classification changed (absent 85, partial 42, present 5).
+          </div>
+        </div>
+
+        <div style="height:1px;background:var(--border);margin:2px 0;"></div>
 
         <!-- v22.2 -->
         <div style="display:flex;gap:12px;align-items:flex-start;">
@@ -181,77 +194,95 @@
     <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem 1.5rem;margin-bottom:1rem;box-shadow:0 2px 8px rgba(0,0,0,0.03);">
       <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:8px;">
         <div style="font-size:13px;font-weight:700;color:var(--navy);">Classification decision tree</div>
-        <div style="font-size:11px;color:var(--text3);">Applied to every species at render time — no manual classification</div>
+        <div style="font-size:11px;color:var(--text3);">Same rule for every taxon — NCBI and BOLD scored separately, then combined</div>
       </div>
-      <svg viewBox="0 0 900 430" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;max-width:100%;font-family:'Sora',sans-serif;" role="img" aria-label="Coverage classification decision tree: species with zero West African NCBI records are classified Absent; species with WA records but below the marker threshold (COI 5, 12S 3, 18S 1, 28S 1, rbcL 3) are Partial; species meeting the threshold in both NCBI and BOLD are Present.">
-        <title>Coverage classification decision tree</title>
+      <svg viewBox="0 0 900 486" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;max-width:100%;font-family:'Sora','DM Sans',sans-serif;" role="img" aria-labelledby="dt-title dt-desc">
+        <title id="dt-title">Coverage classification decision tree</title>
+        <desc id="dt-desc">Each taxon is scored separately in NCBI GenBank and in BOLD (SILVA for nematodes) by its number of West African records for its marker: zero records is absent, fewer than the marker threshold is partial, and at or above the threshold is present. The two scores are then combined: absent in both databases gives Absent, present in both gives Present, and any other combination gives Partial. Thresholds: COI 5, 12S 3, 18S 1, 28S 1, rbcL 3.</desc>
         <defs>
-          <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-            <path d="M 0 0 L 10 5 L 0 10 z" fill="#3d4f63"/>
+          <marker id="dt-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+            <path d="M0 0 L10 5 L0 10 z" fill="#5b6b7d"/>
           </marker>
         </defs>
+        <g fill="none" stroke="#5b6b7d" stroke-width="1.5">
+          <path d="M450 62 V76 H225 V92" marker-end="url(#dt-arrow)"/>
+          <path d="M450 62 V76 H675 V92" marker-end="url(#dt-arrow)"/>
+          <path d="M225 150 V170" marker-end="url(#dt-arrow)"/>
+          <path d="M675 150 V170" marker-end="url(#dt-arrow)"/>
+          <path d="M225 222 V284 H298" marker-end="url(#dt-arrow)"/>
+          <path d="M675 222 V284 H602" marker-end="url(#dt-arrow)"/>
+          <path d="M450 310 V328 H190 V350" marker-end="url(#dt-arrow)"/>
+          <path d="M450 310 V350" marker-end="url(#dt-arrow)"/>
+          <path d="M450 310 V328 H710 V350" marker-end="url(#dt-arrow)"/>
+        </g>
 
-        <!-- Root: query -->
-        <rect x="350" y="10" width="200" height="58" rx="8" fill="#091e38" stroke="#091e38"/>
-        <text x="450" y="33" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">Query species</text>
-        <text x="450" y="51" text-anchor="middle" fill="#cfd8e3" font-size="10.5">NCBI + BOLD + SILVA (WA filter)</text>
+        <!-- Step 0: query -->
+        <rect x="290" y="8" width="320" height="54" rx="8" fill="#091e38"/>
+        <text x="450" y="31" text-anchor="middle" fill="#fff" font-size="13.5" font-weight="700">Each taxon × its eDNA marker</text>
+        <text x="450" y="49" text-anchor="middle" fill="#cfd8e3" font-size="10.5">Accepted name and synonyms · RefSeq duplicates excluded</text>
 
-        <!-- Decision 1: any WA records? -->
-        <line x1="450" y1="68" x2="450" y2="92" stroke="#3d4f63" stroke-width="1.5" marker-end="url(#arrow)"/>
-        <polygon points="450,95 560,140 450,185 340,140" fill="#fef3e0" stroke="#7d4a06" stroke-width="1.2"/>
-        <text x="450" y="132" text-anchor="middle" fill="#7d4a06" font-size="11.5" font-weight="700">Any West African</text>
-        <text x="450" y="147" text-anchor="middle" fill="#7d4a06" font-size="11.5" font-weight="700">NCBI records?</text>
-        <text x="450" y="161" text-anchor="middle" fill="#7d4a06" font-size="10">(WA_NCBI ≥ 1)</text>
+        <!-- Step 1: two databases scored independently -->
+        <g font-size="10.5" text-anchor="middle">
+          <rect x="60" y="92" width="330" height="58" rx="8" fill="#eef3f9" stroke="#091e38" stroke-width="1.2"/>
+          <text x="225" y="115" fill="#091e38" font-size="13" font-weight="700">1a · NCBI GenBank</text>
+          <text x="225" y="134" fill="#3d4f63">West African records (sample country qualifier)</text>
+          <rect x="510" y="92" width="330" height="58" rx="8" fill="#eef3f9" stroke="#091e38" stroke-width="1.2"/>
+          <text x="675" y="115" fill="#091e38" font-size="13" font-weight="700">1b · BOLD Systems</text>
+          <text x="675" y="134" fill="#3d4f63">West African records · SILVA for nematodes</text>
+        </g>
 
-        <!-- NO branch → ABSENT -->
-        <line x1="340" y1="140" x2="205" y2="140" stroke="#3d4f63" stroke-width="1.5" marker-end="url(#arrow)"/>
-        <text x="272" y="132" text-anchor="middle" fill="#3d4f63" font-size="11" font-weight="600">No</text>
-        <rect x="40" y="115" width="165" height="50" rx="8" fill="#fceaea" stroke="#9b2525" stroke-width="1.5"/>
-        <text x="122" y="138" text-anchor="middle" fill="#9b2525" font-size="13" font-weight="800">✗ ABSENT</text>
-        <text x="122" y="155" text-anchor="middle" fill="#9b2525" font-size="10">No regional reference</text>
+        <!-- Threshold scales -->
+        <g text-anchor="middle">
+          <g>
+            <rect x="60" y="170" width="110" height="52" rx="6" fill="#fceaea" stroke="#9b2525"/>
+            <text x="115" y="191" fill="#9b2525" font-size="11.5" font-weight="700">0 records</text>
+            <text x="115" y="208" fill="#9b2525" font-size="10">absent</text>
+            <rect x="170" y="170" width="110" height="52" fill="#fef3e0" stroke="#7d4a06"/>
+            <text x="225" y="191" fill="#7d4a06" font-size="11.5" font-weight="700">1 to T − 1</text>
+            <text x="225" y="208" fill="#7d4a06" font-size="10">partial</text>
+            <rect x="280" y="170" width="110" height="52" rx="6" fill="#e0f5ed" stroke="#0a6b4e"/>
+            <text x="335" y="191" fill="#0a6b4e" font-size="11.5" font-weight="700">≥ T</text>
+            <text x="335" y="208" fill="#0a6b4e" font-size="10">present</text>
+          </g>
+          <g>
+            <rect x="510" y="170" width="110" height="52" rx="6" fill="#fceaea" stroke="#9b2525"/>
+            <text x="565" y="191" fill="#9b2525" font-size="11.5" font-weight="700">0 records</text>
+            <text x="565" y="208" fill="#9b2525" font-size="10">absent</text>
+            <rect x="620" y="170" width="110" height="52" fill="#fef3e0" stroke="#7d4a06"/>
+            <text x="675" y="191" fill="#7d4a06" font-size="11.5" font-weight="700">1 to T − 1</text>
+            <text x="675" y="208" fill="#7d4a06" font-size="10">partial</text>
+            <rect x="730" y="170" width="110" height="52" rx="6" fill="#e0f5ed" stroke="#0a6b4e"/>
+            <text x="785" y="191" fill="#0a6b4e" font-size="11.5" font-weight="700">≥ T</text>
+            <text x="785" y="208" fill="#0a6b4e" font-size="10">present</text>
+          </g>
+          <text x="450" y="242" fill="#3d4f63" font-size="10.5">T = marker threshold: COI 5 · 12S 3 · 18S 1 · 28S 1 · rbcL 3</text>
+          <text x="450" y="257" fill="#6b7a8c" font-size="9.5">(when T = 1, there is no partial band: any record counts as present)</text>
+        </g>
 
-        <!-- YES branch → Decision 2 -->
-        <line x1="560" y1="140" x2="680" y2="140" stroke="#3d4f63" stroke-width="1.5" marker-end="url(#arrow)"/>
-        <text x="620" y="132" text-anchor="middle" fill="#3d4f63" font-size="11" font-weight="600">Yes</text>
+        <!-- Step 2: combine -->
+        <rect x="300" y="266" width="300" height="44" rx="8" fill="#091e38"/>
+        <text x="450" y="285" text-anchor="middle" fill="#fff" font-size="12.5" font-weight="700">2 · Combine the two database scores</text>
+        <text x="450" y="301" text-anchor="middle" fill="#cfd8e3" font-size="10">overall status shown in the table</text>
 
-        <!-- Decision 2: WA records ≥ marker threshold? -->
-        <polygon points="785,95 895,140 785,185 680,140" fill="#e8f1ff" stroke="#1462e8" stroke-width="1.2"/>
-        <text x="785" y="130" text-anchor="middle" fill="#1462e8" font-size="11" font-weight="700">WA records meet</text>
-        <text x="785" y="144" text-anchor="middle" fill="#1462e8" font-size="11" font-weight="700">marker threshold?</text>
-        <text x="785" y="158" text-anchor="middle" fill="#1462e8" font-size="10">(COI≥5 · 12S≥3 · 18S≥1)</text>
+        <!-- Outcomes -->
+        <g text-anchor="middle">
+          <rect x="70" y="352" width="240" height="78" rx="9" fill="#fceaea" stroke="#9b2525" stroke-width="1.6"/>
+          <text x="190" y="377" fill="#9b2525" font-size="14" font-weight="800">✗ ABSENT</text>
+          <text x="190" y="396" fill="#9b2525" font-size="10.5">Absent in both databases</text>
+          <text x="190" y="416" fill="#9b2525" font-size="11" font-weight="700"><tspan id="dt-n-absent">85</tspan> taxa</text>
 
-        <!-- NO branch (below threshold) → PARTIAL -->
-        <path d="M 785 185 L 785 215 L 450 215 L 450 245" fill="none" stroke="#3d4f63" stroke-width="1.5" marker-end="url(#arrow)"/>
-        <text x="620" y="208" text-anchor="middle" fill="#3d4f63" font-size="11" font-weight="600">No (below threshold)</text>
+          <rect x="330" y="352" width="240" height="78" rx="9" fill="#fef3e0" stroke="#7d4a06" stroke-width="1.6"/>
+          <text x="450" y="377" fill="#7d4a06" font-size="14" font-weight="800">~ PARTIAL</text>
+          <text x="450" y="396" fill="#7d4a06" font-size="10.5">Any other combination</text>
+          <text x="450" y="416" fill="#7d4a06" font-size="11" font-weight="700"><tspan id="dt-n-partial">42</tspan> taxa</text>
 
-        <!-- YES branch (meets threshold) → Decision 3 -->
-        <line x1="895" y1="140" x2="895" y2="260" stroke="#3d4f63" stroke-width="1.5"/>
-        <text x="875" y="200" text-anchor="middle" fill="#3d4f63" font-size="11" font-weight="600">Yes</text>
-
-        <!-- Decision 3: both DBs? -->
-        <polygon points="785,265 895,310 785,355 675,310" fill="#e0f5ed" stroke="#0a6b4e" stroke-width="1.2"/>
-        <text x="785" y="302" text-anchor="middle" fill="#0a6b4e" font-size="11" font-weight="700">Records in both</text>
-        <text x="785" y="316" text-anchor="middle" fill="#0a6b4e" font-size="11" font-weight="700">NCBI and BOLD?</text>
-
-        <!-- arrow from yes branch down into diamond -->
-        <line x1="895" y1="260" x2="895" y2="310" stroke="#3d4f63" stroke-width="0"/>
-        <path d="M 895 260 L 895 275" fill="none" stroke="#3d4f63" stroke-width="1.5"/>
-
-        <!-- D3 YES → PRESENT (down) -->
-        <line x1="785" y1="355" x2="785" y2="385" stroke="#3d4f63" stroke-width="1.5" marker-end="url(#arrow)"/>
-        <text x="805" y="373" text-anchor="middle" fill="#3d4f63" font-size="11" font-weight="600">Yes</text>
-        <rect x="715" y="385" width="140" height="40" rx="8" fill="#e0f5ed" stroke="#0a6b4e" stroke-width="1.5"/>
-        <text x="785" y="403" text-anchor="middle" fill="#0a6b4e" font-size="13" font-weight="800">✓ PRESENT</text>
-        <text x="785" y="418" text-anchor="middle" fill="#0a6b4e" font-size="10">Reliable regional ID</text>
-
-        <!-- D3 NO → PARTIAL (left, joins partial box) -->
-        <path d="M 675 310 L 540 310 L 540 275" fill="none" stroke="#3d4f63" stroke-width="1.5" marker-end="url(#arrow)"/>
-        <text x="608" y="302" text-anchor="middle" fill="#3d4f63" font-size="11" font-weight="600">No (one DB only)</text>
-
-        <!-- PARTIAL output box -->
-        <rect x="370" y="245" width="160" height="50" rx="8" fill="#fef3e0" stroke="#7d4a06" stroke-width="1.5"/>
-        <text x="450" y="268" text-anchor="middle" fill="#7d4a06" font-size="13" font-weight="800">~ PARTIAL</text>
-        <text x="450" y="285" text-anchor="middle" fill="#7d4a06" font-size="10">Regional data insufficient</text>
+          <rect x="590" y="352" width="240" height="78" rx="9" fill="#e0f5ed" stroke="#0a6b4e" stroke-width="1.6"/>
+          <text x="710" y="377" fill="#0a6b4e" font-size="14" font-weight="800">✓ PRESENT</text>
+          <text x="710" y="396" fill="#0a6b4e" font-size="10.5">Meets threshold in both databases</text>
+          <text x="710" y="416" fill="#0a6b4e" font-size="11" font-weight="700"><tspan id="dt-n-present">5</tspan> taxa</text>
+        </g>
+        <text x="450" y="458" text-anchor="middle" fill="#6b7a8c" font-size="10">Example: no West African NCBI record but 2 West African BOLD COI records → absent + partial → PARTIAL.</text>
+        <text x="450" y="476" text-anchor="middle" fill="#6b7a8c" font-size="10">Counts are calculated live from the database (<tspan id="dt-n-total">132</tspan> taxa).</text>
       </svg>
       <div style="margin-top:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;">
         <div style="background:var(--bg2);border-radius:var(--radius);padding:8px 12px;font-size:11px;color:var(--text2);"><strong style="color:var(--blue);">COI</strong> ≥5 WA records<br><span style="font-size:10px;color:var(--text3);">Fast-evolving animal barcode</span></div>
@@ -277,10 +308,10 @@
         </div>
         <div style="display:flex;align-items:flex-start;gap:10px;background:var(--red-bg);border:1px solid var(--red);border-radius:var(--radius);padding:10px 14px;flex:1;min-width:220px;">
           <span style="background:var(--red-bg);color:var(--red);padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;border:1px solid var(--red);white-space:nowrap;flex-shrink:0;">✗ ABSENT</span>
-          <span style="font-size:12px;color:var(--text2);line-height:1.5;"><strong>Zero West African records in both NCBI and BOLD/SILVA.</strong> No regional reference sequence exists for this taxon — undetectable in Nigerian eDNA surveys regardless of global availability. Highest priority for new voucher collection and barcoding.</span>
+          <span style="font-size:12px;color:var(--text2);line-height:1.5;"><strong>Zero West African records in both NCBI and BOLD/SILVA.</strong> No regional reference sequence exists for this taxon. Any eDNA assignment depends on non-regional sequences (if any exist) and cannot be checked against local haplotypes. Highest priority for new voucher collection and barcoding.</span>
         </div>
       </div>
-      <p style="font-size:12px;color:var(--text2);line-height:1.7;margin-bottom:14px;">Coverage status is derived by cross-referencing each taxon against the following 10 global databases. A taxon is classified <strong style="color:var(--green)">present</strong> when qualifying barcodes exist in both NCBI and BOLD/SILVA <em>with West African records meeting the marker-specific threshold</em> (COI ≥5, 12S ≥3, 18S ≥1, 28S ≥1, rbcL ≥3); <strong style="color:var(--amber)">partial</strong> when WA records exist but fall below the marker threshold, or when only one database is covered; and <strong style="color:var(--red)">absent</strong> when zero WA records exist in both NCBI and BOLD/SILVA. <strong>Thresholds reflect the intraspecific variation needed for reliable identification with each marker</strong> — fast-evolving barcodes like COI require more replicate sequences to capture haplotype diversity, while conserved ribosomal markers (18S, 28S) used for genus-level work are operationally useful with a single well-curated reference. <strong>Classification is WA-specific: a taxon with global records but zero West African sequences is an "absent" gap in the regional reference library, regardless of global coverage.</strong></p>
+      <p style="font-size:12px;color:var(--text2);line-height:1.7;margin-bottom:14px;">Coverage status is computed from West African sequence counts in three sequence databases — NCBI GenBank, BOLD Systems and (for nematodes) SILVA; the other resources listed below supply accepted names, occurrence records and IUCN status but do not affect the classification. A taxon is classified <strong style="color:var(--green)">present</strong> when qualifying barcodes exist in both NCBI and BOLD/SILVA <em>with West African records meeting the marker-specific threshold</em> (COI ≥5, 12S ≥3, 18S ≥1, 28S ≥1, rbcL ≥3); <strong style="color:var(--amber)">partial</strong> when WA records exist but fall below the marker threshold, or when only one database is covered; and <strong style="color:var(--red)">absent</strong> when zero WA records exist in both NCBI and BOLD/SILVA. <strong>Thresholds reflect the intraspecific variation needed for reliable identification with each marker</strong> — fast-evolving barcodes like COI require more replicate sequences to capture haplotype diversity, while conserved ribosomal markers (18S, 28S) used for genus-level work are operationally useful with a single well-curated reference. <strong>Classification is WA-specific: a taxon with global records but zero West African sequences is an "absent" gap in the regional reference library, regardless of global coverage.</strong></p>
       <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;">
         <div style="background:var(--blue-bg);border:0.5px solid var(--blue);border-radius:var(--radius);padding:8px 10px;"><div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:3px;">NCBI Nucleotide</div><div style="font-size:10px;color:var(--text2);line-height:1.5;">Primary sequence database. 12S, COI, 18S, 28S, rbcL via E-utilities; includes mitochondrial/chloroplast genomes; WA from the GenBank country field.</div></div>
         <div style="background:var(--blue-bg);border:0.5px solid var(--blue);border-radius:var(--radius);padding:8px 10px;"><div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:3px;">BOLD Systems v5</div><div style="font-size:10px;color:var(--text2);line-height:1.5;">COI barcode library (v5, 2024+). WA counts from the country/ocean field, Mauritania to Cameroon plus Cabo Verde, queried per country.</div></div>
@@ -301,7 +332,7 @@
           <li>All <span id="critical-nema-count">25</span> nematode genera tracked — <strong>0 West African or Nigerian sequences</strong> for all (18S and 28S); global SILVA SSU counts range from 0 to 182 per genus</li>
           <li><em>Cynoglossus senegalensis</em> (Senegalese tonguesole) — 1 global 12S record, zero WA; abundant bycatch</li>
           <li>Gulf of Guinea endemics — <em>Pteroscion peli</em> <strong>zero 12S records globally</strong>; <em>Lutjanus agennes</em> zero in NCBI (1 WA record in BOLD); <em>Dentex angolensis</em> 1 global record, zero WA</li>
-          <li><em>Tursiops truncatus</em>, <em>Mugil cephalus</em>, <em>Sphyrna lewini</em> — well-barcoded globally (239 COI, 64 and 102 12S records) but <strong>zero West African sequences</strong>; undetectable in Nigerian eDNA without regional vouchers</li>
+          <li><em>Tursiops truncatus</em>, <em>Mugil cephalus</em>, <em>Sphyrna lewini</em> — well-barcoded globally (239 COI, 64 and 102 12S records) but <strong>zero West African sequences</strong>; eDNA assignments rest on non-regional references until West African vouchers are sequenced</li>
           <li><em>Sea turtles</em> (<em>Chelonia mydas</em>, <em>Dermochelys coriacea</em>, <em>Lepidochelys olivacea</em>) — nest on Nigerian beaches, 8–20 global 12S records each but <strong>zero WA</strong></li>
           <li><em>Penaeus notialis</em> (pink shrimp, largest commercial fishery) — 50 global COI in NCBI (16 in BOLD) but <strong>zero WA</strong>; major regional gap</li>
           <li><em>Neritina glabrata</em> (= <em>Vitta glabrata</em>), <em>Pseudupeneus prayensis</em>, <em>Sphaerium nodicostatum</em> — <strong>zero records anywhere</strong> in NCBI or BOLD, under current or former names</li>
@@ -401,6 +432,17 @@
   <script src="/assets/js/contact.js"></script>
   <script src="/assets/js/nav.js"></script>
   <script src="/assets/js/partials.js"></script>
+  <script>
+    // Decision-tree outcome counts, computed from the same overallStatus() the table uses
+    (function () {
+      try {
+        var n = {absent: 0, partial: 0, present: 0};
+        ALL_TAXA.forEach(function (t) { n[overallStatus(t)]++; });
+        ['absent', 'partial', 'present'].forEach(function (k) { document.getElementById('dt-n-' + k).textContent = n[k]; });
+        document.getElementById('dt-n-total').textContent = ALL_TAXA.length;
+      } catch (e) {}
+    })();
+  </script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       populateDbStats();
