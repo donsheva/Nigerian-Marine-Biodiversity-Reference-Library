@@ -1,0 +1,266 @@
+11:30:56 [  1/107] Ethmalosa fimbriata            12S  accepted                            NCBI 3/2/0  BOLD 2/2/0
+11:31:07 [  2/107] Sardinella maderensis          12S  accepted                            NCBI 3/2/0  BOLD 2/2/0
+11:31:19 [  3/107] Sardinella aurita              12S  accepted                            NCBI 12/1/0  BOLD 1/1/0
+11:31:31 [  4/107] Pseudotolithus senegalensis    12S  accepted                            NCBI 2/2/0  BOLD 0/0/0
+11:31:41 [  5/107] Pseudotolithus elongatus       12S  accepted                            NCBI 4/3/0  BOLD 3/3/0
+11:31:57 [  6/107] Cynoglossus senegalensis       12S  accepted                            NCBI 1/0/0  BOLD 0/0/0
+11:32:09 [  7/107] Galeoides decadactylus         12S  accepted                            NCBI 2/1/0  BOLD 1/1/0
+11:32:20 [  8/107] Polydactylus quadrifilis       12S  accepted                            NCBI 3/2/0  BOLD 2/2/0
+11:32:31 [  9/107] Lutjanus agennes               12S  accepted                            NCBI 0/0/0  BOLD 1/1/0
+11:32:45 [ 10/107] Arius latiscutatus             12S  unaccepted -> Carlarius latiscutatus NCBI 3/2/0  BOLD 2/2/0
+11:32:56 [ 11/107] Brachydeuterus auritus         12S  accepted                            NCBI 0/0/0  BOLD 1/1/0
+11:33:07 [ 12/107] Pomadasys jubelini             12S  accepted                            NCBI 0/0/0  BOLD 2/2/0
+11:33:17 [ 13/107] Elops lacerta                  12S  accepted                            NCBI 1/1/0  BOLD 1/1/0
+11:33:27 [ 14/107] Drepane africana               12S  accepted                            NCBI 5/2/0  BOLD 2/2/0
+11:33:36 [ 15/107] Mugil cephalus                 12S  accepted                            NCBI 64/0/0  BOLD 3/0/0
+11:33:49 [ 16/107] Chrysichthys nigrodigitatus    12S  accepted                            NCBI 2/1/0  BOLD 1/1/0
+11:34:00 [ 17/107] Rhizoprionodon acutus          12S  accepted                            NCBI 2/0/0  BOLD 0/0/0
+11:34:07 [ 18/107] Rhinobatos rhinobatos          12S  accepted                            NCBI 0/0/0  BOLD 1/1/0
+11:34:16 [ 19/107] Hypanus marianae               12S  accepted                            NCBI 29/0/0  BOLD 0/0/0
+11:34:27 [ 20/107] Carcharhinus leucas            12S  accepted                            NCBI 375/1/0  BOLD 0/0/0
+11:34:38 [ 21/107] Sphyrna lewini                 12S  accepted                            NCBI 102/0/0  BOLD 0/0/0
+11:34:49 [ 22/107] Penaeus notialis               COI  superseded combination -> Penaeus (Farfantepenaeus) notialis NCBI 50/0/0  BOLD 16/0/0
+11:34:59 [ 23/107] Callinectes amnicola           COI  accepted                            NCBI 3/1/0  BOLD 3/1/0
+11:35:07 [ 24/107] Parapenaeus longirostris       COI  accepted                            NCBI 29/0/0  BOLD 38/1/0
+11:35:16 [ 25/107] Macrobrachium vollenhovenii    COI  accepted                            NCBI 3/2/2  BOLD 3/2/2
+11:35:24 [ 26/107] Trichechus senegalensis        COI  accepted                            NCBI 1/0/0  BOLD 0/0/0
+11:35:31 [ 27/107] Sousa teuszii                  COI  accepted                            NCBI 1/1/0  BOLD 0/0/0
+11:35:38 [ 28/107] Tursiops truncatus             COI  accepted                            NCBI 239/0/0  BOLD 168/0/0
+11:35:44 [ 29/107] Chelonia mydas                 12S  accepted                            NCBI 20/0/0  BOLD 0/0/0
+11:35:50 [ 30/107] Dermochelys coriacea           12S  accepted                            NCBI 10/0/0  BOLD 0/0/0
+11:35:59 [ 31/107] Lepidochelys olivacea          12S  accepted                            NCBI 8/0/0  BOLD 0/0/0
+11:36:07 [ 32/107] Harpacticoida                  18S  accepted                            NCBI 1499/0/0  BOLD 150/0/0
+11:36:15 [ 33/107] Ostracoda                      COI  accepted                            NCBI 5594/3/0  BOLD 7018/3/0
+11:36:23 [ 34/107] Tardigrada                     18S  accepted                            NCBI 3762/0/0  BOLD 2306/0/0
+11:36:30 [ 35/107] Gastrotricha                   18S  accepted                            NCBI 874/0/0  BOLD 575/0/0
+11:36:39 [ 36/107] Kinorhyncha                    18S  accepted                            NCBI 112/0/0  BOLD 96/0/0
+11:36:49 [ 37/107] Foraminifera                   18S  accepted                            NCBI 21519/0/0  BOLD 0/0/0
+11:37:02 [ 38/107] Ciliophora                     18S  accepted                            NCBI 20113/137/0  BOLD 0/0/0
+11:37:12 [ 39/107] Bacillariophyta                18S  accepted                            NCBI 17068/17/16  BOLD 326/0/0
+11:37:41 [ 40/107] Polychaeta                     COI  accepted                            NCBI 33820/99/4  BOLD 51528/132/9
+11:37:49 [ 41/107] Tympanotonos fuscatus          COI  accepted                            NCBI 3/3/0  BOLD 0/0/0
+11:38:02 [ 42/107] Tympanotonos radula            COI  unaccepted -> Tympanotonos fuscatus NCBI 3/3/0  BOLD 0/0/0
+11:38:10 [ 43/107] Pachymelania aurita            COI  accepted                            NCBI 0/0/0  BOLD 5/5/5
+11:38:18 [ 44/107] Pachymelania fusca             COI  accepted                            NCBI 0/0/0  BOLD 3/3/3
+11:38:25 [ 45/107] Telescopium telescopium        COI  accepted                            NCBI 51/0/0  BOLD 50/0/0
+11:38:34 [ 46/107] Neritina glabrata              COI  unaccepted -> Vitta glabrata        NCBI 0/0/0  BOLD 0/0/0
+11:38:43 [ 47/107] Lanistes varicus               COI  accepted                            NCBI 2/0/0  BOLD 0/0/0
+11:39:00 [ 48/107] Crassostrea gasar              COI  junior subjective synonym -> Crassostrea tulipa NCBI 32/0/0  BOLD 54/0/0
+11:39:15 [ 49/107] Egeria radiata                 COI  unaccepted -> Galatea paradoxa      NCBI 2/2/0  BOLD 0/0/0
+11:39:25 [ 50/107] Senilia senilis                COI  accepted                            NCBI 1/1/0  BOLD 0/0/0
+11:39:32 [ 51/107] Mytilaster minimus             COI  accepted                            NCBI 17/0/0  BOLD 17/0/0
+11:39:42 [ 52/107] Corbula trigona                COI  junior homonym -> Potamocorbula adusta NCBI 0/0/0  BOLD 2/2/2
+11:39:48 [ 53/107] Sphaerium nodicostatum         COI  not in WoRMS                        NCBI 0/0/0  BOLD 0/0/0
+11:39:54 [ 54/107] Capitella capitata             COI  accepted                            NCBI 29/0/0  BOLD 57/0/0
+11:40:05    retry 1: 400 Client Error: Bad Request for url: https://portal.boldsystems.org/api/query/preprocessor?query=tax%3AHediste+diversicolor
+11:40:11    retry 2: 400 Client Error: Bad Request for url: https://portal.boldsystems.org/api/query/preprocessor?query=tax%3AHediste+diversicolor
+11:40:21    retry 3: 400 Client Error: Bad Request for url: https://portal.boldsystems.org/api/query/preprocessor?query=tax%3AHediste+diversicolor
+11:40:38    retry 4: 400 Client Error: Bad Request for url: https://portal.boldsystems.org/api/query/preprocessor?query=tax%3AHediste+diversicolor
+11:40:59 [ 55/107] Nereis diversicolor: FAILED 400 Client Error: Bad Request for url: https://portal.boldsystems.org/api/query/preprocessor?query=tax%3AHediste+diversicolor (re-run the script to retry)
+11:41:07 [ 56/107] Perinereis cultrifera          COI  accepted                            NCBI 67/0/0  BOLD 67/0/0
+11:41:14 [ 57/107] Marphysa sanguinea             COI  accepted                            NCBI 48/0/0  BOLD 45/0/0
+11:41:21 [ 58/107] Sabella pavonina               COI  accepted                            NCBI 6/0/0  BOLD 14/0/0
+11:41:27 [ 59/107] Hydroides elegans              COI  accepted                            NCBI 63/0/0  BOLD 55/0/0
+11:41:38 [ 60/107] Uca tangeri                    COI  superseded combination -> Afruca tangeri NCBI 6/4/0  BOLD 3/1/0
+11:41:46 [ 61/107] Uca inversa                    COI  superseded combination -> Cranuca inversa NCBI 42/0/0  BOLD 46/0/0
+11:42:00 [ 62/107] Sesarma huzardi                COI  superseded combination -> Guinearma huzardi NCBI 35/33/0  BOLD 35/33/0
+11:42:09 [ 63/107] Goniopsis pelii                COI  accepted                            NCBI 1/1/0  BOLD 1/1/0
+11:42:18 [ 64/107] Cardisoma armatum              COI  accepted                            NCBI 2/1/1  BOLD 2/1/1
+11:42:27 [ 65/107] Callinectes pallidus           COI  accepted                            NCBI 3/1/0  BOLD 1/1/0
+11:42:38 [ 66/107] Thunnus albacares              12S  accepted                            NCBI 22/1/0  BOLD 0/0/0
+11:42:46 [ 67/107] Katsuwonus pelamis             12S  accepted                            NCBI 18/0/0  BOLD 0/0/0
+11:42:53 [ 68/107] Thunnus obesus                 12S  accepted                            NCBI 168/0/0  BOLD 0/0/0
+11:43:00 [ 69/107] Xiphias gladius                12S  accepted                            NCBI 13/0/0  BOLD 0/0/0
+11:43:09 [ 70/107] Coryphaena hippurus            12S  accepted                            NCBI 24/0/0  BOLD 1/0/0
+11:43:16 [ 71/107] Scomber japonicus              12S  accepted                            NCBI 28/0/0  BOLD 4/0/0
+11:43:28 [ 72/107] Scomberomorus tritor           12S  accepted                            NCBI 4/3/0  BOLD 3/3/0
+11:43:38 [ 73/107] Caranx hippos                  12S  accepted                            NCBI 6/0/0  BOLD 0/0/0
+11:43:52 [ 74/107] Trichiurus lepturus            12S  accepted                            NCBI 23/1/0  BOLD 1/1/0
+11:44:07 [ 75/107] Dentex angolensis              12S  accepted                            NCBI 1/0/0  BOLD 0/0/0
+11:44:18 [ 76/107] Pagellus bellottii             12S  accepted                            NCBI 4/0/0  BOLD 0/0/0
+11:44:32 [ 77/107] Epinephelus aeneus             12S  accepted                            NCBI 7/3/0  BOLD 3/3/0
+11:44:45 [ 78/107] Sparus caeruleostictus         12S  unaccepted -> Pagrus caeruleostictus NCBI 3/3/0  BOLD 2/2/0
+11:44:54 [ 79/107] Pseudupeneus prayensis         12S  accepted                            NCBI 0/0/0  BOLD 0/0/0
+11:45:07 [ 80/107] Pteroscion peli                12S  accepted                            NCBI 0/0/0  BOLD 0/0/0
+11:45:14 [ 81/107] Pomadasys rogerii              12S  accepted                            NCBI 1/1/0  BOLD 0/0/0
+11:45:26 [ 82/107] Lutjanus goreensis             12S  accepted                            NCBI 2/2/0  BOLD 4/4/0
+11:45:32 [ 83/107] Acropora palmata               COI  accepted                            NCBI 33/0/0  BOLD 5/0/0
+11:45:39 [ 84/107] Porites porites                COI  accepted                            NCBI 4/0/0  BOLD 4/0/0
+11:45:49 [ 85/107] Holothuria atra                COI  accepted                            NCBI 401/0/0  BOLD 400/0/0
+11:45:57 [ 86/107] Holothuria scabra              COI  accepted                            NCBI 205/0/0  BOLD 104/0/0
+11:46:05 [ 87/107] Diadema antillarum             COI  accepted                            NCBI 15/0/0  BOLD 14/0/0
+11:46:14 [ 88/107] Echinometra lucunter           COI  accepted                            NCBI 74/3/0  BOLD 53/3/0
+11:46:20 [ 89/107] Ophiura ophiura                COI  accepted                            NCBI 46/0/0  BOLD 71/0/0
+11:46:28 [ 90/107] Octopus vulgaris               COI  accepted                            NCBI 605/13/0  BOLD 727/0/0
+11:46:34 [ 91/107] Sepia officinalis              COI  accepted                            NCBI 518/0/0  BOLD 402/0/0
+11:46:44 [ 92/107] Loligo vulgaris                COI  accepted                            NCBI 218/0/0  BOLD 237/0/0
+11:46:49 [ 93/107] Charonia variegata             COI  accepted                            NCBI 1/0/0  BOLD 1/0/0
+11:47:00 [ 94/107] Strombus latus                 COI  unaccepted -> Thetystrombus latus   NCBI 3/2/0  BOLD 3/2/0
+11:47:09 [ 95/107] Murex brandaris                COI  superseded combination -> Bolinus brandaris NCBI 4/0/0  BOLD 3/0/0
+11:47:18 [ 96/107] Penaeus kerathurus             COI  superseded combination -> Penaeus (Melicertus) kerathurus NCBI 112/0/0  BOLD 115/0/0
+11:47:31    retry 1: HTTPSConnectionPool(host='www.marinespecies.org', port=443): Max retries exceeded with url: /rest/AphiaRecordsByName/Halophila%20stipulacea?like=false&marine_only=false (Caused by NewConnectionError("HTTPSConnection(host='www.marinespecies.org', port=443): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+11:47:39    retry 2: HTTPSConnectionPool(host='www.marinespecies.org', port=443): Max retries exceeded with url: /rest/AphiaRecordsByName/Halophila%20stipulacea?like=false&marine_only=false (Caused by NewConnectionError("HTTPSConnection(host='www.marinespecies.org', port=443): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+11:47:57 [ 97/107] Halophila stipulacea           rbcL accepted                            NCBI 17/0/0  BOLD 5/0/0
+11:48:05 [ 98/107] Thalassia testudinum           rbcL accepted                            NCBI 127/0/0  BOLD 2/0/0
+11:48:11 [ 99/107] Sargassum natans               rbcL accepted                            NCBI 4/0/0  BOLD 2/0/0
+11:48:18 [100/107] Sargassum fluitans             rbcL accepted                            NCBI 8/0/0  BOLD 1/0/0
+11:48:26 [101/107] Ulva lactuca                   rbcL accepted                            NCBI 241/6/0  BOLD 64/0/0
+11:48:32 [102/107] Gracilaria corticata           rbcL accepted                            NCBI 13/0/0  BOLD 1/0/0
+11:48:39 [103/107] Megaptera novaeangliae         COI  accepted                            NCBI 34/0/0  BOLD 30/0/0
+11:48:45 [104/107] Physeter macrocephalus         COI  accepted                            NCBI 106/0/0  BOLD 4/0/0
+11:48:52 [105/107] Stenella frontalis             COI  accepted                            NCBI 24/0/0  BOLD 23/0/0
+11:48:58 [106/107] Balaenoptera brydei            COI  taxon inquirendum                   NCBI 39/0/0  BOLD 36/0/0
+11:49:04 [107/107] Orcinus orca                   COI  accepted                            NCBI 180/0/0  BOLD 169/0/0
+11:49:04 Done. 106/107 taxa. Missing (re-run): ['Nereis diversicolor']
+11:49:04 Send nmbl_v22_requery_results.json back to Claude to apply to the site.
+11:52:37    retry 1: 400 Client Error: Bad Request for url: https://portal.boldsystems.org/api/query/preprocessor?query=tax%3AHediste+diversicolor
+11:52:44    retry 2: 400 Client Error: Bad Request for url: https://portal.boldsystems.org/api/query/preprocessor?query=tax%3AHediste+diversicolor
+11:52:55    retry 3: 400 Client Error: Bad Request for url: https://portal.boldsystems.org/api/query/preprocessor?query=tax%3AHediste+diversicolor
+11:53:11    retry 4: 400 Client Error: Bad Request for url: https://portal.boldsystems.org/api/query/preprocessor?query=tax%3AHediste+diversicolor
+11:53:32 [ 55/107] Nereis diversicolor: FAILED 400 Client Error: Bad Request for url: https://portal.boldsystems.org/api/query/preprocessor?query=tax%3AHediste+diversicolor (re-run the script to retry)
+11:53:32 Done. 106/107 taxa. Missing (re-run): ['Nereis diversicolor']
+11:53:32 Send nmbl_v22_requery_results.json back to Claude to apply to the site.
+11:54:51    BOLD preprocessor rejected 'Hediste diversicolor'; trying explicit rank
+11:54:54 [ 55/107] Nereis diversicolor            COI  unaccepted -> Hediste diversicolor  NCBI 418/0/0  BOLD 366/0/0
+11:55:08 [N 1/25] Chromadora           accepted                       SILVA SSU 6 LSU 1  NCBI 18S 8/0/0  28S 2/0/0
+11:55:16 [N 2/25] Chromadorita         accepted                       SILVA SSU 66 LSU 51  NCBI 18S 107/0/0  28S 57/0/0
+11:55:24 [N 3/25] Ptycholaimellus      accepted                       SILVA SSU 55 LSU 0  NCBI 18S 73/0/0  28S 14/0/0
+11:55:33 [N 4/25] Dichromadora         accepted                       SILVA SSU 38 LSU 2  NCBI 18S 55/0/0  28S 6/0/0
+11:55:42 [N 5/25] Innocuonema          accepted                       SILVA SSU 2 LSU 0  NCBI 18S 0/0/0  28S 0/0/0
+11:55:50 [N 6/25] Desmodora            accepted                       SILVA SSU 37 LSU 2  NCBI 18S 42/0/0  28S 16/0/0
+11:55:59 [N 7/25] Spirinia             accepted                       SILVA SSU 20 LSU 3  NCBI 18S 26/0/0  28S 17/0/0
+11:56:16 [N 8/25] Metachromadora       accepted                       SILVA SSU 27 LSU 3  NCBI 18S 29/0/0  28S 13/0/0
+11:56:28 [N 9/25] Monhystera           accepted                       SILVA SSU 26 LSU 38  NCBI 18S 29/0/0  28S 39/0/0
+11:56:37 [N10/25] Terschellingia       accepted                       SILVA SSU 182 LSU 0  NCBI 18S 194/0/0  28S 13/0/0
+11:56:46 [N11/25] Diplolaimelloides    accepted                       SILVA SSU 138 LSU 0  NCBI 18S 181/0/0  28S 0/0/0
+11:56:54 [N12/25] Sphaerolaimus        accepted                       SILVA SSU 60 LSU 3  NCBI 18S 57/0/0  28S 15/0/0
+11:57:02 [N13/25] Enoplus              accepted                       SILVA SSU 19 LSU 2  NCBI 18S 21/0/0  28S 3/0/0
+11:57:10 [N14/25] Thoracostoma         accepted                       SILVA SSU 2 LSU 6  NCBI 18S 6/0/0  28S 8/0/0
+11:57:18 [N15/25] Eurystomina          accepted                       SILVA SSU 10 LSU 0  NCBI 18S 11/0/0  28S 1/0/0
+11:57:27 [N16/25] Oxystomina           accepted                       SILVA SSU 42 LSU 22  NCBI 18S 51/0/0  28S 26/0/0
+11:57:38 [N17/25] Axonolaimus          accepted                       SILVA SSU 17 LSU 2  NCBI 18S 39/0/0  28S 6/0/0
+11:57:46 [N18/25] Odontophora          accepted                       SILVA SSU 12 LSU 7  NCBI 18S 17/0/0  28S 11/0/0
+11:57:55 [N19/25] Campylaimus          accepted                       SILVA SSU 4 LSU 0  NCBI 18S 5/0/0  28S 1/0/0
+11:58:09 [N20/25] Desmoscolex          accepted                       SILVA SSU 17 LSU 0  NCBI 18S 20/0/0  28S 0/0/0
+11:58:18 [N21/25] Quadricoma           unaccepted -> Tricoma (Quadricoma) SILVA SSU 0 LSU 0  NCBI 18S 0/0/0  28S 0/0/0
+11:58:29 [N22/25] Aphanolaimus         accepted                       SILVA SSU 3 LSU 4  NCBI 18S 3/0/0  28S 5/0/0
+11:58:37 [N23/25] Stylotheristus       accepted                       SILVA SSU 0 LSU 0  NCBI 18S 0/0/0  28S 0/0/0
+11:58:45 [N24/25] Pellioditis          accepted                       SILVA SSU 37 LSU 45  NCBI 18S 128/0/0  28S 62/0/0
+11:58:53 [N25/25] Plectus              accepted                       SILVA SSU 181 LSU 77  NCBI 18S 214/0/0  28S 93/0/0
+11:58:53 Done. 132/132 taxa (107 species/higher taxa + 25 nematode genera). All taxa complete.
+11:58:53 Send nmbl_v22_requery_results.json back to Claude to apply to the site.
+12:31:16 Done. 132/132 taxa (107 species/higher taxa + 25 nematode genera). All taxa complete.
+12:31:16 Send nmbl_v22_requery_results.json back to Claude to apply to the site.
+12:38:18 [A  1/107] Ethmalosa fimbriata            all NCBI records (any gene): 56
+12:38:20 [A  2/107] Sardinella maderensis          all NCBI records (any gene): 51
+12:38:22 [A  3/107] Sardinella aurita              all NCBI records (any gene): 1857
+12:38:25 [A  4/107] Pseudotolithus senegalensis    all NCBI records (any gene): 44
+12:38:28 [A  5/107] Pseudotolithus elongatus       all NCBI records (any gene): 42
+12:38:29 [A  6/107] Cynoglossus senegalensis       all NCBI records (any gene): 52
+12:38:31 [A  7/107] Galeoides decadactylus         all NCBI records (any gene): 5
+12:38:36 [A  8/107] Polydactylus quadrifilis       all NCBI records (any gene): 5
+12:38:41 [A  9/107] Lutjanus agennes               all NCBI records (any gene): 2
+12:38:43 [A 10/107] Arius latiscutatus             all NCBI records (any gene): 12
+12:38:49 [A 11/107] Brachydeuterus auritus         all NCBI records (any gene): 8
+12:38:58 [A 12/107] Pomadasys jubelini             all NCBI records (any gene): 0
+12:39:05 [A 13/107] Elops lacerta                  all NCBI records (any gene): 3
+12:39:07 [A 14/107] Drepane africana               all NCBI records (any gene): 46
+12:39:13 [A 15/107] Mugil cephalus                 all NCBI records (any gene): 2392
+12:39:17 [A 16/107] Chrysichthys nigrodigitatus    all NCBI records (any gene): 31
+12:39:22 [A 17/107] Rhizoprionodon acutus          all NCBI records (any gene): 274
+12:39:25 [A 18/107] Rhinobatos rhinobatos          all NCBI records (any gene): 5
+12:39:29 [A 19/107] Hypanus marianae               all NCBI records (any gene): 154
+12:39:32 [A 20/107] Carcharhinus leucas            all NCBI records (any gene): 655
+12:39:36 [A 21/107] Sphyrna lewini                 all NCBI records (any gene): 1557
+12:39:37 [A 22/107] Penaeus notialis               all NCBI records (any gene): 92
+12:39:40 [A 23/107] Callinectes amnicola           all NCBI records (any gene): 6
+12:39:47 [A 24/107] Parapenaeus longirostris       all NCBI records (any gene): 48
+12:39:52 [A 25/107] Macrobrachium vollenhovenii    all NCBI records (any gene): 14
+12:39:59 [A 26/107] Trichechus senegalensis        all NCBI records (any gene): 9
+12:40:01 [A 27/107] Sousa teuszii                  all NCBI records (any gene): 5
+12:40:07 [A 28/107] Tursiops truncatus             all NCBI records (any gene): 71852
+12:40:09 [A 29/107] Chelonia mydas                 all NCBI records (any gene): 142315
+12:40:13 [A 30/107] Dermochelys coriacea           all NCBI records (any gene): 18891
+12:40:18 [A 31/107] Lepidochelys olivacea          all NCBI records (any gene): 474
+12:40:20 [A 32/107] Harpacticoida                  all NCBI records (any gene): 163707
+12:40:22 [A 33/107] Ostracoda                      all NCBI records (any gene): 354680
+12:40:24 [A 34/107] Tardigrada                     all NCBI records (any gene): 185248
+12:40:26 [A 35/107] Gastrotricha                   all NCBI records (any gene): 2077
+12:40:28 [A 36/107] Kinorhyncha                    all NCBI records (any gene): 1195
+12:40:31 [A 37/107] Foraminifera                   all NCBI records (any gene): 315001
+12:40:34 [A 38/107] Ciliophora                     all NCBI records (any gene): 1217705
+12:40:37 [A 39/107] Bacillariophyta                all NCBI records (any gene): 4568158
+12:40:44 [A 40/107] Polychaeta                     all NCBI records (any gene): 828260
+12:40:46 [A 41/107] Tympanotonos fuscatus          all NCBI records (any gene): 8
+12:40:54 [A 42/107] Tympanotonos radula            all NCBI records (any gene): 8
+12:40:56 [A 43/107] Pachymelania aurita            all NCBI records (any gene): 0
+12:40:58 [A 44/107] Pachymelania fusca             all NCBI records (any gene): 0
+12:41:01 [A 45/107] Telescopium telescopium        all NCBI records (any gene): 78
+12:41:03 [A 46/107] Neritina glabrata              all NCBI records (any gene): 0
+12:41:04 [A 47/107] Lanistes varicus               all NCBI records (any gene): 8
+12:41:06 [A 48/107] Crassostrea gasar              all NCBI records (any gene): 84
+12:41:09 [A 49/107] Egeria radiata                 all NCBI records (any gene): 64
+12:41:11 [A 50/107] Senilia senilis                all NCBI records (any gene): 1
+12:41:13 [A 51/107] Mytilaster minimus             all NCBI records (any gene): 21
+12:41:15 [A 52/107] Corbula trigona                all NCBI records (any gene): 0
+12:41:20 [A 53/107] Sphaerium nodicostatum         all NCBI records (any gene): 0
+12:41:27 [A 54/107] Capitella capitata             all NCBI records (any gene): 129
+12:41:29 [A 55/107] Nereis diversicolor            all NCBI records (any gene): 756
+12:41:35 [A 56/107] Perinereis cultrifera          all NCBI records (any gene): 85
+12:41:38 [A 57/107] Marphysa sanguinea             all NCBI records (any gene): 70
+12:41:40 [A 58/107] Sabella pavonina               all NCBI records (any gene): 13
+12:41:46 [A 59/107] Hydroides elegans              all NCBI records (any gene): 402
+12:41:50 [A 60/107] Uca tangeri                    all NCBI records (any gene): 15
+12:41:52 [A 61/107] Uca inversa                    all NCBI records (any gene): 50
+12:41:56 [A 62/107] Sesarma huzardi                all NCBI records (any gene): 49
+12:41:57 [A 63/107] Goniopsis pelii                all NCBI records (any gene): 4
+12:42:01 [A 64/107] Cardisoma armatum              all NCBI records (any gene): 16
+12:42:04 [A 65/107] Callinectes pallidus           all NCBI records (any gene): 7
+12:42:07 [A 66/107] Thunnus albacares              all NCBI records (any gene): 2690
+12:42:10 [A 67/107] Katsuwonus pelamis             all NCBI records (any gene): 1820
+12:42:11 [A 68/107] Thunnus obesus                 all NCBI records (any gene): 2230
+12:42:12 [A 69/107] Xiphias gladius                all NCBI records (any gene): 2527
+12:42:13 [A 70/107] Coryphaena hippurus            all NCBI records (any gene): 1380
+12:42:14 [A 71/107] Scomber japonicus              all NCBI records (any gene): 2054
+12:42:16 [A 72/107] Scomberomorus tritor           all NCBI records (any gene): 16
+12:42:17 [A 73/107] Caranx hippos                  all NCBI records (any gene): 145
+12:42:18 [A 74/107] Trichiurus lepturus            all NCBI records (any gene): 2120
+12:42:19 [A 75/107] Dentex angolensis              all NCBI records (any gene): 12
+12:42:20 [A 76/107] Pagellus bellottii             all NCBI records (any gene): 35
+12:42:21 [A 77/107] Epinephelus aeneus             all NCBI records (any gene): 160
+12:42:22 [A 78/107] Sparus caeruleostictus         all NCBI records (any gene): 54
+12:42:23 [A 79/107] Pseudupeneus prayensis         all NCBI records (any gene): 7
+12:42:25 [A 80/107] Pteroscion peli                all NCBI records (any gene): 9
+12:42:26 [A 81/107] Pomadasys rogerii              all NCBI records (any gene): 3
+12:42:28 [A 82/107] Lutjanus goreensis             all NCBI records (any gene): 5
+12:42:29 [A 83/107] Acropora palmata               all NCBI records (any gene): 43510
+12:42:30 [A 84/107] Porites porites                all NCBI records (any gene): 192
+12:42:31 [A 85/107] Holothuria atra                all NCBI records (any gene): 699
+12:42:32 [A 86/107] Holothuria scabra              all NCBI records (any gene): 445
+12:42:33 [A 87/107] Diadema antillarum             all NCBI records (any gene): 321
+12:42:34 [A 88/107] Echinometra lucunter           all NCBI records (any gene): 304
+12:42:35 [A 89/107] Ophiura ophiura                all NCBI records (any gene): 51
+12:42:37 [A 90/107] Octopus vulgaris               all NCBI records (any gene): 33866
+12:42:38 [A 91/107] Sepia officinalis              all NCBI records (any gene): 44640
+12:42:39 [A 92/107] Loligo vulgaris                all NCBI records (any gene): 256
+12:42:40 [A 93/107] Charonia variegata             all NCBI records (any gene): 4
+12:42:41 [A 94/107] Strombus latus                 all NCBI records (any gene): 10
+12:42:42 [A 95/107] Murex brandaris                all NCBI records (any gene): 49
+12:42:44 [A 96/107] Penaeus kerathurus             all NCBI records (any gene): 258
+12:42:45 [A 97/107] Halophila stipulacea           all NCBI records (any gene): 128
+12:42:46 [A 98/107] Thalassia testudinum           all NCBI records (any gene): 239
+12:42:47 [A 99/107] Sargassum natans               all NCBI records (any gene): 1088
+12:42:48 [A100/107] Sargassum fluitans             all NCBI records (any gene): 241
+12:42:49 [A101/107] Ulva lactuca                   all NCBI records (any gene): 653
+12:42:50 [A102/107] Gracilaria corticata           all NCBI records (any gene): 61
+12:42:51 [A103/107] Megaptera novaeangliae         all NCBI records (any gene): 3296
+12:42:52 [A104/107] Physeter macrocephalus         all NCBI records (any gene): 16385
+12:42:54 [A105/107] Stenella frontalis             all NCBI records (any gene): 428
+12:42:56 [A106/107] Balaenoptera brydei            all NCBI records (any gene): 179
+12:42:57 [A107/107] Orcinus orca                   all NCBI records (any gene): 1462
+12:42:59 [M] Sousa: 2 West African records in NCBI (any species name, any gene)
+12:42:59       MN365274.1  Sousa teuszii  Senegal  16384 bp  Sousa teuszii voucher USNM:MAMM:605133 mitochondrion, complete genome
+12:42:59       EU380409.1  Sousa teuszii  Mauritania  335 bp  Sousa teuszii haplotype M001 control region, partial sequence; mitocho
+12:43:00 [M] Trichechus: 0 West African records in NCBI (any species name, any gene)
+12:43:00 Done. 132/132 taxa (107 species/higher taxa + 25 nematode genera). All taxa complete.
+12:43:00 Send nmbl_v22_requery_results.json back to Claude to apply to the site.

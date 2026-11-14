@@ -50,7 +50,7 @@
           </div>
           <div style="font-size:12px;color:var(--text2);line-height:1.85;">
             <span style="color:var(--red);font-weight:700;">✕</span> <strong>Decision tree corrected</strong> — the previous diagram sent any taxon with no West African NCBI record straight to "absent". The code has always scored NCBI and BOLD separately and then combined them, so 8 taxa with West African records in BOLD only were correctly shown as partial in the table but would have been absent by the diagram. The diagram is redrawn to match the code, and its outcome counts are now calculated from the data.<br>
-            <span style="color:var(--amber);font-weight:700;">Δ</span> <strong>Wording</strong> — "absent" taxa were described as "undetectable" in eDNA. Corrected: they have no West African reference, so assignments rely on non-regional sequences where these exist. The data-sources text now states that only NCBI, BOLD and SILVA feed the classification. No classification changed (absent 85, partial 42, present 5).
+            <span style="color:var(--amber);font-weight:700;">Δ</span> <strong>Wording</strong> — "absent" taxa were described as "undetectable" in eDNA. Corrected: they have no West African reference, so assignments rely on non-regional sequences where these exist. The data-sources text now states that only NCBI, BOLD and SILVA feed the classification. "Gulf of Guinea endemics" renamed West African endemics (their ranges run roughly Senegal to Angola).<br><span style="color:var(--blue);font-weight:700;">★</span> <strong>All NCBI records (any gene)</strong> — every species pop-up now gives the total GenBank records for any gene, so that a marker count of 1 is not read as 1 record in total (e.g. <em>Sousa teuszii</em>: 1 COI record, 5 records in all). A fresh Biopython run on 14 Nov 2026 reproduced every v22.2 count (107 taxa, 25 nematode genera; 0 differences). A search of all <em>Sousa</em> and <em>Trichechus</em> records found 2 West African <em>Sousa</em> records (Senegal mitogenome; Mauritania control region) and no West African manatee record. No classification changed (absent 85, partial 42, present 5).
           </div>
         </div>
 
@@ -138,8 +138,8 @@
         <p>Every species in the "absent" column could represent a false negative in any eDNA metabarcoding study conducted in Nigerian waters. The animal or plant may be present, its DNA may be in your sample, and your PCR may amplify it perfectly — but without a matching reference barcode, your analysis software returns nothing. This dashboard makes the scale of that problem visible and actionable.</p>
       </div>
       <div class="info-card">
-        <h3>Gulf of Guinea endemics — priority targets</h3>
-        <p><em>Pteroscion peli</em> (boe drum) has no 12S sequence anywhere in NCBI or BOLD. <em>Lutjanus goreensis</em> (Gorean snapper) and <em>Scomberomorus tritor</em> (West African Spanish mackerel) have only 2 and 4 global 12S records, all from a single Guinea-Bissau dataset, and <em>Strombus latus</em> (= <em>Thetystrombus latus</em>, West African stromb) has 3 global COI records, 2 from Senegal. None of these endemics has been barcoded from Nigerian waters — each Nigerian voucher is a publishable first regional record. <em>Tympanotonos fuscatus</em> — the most commercially important macroinvertebrate in the Niger Delta — has 3 West African COI records (Ghana, Gambia) but none from Nigeria.</p>
+        <h3>West African endemics — priority targets</h3>
+        <p><em>Pteroscion peli</em> (boe drum) has no 12S sequence anywhere in NCBI or BOLD. <em>Lutjanus goreensis</em> (Gorean snapper) and <em>Scomberomorus tritor</em> (West African Spanish mackerel) have only 2 and 4 global 12S records in NCBI, of which 2 and 3 come from a single Guinea-Bissau dataset (GenBank PQ628781–PQ628826), and <em>Strombus latus</em> (= <em>Thetystrombus latus</em>, West African stromb) has 3 global COI records, 2 from Senegal. None of these endemics has been barcoded from Nigerian waters — each Nigerian voucher is a publishable first regional record. <em>Tympanotonos fuscatus</em> — a commercially important mangrove snail in the Niger Delta — has 3 West African COI records (Ghana, Gambia) but none from Nigeria.</p>
       </div>
     </div>
 
@@ -331,7 +331,7 @@
         <ul style="font-size:12px;color:var(--text);line-height:2;padding-left:16px;margin:0;">
           <li>All <span id="critical-nema-count">25</span> nematode genera tracked — <strong>0 West African or Nigerian sequences</strong> for all (18S and 28S); global SILVA SSU counts range from 0 to 182 per genus</li>
           <li><em>Cynoglossus senegalensis</em> (Senegalese tonguesole) — 1 global 12S record, zero WA; abundant bycatch</li>
-          <li>Gulf of Guinea endemics — <em>Pteroscion peli</em> <strong>zero 12S records globally</strong>; <em>Lutjanus agennes</em> zero in NCBI (1 WA record in BOLD); <em>Dentex angolensis</em> 1 global record, zero WA</li>
+          <li>West African endemics — <em>Pteroscion peli</em> <strong>zero 12S records globally</strong>; <em>Lutjanus agennes</em> zero in NCBI (1 WA record in BOLD); <em>Dentex angolensis</em> 1 global record, zero WA</li>
           <li><em>Tursiops truncatus</em>, <em>Mugil cephalus</em>, <em>Sphyrna lewini</em> — well-barcoded globally (239 COI, 64 and 102 12S records) but <strong>zero West African sequences</strong>; eDNA assignments rest on non-regional references until West African vouchers are sequenced</li>
           <li><em>Sea turtles</em> (<em>Chelonia mydas</em>, <em>Dermochelys coriacea</em>, <em>Lepidochelys olivacea</em>) — nest on Nigerian beaches, 8–20 global 12S records each but <strong>zero WA</strong></li>
           <li><em>Penaeus notialis</em> (pink shrimp, largest commercial fishery) — 50 global COI in NCBI (16 in BOLD) but <strong>zero WA</strong>; major regional gap</li>
@@ -404,7 +404,7 @@
       </div>
       <div class="info-card">
         <h3>Offshore EEZ biodiversity</h3>
-        <p>Nigeria's ~210,000 km² EEZ remains almost entirely uncharacterised at the molecular level. Gulf of Guinea endemic fish species — demersal groupers, snappers, croakers unique to this ecosystem — have never been barcoded. As Nigeria expands its Blue Economy policy framework and deepwater oil operations, baseline molecular biodiversity data for the EEZ becomes essential for impact assessment, fisheries management, and international reporting under the Kunming-Montreal Global Biodiversity Framework.</p>
+        <p>Nigeria's ~210,000 km² EEZ remains almost entirely uncharacterised at the molecular level. West African endemic fish species — demersal groupers, snappers, croakers unique to this ecosystem — have never been barcoded. As Nigeria expands its Blue Economy policy framework and deepwater oil operations, baseline molecular biodiversity data for the EEZ becomes essential for impact assessment, fisheries management, and international reporting under the Kunming-Montreal Global Biodiversity Framework.</p>
       </div>
     </div>
 

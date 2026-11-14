@@ -202,3 +202,11 @@ The 8 taxa with absent NCBI but partial/present BOLD would have been "absent" un
 - About: 16S rRNA marker line clarified (planned field marker; coverage tracked with COI); roadmap Phase 5 no longer says the website "launches".
 
 **Still unverified on the About page (flagged to the curator):** BOLD Nematoda "132,070 specimen records … 79,150 with barcodes"; N:C ratio "<50 … >1,000"; EEZ "~210,000 km²".
+
+### v22.3 — re-run and "any gene" totals (14 Nov 2026, later)
+
+- Curator re-ran `Scripts/nmbl_v22_requery.py` (Biopython/BOLD v5/SILVA/WoRMS) on 14 Nov 2026. Results compared field by field with `data.js`: 107 taxa × 6 counts (NCBI/BOLD global, WA, Nigeria) = 0 differences; 25 nematode genera × 6 counts (SILVA SSU/LSU, NCBI 18S/28S WA and Nigeria) = 0 differences.
+- New field `ncbi_all` (all NCBI nucleotide records for the taxon, any gene, organism search across current and accepted names, RefSeq excluded) added to all 107 species records from `nmbl_v22_all_records.csv`; shown in the pop-up as "All NCBI records (any gene)". Classification is unchanged — it uses the marker count only.
+- Genus-level West African check (`nmbl_v22_mammal_wa_check.csv`): *Sousa* — 2 records with a West African country (MN365274 mitogenome, Senegal; EU380409 control region 335 bp, Mauritania). *Trichechus* — 0. Published West African manatee work (e.g. a "Thatcher et al. 2018" Senegal study the curator recalled — not located; Nigerian/Ghanaian/Cameroonian control-region studies) is not in GenBank with a West African country. Notes on both species updated.
+- Wording: "Gulf of Guinea endemic(s)" → "West African endemic(s)" (8 places; ranges ≈ Senegal–Angola, *S. tritor* to the Canaries). *S. tritor*: "4 global 12S records, all from Guinea-Bissau" corrected to 3 of 4 (NCBI WA accessions PQ628824–26). *Sousa teuszii* range corrected from "Gulf of Guinea endemic" to Western Sahara–Angola.
+- Files: `Data/v22.3/` (results JSON/CSV, all-records CSV, mammal check CSV, log).
