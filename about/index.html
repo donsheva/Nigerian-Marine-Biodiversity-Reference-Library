@@ -66,7 +66,7 @@
     <div class="three-col" style="margin-bottom:1.5rem;">
       <div class="accent-card">
         <h3>Nigeria's EEZ in numbers</h3>
-        <p>Approximately 210,000 km² of exclusive economic zone in the Gulf of Guinea. Over 900 km of coastline spanning Lagos, the Niger Delta, and the Cross River estuary. Home to one of the largest mangrove forests in Africa, patch coral reefs, and highly productive offshore upwelling zones supporting major pelagic fisheries.</p>
+        <p>Approximately 210,000 km² of exclusive economic zone in the Gulf of Guinea (210,900 km²; Folami, 2017, cited in Ateme, 2021). About 850 km of coastline spanning Lagos, the Niger Delta, and the Cross River estuary. Home to Africa's largest mangrove forest and productive shelf waters fed by Niger River discharge, supporting artisanal and industrial fisheries.</p>
       </div>
       <div class="info-card">
         <h3>West African endemics — highest scientific value</h3>
@@ -81,7 +81,7 @@
     <div class="two-col">
       <div class="accent-card">
         <h3>The Reference Gap Problem</h3>
-        <p>A BOLD Systems search for Nematoda returns 132,070 specimen records globally. Only 79,150 have qualifying barcodes. Of these, West African records number in the dozens, and Nigerian coastal records are essentially zero. Every missing sequence is a species that eDNA metabarcoding cannot detect in Nigerian waters, regardless of the quality of fieldwork or laboratory methods.</p>
+        <p>For the 25 marine nematode genera tracked here, SILVA holds between 0 and 182 18S (SSU) reference sequences per genus worldwide, and two genera have none at all. Not one of those sequences, and not one 18S or 28S record for these genera in NCBI, comes from West Africa or Nigeria (queried 14 November 2026). Without regional references, nematode eDNA reads from Nigerian sediments can at best be matched to sequences from other regions, and many genera cannot be assigned at all.</p>
       </div>
       <div class="green-card">
         <h3>Why This Library Matters</h3>
@@ -138,7 +138,7 @@
       </div>
       <div class="info-card">
         <h3>Nematode morphology + molecular approach — Niger Delta focus</h3>
-        <p>The Niger Delta is one of the most heavily oiled ecosystems on Earth, with decades of pipeline spills, well-blowouts, and chronic hydrocarbon seepage. Free-living nematodes are the most sensitive and abundant metazoan bioindicators of this contamination. The nematode-to-copepod (N:C) ratio rises sharply under organic enrichment and oil pollution — from a baseline below 50 in clean sediments, to values exceeding 1,000 at severely contaminated sites. For free-living nematodes, identification to genus level requires compound microscopy at 400–1000× magnification. Sediment cores are split: one half fixed in 4% formalin for morphological identification, one half frozen at −20°C for DNA extraction. Single specimens are photographed before individual DNA extraction and PCR amplification. This paired morphological-molecular approach produces the highest-quality nematode reference records.</p>
+        <p>The Niger Delta is one of the most heavily oiled ecosystems on Earth, with decades of pipeline spills, well-blowouts, and chronic hydrocarbon seepage. Free-living nematodes are usually the most abundant metazoans in these sediments and are widely used as bioindicators of this contamination. Because harpacticoid copepods are generally more sensitive to pollution than nematodes, the nematode-to-copepod (N:C) ratio was proposed as a pollution index (Raffaelli &amp; Mason, 1981). Its baseline depends strongly on sediment grain size (Warwick, 1981), and a 2022 global meta-analysis found the ratio unreliable as a stand-alone monitoring tool (<em>Ecología Austral</em> 32: 516–525). This project therefore uses N:C only alongside nematode genus composition. For free-living nematodes, identification to genus level requires compound microscopy at 400–1000× magnification. Sediment cores are split: one half fixed in 4% formalin for morphological identification, one half frozen at −20°C for DNA extraction. Single specimens are photographed before individual DNA extraction and PCR amplification. This paired morphological-molecular approach produces the highest-quality nematode reference records.</p>
       </div>
     </div>
 
@@ -271,6 +271,8 @@
             <li><strong>Decision tree corrected.</strong> The Coverage page diagram showed a single NCBI-first path in which no West African NCBI record meant "absent". The site's code scores NCBI and BOLD (SILVA for nematodes) separately and combines them; 8 taxa with West African records in BOLD only are partial, as the table always showed. The diagram now matches the code, and its counts are computed from the data.</li>
             <li><strong>"Undetectable" removed.</strong> Absent taxa lack a West African reference; they are not necessarily undetectable, because eDNA reads can still be assigned against non-regional sequences where these exist. Wording corrected on the Coverage, Gap Analysis and Statistics pages.</li>
             <li><strong>Data sources.</strong> The Coverage page now states that classification uses NCBI, BOLD and SILVA only; WoRMS, FishBase, NeMys, OBIS, GBIF, AlgaeBase, ENA and IUCN supply names, occurrences and conservation status. Citations: author format standardised and Odedere &amp; Rufai (2026) listed. About: 16S marker note and roadmap Phase 5 wording corrected. "Gulf of Guinea endemics" renamed West African endemics, since their ranges run roughly from Senegal to Angola.</li>
+            <li><strong>Species pop-up redesigned.</strong> The pop-up now leads with the overall status and why (West African records against the marker threshold in each database), followed by a global / West African / Nigerian record table and the details; the data history is collapsible. Invertebrate and plant taxa without an IUCN entry on this site now show "not recorded" instead of a default category.</li>
+            <li><strong>Claims sourced or replaced.</strong> EEZ area cited (210,900 km²; Folami, 2017, in Ateme, 2021); coastline corrected to about 850 km (853 km); the unsourced BOLD Nematoda figures replaced by this site's own SILVA and NCBI counts; the unsourced N:C ratio thresholds replaced by the published context, including the 2022 meta-analysis finding the ratio unreliable on its own. Sources added to the Citations page.</li>
             <li><strong>All NCBI records (any gene).</strong> Species pop-ups now show total GenBank records for any gene alongside the marker count. A full Biopython re-run (14 Nov 2026) reproduced every v22.2 count with no differences. Searching all <em>Sousa</em> and <em>Trichechus</em> records under any species name found two West African <em>Sousa</em> records (Senegal mitogenome; 335 bp control region, Mauritania) and no West African manatee record. No classification changed.</li>
           </ul>
         </div>

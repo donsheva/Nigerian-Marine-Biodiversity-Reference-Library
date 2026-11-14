@@ -13,7 +13,7 @@ function buildSearchIndex() {
     name:s.name, common:s.common, group:s.group, marker:s.marker,
     ncbi:s.ncbi, bold:s.bold, priority:s.priority, notes:s.notes,
     status:macroStatus(s), section:"macrobenthos", tab:"macrobenthos",
-    iucn:"LC", location:"Niger Delta / Lagos Lagoon", habitat:s.habitat||"",
+    iucn:s.iucn||null, location:"Niger Delta / Lagos Lagoon", habitat:s.habitat||"",
     genbank:s.genbank||null, boldTaxon:s.boldTaxon||null,
     extra:{habitat:s.habitat}
   }));
@@ -21,7 +21,7 @@ function buildSearchIndex() {
     name:s.name, common:s.common, group:s.group, marker:s.marker,
     ncbi:s.ncbi, bold:s.bold, priority:s.priority, notes:s.notes,
     status:marineStatus(s), section:"marine", tab:"marine",
-    iucn:s.iucn||"NE", location:"Gulf of Guinea", habitat:s.habitat||"Marine",
+    iucn:s.iucn||null, location:"Gulf of Guinea", habitat:s.habitat||"Marine",
     genbank:s.genbank||null, boldTaxon:s.boldTaxon||null,
     extra:{endemic:GULF_ENDEMICS.includes(s.name)}
   }));
@@ -83,13 +83,13 @@ function onSearchInput(val) {
       const imgUrl = item.image || '';
       const thumbHtml = imgUrl
         ? `<div style="width:44px;height:44px;border-radius:6px;overflow:hidden;flex-shrink:0;"><img src="${imgUrl}" style="width:100%;height:100%;object-fit:cover;" alt="${item.name}" loading="lazy"/></div>`
-        : `<div style="width:44px;height:44px;border-radius:6px;background:var(--bg2);border:1px dashed var(--border2);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;" title="No voucher photo yet">📷</div>`;
+        : '';  // no empty photo placeholder; the initials icon identifies the group
       html += '<div class="search-result-item" onclick="openPopup(' + i + ')">'
             + thumbHtml
-            + '<div class="sri-icon" style="background:' + ibg + ';color:' + icol + ';">' + init + '</div>'
+            + (imgUrl ? '' : '<div class="sri-icon" style="background:' + ibg + ';color:' + icol + ';">' + init + '</div>')
             + '<div class="sri-text">'
             +   '<div class="sri-name">' + displayName(item.name) + '</div>'
-            +   '<div class="sri-meta">' + item.common + ' &middot; ' + item.group + (item.extra && item.extra.endemic ? ' <span style="color:var(--blue);font-size:10px;font-weight:600;">GoG endemic</span>' : '') + '</div>'
+            +   '<div class="sri-meta">' + item.common + ' &middot; ' + item.group + (item.extra && item.extra.endemic ? ' <span style="color:var(--blue);font-size:10px;font-weight:600;">W. African endemic</span>' : '') + '</div>'
             + '</div>'
             + '<span class="sri-badge" style="background:' + stBg + ';color:' + stCol + ';">' + item.status + '</span>'
             + '</div>';
