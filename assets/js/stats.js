@@ -251,7 +251,7 @@ function priorityScore(s) {
 function priorityRationale(s) {
   const reasons = [];
   const ov = overallStatus(s);
-  if (ov === 'absent')  reasons.push('zero refs');
+  if (ov === 'absent')  reasons.push('zero WA refs');
   if (s.ncbi_global === 0) reasons.push('0 global');
   if (s.iucn && ['CR','EN','VU'].includes(s.iucn)) reasons.push('IUCN ' + s.iucn);
   if (s.priority === 'high') reasons.push('curator-flagged');
