@@ -46,7 +46,16 @@ function openPopup(idx) {
   if (s.extra.endemic)  rows.push(['Gulf of Guinea', '<span style="color:var(--blue);font-weight:500;">Endemic species</span>']);
   if (s.extra.order)    rows.push(['Nematode order', s.extra.order]);
   if (s.extra.response) rows.push(['Pollution response', s.extra.response]);
-  if (s.extra.global18s !== undefined) rows.push(['Global 18S sequences', s.extra.global18s.toLocaleString()]);
+  // v22.2: record counts (NCBI / BOLD), from the underlying data record
+  const rec = [VERTEBRATES, MACROBENTHOS, MARINE, MEIOFAUNA_OTHER].map(a => a.find(x => x.name === s.name)).find(Boolean);
+  if (rec && rec.ncbi_global !== undefined) {
+    const fmt = (g, w, n) => (g < 0 ? 'not queried' : g.toLocaleString() + ' global · ' + w + ' West Africa · ' + n + ' Nigeria');
+    rows.push(['NCBI ' + s.marker + ' records', fmt(rec.ncbi_global, rec.ncbi_wa, rec.ncbi_ng || 0)]);
+    if (rec.bold_global !== undefined) rows.push(['BOLD ' + s.marker + ' records', fmt(rec.bold_global, rec.bold_wa, rec.bold_ng || 0)]);
+  }
+  const nrec = s.section === 'nematode' ? NEMATODES.find(n => n.genus === s.name) : null;
+  if (nrec) rows.push(['West African 18S / 28S', nrec.wa18s + ' / ' + (nrec.wa28s || 0) + (nrec.wa18s === 0 ? ' &mdash; <span style="color:var(--red);font-weight:500;">priority gap</span>' : '')]);
+  if (s.extra.global18s !== undefined) rows.push(['Global 18S sequences (SILVA)', s.extra.global18s.toLocaleString()]);
   if (s.extra.ng18s    !== undefined)  rows.push(['Nigeria 18S sequences',
     s.extra.ng18s === 0
       ? '<span style="color:var(--red);font-weight:500;">0 &mdash; priority gap</span>'
@@ -73,16 +82,21 @@ function openPopup(idx) {
   // Build GenBank and BOLD links for species with sequence data
   let gbLink = '', boldLink = '';
   const overSt = s.status;
-  if (overSt === 'present' || s.genbank) {
+  if (overSt === 'present' || s.genbank || (rec && rec.ncbi_global > 0)) {
     const gbAcc = s.genbank || '';
+    // Organism-only search on every name the species is filed under (site name + WoRMS accepted name);
+    // adding a marker word would miss mitochondrial-genome records.
+    const info = (typeof NAME_INFO !== 'undefined' && NAME_INFO[s.name]) || {};
+    const orgNames = [s.name].concat(info.accepted ? [info.accepted] : []).concat(info.synonymOf ? [info.synonymOf] : []);
     const gbUrl = gbAcc
       ? 'https://www.ncbi.nlm.nih.gov/nuccore/' + gbAcc
-      : 'https://www.ncbi.nlm.nih.gov/nuccore/?term=' + encodeURIComponent(s.name + '[ORGN] ' + s.marker);
+      : 'https://www.ncbi.nlm.nih.gov/nuccore/?term=' + encodeURIComponent(orgNames.map(n => '"' + n + '"[ORGN]').join(' OR '));
     const gbLabel = gbAcc ? 'GenBank: ' + gbAcc : 'Search NCBI';
     gbLink = '<a href="' + gbUrl + '" target="_blank" class="popup-action" style="text-decoration:none;background:var(--green-bg);color:var(--green);border-color:rgba(10,107,78,0.3);">🔗 ' + gbLabel + '</a>';
   }
   if (overSt === 'present' || s.boldTaxon || (s.bold && s.bold !== 'absent')) {
-    const bTaxon = s.boldTaxon || s.name;
+    const binfo = (typeof NAME_INFO !== 'undefined' && NAME_INFO[s.name]) || {};
+    const bTaxon = s.boldTaxon || binfo.accepted || binfo.synonymOf || s.name;
     const bUrl = 'https://www.boldsystems.org/index.php/Taxbrowser_Taxonpage?taxon=' + encodeURIComponent(bTaxon);
     boldLink = '<a href="' + bUrl + '" target="_blank" class="popup-action" style="text-decoration:none;background:var(--blue-bg);color:var(--blue);border-color:rgba(20,98,232,0.3);">🔗 BOLD: ' + bTaxon + '</a>';
   }
