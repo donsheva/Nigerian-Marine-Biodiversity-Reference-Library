@@ -245,6 +245,6 @@ Counts from the curator's run of `Scripts/nmbl_v22_requery.py` (log 20:49–20:5
 **Totals:** absent 85 → 80, partial 42 → 46, present 5 → 6. High-priority gaps 40 → 39. IUCN-threatened vertebrates 8 (unchanged count).
 
 **Open points for the curator**
-- *Holothuria dakarensis*: WoRMS returned no match for the exact name (the script logs "not in WoRMS"); Thandar & Mjobo (2014) use *Holothuria (Holothuria) dakarensis*. Name status should be confirmed.
-- *Fontitrygon margarita* IUCN: entered as EN (2021 assessment, per Rufford project and Ghana stingray report); Wikipedia's infobox shows VU. Confirm on the IUCN Red List (e.T161495A104172843).
+- *Holothuria dakarensis* — **resolved 15 Nov 2026**: accepted in WoRMS as *Holothuria (Holothuria) dakarensis* Panning, 1939 (AphiaID 124495), the same species written with its subgenus; the script's exact-name lookup missed the subgeneric form, so "not in WoRMS" in the log is a lookup artefact. Type locality Dakar, Senegal. IUCN Least Concern (assessed 19 May 2010, via SeaLifeBase) added to the record. NCBI and BOLD file the species as *Holothuria dakarensis*, so the counts stand.
+- *Fontitrygon margarita* IUCN — **resolved 15 Nov 2026**: curator confirmed Endangered (EN, 2021 assessment). The Vulnerable category in Wikipedia's infobox is not used.
 - Common names: neither sea cucumber has an established English name; both shown as "Sea cucumber".
