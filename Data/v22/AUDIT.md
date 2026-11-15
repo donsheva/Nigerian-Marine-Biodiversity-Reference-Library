@@ -222,3 +222,29 @@ Sources added to the Citations page. OBIS "accessed [date]" → November 2026.
 **Pop-up.** Rewritten (`assets/js/popup.js`, styles in `styles.css`): status + per-database reason first; NCBI/BOLD (or SILVA 18S/28S) record table; details; notes with version history in a collapsible block; database links first. IUCN for macrobenthos was hard-coded "LC" and for marine taxa defaulted to "NE" in `search.js`; neither array has IUCN data, so the pop-up now says "not recorded on this site". "Location" relabelled "Project sampling area" (it is a fixed value per group). Search dropdown: removed empty photo placeholder; left-aligned text. Test: all 132 pop-ups opened in Chrome — 0 errors, pill = `overallStatus()` for all, record table present for all.
 
 **Flagged to curator, not changed (taxon-list scope):** several taxa on the list are not known from the Gulf of Guinea — *Acropora palmata*, *Diadema antillarum*, *Thalassia testudinum* (Caribbean/W. Atlantic); *Holothuria atra*, *H. scabra*, *Telescopium telescopium*, *Gracilaria corticata* (Indo-Pacific); *Halophila stipulacea* (Red Sea/Indian Ocean, invasive elsewhere); *Hypanus marianae* (Brazilian endemic); *Scomber japonicus* (Pacific; the E. Atlantic chub mackerel is *S. colias*).
+
+## v22.4 — ten non-regional taxa replaced (14 Nov 2026)
+
+**Reason.** Ten list taxa are not recorded in the Gulf of Guinea, so their "absent" status did not measure a regional reference gap. Each was replaced by a documented West African species in the same group and with the same marker (curator decision, 14 Nov 2026).
+
+| Removed | Why | Replacement | Distribution source | Marker | NCBI g/WA | BOLD g/WA | Overall | NCBI any gene |
+|---|---|---|---|---|---|---|---|---|
+| *Acropora palmata* | Caribbean | *Siderastrea radians* | São Tomé & Príncipe (Schleimer et al. 2025, Crustacean Research 54) | COI | 6/0 | 6/0 | absent | 109 |
+| *Diadema antillarum* | W. Atlantic | *Diadema africanum* | Senegal, Ghana, São Tomé (Rodríguez et al. 2013, Zootaxa 3636) | COI | 244/12 (Cape Verde) | 244/12 | present | 258 |
+| *Thalassia testudinum* | Caribbean | *Halodule wrightii* | Mauritania–Angola (Tavares et al. 2022, Front. Mar. Sci. 9:809721) | rbcL | 7/0 | 5/0 | absent | 249 |
+| *Halophila stipulacea* | Red Sea / Indian Ocean | *Ruppia maritima* | One of four W. African seagrasses (Seagrasses of West Africa, Diversity 2022) | rbcL | 68/0 | 54/0 | absent | 431 |
+| *Holothuria atra* | Indo-Pacific | *Holothuria dakarensis* | Ghana (Thandar & Mjobo 2014, Zootaxa 3900) | COI | 2/1 (Cape Verde) | 2/0 | partial | 4 |
+| *Holothuria scabra* | Indo-Pacific | *Isostichopus maculatus* | Nigeria, Liberia (Borrero-Pérez et al. 2024) | COI | 16/0 | 0/0 | absent | 32 |
+| *Telescopium telescopium* | Indo-West Pacific | *Littoraria angulifera* | Senegal–Angola mangroves | COI | 8/2 (Ghana, Senegal) | 10/2 | partial | 16 |
+| *Gracilaria corticata* | Indo-Pacific | *Hypnea musciformis* | Abundant on Ghana coast (Ale et al. 2016, Diversity 8:14) | rbcL | 64/3 (Cape Verde) | 18/0 | partial | 290 |
+| *Hypanus marianae* | Brazilian endemic | *Fontitrygon margarita* | W. African endemic; Lagos landings (TJNPR 2025, 9(7):3398) | 12S | 1/1 (Senegal) | 0/0 | partial | 17 |
+| *Scomber japonicus* | Pacific | *Scomber colias* | Gulf of Guinea 10°N–16°S (Plazi/FishBase) | 12S | 8/0 | 0/0 | absent | 969 |
+
+Counts from the curator's run of `Scripts/nmbl_v22_requery.py` (log 20:49–20:51, 14 Nov 2026); raw files in `Data/v22.4/`. Verification: all 107 records × 6 counts and `ncbi_all` match the run (0 differences); stored per-database statuses match the threshold rule (0 mismatches); 132/132 pop-ups open with status = `overallStatus()`.
+
+**Totals:** absent 85 → 80, partial 42 → 46, present 5 → 6. High-priority gaps 40 → 39. IUCN-threatened vertebrates 8 (unchanged count).
+
+**Open points for the curator**
+- *Holothuria dakarensis*: WoRMS returned no match for the exact name (the script logs "not in WoRMS"); Thandar & Mjobo (2014) use *Holothuria (Holothuria) dakarensis*. Name status should be confirmed.
+- *Fontitrygon margarita* IUCN: entered as EN (2021 assessment, per Rufford project and Ghana stingray report); Wikipedia's infobox shows VU. Confirm on the IUCN Red List (e.T161495A104172843).
+- Common names: neither sea cucumber has an established English name; both shown as "Sea cucumber".

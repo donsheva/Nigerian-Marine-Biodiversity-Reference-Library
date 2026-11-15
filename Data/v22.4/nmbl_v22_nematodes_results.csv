@@ -1,0 +1,26 @@
+genus,worms_status,names_queried,silva_ssu_r144,silva_lsu_r138_2,ncbi_18s_global,ncbi_18s_wa,ncbi_18s_nigeria,ncbi_28s_global,ncbi_28s_wa,ncbi_28s_nigeria
+Chromadora,accepted,Chromadora,6,1,8,0,0,2,0,0
+Chromadorita,accepted,Chromadorita,66,51,107,0,0,57,0,0
+Ptycholaimellus,accepted,Ptycholaimellus,55,0,73,0,0,14,0,0
+Dichromadora,accepted,Dichromadora,38,2,55,0,0,6,0,0
+Innocuonema,accepted,Innocuonema,2,0,0,0,0,0,0,0
+Desmodora,accepted,Desmodora,37,2,42,0,0,16,0,0
+Spirinia,accepted,Spirinia,20,3,26,0,0,17,0,0
+Metachromadora,accepted,Metachromadora,27,3,29,0,0,13,0,0
+Monhystera,accepted,Monhystera,26,38,29,0,0,39,0,0
+Terschellingia,accepted,Terschellingia,182,0,194,0,0,13,0,0
+Diplolaimelloides,accepted,Diplolaimelloides,138,0,181,0,0,0,0,0
+Sphaerolaimus,accepted,Sphaerolaimus,60,3,57,0,0,15,0,0
+Enoplus,accepted,Enoplus,19,2,21,0,0,3,0,0
+Thoracostoma,accepted,Thoracostoma,2,6,6,0,0,8,0,0
+Eurystomina,accepted,Eurystomina,10,0,11,0,0,1,0,0
+Oxystomina,accepted,Oxystomina,42,22,51,0,0,26,0,0
+Axonolaimus,accepted,Axonolaimus,17,2,39,0,0,6,0,0
+Odontophora,accepted,Odontophora,12,7,17,0,0,11,0,0
+Campylaimus,accepted,Campylaimus,4,0,5,0,0,1,0,0
+Desmoscolex,accepted,Desmoscolex,17,0,20,0,0,0,0,0
+Quadricoma,unaccepted -> Tricoma (Quadricoma),Quadricoma; Tricoma (Quadricoma),0,0,0,0,0,0,0,0
+Aphanolaimus,accepted,Aphanolaimus,3,4,3,0,0,5,0,0
+Stylotheristus,accepted,Stylotheristus,0,0,0,0,0,0,0,0
+Pellioditis,accepted,Pellioditis,37,45,128,0,0,62,0,0
+Plectus,accepted,Plectus,181,77,214,0,0,93,0,0
