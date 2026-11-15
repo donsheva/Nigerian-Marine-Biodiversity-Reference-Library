@@ -1,0 +1,34 @@
+species,common_name,group,marker,ncbi_count,status,section,global_count
+Ethmalosa fimbriata,Bonga shad,Fish,12S,2,partial,vertebrates,
+Sardinella maderensis,Madeiran sardinella,Fish,12S,2,partial,vertebrates,
+Pseudotolithus senegalensis,Cassava croaker,Fish,12S,2,partial,vertebrates,
+Pseudotolithus elongatus,Bobo croaker,Fish,12S,3,present,vertebrates,
+Cynoglossus senegalensis,Senegalese tonguesole,Fish,12S,0,absent,vertebrates,
+Galeoides decadactylus,Lesser African threadfin,Fish,12S,1,partial,vertebrates,
+Polydactylus quadrifilis,Giant African threadfin,Fish,12S,2,partial,vertebrates,
+Lutjanus agennes,African red snapper,Fish,12S,0,absent,vertebrates,
+Arius latiscutatus,Rough-head sea catfish,Fish,12S,3,present,vertebrates,
+Brachydeuterus auritus,Bigeye grunt,Fish,12S,0,absent,vertebrates,
+Elops lacerta,West African ladyfish,Fish,12S,1,partial,vertebrates,
+Mugil cephalus,Flathead mullet,Fish,12S,53,present,vertebrates,
+Rhizoprionodon acutus,Milk shark,Elasmobranch,12S,1,partial,vertebrates,
+Rhinobatos rhinobatos,Guitarfish,Elasmobranch,12S,0,absent,vertebrates,
+Carcharhinus leucas,Bull shark,Elasmobranch,12S,7,present,vertebrates,
+Sphyrna lewini,Scalloped hammerhead,Elasmobranch,12S,25,present,vertebrates,
+Trichechus senegalensis,African manatee,Mammal,COI,0,absent,vertebrates,
+Sousa teuszii,Atlantic humpback dolphin,Mammal,COI,0,absent,vertebrates,
+Tursiops truncatus,Bottlenose dolphin,Mammal,COI,42,present,vertebrates,
+Chelonia mydas,Green sea turtle,Turtle,12S,11,present,vertebrates,
+Dermochelys coriacea,Leatherback turtle,Turtle,12S,7,present,vertebrates,
+Lepidochelys olivacea,Olive ridley turtle,Turtle,12S,3,present,vertebrates,
+Penaeus notialis,Southern pink shrimp,Crustacean,12S,2,partial,vertebrates,
+Callinectes amnicola,Swimming crab,Crustacean,12S,0,absent,vertebrates,
+Macrobrachium vollenhovenii,African river prawn,Crustacean,12S,0,absent,vertebrates,
+Nematoda,Free-living nematodes,Meiofauna,18S,473,present,meiofauna,27460
+Harpacticoida,Harpacticoid copepods,Meiofauna,18S,0,absent,meiofauna,532
+Ostracoda,Ostracods,Meiofauna,COI,0,absent,meiofauna,2987
+Tardigrada,Water bears,Meiofauna,18S,0,absent,meiofauna,1362
+Gastrotricha,Gastrotrichs,Meiofauna,18S,0,absent,meiofauna,414
+Kinorhyncha,Mud dragons,Meiofauna,18S,0,absent,meiofauna,103
+Platyhelminthes,Free-living flatworms,Meiofauna,18S,83,present,meiofauna,9218
+Foraminifera,Foraminifera,Meiofauna,18S,26,present,meiofauna,6974

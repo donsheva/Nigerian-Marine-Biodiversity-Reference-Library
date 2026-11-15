@@ -1,0 +1,22 @@
+{
+  "Ethmalosa fimbriata||12S": {
+    "global": 57,
+    "wa": 0
+  },
+  "Pseudotolithus elongatus||12S": {
+    "global": 38,
+    "wa": 12
+  },
+  "Pseudotolithus senegalensis||12S": {
+    "global": 35,
+    "wa": 12
+  },
+  "Sardinella aurita||12S": {
+    "global": 1100,
+    "wa": 3
+  },
+  "Sardinella maderensis||12S": {
+    "global": 45,
+    "wa": 6
+  }
+}

@@ -20,7 +20,7 @@ import pandas as pd
 import requests
 import time
 
-Entrez.email = "odedereade@gmail.com"   # ← your NCBI email
+Entrez.email = "your@email.com"   # ← your NCBI email
 
 WA_COUNTRIES = ["Nigeria", "Ghana", "Cameroon", "Benin", "Togo",
                 "Senegal", "Guinea", "Cote d Ivoire", "Gulf of Guinea"]

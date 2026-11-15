@@ -1,0 +1,392 @@
+2026-04-23 01:45:49,890  INFO     Using NCBI API key (faster rate limit)
+2026-04-23 01:45:49,890  INFO     Parsing dashboard: nigeria_reflib_dashboard_v21.html
+2026-04-23 01:45:49,896  INFO     Found 107 species entries
+2026-04-23 01:45:49,896  INFO     Limited to first 5 species for this run
+2026-04-23 01:45:49,896  INFO     [1/5] Ethmalosa fimbriata (12S)
+2026-04-23 01:45:49,896  INFO       NCBI Ethmalosa fimbriata x 12S: querying global + WA
+2026-04-23 01:45:49,896  INFO         NCBI query: "Ethmalosa fimbriata"[Organism] AND 12S[Title]
+2026-04-23 01:45:52,727  INFO         NCBI returned: 2 hits
+2026-04-23 01:45:52,727  INFO         NCBI query: "Ethmalosa fimbriata"[Organism] AND 12S[Title] AND ("Nigeria"[Country] OR "Ghana"[Country] OR "Cameroon"[Country] OR "Benin"[Country] OR "Togo"[Country] OR "Cote d'Ivoire"[Country])
+2026-04-23 01:45:53,632  INFO         NCBI returned: 0 hits
+2026-04-23 01:45:56,754  INFO         BOLD Ethmalosa fimbriata geo=None → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:46:01,565  INFO         BOLD Ethmalosa fimbriata geo=None → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:46:08,484  INFO         BOLD Ethmalosa fimbriata geo=None → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:46:19,492  INFO         BOLD Ethmalosa fimbriata geo=None → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:46:22,465  INFO         BOLD Ethmalosa fimbriata geo=Nigeria → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:46:27,343  INFO         BOLD Ethmalosa fimbriata geo=Nigeria → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:46:34,017  INFO         BOLD Ethmalosa fimbriata geo=Nigeria → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:46:44,643  INFO         BOLD Ethmalosa fimbriata geo=Nigeria → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:46:47,582  INFO         BOLD Ethmalosa fimbriata geo=Ghana → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:46:52,477  INFO         BOLD Ethmalosa fimbriata geo=Ghana → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:46:59,321  INFO         BOLD Ethmalosa fimbriata geo=Ghana → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:47:10,200  INFO         BOLD Ethmalosa fimbriata geo=Ghana → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:47:12,772  INFO         BOLD Ethmalosa fimbriata geo=Cameroon → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:47:17,394  INFO         BOLD Ethmalosa fimbriata geo=Cameroon → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:47:23,973  INFO         BOLD Ethmalosa fimbriata geo=Cameroon → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:47:34,903  INFO         BOLD Ethmalosa fimbriata geo=Cameroon → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:47:37,673  INFO         BOLD Ethmalosa fimbriata geo=Benin → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:47:42,449  INFO         BOLD Ethmalosa fimbriata geo=Benin → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:47:49,647  INFO         BOLD Ethmalosa fimbriata geo=Benin → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:48:02,405  INFO         BOLD Ethmalosa fimbriata geo=Benin → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:48:06,790  INFO         BOLD Ethmalosa fimbriata geo=Togo → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:48:16,411  INFO         BOLD Ethmalosa fimbriata geo=Togo → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:48:23,540  INFO         BOLD Ethmalosa fimbriata geo=Togo → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:48:37,415  INFO         BOLD Ethmalosa fimbriata geo=Togo → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:48:40,589  INFO         BOLD Ethmalosa fimbriata geo=Cote d'Ivoire → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:48:46,372  INFO         BOLD Ethmalosa fimbriata geo=Cote d'Ivoire → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:48:54,493  INFO         BOLD Ethmalosa fimbriata geo=Cote d'Ivoire → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:49:05,769  INFO         BOLD Ethmalosa fimbriata geo=Cote d'Ivoire → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:49:05,778  INFO     [2/5] Sardinella maderensis (12S)
+2026-04-23 01:49:05,779  INFO       NCBI Sardinella maderensis x 12S: querying global + WA
+2026-04-23 01:49:05,779  INFO         NCBI query: "Sardinella maderensis"[Organism] AND 12S[Title]
+2026-04-23 01:49:06,668  INFO         NCBI returned: 2 hits
+2026-04-23 01:49:06,668  INFO         NCBI query: "Sardinella maderensis"[Organism] AND 12S[Title] AND ("Nigeria"[Country] OR "Ghana"[Country] OR "Cameroon"[Country] OR "Benin"[Country] OR "Togo"[Country] OR "Cote d'Ivoire"[Country])
+2026-04-23 01:49:07,672  INFO         NCBI returned: 0 hits
+2026-04-23 01:49:12,097  INFO         BOLD Sardinella maderensis geo=None → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:49:18,434  INFO         BOLD Sardinella maderensis geo=None → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:49:25,820  INFO         BOLD Sardinella maderensis geo=None → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:49:37,555  INFO         BOLD Sardinella maderensis geo=None → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:49:41,628  INFO         BOLD Sardinella maderensis geo=Nigeria → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:49:47,096  INFO         BOLD Sardinella maderensis geo=Nigeria → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:49:54,140  INFO         BOLD Sardinella maderensis geo=Nigeria → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:50:04,988  INFO         BOLD Sardinella maderensis geo=Nigeria → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:50:07,998  INFO         BOLD Sardinella maderensis geo=Ghana → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:50:12,919  INFO         BOLD Sardinella maderensis geo=Ghana → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:50:20,045  INFO         BOLD Sardinella maderensis geo=Ghana → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:50:58,299  WARNING  BOLD query failed for Sardinella maderensis geo=Ghana (attempt 4): HTTPConnectionPool(host='v4.boldsystems.org', port=80): Read timed out. (read timeout=30)
+2026-04-23 01:51:29,157  WARNING  BOLD query failed for Sardinella maderensis geo=Cameroon (attempt 1): HTTPConnectionPool(host='v4.boldsystems.org', port=80): Read timed out. (read timeout=30)
+2026-04-23 01:52:01,422  WARNING  BOLD query failed for Sardinella maderensis geo=Cameroon (attempt 2): HTTPConnectionPool(host='v4.boldsystems.org', port=80): Read timed out. (read timeout=30)
+2026-04-23 01:52:35,927  WARNING  BOLD query failed for Sardinella maderensis geo=Cameroon (attempt 3): HTTPConnectionPool(host='v4.boldsystems.org', port=80): Read timed out. (read timeout=30)
+2026-04-23 01:53:14,208  WARNING  BOLD query failed for Sardinella maderensis geo=Cameroon (attempt 4): HTTPConnectionPool(host='v4.boldsystems.org', port=80): Read timed out. (read timeout=30)
+2026-04-23 01:53:44,590  WARNING  BOLD query failed for Sardinella maderensis geo=Benin (attempt 1): HTTPConnectionPool(host='v4.boldsystems.org', port=80): Read timed out. (read timeout=30)
+2026-04-23 01:54:17,006  WARNING  BOLD query failed for Sardinella maderensis geo=Benin (attempt 2): HTTPConnectionPool(host='v4.boldsystems.org', port=80): Read timed out. (read timeout=30)
+2026-04-23 01:54:51,289  WARNING  BOLD query failed for Sardinella maderensis geo=Benin (attempt 3): HTTPConnectionPool(host='v4.boldsystems.org', port=80): Read timed out. (read timeout=30)
+2026-04-23 01:55:29,549  WARNING  BOLD query failed for Sardinella maderensis geo=Benin (attempt 4): HTTPConnectionPool(host='v4.boldsystems.org', port=80): Read timed out. (read timeout=30)
+2026-04-23 01:55:29,587  WARNING  BOLD query failed for Sardinella maderensis geo=Togo (attempt 1): HTTPConnectionPool(host='v4.boldsystems.org', port=80): Max retries exceeded with url: /index.php/API_Public/combined?taxon=Sardinella+maderensis&format=json&geo=Togo (Caused by NameResolutionError("HTTPConnection(host='v4.boldsystems.org', port=80): Failed to resolve 'v4.boldsystems.org' ([Errno 11001] getaddrinfo failed)"))
+2026-04-23 01:55:31,600  WARNING  BOLD query failed for Sardinella maderensis geo=Togo (attempt 2): HTTPConnectionPool(host='v4.boldsystems.org', port=80): Max retries exceeded with url: /index.php/API_Public/combined?taxon=Sardinella+maderensis&format=json&geo=Togo (Caused by NameResolutionError("HTTPConnection(host='v4.boldsystems.org', port=80): Failed to resolve 'v4.boldsystems.org' ([Errno 11001] getaddrinfo failed)"))
+2026-04-23 01:55:35,603  WARNING  BOLD query failed for Sardinella maderensis geo=Togo (attempt 3): HTTPConnectionPool(host='v4.boldsystems.org', port=80): Max retries exceeded with url: /index.php/API_Public/combined?taxon=Sardinella+maderensis&format=json&geo=Togo (Caused by NameResolutionError("HTTPConnection(host='v4.boldsystems.org', port=80): Failed to resolve 'v4.boldsystems.org' ([Errno 11001] getaddrinfo failed)"))
+2026-04-23 01:55:43,613  WARNING  BOLD query failed for Sardinella maderensis geo=Togo (attempt 4): HTTPConnectionPool(host='v4.boldsystems.org', port=80): Max retries exceeded with url: /index.php/API_Public/combined?taxon=Sardinella+maderensis&format=json&geo=Togo (Caused by NameResolutionError("HTTPConnection(host='v4.boldsystems.org', port=80): Failed to resolve 'v4.boldsystems.org' ([Errno 11001] getaddrinfo failed)"))
+2026-04-23 01:55:43,623  WARNING  BOLD query failed for Sardinella maderensis geo=Cote d'Ivoire (attempt 1): HTTPConnectionPool(host='v4.boldsystems.org', port=80): Max retries exceeded with url: /index.php/API_Public/combined?taxon=Sardinella+maderensis&format=json&geo=Cote+d%27Ivoire (Caused by NameResolutionError("HTTPConnection(host='v4.boldsystems.org', port=80): Failed to resolve 'v4.boldsystems.org' ([Errno 11001] getaddrinfo failed)"))
+2026-04-23 01:55:45,634  WARNING  BOLD query failed for Sardinella maderensis geo=Cote d'Ivoire (attempt 2): HTTPConnectionPool(host='v4.boldsystems.org', port=80): Max retries exceeded with url: /index.php/API_Public/combined?taxon=Sardinella+maderensis&format=json&geo=Cote+d%27Ivoire (Caused by NameResolutionError("HTTPConnection(host='v4.boldsystems.org', port=80): Failed to resolve 'v4.boldsystems.org' ([Errno 11001] getaddrinfo failed)"))
+2026-04-23 01:55:49,641  WARNING  BOLD query failed for Sardinella maderensis geo=Cote d'Ivoire (attempt 3): HTTPConnectionPool(host='v4.boldsystems.org', port=80): Max retries exceeded with url: /index.php/API_Public/combined?taxon=Sardinella+maderensis&format=json&geo=Cote+d%27Ivoire (Caused by NameResolutionError("HTTPConnection(host='v4.boldsystems.org', port=80): Failed to resolve 'v4.boldsystems.org' ([Errno 11001] getaddrinfo failed)"))
+2026-04-23 01:55:57,655  WARNING  BOLD query failed for Sardinella maderensis geo=Cote d'Ivoire (attempt 4): HTTPConnectionPool(host='v4.boldsystems.org', port=80): Max retries exceeded with url: /index.php/API_Public/combined?taxon=Sardinella+maderensis&format=json&geo=Cote+d%27Ivoire (Caused by NameResolutionError("HTTPConnection(host='v4.boldsystems.org', port=80): Failed to resolve 'v4.boldsystems.org' ([Errno 11001] getaddrinfo failed)"))
+2026-04-23 01:55:57,661  INFO     [3/5] Sardinella aurita (12S)
+2026-04-23 01:55:57,661  INFO       NCBI Sardinella aurita x 12S: querying global + WA
+2026-04-23 01:55:57,664  INFO         NCBI query: "Sardinella aurita"[Organism] AND 12S[Title]
+2026-04-23 01:56:27,671  WARNING  NCBI query failed (attempt 1/4): <urlopen error [Errno 11001] getaddrinfo failed>
+2026-04-23 01:57:23,185  INFO         NCBI returned: 8 hits
+2026-04-23 01:57:23,185  INFO         NCBI query: "Sardinella aurita"[Organism] AND 12S[Title] AND ("Nigeria"[Country] OR "Ghana"[Country] OR "Cameroon"[Country] OR "Benin"[Country] OR "Togo"[Country] OR "Cote d'Ivoire"[Country])
+2026-04-23 01:57:25,193  INFO         NCBI returned: 0 hits
+2026-04-23 01:57:32,695  INFO         BOLD Sardinella aurita geo=None → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:57:38,141  INFO         BOLD Sardinella aurita geo=None → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:57:45,523  INFO         BOLD Sardinella aurita geo=None → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:58:03,158  INFO         BOLD Sardinella aurita geo=None → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:58:06,317  INFO         BOLD Sardinella aurita geo=Nigeria → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:58:12,168  INFO         BOLD Sardinella aurita geo=Nigeria → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:58:19,308  INFO         BOLD Sardinella aurita geo=Nigeria → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:58:32,290  INFO         BOLD Sardinella aurita geo=Nigeria → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:58:36,472  INFO         BOLD Sardinella aurita geo=Ghana → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:58:44,326  INFO         BOLD Sardinella aurita geo=Ghana → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:58:54,845  INFO         BOLD Sardinella aurita geo=Ghana → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:59:06,481  INFO         BOLD Sardinella aurita geo=Ghana → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:59:09,945  INFO         BOLD Sardinella aurita geo=Cameroon → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:59:15,705  INFO         BOLD Sardinella aurita geo=Cameroon → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:59:23,065  INFO         BOLD Sardinella aurita geo=Cameroon → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:59:33,729  INFO         BOLD Sardinella aurita geo=Cameroon → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:59:37,123  INFO         BOLD Sardinella aurita geo=Benin → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:59:43,496  INFO         BOLD Sardinella aurita geo=Benin → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 01:59:53,932  INFO         BOLD Sardinella aurita geo=Benin → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 02:00:10,933  INFO         BOLD Sardinella aurita geo=Benin → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 02:00:24,473  INFO         BOLD Sardinella aurita geo=Togo → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 02:00:29,457  INFO         BOLD Sardinella aurita geo=Togo → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 02:00:36,273  INFO         BOLD Sardinella aurita geo=Togo → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 02:00:47,543  INFO         BOLD Sardinella aurita geo=Togo → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 02:00:50,467  INFO         BOLD Sardinella aurita geo=Cote d'Ivoire → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 02:00:57,940  INFO         BOLD Sardinella aurita geo=Cote d'Ivoire → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 02:01:08,600  INFO         BOLD Sardinella aurita geo=Cote d'Ivoire → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 02:01:19,556  INFO         BOLD Sardinella aurita geo=Cote d'Ivoire → non-JSON: <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=is
+2026-04-23 02:01:19,565  INFO     [4/5] Pseudotolithus senegalensis (12S)
+2026-04-23 02:01:19,567  INFO       NCBI Pseudotolithus senegalensis x 12S: querying global + WA
+2026-04-23 02:09:38,727  INFO     [5/5] Pseudotolithus elongatus (12S)
+2026-04-23 02:09:38,729  INFO       NCBI Pseudotolithus elongatus x 12S: querying global + WA
+2026-04-23 02:12:57,034  INFO     Wrote verification_report_v21.csv
+2026-04-23 02:12:57,036  INFO     Wrote verification_report_v21.json
+2026-04-23 02:12:57,042  INFO     Wrote dashboard_update_patch.json (5 species patches)
+2026-04-23 02:12:57,042  INFO     
+2026-04-23 02:12:57,042  INFO     ─── SUMMARY ──────────────────────────────────────
+2026-04-23 02:12:57,042  INFO     Species processed:        5
+2026-04-23 02:12:57,042  INFO     NCBI status changes:      5
+2026-04-23 02:12:57,042  INFO     BOLD status changes:      2
+2026-04-23 02:12:57,042  INFO     Records with errors:      5
+2026-04-23 02:12:57,042  INFO     
+2026-04-23 02:12:57,042  INFO     Next step: review verification_report_v21.csv
+2026-04-23 02:12:57,042  INFO     Then run with --apply to update the HTML:
+2026-04-23 02:12:57,042  INFO       python reverify_v21.py --dashboard nigeria_reflib_dashboard_v21.html --apply

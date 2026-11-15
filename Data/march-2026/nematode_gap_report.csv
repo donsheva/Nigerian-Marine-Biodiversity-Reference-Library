@@ -1,0 +1,28 @@
+genus,order,ecological_role,global_18S,wa_18S,ng_18S,global_28S,wa_28S,ng_28S
+Chromadora,Chromadorida,Enrichment tolerant,3,0,0,1,0,0
+Chromadorita,Chromadorida,Enrichment tolerant,56,0,14,52,0,0
+Ptycholaimellus,Chromadorida,Enrichment tolerant,4,0,0,0,0,0
+Dichromadora,Chromadorida,Enrichment tolerant,8,0,0,2,0,0
+Innocuonema,Chromadorida,Enrichment tolerant,0,0,0,0,0,0
+Desmodora,Desmodorida,Hypoxia tolerant,14,0,0,2,0,0
+Spirinia,Desmodorida,Hypoxia tolerant,8,0,0,2,0,0
+Metachromadora,Desmodorida,Hypoxia tolerant,8,0,0,3,0,0
+Monhystera,Monhysterida,Disturbance opportunist,23,0,0,37,0,0
+Terschellingia,Monhysterida,Organic enrichment indicator,114,0,0,1,0,0
+Diplolaimelloides,Monhysterida,Organic enrichment indicator,138,0,0,0,0,0
+Sphaerolaimus,Monhysterida,Sulphide tolerant,17,0,0,3,0,0
+Enoplus,Enoplida,Pollution sensitive,12,0,0,2,0,0
+Thoracostoma,Enoplida,Pollution sensitive,3,0,0,7,0,0
+Eurystomina,Enoplida,Pollution sensitive,3,0,0,0,0,0
+Oxystomina,Enoplida,Pollution sensitive,27,0,0,24,0,0
+Axonolaimus,Araeolaimida,Deposit feeder,23,0,0,2,0,0
+Odontophora,Araeolaimida,Deposit feeder,9,0,0,7,0,0
+Campylaimus,Araeolaimida,Deposit feeder,1,0,0,0,0,0
+Desmoscolex,Desmoscolecida,Sandy sediment specialist,6,0,0,0,0,0
+Quadricoma,Desmoscolecida,Sandy sediment specialist,0,0,0,0,0,0
+Pellioditis,Rhabditida,Organic matter indicator,35,0,1,6,0,0
+Diploscapter,Rhabditida,Organic matter indicator,12,0,0,2,0,0
+Plectus,Plectida,Generalist,120,0,0,73,0,0
+Rhabditis,Plectida,Generalist,187,0,0,24,0,0
+Aphanolaimus,Araeolaimida,Fine sediment,3,0,0,4,0,0
+Stylotheristus,Desmodorida,Mangrove associated,0,0,0,0,0,0

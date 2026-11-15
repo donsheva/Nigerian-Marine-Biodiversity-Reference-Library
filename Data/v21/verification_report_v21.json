@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Ethmalosa fimbriata",
+    "marker": "12S",
+    "stored_ncbi": "partial",
+    "stored_bold": "absent",
+    "stored_ncbi_global": 2,
+    "stored_ncbi_wa": 2,
+    "stored_priority": "high",
+    "stored_notes": "Top commercial pelagic; 2 West African NCBI 12S records \u2014 below threshold of 3 for reliable ID; BOLD absent \u2014 overall partial",
+    "new_ncbi_global": 2,
+    "new_ncbi_wa": 0,
+    "new_bold_total": 0,
+    "new_bold_wa": 0,
+    "new_ncbi_status": "absent",
+    "new_bold_status": "absent",
+    "new_overall_status": "absent",
+    "errors": [
+      "BOLD: total: non-JSON response; Nigeria: non-JSON response; Ghana: non-JSON response; Cameroon: non-JSON response; Benin: non-JSON response; Togo: non-JSON response; Cote d'Ivoire: non-JSON response"
+    ]
+  },
+  {
+    "name": "Sardinella maderensis",
+    "marker": "12S",
+    "stored_ncbi": "partial",
+    "stored_bold": "present",
+    "stored_ncbi_global": 2,
+    "stored_ncbi_wa": 2,
+    "stored_priority": "med",
+    "stored_notes": "BOLD v5: WA records confirmed; NCBI 2 WA 12S records \u2014 below threshold of 3; more WA barcodes needed",
+    "new_ncbi_global": 2,
+    "new_ncbi_wa": 0,
+    "new_bold_total": 0,
+    "new_bold_wa": 0,
+    "new_ncbi_status": "absent",
+    "new_bold_status": "absent",
+    "new_overall_status": "absent",
+    "errors": [
+      "BOLD: total: non-JSON response; Nigeria: non-JSON response; Ghana: ReadTimeout: HTTPConnectionPool(host='v4.boldsystems.org', port=80): Read timed out. (read timeout=30); Cameroon: ReadTimeout: HTTPConnectionPool(host='v4.boldsystems.org', port=80): Read timed out. (read timeout=30); Benin: ReadTimeout: HTTPConnectionPool(host='v4.boldsystems.org', port=80): Read timed out. (read timeout=30); Togo: ConnectionError: HTTPConnectionPool(host='v4.boldsystems.org', port=80): Max retries exceeded with url: /index.php/API_Public/combined?taxon=Sardinella+maderensis&format=json&geo=Togo (Caused by NameResolutionError(\"HTTPConnection(host='v4.boldsystems.org', port=80): Failed to resolve 'v4.boldsystems.org' ([Errno 11001] getaddrinfo failed)\")); Cote d'Ivoire: ConnectionError: HTTPConnectionPool(host='v4.boldsystems.org', port=80): Max retries exceeded with url: /index.php/API_Public/combined?taxon=Sardinella+maderensis&format=json&geo=Cote+d%27Ivoire (Caused by NameResolutionError(\"HTTPConnection(host='v4.boldsystems.org', port=80): Failed to resolve 'v4.boldsystems.org' ([Errno 11001] getaddrinfo failed)\"))"
+    ]
+  },
+  {
+    "name": "Sardinella aurita",
+    "marker": "12S",
+    "stored_ncbi": "present",
+    "stored_bold": "present",
+    "stored_ncbi_global": 8,
+    "stored_ncbi_wa": 4,
+    "stored_priority": "low",
+    "stored_notes": "8 global NCBI 12S; 4 from West Africa (Senegal, Ghana, C\u00f4te d'Ivoire) \u2014 meets 12S threshold of 3; BOLD v5: WA records confirmed",
+    "new_ncbi_global": 8,
+    "new_ncbi_wa": 0,
+    "new_bold_total": 0,
+    "new_bold_wa": 0,
+    "new_ncbi_status": "absent",
+    "new_bold_status": "absent",
+    "new_overall_status": "absent",
+    "errors": [
+      "BOLD: total: non-JSON response; Nigeria: non-JSON response; Ghana: non-JSON response; Cameroon: non-JSON response; Benin: non-JSON response; Togo: non-JSON response; Cote d'Ivoire: non-JSON response"
+    ]
+  },
+  {
+    "name": "Pseudotolithus senegalensis",
+    "marker": "12S",
+    "stored_ncbi": "partial",
+    "stored_bold": "absent",
+    "stored_ncbi_global": 2,
+    "stored_ncbi_wa": 2,
+    "stored_priority": "high",
+    "stored_notes": "Top commercial demersal; zero sequences",
+    "new_ncbi_global": 2,
+    "new_ncbi_wa": 0,
+    "new_bold_total": 0,
+    "new_bold_wa": 0,
+    "new_ncbi_status": "absent",
+    "new_bold_status": "absent",
+    "new_overall_status": "absent",
+    "errors": [
+      "BOLD: total: non-JSON response; Nigeria: non-JSON response; Ghana: non-JSON response; Cameroon: non-JSON response; Benin: non-JSON response; Togo: non-JSON response; Cote d'Ivoire: non-JSON response"
+    ]
+  },
+  {
+    "name": "Pseudotolithus elongatus",
+    "marker": "12S",
+    "stored_ncbi": "present",
+    "stored_bold": "absent",
+    "stored_ncbi_global": 3,
+    "stored_ncbi_wa": 3,
+    "stored_priority": "high",
+    "stored_notes": "Common Niger Delta trawls; 3 WA 12S records \u2014 meets threshold; BOLD absent \u2014 overall partial",
+    "new_ncbi_global": 3,
+    "new_ncbi_wa": 0,
+    "new_bold_total": 0,
+    "new_bold_wa": 0,
+    "new_ncbi_status": "absent",
+    "new_bold_status": "absent",
+    "new_overall_status": "absent",
+    "errors": [
+      "BOLD: total: non-JSON response; Nigeria: non-JSON response; Ghana: non-JSON response; Cameroon: non-JSON response; Benin: non-JSON response; Togo: non-JSON response; Cote d'Ivoire: non-JSON response"
+    ]
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "species": "Ethmalosa fimbriata",
+    "updates": {
+      "ncbi": "absent",
+      "bold": "absent",
+      "ncbi_global": 57,
+      "ncbi_wa": 0
+    }
+  },
+  {
+    "species": "Sardinella maderensis",
+    "updates": {
+      "ncbi": "present",
+      "bold": "absent",
+      "ncbi_global": 45,
+      "ncbi_wa": 6
+    }
+  },
+  {
+    "species": "Sardinella aurita",
+    "updates": {
+      "ncbi": "present",
+      "bold": "absent",
+      "ncbi_global": 1100,
+      "ncbi_wa": 3
+    }
+  },
+  {
+    "species": "Pseudotolithus senegalensis",
+    "updates": {
+      "ncbi": "present",
+      "bold": "absent",
+      "ncbi_global": 35,
+      "ncbi_wa": 12
+    }
+  },
+  {
+    "species": "Pseudotolithus elongatus",
+    "updates": {
+      "ncbi": "present",
+      "bold": "absent",
+      "ncbi_global": 38,
+      "ncbi_wa": 12
+    }
+  }
+]

@@ -1,0 +1,133 @@
+section,name,common,group,marker,ncbi,bold_silva,overall_status,priority,iucn,habitat,location,notes,genus,order,pollution_response,global_18S,wa_18S,ng_18S,global_28S,ng_28S
+vertebrate,Ethmalosa fimbriata,Bonga shad,Fish,12S,partial,absent,partial,high,LC,Estuarine/Coastal,Lagos Lagoon,Top commercial pelagic; no 12S globally,,,,,,,,
+vertebrate,Sardinella maderensis,Madeiran sardinella,Fish,12S,present,present,present,low,LC,Marine/Pelagic,Gulf of Guinea,Well covered globally,,,,,,,,
+vertebrate,Sardinella aurita,Round sardinella,Fish,12S,present,present,present,low,LC,Marine/Pelagic,Gulf of Guinea,Well covered globally,,,,,,,,
+vertebrate,Pseudotolithus senegalensis,Cassava croaker,Fish,12S,absent,absent,absent,high,LC,Coastal/Estuarine,Niger Delta,Top commercial demersal; zero sequences,,,,,,,,
+vertebrate,Pseudotolithus elongatus,Bobo croaker,Fish,12S,absent,absent,absent,high,LC,Coastal/Demersal,Niger Delta,Common Niger Delta trawls; unsequenced,,,,,,,,
+vertebrate,Cynoglossus senegalensis,Senegalese tonguesole,Fish,12S,absent,absent,absent,high,LC,Demersal/Soft sediment,Gulf of Guinea,Abundant bycatch; zero sequences,,,,,,,,
+vertebrate,Galeoides decadactylus,Lesser African threadfin,Fish,12S,absent,absent,absent,high,LC,Coastal/Estuarine,Lagos/Niger Delta,Key artisanal species,,,,,,,,
+vertebrate,Polydactylus quadrifilis,Giant African threadfin,Fish,12S,partial,absent,partial,high,LC,Coastal/Estuarine,Lagos Lagoon,Few COI records; no 12S,,,,,,,,
+vertebrate,Lutjanus agennes,African red snapper,Fish,12S,absent,absent,absent,high,LC,Reef/Rocky substrate,Gulf of Guinea,Reef-associated; no sequences anywhere,,,,,,,,
+vertebrate,Arius latiscutatus,Rough-head sea catfish,Fish,12S,absent,absent,absent,high,LC,Estuarine/Mangrove,Niger Delta,Dominant estuarine catfish,,,,,,,,
+vertebrate,Brachydeuterus auritus,Bigeye grunt,Fish,12S,absent,absent,absent,med,LC,Coastal/Demersal,Gulf of Guinea,Abundant in trawl surveys,,,,,,,,
+vertebrate,Pomadasys jubelini,Sompat grunt,Fish,12S,partial,absent,partial,med,LC,Estuarine/Nearshore,Lagos Lagoon,Estuarine and nearshore,,,,,,,,
+vertebrate,Elops lacerta,West African ladyfish,Fish,12S,absent,absent,absent,med,LC,Coastal/Estuarine,Gulf of Guinea,Coastal; underrepresented,,,,,,,,
+vertebrate,Drepane africana,African sicklefish,Fish,12S,absent,absent,absent,med,LC,Coastal/Sandy substrate,Gulf of Guinea,,,,,,,,,
+vertebrate,Mugil cephalus,Flathead mullet,Fish,12S,present,present,present,low,LC,Coastal/Estuarine,Lagos Lagoon,Cosmopolitan; well covered,,,,,,,,
+vertebrate,Chrysichthys nigrodigitatus,Bagrid catfish,Fish,12S,partial,absent,partial,med,LC,Freshwater/Estuarine,Lagos Lagoon,Common in Lagos Lagoon,,,,,,,,
+vertebrate,Rhizoprionodon acutus,Milk shark,Elasmobranch,12S,partial,absent,partial,high,NT,Inshore/Coastal,Gulf of Guinea,Most common inshore shark; few WA records,,,,,,,,
+vertebrate,Rhinobatos rhinobatos,Common guitarfish,Elasmobranch,12S,partial,absent,partial,high,CR,Inshore/Sandy substrate,Gulf of Guinea,Critically endangered; major WA gap,,,,,,,,
+vertebrate,Hypanus marianae,Large-eyed stingray,Elasmobranch,12S,absent,absent,absent,high,LC,Inshore/Sandy substrate,Gulf of Guinea,Inshore stingray; no sequences,,,,,,,,
+vertebrate,Carcharhinus leucas,Bull shark,Elasmobranch,12S,present,present,present,low,NT,Coastal/Estuarine,Lagos/Niger Delta,Global records available,,,,,,,,
+vertebrate,Sphyrna lewini,Scalloped hammerhead,Elasmobranch,12S,present,partial,partial,med,CR,Coastal/Offshore,Gulf of Guinea,CITES listed; some records,,,,,,,,
+vertebrate,Penaeus notialis,Southern pink shrimp,Crustacean,COI,partial,absent,partial,high,LC,Shallow marine/Estuarine,Niger Delta,Most important commercial shrimp,,,,,,,,
+vertebrate,Callinectes amnicola,Swimming crab,Crustacean,COI,absent,absent,absent,high,DD,Estuarine/Lagoon,Lagos Lagoon,Dominant brachyuran; zero sequences,,,,,,,,
+vertebrate,Parapenaeus longirostris,Deep-water rose shrimp,Crustacean,COI,present,partial,partial,low,LC,Offshore/Deep,Gulf of Guinea,Some Mediterranean records,,,,,,,,
+vertebrate,Macrobrachium vollenhovenii,African river prawn,Crustacean,COI,partial,absent,partial,med,LC,Freshwater/Estuarine,Niger Delta,Estuarine/freshwater overlap,,,,,,,,
+vertebrate,Trichechus senegalensis,African manatee,Mammal,COI,partial,absent,partial,high,VU,Lagoon/Mangrove/Riverine,Lagos Lagoon,CITES I; data-deficient in Nigeria,,,,,,,,
+vertebrate,Sousa teuszii,Atlantic humpback dolphin,Mammal,COI,partial,absent,partial,high,CR,Coastal/Marine,Gulf of Guinea,Critically endangered; GoG endemic,,,,,,,,
+vertebrate,Tursiops truncatus,Bottlenose dolphin,Mammal,COI,present,present,present,low,LC,Coastal/Offshore,Gulf of Guinea,Well covered globally,,,,,,,,
+vertebrate,Chelonia mydas,Green sea turtle,Turtle,12S,present,partial,partial,low,EN,Marine/Nesting beaches,Gulf of Guinea,Global records; some WA gaps,,,,,,,,
+vertebrate,Dermochelys coriacea,Leatherback turtle,Turtle,12S,present,partial,partial,low,VU,Marine/Offshore,Gulf of Guinea,Global records available,,,,,,,,
+vertebrate,Lepidochelys olivacea,Olive ridley turtle,Turtle,12S,present,partial,partial,low,VU,Marine/Coastal,Gulf of Guinea,Nests on Nigerian beaches,,,,,,,,
+meiofauna,Harpacticoida,Harpacticoid copepods,Meiofauna,18S,partial,absent,partial,high,,,,N:C ratio denominator; key bioindicator,,,,,,,,
+meiofauna,Ostracoda,Ostracods,Meiofauna,COI,partial,absent,partial,med,,,,Sediment archive; pollution record,,,,,,,,
+meiofauna,Tardigrada,Water bears,Meiofauna,18S,partial,absent,partial,med,,,,Sandy sediment specialist,,,,,,,,
+meiofauna,Gastrotricha,Gastrotrichs,Meiofauna,18S,absent,absent,absent,med,,,,Fine sediment indicator,,,,,,,,
+meiofauna,Kinorhyncha,Mud dragons,Meiofauna,18S,absent,absent,absent,med,,,,Subtidal mud specialist,,,,,,,,
+meiofauna,Foraminifera,Foraminifera,Protist,18S,partial,absent,partial,high,,,,Sediment archive; historical baseline,,,,,,,,
+meiofauna,Ciliophora,Ciliates,Protist,18S,partial,absent,partial,med,,,,Organic matter processors,,,,,,,,
+meiofauna,Bacillariophyta,Diatoms,Protist,18S,partial,absent,partial,med,,,,Primary producers; water quality,,,,,,,,
+meiofauna,Polychaeta,Polychaete worms,Meiofauna,COI,partial,absent,partial,high,,,,Key organic enrichment indicator,,,,,,,,
+marine,Thunnus albacares,Yellowfin tuna,Marine-Pelagic,12S,present,present,present,low,,,,Major offshore fishery; globally well-sequenced,,,,,,,,
+marine,Katsuwonus pelamis,Skipjack tuna,Marine-Pelagic,12S,present,present,present,low,,,,Highly migratory; global records exist,,,,,,,,
+marine,Thunnus obesus,Bigeye tuna,Marine-Pelagic,12S,present,present,present,low,,,,Deep-ranging tuna; EEZ fishery,,,,,,,,
+marine,Xiphias gladius,Swordfish,Marine-Pelagic,12S,present,partial,partial,low,,,,Offshore billfish; some WA gap,,,,,,,,
+marine,Coryphaena hippurus,Dolphinfish / mahi-mahi,Marine-Pelagic,12S,present,partial,partial,low,,,,Offshore; few Nigeria-specific sequences,,,,,,,,
+marine,Scomber japonicus,Chub mackerel,Marine-Pelagic,12S,present,present,present,low,,,,Pelagic; global records,,,,,,,,
+marine,Scomberomorus tritor,West African Spanish mackerel,Marine-Pelagic,12S,partial,absent,partial,high,,,,Key Gulf of Guinea pelagic; very few sequences,,,,,,,,
+marine,Caranx hippos,Crevalle jack,Marine-Pelagic,12S,present,partial,partial,med,,,,Nearshore-offshore; few WA barcodes,,,,,,,,
+marine,Trichiurus lepturus,Largehead hairtail,Marine-Pelagic,12S,present,partial,partial,med,,,,Common offshore demersal-pelagic,,,,,,,,
+marine,Dentex angolensis,Angolan dentex,Marine-Demersal,12S,absent,absent,absent,high,,,,Deep trawl target; zero sequences globally,,,,,,,,
+marine,Pagellus bellottii,Red pandora,Marine-Demersal,12S,partial,absent,partial,high,,,,Important offshore demersal; few WA records,,,,,,,,
+marine,Epinephelus aeneus,White grouper,Marine-Demersal,12S,partial,absent,partial,high,,,,Reef/rocky substrate; Gulf of Guinea gap,,,,,,,,
+marine,Sparus caeruleostictus,Blue-spotted seabream,Marine-Demersal,12S,partial,absent,partial,high,,,,Common offshore; unsequenced from Nigeria,,,,,,,,
+marine,Pseudupeneus prayensis,West African goatfish,Marine-Demersal,12S,absent,absent,absent,high,,,,Sandy substrate offshore; zero sequences,,,,,,,,
+marine,Pteroscion peli,Boe drum,Marine-Demersal,12S,absent,absent,absent,high,,,,Gulf of Guinea endemic demersal; unsequenced,,,,,,,,
+marine,Pomadasys rogerii,Piggy grunt,Marine-Demersal,12S,absent,absent,absent,med,,,,Coastal/offshore demersal,,,,,,,,
+marine,Lutjanus goreensis,Gorean snapper,Marine-Demersal,12S,absent,absent,absent,high,,,,West African endemic snapper; unsequenced,,,,,,,,
+marine,Acropora palmata,Elkhorn coral,Marine-Reef,COI,present,partial,partial,med,,,,Framework reef builder; some Atlantic records,,,,,,,,
+marine,Porites porites,Finger coral,Marine-Reef,COI,present,partial,partial,med,,,,Common patch reef coral; Gulf of Guinea,,,,,,,,
+marine,Holothuria atra,Black sea cucumber,Marine-Reef,COI,present,partial,partial,med,,,,Reef flat; harvested; few WA records,,,,,,,,
+marine,Holothuria scabra,Sandfish sea cucumber,Marine-Reef,COI,present,partial,partial,med,,,,Commercial fishery species,,,,,,,,
+marine,Diadema antillarum,Long-spined sea urchin,Marine-Reef,COI,present,partial,partial,low,,,,Reef herbivore; Atlantic records exist,,,,,,,,
+marine,Echinometra lucunter,Rock-boring urchin,Marine-Reef,COI,present,partial,partial,low,,,,Intertidal rock surfaces,,,,,,,,
+marine,Ophiura ophiura,Common brittle star,Marine-Reef,COI,present,partial,partial,low,,,,Subtidal sediment; some WA records,,,,,,,,
+marine,Octopus vulgaris,Common octopus,Marine-Invertebrate,COI,present,present,present,low,,,,Coastal/offshore; globally sequenced,,,,,,,,
+marine,Sepia officinalis,Common cuttlefish,Marine-Invertebrate,COI,present,partial,partial,low,,,,Coastal; some WA gap in sequences,,,,,,,,
+marine,Loligo vulgaris,European squid,Marine-Invertebrate,COI,present,partial,partial,med,,,,Offshore squid; few Nigeria sequences,,,,,,,,
+marine,Charonia variegata,Triton shell,Marine-Invertebrate,COI,partial,absent,partial,high,,,,Large marine gastropod; zero WA sequences,,,,,,,,
+marine,Strombus latus,West African stromb,Marine-Invertebrate,COI,absent,absent,absent,high,,,,West African endemic; zero sequences globally,,,,,,,,
+marine,Murex brandaris,Spiny dye-murex,Marine-Invertebrate,COI,partial,absent,partial,med,,,,Subtidal rocky; few WA records,,,,,,,,
+marine,Penaeus kerathurus,Caramote prawn,Marine-Invertebrate,COI,present,partial,partial,low,,,,Offshore prawn; some Mediterranean records,,,,,,,,
+marine,Halophila stipulacea,Stipulate seagrass,Marine-Plants,rbcL,present,absent,partial,med,,,,Expanding range in Gulf of Guinea; invasive watch,,,,,,,,
+marine,Thalassia testudinum,Turtle grass,Marine-Plants,rbcL,present,absent,partial,med,,,,Coastal seagrass beds; Caribbean/Atlantic,,,,,,,,
+marine,Sargassum natans,Sargassum (floating),Marine-Plants,rbcL,present,absent,partial,med,,,,Pelagic/coastal; major ecological concern in GoG,,,,,,,,
+marine,Sargassum fluitans,Sargassum (fluitans),Marine-Plants,rbcL,present,absent,partial,med,,,,Co-dominant Sargassum species in inundations,,,,,,,,
+marine,Ulva lactuca,Sea lettuce,Marine-Plants,rbcL,present,absent,partial,low,,,,Intertidal/coastal; nutrient indicator,,,,,,,,
+marine,Gracilaria corticata,Red macroalgae,Marine-Plants,rbcL,partial,absent,partial,med,,,,Subtidal macroalgae; few WA sequences,,,,,,,,
+marine,Megaptera novaeangliae,Humpback whale,Marine-Mammal,COI,present,present,present,low,,,,Passes through Gulf of Guinea; globally sequenced,,,,,,,,
+marine,Physeter macrocephalus,Sperm whale,Marine-Mammal,COI,present,present,present,low,,,,Deep offshore; global records,,,,,,,,
+marine,Stenella frontalis,Atlantic spotted dolphin,Marine-Mammal,COI,present,partial,partial,low,,,,Offshore pelagic; few WA sequences,,,,,,,,
+marine,Balaenoptera brydei,Bryde's whale,Marine-Mammal,COI,present,partial,partial,med,,,,Resident in Gulf of Guinea; WA gap,,,,,,,,
+marine,Orcinus orca,Killer whale,Marine-Mammal,COI,present,present,present,low,,,,Occasional visitor; globally sequenced,,,,,,,,
+macrobenthos,Tympanotonos fuscatus,Mud periwinkle / Isam,Gastropod,COI,partial,absent,partial,high,,mangrove,,Most abundant Niger Delta macroinvertebrate; oil pollution indicator; major food source,,,,,,,,
+macrobenthos,Tympanotonos radula,Radula periwinkle,Gastropod,COI,absent,absent,absent,high,,mangrove,,Co-occurs with T. fuscatus; unsequenced from Nigeria,,,,,,,,
+macrobenthos,Pachymelania aurita,Eared mud snail,Gastropod,COI,partial,absent,partial,high,,estuarine,,Estuarine/lagoon specialist; few global sequences,,,,,,,,
+macrobenthos,Pachymelania fusca,Fusca mud snail,Gastropod,COI,absent,absent,absent,high,,estuarine,,Co-occurs with P. aurita; zero sequences globally,,,,,,,,
+macrobenthos,Telescopium telescopium,Telescope snail,Gastropod,COI,partial,partial,partial,med,,mangrove,,Mangrove gastropod; some Indo-Pacific records,,,,,,,,
+macrobenthos,Neritina glabrata,Smooth nerite,Gastropod,COI,absent,absent,absent,med,,estuarine,,Freshwater-estuarine snail; Lagos Lagoon,,,,,,,,
+macrobenthos,Lanistes varicus,Apple snail,Gastropod,COI,partial,absent,partial,med,,estuarine,,Freshwater/brackish; Niger Delta,,,,,,,,
+macrobenthos,Crassostrea gasar,Mangrove oyster,Bivalve,COI,partial,partial,partial,high,,mangrove,,Major fishery species; some records exist but not Nigeria-specific,,,,,,,,
+macrobenthos,Egeria radiata,Estuarine clam,Bivalve,COI,absent,absent,absent,high,,estuarine,,Critical food source; dug from estuarine mudflats; unsequenced,,,,,,,,
+macrobenthos,Senilia senilis,Blood cockle,Bivalve,COI,partial,partial,partial,med,,intertidal,,Intertidal mudflats; some West African records,,,,,,,,
+macrobenthos,Mytilaster minimus,Dwarf mussel,Bivalve,COI,partial,absent,partial,med,,intertidal,,Hard substrate; Lagos harbour,,,,,,,,
+macrobenthos,Corbula trigona,Trigonal basket clam,Bivalve,COI,absent,absent,absent,med,,subtidal,,Subtidal soft sediment; Niger Delta,,,,,,,,
+macrobenthos,Sphaerium nodicostatum,Freshwater clam,Bivalve,COI,absent,absent,absent,low,,estuarine,,Freshwater/estuarine margin,,,,,,,,
+macrobenthos,Capitella capitata,Capitella worm,Polychaete,COI,present,present,present,low,,subtidal,,Classic organic enrichment indicator; globally well-sequenced,,,,,,,,
+macrobenthos,Nereis diversicolor,Ragworm,Polychaete,COI,present,partial,partial,low,,intertidal,,Common; some records; West Africa gap,,,,,,,,
+macrobenthos,Perinereis cultrifera,Cultured ragworm,Polychaete,COI,partial,absent,partial,med,,intertidal,,Niger Delta intertidal; few West Africa records,,,,,,,,
+macrobenthos,Marphysa sanguinea,King ragworm,Polychaete,COI,partial,absent,partial,med,,intertidal,,Intertidal; bait species; few WA records,,,,,,,,
+macrobenthos,Sabella pavonina,Peacock worm,Polychaete,COI,partial,absent,partial,low,,subtidal,,Subtidal hard substrate,,,,,,,,
+macrobenthos,Hydroides elegans,Calcareous tubeworm,Polychaete,COI,present,partial,partial,low,,subtidal,,Fouling species; globally sequenced,,,,,,,,
+macrobenthos,Uca tangeri,Fiddler crab,Crustacean-macro,COI,partial,absent,partial,high,,mangrove,,Mangrove bioindicator; bioturbation engineer; few WA sequences,,,,,,,,
+macrobenthos,Uca inversa,Fiddler crab,Crustacean-macro,COI,absent,absent,absent,high,,mangrove,,West African fiddler crab; unsequenced,,,,,,,,
+macrobenthos,Sesarma huzardi,Mangrove sesarmid crab,Crustacean-macro,COI,absent,absent,absent,high,,mangrove,,Dominant mangrove crab; no sequences anywhere,,,,,,,,
+macrobenthos,Goniopsis pelii,Mangrove climbing crab,Crustacean-macro,COI,absent,absent,absent,high,,mangrove,,Climbs mangrove prop roots; zero sequences,,,,,,,,
+macrobenthos,Cardisoma armatum,Rainbow crab,Crustacean-macro,COI,partial,absent,partial,med,,mangrove,,Sold in markets; semi-terrestrial mangrove crab,,,,,,,,
+macrobenthos,Callinectes pallidus,Pallid swimming crab,Crustacean-macro,COI,absent,absent,absent,med,,estuarine,,Estuarine; co-occurs with C. amnicola,,,,,,,,
+nematode,Chromadora,Enrichment tolerant,Nematode,18S,partial,partial,partial,high,,Sediment,,Enrichment tolerant; increases with pollution,Chromadora,Chromadorida,tolerant,4200,12,0,890,0
+nematode,Chromadorita,Enrichment tolerant,Nematode,18S,partial,partial,partial,high,,Sediment,,Enrichment tolerant,Chromadorita,Chromadorida,tolerant,1800,4,0,420,0
+nematode,Ptycholaimellus,Organic enrichment indicator,Nematode,18S,partial,absent,partial,high,,Sediment,,Organic enrichment indicator,Ptycholaimellus,Chromadorida,tolerant,320,0,0,180,0
+nematode,Dichromadora,Tolerant generalist,Nematode,18S,partial,partial,partial,high,,Sediment,,Tolerant generalist,Dichromadora,Chromadorida,tolerant,560,2,0,210,0
+nematode,Innocuonema,Sandy sediment tolerant,Nematode,18S,partial,absent,partial,high,,Sediment,,Sandy sediment tolerant,Innocuonema,Chromadorida,tolerant,140,0,0,60,0
+nematode,Desmodora,Hypoxia tolerant,Nematode,18S,partial,partial,partial,high,,Sediment,,Hypoxia tolerant; sulphidic sediment,Desmodora,Desmodorida,tolerant,2100,8,0,640,0
+nematode,Spirinia,Hypoxia tolerant,Nematode,18S,partial,partial,partial,high,,Sediment,,Hypoxia tolerant,Spirinia,Desmodorida,tolerant,980,3,0,310,0
+nematode,Metachromadora,Organic enrichment associated,Nematode,18S,partial,partial,partial,high,,Sediment,,Organic enrichment associated,Metachromadora,Desmodorida,tolerant,720,1,0,280,0
+nematode,Monhystera,Disturbance opportunist,Nematode,18S,partial,partial,partial,high,,Sediment,,Disturbance opportunist; rises after spills,Monhystera,Monhysterida,indicator,5600,18,0,1200,0
+nematode,Terschellingia,Organic enrichment / sulphide indicator,Nematode,18S,partial,partial,partial,high,,Sediment,,Organic enrichment / sulphide indicator,Terschellingia,Monhysterida,indicator,890,2,0,340,0
+nematode,Diplolaimelloides,Organic enrichment indicator,Nematode,18S,partial,absent,partial,high,,Sediment,,Organic enrichment indicator,Diplolaimelloides,Monhysterida,indicator,420,0,0,160,0
+nematode,Sphaerolaimus,Sulphide-rich sediment indicator,Nematode,18S,partial,absent,partial,high,,Sediment,,Sulphide-rich sediment indicator,Sphaerolaimus,Monhysterida,indicator,380,0,0,140,0
+nematode,Enoplus,Pollution sensitive,Nematode,18S,partial,partial,partial,high,,Sediment,,Pollution sensitive; baseline reference,Enoplus,Enoplida,sensitive,3200,6,0,780,0
+nematode,Thoracostoma,Pollution sensitive,Nematode,18S,partial,absent,partial,high,,Sediment,,Pollution sensitive; clean sediment,Thoracostoma,Enoplida,sensitive,640,0,0,220,0
+nematode,Eurystomina,Pollution sensitive,Nematode,18S,partial,absent,partial,high,,Sediment,,Pollution sensitive,Eurystomina,Enoplida,sensitive,480,0,0,190,0
+nematode,Oxystomina,Clean sediment specialist,Nematode,18S,partial,absent,partial,high,,Sediment,,Clean sediment specialist,Oxystomina,Enoplida,sensitive,310,0,0,120,0
+nematode,Axonolaimus,Deposit feeder,Nematode,18S,partial,partial,partial,high,,Sediment,,Deposit feeder; fine sediment,Axonolaimus,Araeolaimida,other,760,1,0,290,0
+nematode,Odontophora,Deposit feeder,Nematode,18S,partial,absent,partial,high,,Sediment,,Deposit feeder,Odontophora,Araeolaimida,other,420,0,0,160,0
+nematode,Campylaimus,Deposit feeder,Nematode,18S,partial,absent,partial,high,,Sediment,,Deposit feeder,Campylaimus,Araeolaimida,other,280,0,0,110,0
+nematode,Desmoscolex,Sandy sediment specialist,Nematode,18S,partial,absent,partial,high,,Sediment,,Sandy sediment specialist,Desmoscolex,Desmoscolecida,other,1200,0,0,380,0
+nematode,Quadricoma,Sandy sediment specialist,Nematode,18S,partial,absent,partial,high,,Sediment,,Sandy sediment specialist,Quadricoma,Desmoscolecida,other,340,0,0,130,0
+nematode,Aphanolaimus,Fine sediment generalist,Nematode,18S,partial,absent,partial,high,,Sediment,,Fine sediment generalist,Aphanolaimus,Araeolaimida,other,190,0,0,80,0
+nematode,Stylotheristus,Mangrove sediment associated,Nematode,18S,partial,absent,partial,high,,Sediment,,Mangrove sediment associated,Stylotheristus,Desmodorida,other,160,0,0,60,0
+nematode,Pellioditis,Organic matter indicator,Nematode,18S,partial,partial,partial,high,,Sediment,,Organic matter indicator,Pellioditis,Rhabditida,indicator,2200,5,0,580,0
+nematode,Plectus,Generalist,Nematode,18S,partial,partial,partial,high,,Sediment,,Generalist; broad habitat,Plectus,Plectida,other,3100,9,0,740,0

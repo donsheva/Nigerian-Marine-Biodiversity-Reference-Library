@@ -1,0 +1,444 @@
+[
+    {
+        "id": 1,
+        "scientific_name": "Ethmalosa fimbriata",
+        "common_name": "Bonga shad",
+        "group": "Fish",
+        "habitat": "Lagoon",
+        "location": "Lagos Lagoon",
+        "endemism": "Gulf of Guinea",
+        "iucn_status": "LC",
+        "markers": [
+            "12S",
+            "COI"
+        ],
+        "sequence_available": false,
+        "ncbi_accession": "",
+        "bold_id": "",
+        "image": "",
+        "notes": ""
+    },
+    {
+        "id": 2,
+        "scientific_name": "Pseudotolithus typus",
+        "common_name": "Longneck croaker",
+        "group": "Fish",
+        "habitat": "Marine",
+        "location": "Gulf of Guinea",
+        "endemism": "Gulf of Guinea",
+        "iucn_status": "LC",
+        "markers": [
+            "12S",
+            "COI"
+        ],
+        "sequence_available": false,
+        "ncbi_accession": "",
+        "bold_id": "",
+        "image": "",
+        "notes": ""
+    },
+    {
+        "id": 3,
+        "scientific_name": "Pseudotolithus elongatus",
+        "common_name": "Cassava croaker",
+        "group": "Fish",
+        "habitat": "Marine",
+        "location": "Gulf of Guinea",
+        "endemism": "Gulf of Guinea",
+        "iucn_status": "LC",
+        "markers": [
+            "12S",
+            "COI"
+        ],
+        "sequence_available": false,
+        "ncbi_accession": "",
+        "bold_id": "",
+        "image": "",
+        "notes": ""
+    },
+    {
+        "id": 4,
+        "scientific_name": "Lutjanus goreensis",
+        "common_name": "Gorean snapper",
+        "group": "Fish",
+        "habitat": "Marine",
+        "location": "Gulf of Guinea",
+        "endemism": "Gulf of Guinea",
+        "iucn_status": "LC",
+        "markers": [
+            "12S",
+            "COI"
+        ],
+        "sequence_available": false,
+        "ncbi_accession": "",
+        "bold_id": "",
+        "image": "",
+        "notes": ""
+    },
+    {
+        "id": 5,
+        "scientific_name": "Pteroscion peli",
+        "common_name": "Boe drum",
+        "group": "Fish",
+        "habitat": "Marine",
+        "location": "Gulf of Guinea",
+        "endemism": "Gulf of Guinea",
+        "iucn_status": "LC",
+        "markers": [
+            "12S",
+            "COI"
+        ],
+        "sequence_available": false,
+        "ncbi_accession": "",
+        "bold_id": "",
+        "image": "",
+        "notes": ""
+    },
+    {
+        "id": 6,
+        "scientific_name": "Sardinella aurita",
+        "common_name": "Round sardinella",
+        "group": "Fish",
+        "habitat": "Marine",
+        "location": "Gulf of Guinea",
+        "endemism": "Gulf of Guinea",
+        "iucn_status": "LC",
+        "markers": [
+            "12S",
+            "COI"
+        ],
+        "sequence_available": false,
+        "ncbi_accession": "",
+        "bold_id": "",
+        "image": "",
+        "notes": ""
+    },
+    {
+        "id": 7,
+        "scientific_name": "Sardinella maderensis",
+        "common_name": "Madeiran sardinella",
+        "group": "Fish",
+        "habitat": "Marine",
+        "location": "Gulf of Guinea",
+        "endemism": "Gulf of Guinea",
+        "iucn_status": "LC",
+        "markers": [
+            "12S",
+            "COI"
+        ],
+        "sequence_available": false,
+        "ncbi_accession": "",
+        "bold_id": "",
+        "image": "",
+        "notes": ""
+    },
+    {
+        "id": 8,
+        "scientific_name": "Caranx hippos",
+        "common_name": "Crevalle jack",
+        "group": "Fish",
+        "habitat": "Marine",
+        "location": "Gulf of Guinea",
+        "endemism": "Gulf of Guinea",
+        "iucn_status": "LC",
+        "markers": [
+            "12S",
+            "COI"
+        ],
+        "sequence_available": false,
+        "ncbi_accession": "",
+        "bold_id": "",
+        "image": "",
+        "notes": ""
+    },
+    {
+        "id": 9,
+        "scientific_name": "Scomberomorus tritor",
+        "common_name": "West African Spanish mackerel",
+        "group": "Fish",
+        "habitat": "Marine",
+        "location": "Gulf of Guinea",
+        "endemism": "Gulf of Guinea",
+        "iucn_status": "LC",
+        "markers": [
+            "12S",
+            "COI"
+        ],
+        "sequence_available": false,
+        "ncbi_accession": "",
+        "bold_id": "",
+        "image": "",
+        "notes": ""
+    },
+    {
+        "id": 10,
+        "scientific_name": "Trachinotus teraia",
+        "common_name": "African pompano",
+        "group": "Fish",
+        "habitat": "Marine",
+        "location": "Gulf of Guinea",
+        "endemism": "Gulf of Guinea",
+        "iucn_status": "LC",
+        "markers": [
+            "12S",
+            "COI"
+        ],
+        "sequence_available": false,
+        "ncbi_accession": "",
+        "bold_id": "",
+        "image": "",
+        "notes": ""
+    },
+    {
+        "id": 50,
+        "scientific_name": "Tympanotonos fuscatus",
+        "common_name": "Mangrove periwinkle",
+        "group": "Gastropod",
+        "habitat": "Mangrove",
+        "location": "Niger Delta",
+        "endemism": "Gulf of Guinea",
+        "iucn_status": "LC",
+        "markers": [
+            "COI"
+        ],
+        "sequence_available": false,
+        "ncbi_accession": "",
+        "bold_id": "",
+        "image": "",
+        "notes": ""
+    },
+    {
+        "id": 51,
+        "scientific_name": "Pachymelania aurita",
+        "common_name": "Mangrove snail",
+        "group": "Gastropod",
+        "habitat": "Mangrove",
+        "location": "Lagos Lagoon",
+        "endemism": "Gulf of Guinea",
+        "iucn_status": "LC",
+        "markers": [
+            "COI"
+        ],
+        "sequence_available": false,
+        "ncbi_accession": "",
+        "bold_id": "",
+        "image": "",
+        "notes": ""
+    },
+    {
+        "id": 52,
+        "scientific_name": "Callinectes amnicola",
+        "common_name": "Lagos lagoon crab",
+        "group": "Crustacean",
+        "habitat": "Estuarine",
+        "location": "Lagos Lagoon",
+        "endemism": "Gulf of Guinea",
+        "iucn_status": "LC",
+        "markers": [
+            "COI"
+        ],
+        "sequence_available": false,
+        "ncbi_accession": "",
+        "bold_id": "",
+        "image": "",
+        "notes": ""
+    },
+    {
+        "id": 53,
+        "scientific_name": "Uca tangeri",
+        "common_name": "Fiddler crab",
+        "group": "Crustacean",
+        "habitat": "Intertidal",
+        "location": "Gulf of Guinea",
+        "endemism": "Gulf of Guinea",
+        "iucn_status": "LC",
+        "markers": [
+            "COI"
+        ],
+        "sequence_available": false,
+        "ncbi_accession": "",
+        "bold_id": "",
+        "image": "",
+        "notes": ""
+    },
+    {
+        "id": 54,
+        "scientific_name": "Crassostrea gasar",
+        "common_name": "Mangrove oyster",
+        "group": "Bivalve",
+        "habitat": "Mangrove",
+        "location": "Niger Delta",
+        "endemism": "Gulf of Guinea",
+        "iucn_status": "LC",
+        "markers": [
+            "COI"
+        ],
+        "sequence_available": false,
+        "ncbi_accession": "",
+        "bold_id": "",
+        "image": "",
+        "notes": ""
+    },
+    {
+        "id": 55,
+        "scientific_name": "Tagelus adansonii",
+        "common_name": "Razor clam",
+        "group": "Bivalve",
+        "habitat": "Estuarine",
+        "location": "Gulf of Guinea",
+        "endemism": "Gulf of Guinea",
+        "iucn_status": "LC",
+        "markers": [
+            "COI"
+        ],
+        "sequence_available": false,
+        "ncbi_accession": "",
+        "bold_id": "",
+        "image": "",
+        "notes": ""
+    },
+    {
+        "id": 100,
+        "scientific_name": "Halalaimus sp.",
+        "common_name": "Free living nematode",
+        "group": "Nematode",
+        "habitat": "Sediment",
+        "location": "Lagos Lagoon",
+        "endemism": "Gulf of Guinea",
+        "iucn_status": "DD",
+        "markers": [
+            "18S"
+        ],
+        "sequence_available": false,
+        "ncbi_accession": "",
+        "bold_id": "",
+        "image": "",
+        "notes": ""
+    },
+    {
+        "id": 101,
+        "scientific_name": "Enoplus sp.",
+        "common_name": "Marine nematode",
+        "group": "Nematode",
+        "habitat": "Sediment",
+        "location": "Gulf of Guinea",
+        "endemism": "Gulf of Guinea",
+        "iucn_status": "DD",
+        "markers": [
+            "18S"
+        ],
+        "sequence_available": false,
+        "ncbi_accession": "",
+        "bold_id": "",
+        "image": "",
+        "notes": ""
+    },
+    {
+        "id": 102,
+        "scientific_name": "Chromadorita sp.",
+        "common_name": "Marine nematode",
+        "group": "Nematode",
+        "habitat": "Sediment",
+        "location": "Lagos Lagoon",
+        "endemism": "Gulf of Guinea",
+        "iucn_status": "DD",
+        "markers": [
+            "18S"
+        ],
+        "sequence_available": false,
+        "ncbi_accession": "",
+        "bold_id": "",
+        "image": "",
+        "notes": ""
+    },
+    {
+        "id": 103,
+        "scientific_name": "Oncholaimus sp.",
+        "common_name": "Predatory nematode",
+        "group": "Nematode",
+        "habitat": "Sediment",
+        "location": "Niger Delta",
+        "endemism": "Gulf of Guinea",
+        "iucn_status": "DD",
+        "markers": [
+            "18S"
+        ],
+        "sequence_available": false,
+        "ncbi_accession": "",
+        "bold_id": "",
+        "image": "",
+        "notes": ""
+    },
+    {
+        "id": 200,
+        "scientific_name": "Trichechus senegalensis",
+        "common_name": "African manatee",
+        "group": "Mammal",
+        "habitat": "Lagoon",
+        "location": "Lagos Lagoon",
+        "endemism": "Gulf of Guinea",
+        "iucn_status": "VU",
+        "markers": [
+            "COI"
+        ],
+        "sequence_available": false,
+        "ncbi_accession": "",
+        "bold_id": "",
+        "image": "",
+        "notes": ""
+    },
+    {
+        "id": 201,
+        "scientific_name": "Sousa teuszii",
+        "common_name": "Atlantic humpback dolphin",
+        "group": "Mammal",
+        "habitat": "Marine",
+        "location": "Gulf of Guinea",
+        "endemism": "Gulf of Guinea",
+        "iucn_status": "CR",
+        "markers": [
+            "COI"
+        ],
+        "sequence_available": false,
+        "ncbi_accession": "",
+        "bold_id": "",
+        "image": "",
+        "notes": ""
+    },
+    {
+        "id": 250,
+        "scientific_name": "Chelonia mydas",
+        "common_name": "Green sea turtle",
+        "group": "Turtle",
+        "habitat": "Marine",
+        "location": "Gulf of Guinea",
+        "endemism": "Gulf of Guinea",
+        "iucn_status": "EN",
+        "markers": [
+            "COI"
+        ],
+        "sequence_available": false,
+        "ncbi_accession": "",
+        "bold_id": "",
+        "image": "",
+        "notes": ""
+    },
+    {
+        "id": 251,
+        "scientific_name": "Eretmochelys imbricata",
+        "common_name": "Hawksbill turtle",
+        "group": "Turtle",
+        "habitat": "Marine",
+        "location": "Gulf of Guinea",
+        "endemism": "Gulf of Guinea",
+        "iucn_status": "CR",
+        "markers": [
+            "COI"
+        ],
+        "sequence_available": false,
+        "ncbi_accession": "",
+        "bold_id": "",
+        "image": "",
+        "notes": ""
+    }
+]
