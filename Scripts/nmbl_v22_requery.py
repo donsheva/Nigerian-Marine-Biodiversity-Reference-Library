@@ -44,29 +44,29 @@ import argparse, csv, json, os, re, sys, time
 import requests
 from Bio import Entrez
 
-TAXA = [  # (site name, marker) - from assets/js/data.js, v22
+TAXA = [  # (site name, marker) - from assets/js/data.js, v22.4 (10 non-regional taxa swapped for West African species)
  ("Ethmalosa fimbriata","12S"),("Sardinella maderensis","12S"),("Sardinella aurita","12S"),("Pseudotolithus senegalensis","12S"),
  ("Pseudotolithus elongatus","12S"),("Cynoglossus senegalensis","12S"),("Galeoides decadactylus","12S"),("Polydactylus quadrifilis","12S"),
  ("Lutjanus agennes","12S"),("Arius latiscutatus","12S"),("Brachydeuterus auritus","12S"),("Pomadasys jubelini","12S"),("Elops lacerta","12S"),
  ("Drepane africana","12S"),("Mugil cephalus","12S"),("Chrysichthys nigrodigitatus","12S"),("Rhizoprionodon acutus","12S"),
- ("Rhinobatos rhinobatos","12S"),("Hypanus marianae","12S"),("Carcharhinus leucas","12S"),("Sphyrna lewini","12S"),("Penaeus notialis","COI"),
+ ("Rhinobatos rhinobatos","12S"),("Fontitrygon margarita","12S"),("Carcharhinus leucas","12S"),("Sphyrna lewini","12S"),("Penaeus notialis","COI"),
  ("Callinectes amnicola","COI"),("Parapenaeus longirostris","COI"),("Macrobrachium vollenhovenii","COI"),("Trichechus senegalensis","COI"),
  ("Sousa teuszii","COI"),("Tursiops truncatus","COI"),("Chelonia mydas","12S"),("Dermochelys coriacea","12S"),("Lepidochelys olivacea","12S"),
  ("Harpacticoida","18S"),("Ostracoda","COI"),("Tardigrada","18S"),("Gastrotricha","18S"),("Kinorhyncha","18S"),("Foraminifera","18S"),
  ("Ciliophora","18S"),("Bacillariophyta","18S"),("Polychaeta","COI"),("Tympanotonos fuscatus","COI"),("Tympanotonos radula","COI"),
- ("Pachymelania aurita","COI"),("Pachymelania fusca","COI"),("Telescopium telescopium","COI"),("Neritina glabrata","COI"),("Lanistes varicus","COI"),
+ ("Pachymelania aurita","COI"),("Pachymelania fusca","COI"),("Littoraria angulifera","COI"),("Neritina glabrata","COI"),("Lanistes varicus","COI"),
  ("Crassostrea gasar","COI"),("Egeria radiata","COI"),("Senilia senilis","COI"),("Mytilaster minimus","COI"),("Corbula trigona","COI"),
  ("Sphaerium nodicostatum","COI"),("Capitella capitata","COI"),("Nereis diversicolor","COI"),("Perinereis cultrifera","COI"),
  ("Marphysa sanguinea","COI"),("Sabella pavonina","COI"),("Hydroides elegans","COI"),("Uca tangeri","COI"),("Uca inversa","COI"),
  ("Sesarma huzardi","COI"),("Goniopsis pelii","COI"),("Cardisoma armatum","COI"),("Callinectes pallidus","COI"),("Thunnus albacares","12S"),
- ("Katsuwonus pelamis","12S"),("Thunnus obesus","12S"),("Xiphias gladius","12S"),("Coryphaena hippurus","12S"),("Scomber japonicus","12S"),
+ ("Katsuwonus pelamis","12S"),("Thunnus obesus","12S"),("Xiphias gladius","12S"),("Coryphaena hippurus","12S"),("Scomber colias","12S"),
  ("Scomberomorus tritor","12S"),("Caranx hippos","12S"),("Trichiurus lepturus","12S"),("Dentex angolensis","12S"),("Pagellus bellottii","12S"),
  ("Epinephelus aeneus","12S"),("Sparus caeruleostictus","12S"),("Pseudupeneus prayensis","12S"),("Pteroscion peli","12S"),
- ("Pomadasys rogerii","12S"),("Lutjanus goreensis","12S"),("Acropora palmata","COI"),("Porites porites","COI"),("Holothuria atra","COI"),
- ("Holothuria scabra","COI"),("Diadema antillarum","COI"),("Echinometra lucunter","COI"),("Ophiura ophiura","COI"),("Octopus vulgaris","COI"),
+ ("Pomadasys rogerii","12S"),("Lutjanus goreensis","12S"),("Siderastrea radians","COI"),("Porites porites","COI"),("Holothuria dakarensis","COI"),
+ ("Isostichopus maculatus","COI"),("Diadema africanum","COI"),("Echinometra lucunter","COI"),("Ophiura ophiura","COI"),("Octopus vulgaris","COI"),
  ("Sepia officinalis","COI"),("Loligo vulgaris","COI"),("Charonia variegata","COI"),("Strombus latus","COI"),("Murex brandaris","COI"),
- ("Penaeus kerathurus","COI"),("Halophila stipulacea","rbcL"),("Thalassia testudinum","rbcL"),("Sargassum natans","rbcL"),
- ("Sargassum fluitans","rbcL"),("Ulva lactuca","rbcL"),("Gracilaria corticata","rbcL"),("Megaptera novaeangliae","COI"),
+ ("Penaeus kerathurus","COI"),("Ruppia maritima","rbcL"),("Halodule wrightii","rbcL"),("Sargassum natans","rbcL"),
+ ("Sargassum fluitans","rbcL"),("Ulva lactuca","rbcL"),("Hypnea musciformis","rbcL"),("Megaptera novaeangliae","COI"),
  ("Physeter macrocephalus","COI"),("Stenella frontalis","COI"),("Balaenoptera brydei","COI"),("Orcinus orca","COI"),
 ]
 
