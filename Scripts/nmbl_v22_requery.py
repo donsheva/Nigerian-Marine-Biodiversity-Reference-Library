@@ -71,9 +71,10 @@ TAXA = [  # (site name, marker) - from assets/js/data.js, v22.4 (10 non-regional
 ]
 
 NEMATODE_GENERA = ["Chromadora","Chromadorita","Ptycholaimellus","Dichromadora","Innocuonema","Desmodora","Spirinia",
- "Metachromadora","Monhystera","Terschellingia","Diplolaimelloides","Sphaerolaimus","Enoplus","Thoracostoma","Eurystomina",
- "Oxystomina","Axonolaimus","Odontophora","Campylaimus","Desmoscolex","Quadricoma","Aphanolaimus","Stylotheristus",
- "Pellioditis","Plectus",
+ "Metachromadora","Terschellingia","Diplolaimelloides","Sphaerolaimus","Enoplus","Thoracostoma","Eurystomina",
+ "Oxystomina","Axonolaimus","Odontophora","Campylaimus","Desmoscolex","Quadricoma","Stylotheristus",
+ "Pellioditis",
+ # v22.5: Monhystera, Aphanolaimus and Plectus removed (mainly terrestrial/freshwater; results kept in Data/v22.4)
  # v22.5 additions (Nov 2026): genera typical of tropical estuarine/lagoon muds
  "Sabatieria","Daptonema","Theristus","Paracomesoma","Dorylaimopsis","Halalaimus","Viscosia"]
 
@@ -354,6 +355,6 @@ if __name__ == "__main__":
                         "; ".join(f"{k} {v}" for k, v in n["wa_countries"].items()), b["global"], b["wa"], b["ng"], b["all_records"]])
     missing = [sp for sp, _ in TAXA if sp not in cache] + [g for g in NEMATODE_GENERA if "NEMATODE:" + g not in cache]
     done = len(TAXA) + len(NEMATODE_GENERA) - len(missing)
-    log(f"Done. {done}/{len(TAXA) + len(NEMATODE_GENERA)} taxa (107 species/higher taxa + 25 nematode genera). "
+    log(f"Done. {done}/{len(TAXA) + len(NEMATODE_GENERA)} taxa ({len(TAXA)} species/higher taxa + {len(NEMATODE_GENERA)} nematode genera). "
         + (f"Missing (re-run): {missing}" if missing else "All taxa complete."))
     log("Send nmbl_v22_requery_results.json back to Claude to apply to the site.")

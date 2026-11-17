@@ -1,0 +1,108 @@
+taxon,marker,worms_status,names_queried,ncbi_global,ncbi_wa,ncbi_nigeria,ncbi_wa_countries,bold_global,bold_wa,bold_nigeria,bold_all_records
+Ethmalosa fimbriata,12S,accepted,Ethmalosa fimbriata,3,2,0,Guinea-Bissau 2,2,2,0,18
+Sardinella maderensis,12S,accepted,Sardinella maderensis,3,2,0,Guinea-Bissau 2,2,2,0,47
+Sardinella aurita,12S,accepted,Sardinella aurita,12,1,0,Guinea-Bissau 1,1,1,0,521
+Pseudotolithus senegalensis,12S,accepted,Pseudotolithus senegalensis,2,2,0,Guinea-Bissau 2,0,0,0,8
+Pseudotolithus elongatus,12S,accepted,Pseudotolithus elongatus,4,3,0,Guinea-Bissau 3,3,3,0,22
+Cynoglossus senegalensis,12S,accepted,Cynoglossus senegalensis,1,0,0,,0,0,0,33
+Galeoides decadactylus,12S,accepted,Galeoides decadactylus,2,1,0,Guinea-Bissau 1,1,1,0,17
+Polydactylus quadrifilis,12S,accepted,Polydactylus quadrifilis,3,2,0,Guinea-Bissau 2,2,2,0,6
+Lutjanus agennes,12S,accepted,Lutjanus agennes,0,0,0,,1,1,0,6
+Arius latiscutatus,12S,unaccepted -> Carlarius latiscutatus,Arius latiscutatus; Carlarius latiscutatus,3,2,0,Guinea-Bissau 2,2,2,0,16
+Brachydeuterus auritus,12S,accepted,Brachydeuterus auritus,0,0,0,,1,1,0,9
+Pomadasys jubelini,12S,accepted,Pomadasys jubelini,0,0,0,,2,2,0,25
+Elops lacerta,12S,accepted,Elops lacerta,1,1,0,Guinea-Bissau 1,1,1,0,6
+Drepane africana,12S,accepted,Drepane africana,5,2,0,Guinea-Bissau 2,2,2,0,6
+Mugil cephalus,12S,accepted,Mugil cephalus,64,0,0,,3,0,0,660
+Chrysichthys nigrodigitatus,12S,accepted,Chrysichthys nigrodigitatus,2,1,0,Guinea-Bissau 1,1,1,0,53
+Rhizoprionodon acutus,12S,accepted,Rhizoprionodon acutus,2,0,0,,0,0,0,234
+Rhinobatos rhinobatos,12S,accepted,Rhinobatos rhinobatos,0,0,0,,1,1,0,5
+Fontitrygon margarita,12S,accepted,Fontitrygon margarita,1,1,0,Senegal 1,0,0,0,18
+Carcharhinus leucas,12S,accepted,Carcharhinus leucas,375,1,0,Sierra Leone 1,0,0,0,168
+Sphyrna lewini,12S,accepted,Sphyrna lewini,102,0,0,,0,0,0,709
+Penaeus notialis,COI,superseded combination -> Penaeus (Farfantepenaeus) notialis,Penaeus notialis; Penaeus (Farfantepenaeus) notialis,50,0,0,,16,0,0,16
+Callinectes amnicola,COI,accepted,Callinectes amnicola,3,1,0,Ghana 1,3,1,0,3
+Parapenaeus longirostris,COI,accepted,Parapenaeus longirostris,29,0,0,,38,1,0,38
+Macrobrachium vollenhovenii,COI,accepted,Macrobrachium vollenhovenii,3,2,2,Nigeria 2,3,2,2,8
+Trichechus senegalensis,COI,accepted,Trichechus senegalensis,1,0,0,,0,0,0,0
+Sousa teuszii,COI,accepted,Sousa teuszii,1,1,0,Senegal 1,0,0,0,0
+Tursiops truncatus,COI,accepted,Tursiops truncatus,239,0,0,,168,0,0,186
+Chelonia mydas,12S,accepted,Chelonia mydas,20,0,0,,0,0,0,167
+Dermochelys coriacea,12S,accepted,Dermochelys coriacea,10,0,0,,0,0,0,29
+Lepidochelys olivacea,12S,accepted,Lepidochelys olivacea,8,0,0,,0,0,0,52
+Harpacticoida,18S,accepted,Harpacticoida,1499,0,0,,150,0,0,5615
+Ostracoda,COI,accepted,Ostracoda,5594,3,0,Cape Verde 3,7018,3,0,7661
+Tardigrada,18S,accepted,Tardigrada,3762,0,0,,2306,0,0,5992
+Gastrotricha,18S,accepted,Gastrotricha,874,0,0,,575,0,0,1183
+Kinorhyncha,18S,accepted,Kinorhyncha,112,0,0,,96,0,0,658
+Foraminifera,18S,accepted,Foraminifera,21519,0,0,,0,0,0,76
+Ciliophora,18S,accepted,Ciliophora,20113,137,0,Cameroon 36; Benin 97; Cape Verde 1; Guinea 1; Sierra Leone 1; Ghana 1,0,0,0,2497
+Bacillariophyta,18S,accepted,Bacillariophyta,17068,17,16,Senegal 1; Nigeria 16,326,0,0,6905
+Polychaeta,COI,accepted,Polychaeta,33820,99,4,Guinea-Bissau 4; Mauritania 8; Senegal 3; Guinea 3; Nigeria 4; Cape Verde 74; Sierra Leone 1; Ghana 2,51528,132,9,63982
+Tympanotonos fuscatus,COI,accepted,Tympanotonos fuscatus,3,3,0,Gambia 1; Ghana 2,0,0,0,0
+Tympanotonos radula,COI,unaccepted -> Tympanotonos fuscatus,Tympanotonos radula; Tympanotonos fuscatus,3,3,0,Gambia 1; Ghana 2,0,0,0,0
+Pachymelania aurita,COI,accepted,Pachymelania aurita,0,0,0,,5,5,5,5
+Pachymelania fusca,COI,accepted,Pachymelania fusca,0,0,0,,3,3,3,3
+Littoraria angulifera,COI,accepted,Littoraria angulifera,8,2,0,Ghana 1; Senegal 1,10,2,0,10
+Neritina glabrata,COI,unaccepted -> Vitta glabrata,Neritina glabrata; Vitta glabrata,0,0,0,,0,0,0,0
+Lanistes varicus,COI,accepted,Lanistes varicus,2,0,0,,0,0,0,0
+Crassostrea gasar,COI,junior subjective synonym -> Crassostrea tulipa,Crassostrea gasar; Crassostrea tulipa,32,0,0,,54,0,0,67
+Egeria radiata,COI,unaccepted -> Galatea paradoxa,Egeria radiata; Galatea paradoxa,2,2,0,Ghana 2,0,0,0,0
+Senilia senilis,COI,accepted,Senilia senilis,1,1,0,Senegal 1,0,0,0,0
+Mytilaster minimus,COI,accepted,Mytilaster minimus,17,0,0,,17,0,0,17
+Corbula trigona,COI,junior homonym -> Potamocorbula adusta,Corbula trigona; Potamocorbula adusta,0,0,0,,2,2,2,2
+Sphaerium nodicostatum,COI,not in WoRMS,Sphaerium nodicostatum,0,0,0,,0,0,0,0
+Capitella capitata,COI,accepted,Capitella capitata,29,0,0,,57,0,0,60
+Nereis diversicolor,COI,unaccepted -> Hediste diversicolor,Nereis diversicolor; Hediste diversicolor,418,0,0,,366,0,0,478
+Perinereis cultrifera,COI,accepted,Perinereis cultrifera,67,0,0,,67,0,0,88
+Marphysa sanguinea,COI,accepted,Marphysa sanguinea,48,0,0,,45,0,0,60
+Sabella pavonina,COI,accepted,Sabella pavonina,6,0,0,,14,0,0,16
+Hydroides elegans,COI,accepted,Hydroides elegans,63,0,0,,55,0,0,70
+Uca tangeri,COI,superseded combination -> Afruca tangeri,Uca tangeri; Afruca tangeri,6,4,0,Guinea-Bissau 3; Ghana 1,3,1,0,3
+Uca inversa,COI,superseded combination -> Cranuca inversa,Uca inversa; Cranuca inversa,42,0,0,,46,0,0,46
+Sesarma huzardi,COI,superseded combination -> Guinearma huzardi,Sesarma huzardi; Guinearma huzardi,35,33,0,Cameroon 16; Ghana 14; Gambia 3,35,33,0,35
+Goniopsis pelii,COI,accepted,Goniopsis pelii,1,1,0,Ghana 1,1,1,0,1
+Cardisoma armatum,COI,accepted,Cardisoma armatum,2,1,1,Nigeria 1,2,1,1,2
+Callinectes pallidus,COI,accepted,Callinectes pallidus,3,1,0,Ghana 1,1,1,0,1
+Thunnus albacares,12S,accepted,Thunnus albacares,22,1,0,Senegal 1,0,0,0,769
+Katsuwonus pelamis,12S,accepted,Katsuwonus pelamis,18,0,0,,0,0,0,297
+Thunnus obesus,12S,accepted,Thunnus obesus,168,0,0,,0,0,0,188
+Xiphias gladius,12S,accepted,Xiphias gladius,13,0,0,,0,0,0,341
+Coryphaena hippurus,12S,accepted,Coryphaena hippurus,24,0,0,,1,0,0,596
+Scomber colias,12S,accepted,Scomber colias,8,0,0,,0,0,0,112
+Scomberomorus tritor,12S,accepted,Scomberomorus tritor,4,3,0,Guinea-Bissau 3,3,3,0,11
+Caranx hippos,12S,accepted,Caranx hippos,6,0,0,,0,0,0,89
+Trichiurus lepturus,12S,accepted,Trichiurus lepturus,23,1,0,Guinea-Bissau 1,1,1,0,504
+Dentex angolensis,12S,accepted,Dentex angolensis,1,0,0,,0,0,0,17
+Pagellus bellottii,12S,accepted,Pagellus bellottii,4,0,0,,0,0,0,21
+Epinephelus aeneus,12S,accepted,Epinephelus aeneus,7,3,0,Guinea-Bissau 3,3,3,0,78
+Sparus caeruleostictus,12S,unaccepted -> Pagrus caeruleostictus,Sparus caeruleostictus; Pagrus caeruleostictus,3,3,0,Guinea-Bissau 2; Ghana 1,2,2,0,37
+Pseudupeneus prayensis,12S,accepted,Pseudupeneus prayensis,0,0,0,,0,0,0,5
+Pteroscion peli,12S,accepted,Pteroscion peli,0,0,0,,0,0,0,8
+Pomadasys rogerii,12S,accepted,Pomadasys rogerii,1,1,0,Guinea-Bissau 1,0,0,0,0
+Lutjanus goreensis,12S,accepted,Lutjanus goreensis,2,2,0,Guinea-Bissau 2,4,4,0,20
+Siderastrea radians,COI,accepted,Siderastrea radians,6,0,0,,6,0,0,16
+Porites porites,COI,accepted,Porites porites,4,0,0,,4,0,0,16
+Holothuria dakarensis,COI,not in WoRMS,Holothuria dakarensis,2,1,0,Cape Verde 1,2,0,0,2
+Isostichopus maculatus,COI,accepted,Isostichopus maculatus,16,0,0,,0,0,0,0
+Diadema africanum,COI,accepted,Diadema africanum,244,12,0,Cape Verde 12,244,12,0,244
+Echinometra lucunter,COI,accepted,Echinometra lucunter,74,3,0,Senegal 3,53,3,0,87
+Ophiura ophiura,COI,accepted,Ophiura ophiura,46,0,0,,71,0,0,73
+Octopus vulgaris,COI,accepted,Octopus vulgaris,605,13,0,Cape Verde 13,727,0,0,740
+Sepia officinalis,COI,accepted,Sepia officinalis,518,0,0,,402,0,0,420
+Loligo vulgaris,COI,accepted,Loligo vulgaris,218,0,0,,237,0,0,241
+Charonia variegata,COI,accepted,Charonia variegata,1,0,0,,1,0,0,4
+Strombus latus,COI,unaccepted -> Thetystrombus latus,Strombus latus; Thetystrombus latus,3,2,0,Senegal 2,3,2,0,3
+Murex brandaris,COI,superseded combination -> Bolinus brandaris,Murex brandaris; Bolinus brandaris,4,0,0,,3,0,0,15
+Penaeus kerathurus,COI,superseded combination -> Penaeus (Melicertus) kerathurus,Penaeus kerathurus; Penaeus (Melicertus) kerathurus,112,0,0,,115,0,0,116
+Ruppia maritima,rbcL,accepted,Ruppia maritima,68,0,0,,54,0,0,102
+Halodule wrightii,rbcL,accepted,Halodule wrightii,7,0,0,,5,0,0,6
+Sargassum natans,rbcL,accepted,Sargassum natans,4,0,0,,2,0,0,6
+Sargassum fluitans,rbcL,accepted,Sargassum fluitans,8,0,0,,1,0,0,7
+Ulva lactuca,rbcL,accepted,Ulva lactuca,241,6,0,Senegal 6,64,0,0,130
+Hypnea musciformis,rbcL,accepted,Hypnea musciformis,64,3,0,Cape Verde 3,18,0,0,104
+Megaptera novaeangliae,COI,accepted,Megaptera novaeangliae,34,0,0,,30,0,0,40
+Physeter macrocephalus,COI,accepted,Physeter macrocephalus,106,0,0,,4,0,0,4
+Stenella frontalis,COI,accepted,Stenella frontalis,24,0,0,,23,0,0,23
+Balaenoptera brydei,COI,taxon inquirendum,Balaenoptera brydei,39,0,0,,36,0,0,47
+Orcinus orca,COI,accepted,Orcinus orca,180,0,0,,169,0,0,192

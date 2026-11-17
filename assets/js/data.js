@@ -47,7 +47,7 @@ const MEIOFAUNA_OTHER = [
 ];
 
 // v22 (Nov 2026): global18s = SILVA SSU r144, global28s = SILVA LSU r138.2 (genus-level, organism-name match);
-// wa/ng = INSDC GenBank country field (0 for all 25 genera). Previous figures could not be reproduced from any source.
+// wa/ng = INSDC GenBank country field (0 for all 29 genera; v22.5 added 7 estuarine genera and removed 3 mainly terrestrial/freshwater ones). Previous figures could not be reproduced from any source.
 const NEMATODES = [
   {genus:"Chromadora",        order:"Chromadorida",   response:"tolerant",  global18s:6, wa18s:0, ng18s:0, global28s:1, ng28s:0, wa28s:0, role:"Enrichment tolerant; increases with pollution"},
   {genus:"Chromadorita",      order:"Chromadorida",   response:"tolerant",  global18s:66, wa18s:0,  ng18s:0, global28s:51, ng28s:0, wa28s:0, role:"Enrichment tolerant"},
@@ -57,7 +57,6 @@ const NEMATODES = [
   {genus:"Desmodora",         order:"Desmodorida",    response:"tolerant",  global18s:37, wa18s:0,  ng18s:0, global28s:2, ng28s:0, wa28s:0, role:"Hypoxia tolerant; sulphidic sediment"},
   {genus:"Spirinia",          order:"Desmodorida",    response:"tolerant",  global18s:20,  wa18s:0,  ng18s:0, global28s:3, ng28s:0, wa28s:0, role:"Hypoxia tolerant"},
   {genus:"Metachromadora",    order:"Desmodorida",    response:"tolerant",  global18s:27,  wa18s:0,  ng18s:0, global28s:3, ng28s:0, wa28s:0, role:"Organic enrichment associated"},
-  {genus:"Monhystera",        order:"Monhysterida",   response:"indicator", global18s:26, wa18s:0, ng18s:0, global28s:38,ng28s:0, wa28s:0, role:"Disturbance opportunist; rises after spills"},
   {genus:"Terschellingia",    order:"Monhysterida",   response:"indicator", global18s:182,  wa18s:0,  ng18s:0, global28s:0, ng28s:0, wa28s:0, role:"Organic enrichment / sulphide indicator"},
   {genus:"Diplolaimelloides", order:"Monhysterida",   response:"indicator", global18s:138,  wa18s:0,  ng18s:0, global28s:0, ng28s:0, wa28s:0, role:"Organic enrichment indicator"},
   {genus:"Sphaerolaimus",     order:"Monhysterida",   response:"indicator", global18s:60,  wa18s:0,  ng18s:0, global28s:3, ng28s:0, wa28s:0, role:"Sulphide-rich sediment indicator"},
@@ -69,11 +68,17 @@ const NEMATODES = [
   {genus:"Odontophora",       order:"Araeolaimida",   response:"other",     global18s:12,  wa18s:0,  ng18s:0, global28s:7, ng28s:0, wa28s:0, role:"Deposit feeder"},
   {genus:"Campylaimus",       order:"Araeolaimida",   response:"other",     global18s:4,  wa18s:0,  ng18s:0, global28s:0, ng28s:0, wa28s:0, role:"Deposit feeder"},
   {genus:"Desmoscolex",       order:"Desmoscolecida", response:"other",     global18s:17, wa18s:0,  ng18s:0, global28s:0, ng28s:0, wa28s:0, role:"Sandy sediment specialist"},
-  {genus:"Quadricoma",        order:"Desmoscolecida", response:"other",     global18s:0,  wa18s:0,  ng18s:0, global28s:0, ng28s:0, wa28s:0, role:"Sandy sediment specialist"},
-  {genus:"Aphanolaimus",      order:"Araeolaimida",   response:"other",     global18s:3,  wa18s:0,  ng18s:0, global28s:4,  ng28s:0, wa28s:0, role:"Fine sediment generalist"},
-  {genus:"Stylotheristus",    order:"Desmodorida",    response:"other",     global18s:0,  wa18s:0,  ng18s:0, global28s:0,  ng28s:0, wa28s:0, role:"Mangrove sediment associated"},
+  {genus:"Quadricoma",        order:"Desmoscolecida", response:"other",     global18s:0,  wa18s:0,  ng18s:0, global28s:0, ng28s:0, wa28s:0, role:"Sandy sediment specialist; WoRMS treats it as subgenus Tricoma (Quadricoma)"},
+  {genus:"Stylotheristus",    order:"Monhysterida",    response:"other",     global18s:0,  wa18s:0,  ng18s:0, global28s:0,  ng28s:0, wa28s:0, role:"Mangrove sediment associated"},
   {genus:"Pellioditis",       order:"Rhabditida",     response:"indicator", global18s:37, wa18s:0,  ng18s:0, global28s:45, ng28s:0, wa28s:0, role:"Organic matter indicator"},
-  {genus:"Plectus",           order:"Plectida",       response:"other",     global18s:181, wa18s:0,  ng18s:0, global28s:77, ng28s:0, wa28s:0, role:"Generalist; broad habitat"},
+  // v22.5 (Nov 2026): genera typical of tropical estuarine and lagoon muds
+  {genus:"Sabatieria",        order:"Araeolaimida",   response:"indicator", global18s:228, wa18s:0, ng18s:0, global28s:41, ng28s:0, wa28s:0, role:"Silt-clay and hypoxia tolerant; dominant in organically enriched muds"},
+  {genus:"Daptonema",         order:"Monhysterida",   response:"tolerant",  global18s:101, wa18s:0, ng18s:0, global28s:7, ng28s:0, wa28s:0, role:"Disturbance tolerant; abundant in enriched estuarine mud"},
+  {genus:"Theristus",         order:"Monhysterida",   response:"other",     global18s:60, wa18s:0, ng18s:0, global28s:1, ng28s:0, wa28s:0, role:"Deposit feeder; estuarine sand and mud"},
+  {genus:"Paracomesoma",      order:"Araeolaimida",   response:"other",     global18s:18, wa18s:0, ng18s:0, global28s:1, ng28s:0, wa28s:0, role:"Mangrove and estuarine mud"},
+  {genus:"Dorylaimopsis",     order:"Araeolaimida",   response:"other",     global18s:21, wa18s:0, ng18s:0, global28s:2, ng28s:0, wa28s:0, role:"Deposit feeder; fine muddy sediment"},
+  {genus:"Halalaimus",        order:"Enoplida",       response:"sensitive", global18s:79, wa18s:0, ng18s:0, global28s:42, ng28s:0, wa28s:0, role:"Pollution sensitive; declines in enriched sediment"},
+  {genus:"Viscosia",          order:"Enoplida",       response:"other",     global18s:44, wa18s:0, ng18s:0, global28s:18, ng28s:0, wa28s:0, role:"Predator/scavenger; estuarine and mangrove sediment"},
 ];
 
 // Combine all taxa into one flat list for "All taxa" tab

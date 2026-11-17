@@ -38,10 +38,22 @@
           <span style="font-size:10px;background:var(--bg3);color:var(--text2);padding:2px 8px;border-radius:20px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;">Changelog</span>
           Version history &amp; audit trail
         </span>
-        <span style="font-size:11px;color:var(--text3);font-weight:400;">v20 – v22.4 · click to expand</span>
+        <span style="font-size:11px;color:var(--text3);font-weight:400;">v20 – v22.5 · click to expand</span>
       </summary>
 
       <div style="margin-top:14px;display:flex;flex-direction:column;gap:8px;">
+
+        <!-- v22.5 -->
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+          <div style="flex-shrink:0;padding-top:1px;">
+            <span style="display:inline-block;font-size:10px;font-weight:800;color:#fff;background:linear-gradient(90deg,#0d6efd,#0c8599);padding:3px 9px;border-radius:6px;letter-spacing:0.06em;white-space:nowrap;">v22.5 · Nov 2026</span>
+          </div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.85;">
+            <span style="color:var(--blue);font-weight:700;">★</span> <strong>7 nematode genera added</strong> — <em>Sabatieria</em>, <em>Daptonema</em>, <em>Theristus</em>, <em>Paracomesoma</em>, <em>Dorylaimopsis</em>, <em>Halalaimus</em> and <em>Viscosia</em>, genera typical of tropical estuarine, lagoon and mangrove muds that were missing from the list. All were counted in SILVA SSU r144 / LSU r138.2 and NCBI 18S/28S on 16 November 2026 with the same script and rules as the other genera (SILVA SSU 18–228 per genus; 0 West African or Nigerian records).<br><span style="color:var(--red);font-weight:700;">✕</span> <strong>3 genera removed</strong> — <em>Monhystera</em>, <em>Aphanolaimus</em> and <em>Plectus</em> live mainly in soil and fresh water and are poor indicators for lagoon and shelf sediment. Their counts are kept in <code>Data/v22.4</code>.<br><span style="color:var(--amber);font-weight:700;">Δ</span> <strong>Corrections and totals</strong> — <em>Stylotheristus</em> moved to Monhysterida (Xyalidae); <em>Quadricoma</em> noted as a subgenus of <em>Tricoma</em> in WoRMS. Nematodes 25 → 29 genera across 7 orders; all taxa 132 → 136; absent 80 → 84, partial 46, present 6. Raw outputs in <code>Data/v22.5</code>.
+          </div>
+        </div>
+
+        <div style="height:1px;background:var(--border);margin:2px 0;"></div>
 
         <!-- v22.4 -->
         <div style="display:flex;gap:12px;align-items:flex-start;">
@@ -177,7 +189,7 @@
           <li><strong>Marine demersal fish</strong> — offshore snappers, groupers, dentex</li>
           <li><strong>Coral reef and hard substrate</strong> — corals, sea urchins, holothurians</li>
           <li><strong>Macrobenthos</strong> — <em>Tympanotonos</em>, <em>Pachymelania</em>, bivalves, polychaetes, mangrove crabs</li>
-          <li><strong>Nematodes</strong> — 25 genera across 8 orders, 18S + 28S</li>
+          <li><strong>Nematodes</strong> — 29 genera across 7 orders, 18S + 28S</li>
           <li><strong>Meiofauna</strong> — copepods, ostracods, foraminifera</li>
           <li><strong>Seagrass &amp; macroalgae</strong> — including <em>Sargassum</em> bloom species</li>
           <li><strong>Marine mammals</strong> — including African manatee, Atlantic humpback dolphin</li>
@@ -343,7 +355,7 @@
       <div style="background:var(--red-bg);border:1px solid var(--red);border-radius:var(--radius-lg);padding:1.25rem;">
         <div style="font-size:12px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px;">🔴 Critical Gaps — Zero West African Reference Records</div>
         <ul style="font-size:12px;color:var(--text);line-height:2;padding-left:16px;margin:0;">
-          <li>All <span id="critical-nema-count">25</span> nematode genera tracked — <strong>0 West African or Nigerian sequences</strong> for all (18S and 28S); global SILVA SSU counts range from 0 to 182 per genus</li>
+          <li>All <span id="critical-nema-count">29</span> nematode genera tracked — <strong>0 West African or Nigerian sequences</strong> for all (18S and 28S); global SILVA SSU counts range from 0 to 228 per genus</li>
           <li><em>Cynoglossus senegalensis</em> (Senegalese tonguesole) — 1 global 12S record, zero WA; abundant bycatch</li>
           <li>West African endemics — <em>Pteroscion peli</em> <strong>zero 12S records globally</strong>; <em>Lutjanus agennes</em> zero in NCBI (1 WA record in BOLD); <em>Dentex angolensis</em> 1 global record, zero WA</li>
           <li><em>Tursiops truncatus</em>, <em>Mugil cephalus</em>, <em>Sphyrna lewini</em> — well-barcoded globally (239 COI, 64 and 102 12S records) but <strong>zero West African sequences</strong>; eDNA assignments rest on non-regional references until West African vouchers are sequenced</li>
@@ -382,7 +394,7 @@
         <ul style="font-size:12px;color:var(--text);line-height:2;padding-left:16px;margin:0;">
           <li><strong>Classification is regional:</strong> "present" means West African records meet the marker threshold — not global availability</li>
           <li><strong>Zero WA = absent</strong>, regardless of how well-studied the species is globally (major shift from v20)</li>
-          <li><strong>Nematode 0 values</strong> are real — no INSDC (GenBank/ENA) record for any of the 25 genera carries a West African country; SILVA is built from INSDC, so its WA count is also zero</li>
+          <li><strong>Nematode 0 values</strong> are real — no INSDC (GenBank/ENA) record for any of the 29 genera carries a West African country; SILVA is built from INSDC, so its WA count is also zero</li>
           <li><strong>Nematode global counts</strong> are SILVA SSU r144 / LSU r138.2 genus-level counts (organism-name match); v21 figures could not be reproduced from any source and were replaced in v22</li><li><strong>WA counts are conservative:</strong> a record counts only if its GenBank/BOLD country field names a West African state (Mauritania–Cameroon, Cabo Verde)</li>
           <li><strong>IUCN statuses</strong> sourced from IUCN Red List (2024); subject to revision</li>
           <li>Dashboard v22.2 — live counts from NCBI, BOLD v5 and SILVA, 13–14 Nov 2026, queried under current and accepted (WoRMS) names; query code and raw results in the GitHub repository (<code>Scripts/</code>, <code>Data/v22/</code>)</li>

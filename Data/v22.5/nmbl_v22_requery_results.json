@@ -1,0 +1,5151 @@
+{
+ "Ethmalosa fimbriata": {
+  "marker": "12S",
+  "names_queried": [
+   "Ethmalosa fimbriata"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 3,
+   "wa": 2,
+   "ng": 0,
+   "wa_countries": {
+    "Guinea-Bissau": 2
+   },
+   "wa_accessions": [
+    "PQ628765.1",
+    "PQ628764.1"
+   ]
+  },
+  "bold": {
+   "global": 2,
+   "wa": 2,
+   "ng": 0,
+   "all_records": 18,
+   "per_name": {
+    "Ethmalosa fimbriata": {
+     "global": 2,
+     "wa": 2,
+     "ng": 0,
+     "all_records": 18
+    }
+   }
+  }
+ },
+ "Sardinella maderensis": {
+  "marker": "12S",
+  "names_queried": [
+   "Sardinella maderensis"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 3,
+   "wa": 2,
+   "ng": 0,
+   "wa_countries": {
+    "Guinea-Bissau": 2
+   },
+   "wa_accessions": [
+    "PQ628818.1",
+    "PQ628817.1"
+   ]
+  },
+  "bold": {
+   "global": 2,
+   "wa": 2,
+   "ng": 0,
+   "all_records": 47,
+   "per_name": {
+    "Sardinella maderensis": {
+     "global": 2,
+     "wa": 2,
+     "ng": 0,
+     "all_records": 47
+    }
+   }
+  }
+ },
+ "Sardinella aurita": {
+  "marker": "12S",
+  "names_queried": [
+   "Sardinella aurita"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 12,
+   "wa": 1,
+   "ng": 0,
+   "wa_countries": {
+    "Guinea-Bissau": 1
+   },
+   "wa_accessions": [
+    "PQ628816.1"
+   ]
+  },
+  "bold": {
+   "global": 1,
+   "wa": 1,
+   "ng": 0,
+   "all_records": 521,
+   "per_name": {
+    "Sardinella aurita": {
+     "global": 1,
+     "wa": 1,
+     "ng": 0,
+     "all_records": 521
+    }
+   }
+  }
+ },
+ "Pseudotolithus senegalensis": {
+  "marker": "12S",
+  "names_queried": [
+   "Pseudotolithus senegalensis"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 2,
+   "wa": 2,
+   "ng": 0,
+   "wa_countries": {
+    "Guinea-Bissau": 2
+   },
+   "wa_accessions": [
+    "PQ628811.1",
+    "PQ628810.1"
+   ]
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 8,
+   "per_name": {
+    "Pseudotolithus senegalensis": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 8
+    }
+   }
+  }
+ },
+ "Pseudotolithus elongatus": {
+  "marker": "12S",
+  "names_queried": [
+   "Pseudotolithus elongatus"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 4,
+   "wa": 3,
+   "ng": 0,
+   "wa_countries": {
+    "Guinea-Bissau": 3
+   },
+   "wa_accessions": [
+    "PQ628806.1",
+    "PQ628805.1",
+    "PQ628804.1"
+   ]
+  },
+  "bold": {
+   "global": 3,
+   "wa": 3,
+   "ng": 0,
+   "all_records": 22,
+   "per_name": {
+    "Pseudotolithus elongatus": {
+     "global": 3,
+     "wa": 3,
+     "ng": 0,
+     "all_records": 22
+    }
+   }
+  }
+ },
+ "Cynoglossus senegalensis": {
+  "marker": "12S",
+  "names_queried": [
+   "Cynoglossus senegalensis"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 1,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 33,
+   "per_name": {
+    "Cynoglossus senegalensis": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 33
+    }
+   }
+  }
+ },
+ "Galeoides decadactylus": {
+  "marker": "12S",
+  "names_queried": [
+   "Galeoides decadactylus"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 2,
+   "wa": 1,
+   "ng": 0,
+   "wa_countries": {
+    "Guinea-Bissau": 1
+   },
+   "wa_accessions": [
+    "PQ628767.1"
+   ]
+  },
+  "bold": {
+   "global": 1,
+   "wa": 1,
+   "ng": 0,
+   "all_records": 17,
+   "per_name": {
+    "Galeoides decadactylus": {
+     "global": 1,
+     "wa": 1,
+     "ng": 0,
+     "all_records": 17
+    }
+   }
+  }
+ },
+ "Polydactylus quadrifilis": {
+  "marker": "12S",
+  "names_queried": [
+   "Polydactylus quadrifilis"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 3,
+   "wa": 2,
+   "ng": 0,
+   "wa_countries": {
+    "Guinea-Bissau": 2
+   },
+   "wa_accessions": [
+    "PQ628797.1",
+    "PQ628796.1"
+   ]
+  },
+  "bold": {
+   "global": 2,
+   "wa": 2,
+   "ng": 0,
+   "all_records": 6,
+   "per_name": {
+    "Polydactylus quadrifilis": {
+     "global": 2,
+     "wa": 2,
+     "ng": 0,
+     "all_records": 6
+    }
+   }
+  }
+ },
+ "Lutjanus agennes": {
+  "marker": "12S",
+  "names_queried": [
+   "Lutjanus agennes"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 1,
+   "wa": 1,
+   "ng": 0,
+   "all_records": 6,
+   "per_name": {
+    "Lutjanus agennes": {
+     "global": 1,
+     "wa": 1,
+     "ng": 0,
+     "all_records": 6
+    }
+   }
+  }
+ },
+ "Arius latiscutatus": {
+  "marker": "12S",
+  "names_queried": [
+   "Arius latiscutatus",
+   "Carlarius latiscutatus"
+  ],
+  "worms": "unaccepted -> Carlarius latiscutatus",
+  "ncbi": {
+   "global": 3,
+   "wa": 2,
+   "ng": 0,
+   "wa_countries": {
+    "Guinea-Bissau": 2
+   },
+   "wa_accessions": [
+    "PQ628736.1",
+    "PQ628735.1"
+   ]
+  },
+  "bold": {
+   "global": 2,
+   "wa": 2,
+   "ng": 0,
+   "all_records": 16,
+   "per_name": {
+    "Arius latiscutatus": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 5
+    },
+    "Carlarius latiscutatus": {
+     "global": 2,
+     "wa": 2,
+     "ng": 0,
+     "all_records": 11
+    }
+   }
+  }
+ },
+ "Brachydeuterus auritus": {
+  "marker": "12S",
+  "names_queried": [
+   "Brachydeuterus auritus"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 1,
+   "wa": 1,
+   "ng": 0,
+   "all_records": 9,
+   "per_name": {
+    "Brachydeuterus auritus": {
+     "global": 1,
+     "wa": 1,
+     "ng": 0,
+     "all_records": 9
+    }
+   }
+  }
+ },
+ "Pomadasys jubelini": {
+  "marker": "12S",
+  "names_queried": [
+   "Pomadasys jubelini"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 2,
+   "wa": 2,
+   "ng": 0,
+   "all_records": 25,
+   "per_name": {
+    "Pomadasys jubelini": {
+     "global": 2,
+     "wa": 2,
+     "ng": 0,
+     "all_records": 25
+    }
+   }
+  }
+ },
+ "Elops lacerta": {
+  "marker": "12S",
+  "names_queried": [
+   "Elops lacerta"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 1,
+   "wa": 1,
+   "ng": 0,
+   "wa_countries": {
+    "Guinea-Bissau": 1
+   },
+   "wa_accessions": [
+    "PQ628756.1"
+   ]
+  },
+  "bold": {
+   "global": 1,
+   "wa": 1,
+   "ng": 0,
+   "all_records": 6,
+   "per_name": {
+    "Elops lacerta": {
+     "global": 1,
+     "wa": 1,
+     "ng": 0,
+     "all_records": 6
+    }
+   }
+  }
+ },
+ "Drepane africana": {
+  "marker": "12S",
+  "names_queried": [
+   "Drepane africana"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 5,
+   "wa": 2,
+   "ng": 0,
+   "wa_countries": {
+    "Guinea-Bissau": 2
+   },
+   "wa_accessions": [
+    "PQ628755.1",
+    "PQ628754.1"
+   ]
+  },
+  "bold": {
+   "global": 2,
+   "wa": 2,
+   "ng": 0,
+   "all_records": 6,
+   "per_name": {
+    "Drepane africana": {
+     "global": 2,
+     "wa": 2,
+     "ng": 0,
+     "all_records": 6
+    }
+   }
+  }
+ },
+ "Mugil cephalus": {
+  "marker": "12S",
+  "names_queried": [
+   "Mugil cephalus"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 64,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 3,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 660,
+   "per_name": {
+    "Mugil cephalus": {
+     "global": 3,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 660
+    }
+   }
+  }
+ },
+ "Chrysichthys nigrodigitatus": {
+  "marker": "12S",
+  "names_queried": [
+   "Chrysichthys nigrodigitatus"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 2,
+   "wa": 1,
+   "ng": 0,
+   "wa_countries": {
+    "Guinea-Bissau": 1
+   },
+   "wa_accessions": [
+    "PQ628745.1"
+   ]
+  },
+  "bold": {
+   "global": 1,
+   "wa": 1,
+   "ng": 0,
+   "all_records": 53,
+   "per_name": {
+    "Chrysichthys nigrodigitatus": {
+     "global": 1,
+     "wa": 1,
+     "ng": 0,
+     "all_records": 53
+    }
+   }
+  }
+ },
+ "Rhizoprionodon acutus": {
+  "marker": "12S",
+  "names_queried": [
+   "Rhizoprionodon acutus"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 2,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 234,
+   "per_name": {
+    "Rhizoprionodon acutus": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 234
+    }
+   }
+  }
+ },
+ "Rhinobatos rhinobatos": {
+  "marker": "12S",
+  "names_queried": [
+   "Rhinobatos rhinobatos"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 1,
+   "wa": 1,
+   "ng": 0,
+   "all_records": 5,
+   "per_name": {
+    "Rhinobatos rhinobatos": {
+     "global": 1,
+     "wa": 1,
+     "ng": 0,
+     "all_records": 5
+    }
+   }
+  }
+ },
+ "Hypanus marianae": {
+  "marker": "12S",
+  "names_queried": [
+   "Hypanus marianae"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 29,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 0,
+   "per_name": {
+    "Hypanus marianae": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 0
+    }
+   }
+  }
+ },
+ "Carcharhinus leucas": {
+  "marker": "12S",
+  "names_queried": [
+   "Carcharhinus leucas"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 375,
+   "wa": 1,
+   "ng": 0,
+   "wa_countries": {
+    "Sierra Leone": 1
+   },
+   "wa_accessions": [
+    "OP007104.1"
+   ]
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 168,
+   "per_name": {
+    "Carcharhinus leucas": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 168
+    }
+   }
+  }
+ },
+ "Sphyrna lewini": {
+  "marker": "12S",
+  "names_queried": [
+   "Sphyrna lewini"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 102,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 709,
+   "per_name": {
+    "Sphyrna lewini": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 709
+    }
+   }
+  }
+ },
+ "Penaeus notialis": {
+  "marker": "COI",
+  "names_queried": [
+   "Penaeus notialis",
+   "Penaeus (Farfantepenaeus) notialis"
+  ],
+  "worms": "superseded combination -> Penaeus (Farfantepenaeus) notialis",
+  "ncbi": {
+   "global": 50,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 16,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 16,
+   "per_name": {
+    "Penaeus notialis": {
+     "global": 16,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 16
+    },
+    "Penaeus (Farfantepenaeus) notialis": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 0
+    }
+   }
+  }
+ },
+ "Callinectes amnicola": {
+  "marker": "COI",
+  "names_queried": [
+   "Callinectes amnicola"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 3,
+   "wa": 1,
+   "ng": 0,
+   "wa_countries": {
+    "Ghana": 1
+   },
+   "wa_accessions": [
+    "MG462523.1"
+   ]
+  },
+  "bold": {
+   "global": 3,
+   "wa": 1,
+   "ng": 0,
+   "all_records": 3,
+   "per_name": {
+    "Callinectes amnicola": {
+     "global": 3,
+     "wa": 1,
+     "ng": 0,
+     "all_records": 3
+    }
+   }
+  }
+ },
+ "Parapenaeus longirostris": {
+  "marker": "COI",
+  "names_queried": [
+   "Parapenaeus longirostris"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 29,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 38,
+   "wa": 1,
+   "ng": 0,
+   "all_records": 38,
+   "per_name": {
+    "Parapenaeus longirostris": {
+     "global": 38,
+     "wa": 1,
+     "ng": 0,
+     "all_records": 38
+    }
+   }
+  }
+ },
+ "Macrobrachium vollenhovenii": {
+  "marker": "COI",
+  "names_queried": [
+   "Macrobrachium vollenhovenii"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 3,
+   "wa": 2,
+   "ng": 2,
+   "wa_countries": {
+    "Nigeria": 2
+   },
+   "wa_accessions": [
+    "KT374068.1",
+    "KT374067.1"
+   ]
+  },
+  "bold": {
+   "global": 3,
+   "wa": 2,
+   "ng": 2,
+   "all_records": 8,
+   "per_name": {
+    "Macrobrachium vollenhovenii": {
+     "global": 3,
+     "wa": 2,
+     "ng": 2,
+     "all_records": 8
+    }
+   }
+  }
+ },
+ "Trichechus senegalensis": {
+  "marker": "COI",
+  "names_queried": [
+   "Trichechus senegalensis"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 1,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 0,
+   "per_name": {
+    "Trichechus senegalensis": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 0
+    }
+   }
+  }
+ },
+ "Sousa teuszii": {
+  "marker": "COI",
+  "names_queried": [
+   "Sousa teuszii"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 1,
+   "wa": 1,
+   "ng": 0,
+   "wa_countries": {
+    "Senegal": 1
+   },
+   "wa_accessions": [
+    "MN365274.1"
+   ]
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 0,
+   "per_name": {
+    "Sousa teuszii": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 0
+    }
+   }
+  }
+ },
+ "Tursiops truncatus": {
+  "marker": "COI",
+  "names_queried": [
+   "Tursiops truncatus"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 239,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 168,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 186,
+   "per_name": {
+    "Tursiops truncatus": {
+     "global": 168,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 186
+    }
+   }
+  }
+ },
+ "Chelonia mydas": {
+  "marker": "12S",
+  "names_queried": [
+   "Chelonia mydas"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 20,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 167,
+   "per_name": {
+    "Chelonia mydas": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 167
+    }
+   }
+  }
+ },
+ "Dermochelys coriacea": {
+  "marker": "12S",
+  "names_queried": [
+   "Dermochelys coriacea"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 10,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 29,
+   "per_name": {
+    "Dermochelys coriacea": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 29
+    }
+   }
+  }
+ },
+ "Lepidochelys olivacea": {
+  "marker": "12S",
+  "names_queried": [
+   "Lepidochelys olivacea"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 8,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 52,
+   "per_name": {
+    "Lepidochelys olivacea": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 52
+    }
+   }
+  }
+ },
+ "Harpacticoida": {
+  "marker": "18S",
+  "names_queried": [
+   "Harpacticoida"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 1499,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 150,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 5615,
+   "per_name": {
+    "Harpacticoida": {
+     "global": 150,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 5615
+    }
+   }
+  }
+ },
+ "Ostracoda": {
+  "marker": "COI",
+  "names_queried": [
+   "Ostracoda"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 5594,
+   "wa": 3,
+   "ng": 0,
+   "wa_countries": {
+    "Cape Verde": 3
+   },
+   "wa_accessions": [
+    "OR378964.1",
+    "OR378925.1",
+    "OR378924.1"
+   ]
+  },
+  "bold": {
+   "global": 7018,
+   "wa": 3,
+   "ng": 0,
+   "all_records": 7661,
+   "per_name": {
+    "Ostracoda": {
+     "global": 7018,
+     "wa": 3,
+     "ng": 0,
+     "all_records": 7661
+    }
+   }
+  }
+ },
+ "Tardigrada": {
+  "marker": "18S",
+  "names_queried": [
+   "Tardigrada"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 3762,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 2306,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 5992,
+   "per_name": {
+    "Tardigrada": {
+     "global": 2306,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 5992
+    }
+   }
+  }
+ },
+ "Gastrotricha": {
+  "marker": "18S",
+  "names_queried": [
+   "Gastrotricha"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 874,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 575,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 1183,
+   "per_name": {
+    "Gastrotricha": {
+     "global": 575,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 1183
+    }
+   }
+  }
+ },
+ "Kinorhyncha": {
+  "marker": "18S",
+  "names_queried": [
+   "Kinorhyncha"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 112,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 96,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 658,
+   "per_name": {
+    "Kinorhyncha": {
+     "global": 96,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 658
+    }
+   }
+  }
+ },
+ "Foraminifera": {
+  "marker": "18S",
+  "names_queried": [
+   "Foraminifera"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 21519,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 76,
+   "per_name": {
+    "Foraminifera": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 76
+    }
+   }
+  }
+ },
+ "Ciliophora": {
+  "marker": "18S",
+  "names_queried": [
+   "Ciliophora"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 20113,
+   "wa": 137,
+   "ng": 0,
+   "wa_countries": {
+    "Cameroon": 36,
+    "Benin": 97,
+    "Cape Verde": 1,
+    "Guinea": 1,
+    "Sierra Leone": 1,
+    "Ghana": 1
+   },
+   "wa_accessions": [
+    "PP621592.1",
+    "PP621591.1",
+    "PP621590.1",
+    "PP621589.1",
+    "PP621588.1",
+    "PP621587.1",
+    "PP621586.1",
+    "PP621585.1",
+    "PP621584.1",
+    "PP621583.1",
+    "PP621582.1",
+    "PP621581.1",
+    "PP621580.1",
+    "PP621579.1",
+    "PP621578.1",
+    "PP621577.1",
+    "PP621576.1",
+    "PP621575.1",
+    "PP621574.1",
+    "PP621573.1",
+    "PP621572.1",
+    "PP621571.1",
+    "PP621570.1",
+    "HG996430.1",
+    "HG996426.1",
+    "HG996411.1",
+    "HG996402.1",
+    "HG996389.1",
+    "HG996370.1",
+    "HG996346.1",
+    "HG996344.1",
+    "HG996332.1",
+    "HG996326.1",
+    "HG996325.1",
+    "HG996322.1",
+    "HG996311.1",
+    "HG996307.1",
+    "HG996294.1",
+    "HG996293.1",
+    "HG996289.1",
+    "HG996288.1",
+    "HG996278.1",
+    "HG996276.1",
+    "HG996257.1",
+    "HG996256.1",
+    "HG996248.1",
+    "HG996232.1",
+    "HG996208.1",
+    "HG996206.1",
+    "HG996200.1",
+    "HG996177.1",
+    "HG996173.1",
+    "HG996169.1",
+    "HG996168.1",
+    "HG996165.1",
+    "HG996142.1",
+    "HG996138.1",
+    "HG996137.1",
+    "HG996129.1",
+    "HG996127.1",
+    "HG996124.1",
+    "HG996122.1",
+    "HG996107.1",
+    "HG996105.1",
+    "HG996086.1",
+    "HG996025.1",
+    "HG996020.1",
+    "HG996018.1",
+    "HG996007.1",
+    "HG996006.1",
+    "HG995999.1",
+    "HG995990.1",
+    "HG995978.1",
+    "HG995977.1",
+    "HG995976.1",
+    "HG995973.1",
+    "HG995954.1",
+    "HG995927.1",
+    "HG995923.1",
+    "HG995885.1",
+    "HG995873.1",
+    "HG995869.1",
+    "HG995857.1",
+    "HG995813.1",
+    "HG995804.1",
+    "HG995793.1",
+    "HG995754.1",
+    "HG995749.1",
+    "HG995746.1",
+    "HG995745.1",
+    "HG995741.1",
+    "HG995717.1",
+    "HG995716.1",
+    "HG995712.1",
+    "HG995680.1",
+    "HG995673.1",
+    "HG995654.1",
+    "HG995648.1",
+    "HG995644.1",
+    "HG995635.1",
+    "HG995626.1",
+    "HG995622.1",
+    "HG995619.1",
+    "HG995613.1",
+    "HG995601.1",
+    "HG995597.1",
+    "HG995574.1",
+    "HG995569.1",
+    "HG995560.1",
+    "HG995548.1",
+    "HG995547.1",
+    "HG995543.1",
+    "HG995537.1",
+    "HG995531.1",
+    "HG995528.1",
+    "HG995515.1",
+    "HG995507.1",
+    "HG995482.1",
+    "HG995475.1",
+    "HG995465.1",
+    "KY020814.1",
+    "KY775520.1",
+    "JQ073380.1",
+    "JQ073379.1",
+    "JQ073355.1",
+    "JQ073354.1",
+    "JQ073353.1",
+    "JQ073335.1",
+    "JQ073334.1",
+    "JQ073317.1",
+    "JQ073316.1",
+    "JQ073315.1",
+    "EU680309.1",
+    "EU127481.1",
+    "AB437347.1",
+    "AB437346.1",
+    "DQ442835.1"
+   ]
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 2497,
+   "per_name": {
+    "Ciliophora": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 2497
+    }
+   }
+  }
+ },
+ "Bacillariophyta": {
+  "marker": "18S",
+  "names_queried": [
+   "Bacillariophyta"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 17068,
+   "wa": 17,
+   "ng": 16,
+   "wa_countries": {
+    "Senegal": 1,
+    "Nigeria": 16
+   },
+   "wa_accessions": [
+    "PX584483.1",
+    "PV700349.1",
+    "PV655548.1",
+    "KU341756.1",
+    "KU341755.1",
+    "KU341754.1",
+    "KU341753.1",
+    "KU341752.1",
+    "KU341751.1",
+    "KU341750.1",
+    "KU341749.1",
+    "KU341748.1",
+    "KU341747.1",
+    "KU341746.1",
+    "KU341745.1",
+    "KU341744.1",
+    "KU341743.1"
+   ]
+  },
+  "bold": {
+   "global": 326,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 6905,
+   "per_name": {
+    "Bacillariophyta": {
+     "global": 326,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 6905
+    }
+   }
+  }
+ },
+ "Polychaeta": {
+  "marker": "COI",
+  "names_queried": [
+   "Polychaeta"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 33820,
+   "wa": 99,
+   "ng": 4,
+   "wa_countries": {
+    "Guinea-Bissau": 4,
+    "Mauritania": 8,
+    "Senegal": 3,
+    "Guinea": 3,
+    "Nigeria": 4,
+    "Cape Verde": 74,
+    "Sierra Leone": 1,
+    "Ghana": 2
+   },
+   "wa_accessions": [
+    "QB044163.1",
+    "QB044162.1",
+    "PX434398.1",
+    "PX434397.1",
+    "PX434396.1",
+    "PX878927.1",
+    "PX878910.1",
+    "PX878909.1",
+    "PX168857.1",
+    "OR935940.1",
+    "OR935932.1",
+    "OR935931.1",
+    "OR655031.1",
+    "OR379313.1",
+    "OR379275.1",
+    "OR379274.1",
+    "OR379273.1",
+    "OR379272.1",
+    "OR379271.1",
+    "OR379270.1",
+    "OR379269.1",
+    "OR379268.1",
+    "OR379267.1",
+    "OR379266.1",
+    "OR379265.1",
+    "OR379264.1",
+    "OR379263.1",
+    "OR379262.1",
+    "OR379261.1",
+    "OR379259.1",
+    "OR379257.1",
+    "OR379256.1",
+    "OR379255.1",
+    "OR379254.1",
+    "OR379253.1",
+    "OR379252.1",
+    "OR379251.1",
+    "OR379250.1",
+    "OR379249.1",
+    "OR379244.1",
+    "OR379243.1",
+    "OR379242.1",
+    "OR379239.1",
+    "OR379238.1",
+    "OR379237.1",
+    "OR379234.1",
+    "OR379232.1",
+    "OR379231.1",
+    "OR379224.1",
+    "OR379223.1",
+    "OR379222.1",
+    "OR379211.1",
+    "OR379210.1",
+    "OR379209.1",
+    "OR379194.1",
+    "OR379149.1",
+    "OR379125.1",
+    "OR379122.1",
+    "OR379114.1",
+    "OR379092.1",
+    "OR379084.1",
+    "OR379083.1",
+    "OR379045.1",
+    "OR379039.1",
+    "OR379007.1",
+    "OR378981.1",
+    "OR378975.1",
+    "OR378961.1",
+    "OR378960.1",
+    "OR378959.1",
+    "OR378952.1",
+    "OR378938.1",
+    "OR378933.1",
+    "OR378932.1",
+    "OR378929.1",
+    "OR378927.1",
+    "OR378926.1",
+    "OR378918.1",
+    "OR378917.1",
+    "OR378899.1",
+    "OR378898.1",
+    "OR378897.1",
+    "OR378888.1",
+    "OR378887.1",
+    "OR378886.1",
+    "OP476456.1",
+    "MZ334711.1",
+    "MZ334709.1",
+    "MZ334706.1",
+    "MZ334698.1",
+    "MZ334697.1",
+    "MZ334693.1",
+    "MZ334689.1",
+    "MZ334681.1",
+    "MZ334679.1",
+    "MZ334678.1",
+    "MZ334677.1",
+    "OM237791.1",
+    "MW794259.1"
+   ]
+  },
+  "bold": {
+   "global": 51528,
+   "wa": 132,
+   "ng": 9,
+   "all_records": 63982,
+   "per_name": {
+    "Polychaeta": {
+     "global": 51528,
+     "wa": 132,
+     "ng": 9,
+     "all_records": 63982
+    }
+   }
+  }
+ },
+ "Tympanotonos fuscatus": {
+  "marker": "COI",
+  "names_queried": [
+   "Tympanotonos fuscatus"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 3,
+   "wa": 3,
+   "ng": 0,
+   "wa_countries": {
+    "Gambia": 1,
+    "Ghana": 2
+   },
+   "wa_accessions": [
+    "AM932794.1",
+    "AM932793.1",
+    "AM932792.1"
+   ]
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 0,
+   "per_name": {
+    "Tympanotonos fuscatus": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 0
+    }
+   }
+  }
+ },
+ "Tympanotonos radula": {
+  "marker": "COI",
+  "names_queried": [
+   "Tympanotonos radula",
+   "Tympanotonos fuscatus"
+  ],
+  "worms": "unaccepted -> Tympanotonos fuscatus",
+  "ncbi": {
+   "global": 3,
+   "wa": 3,
+   "ng": 0,
+   "wa_countries": {
+    "Gambia": 1,
+    "Ghana": 2
+   },
+   "wa_accessions": [
+    "AM932794.1",
+    "AM932793.1",
+    "AM932792.1"
+   ]
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 0,
+   "per_name": {
+    "Tympanotonos radula": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 0
+    },
+    "Tympanotonos fuscatus": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 0
+    }
+   }
+  }
+ },
+ "Pachymelania aurita": {
+  "marker": "COI",
+  "names_queried": [
+   "Pachymelania aurita"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 5,
+   "wa": 5,
+   "ng": 5,
+   "all_records": 5,
+   "per_name": {
+    "Pachymelania aurita": {
+     "global": 5,
+     "wa": 5,
+     "ng": 5,
+     "all_records": 5
+    }
+   }
+  }
+ },
+ "Pachymelania fusca": {
+  "marker": "COI",
+  "names_queried": [
+   "Pachymelania fusca"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 3,
+   "wa": 3,
+   "ng": 3,
+   "all_records": 3,
+   "per_name": {
+    "Pachymelania fusca": {
+     "global": 3,
+     "wa": 3,
+     "ng": 3,
+     "all_records": 3
+    }
+   }
+  }
+ },
+ "Telescopium telescopium": {
+  "marker": "COI",
+  "names_queried": [
+   "Telescopium telescopium"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 51,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 50,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 58,
+   "per_name": {
+    "Telescopium telescopium": {
+     "global": 50,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 58
+    }
+   }
+  }
+ },
+ "Neritina glabrata": {
+  "marker": "COI",
+  "names_queried": [
+   "Neritina glabrata",
+   "Vitta glabrata"
+  ],
+  "worms": "unaccepted -> Vitta glabrata",
+  "ncbi": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 0,
+   "per_name": {
+    "Neritina glabrata": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 0
+    },
+    "Vitta glabrata": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 0
+    }
+   }
+  }
+ },
+ "Lanistes varicus": {
+  "marker": "COI",
+  "names_queried": [
+   "Lanistes varicus"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 2,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 0,
+   "per_name": {
+    "Lanistes varicus": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 0
+    }
+   }
+  }
+ },
+ "Crassostrea gasar": {
+  "marker": "COI",
+  "names_queried": [
+   "Crassostrea gasar",
+   "Crassostrea tulipa"
+  ],
+  "worms": "junior subjective synonym -> Crassostrea tulipa",
+  "ncbi": {
+   "global": 32,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 54,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 67,
+   "per_name": {
+    "Crassostrea gasar": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 0
+    },
+    "Crassostrea tulipa": {
+     "global": 54,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 67
+    }
+   }
+  }
+ },
+ "Egeria radiata": {
+  "marker": "COI",
+  "names_queried": [
+   "Egeria radiata",
+   "Galatea paradoxa"
+  ],
+  "worms": "unaccepted -> Galatea paradoxa",
+  "ncbi": {
+   "global": 2,
+   "wa": 2,
+   "ng": 0,
+   "wa_countries": {
+    "Ghana": 2
+   },
+   "wa_accessions": [
+    "OP174514.1",
+    "OP174513.1"
+   ]
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 0,
+   "per_name": {
+    "Egeria radiata": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 0
+    },
+    "Galatea paradoxa": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 0
+    }
+   }
+  }
+ },
+ "Senilia senilis": {
+  "marker": "COI",
+  "names_queried": [
+   "Senilia senilis"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 1,
+   "wa": 1,
+   "ng": 0,
+   "wa_countries": {
+    "Senegal": 1
+   },
+   "wa_accessions": [
+    "JN133732.1"
+   ]
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 0,
+   "per_name": {
+    "Senilia senilis": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 0
+    }
+   }
+  }
+ },
+ "Mytilaster minimus": {
+  "marker": "COI",
+  "names_queried": [
+   "Mytilaster minimus"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 17,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 17,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 17,
+   "per_name": {
+    "Mytilaster minimus": {
+     "global": 17,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 17
+    }
+   }
+  }
+ },
+ "Corbula trigona": {
+  "marker": "COI",
+  "names_queried": [
+   "Corbula trigona",
+   "Potamocorbula adusta"
+  ],
+  "worms": "junior homonym -> Potamocorbula adusta",
+  "ncbi": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 2,
+   "wa": 2,
+   "ng": 2,
+   "all_records": 2,
+   "per_name": {
+    "Corbula trigona": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 0
+    },
+    "Potamocorbula adusta": {
+     "global": 2,
+     "wa": 2,
+     "ng": 2,
+     "all_records": 2
+    }
+   }
+  }
+ },
+ "Sphaerium nodicostatum": {
+  "marker": "COI",
+  "names_queried": [
+   "Sphaerium nodicostatum"
+  ],
+  "worms": "not in WoRMS",
+  "ncbi": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 0,
+   "per_name": {
+    "Sphaerium nodicostatum": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 0
+    }
+   }
+  }
+ },
+ "Capitella capitata": {
+  "marker": "COI",
+  "names_queried": [
+   "Capitella capitata"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 29,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 57,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 60,
+   "per_name": {
+    "Capitella capitata": {
+     "global": 57,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 60
+    }
+   }
+  }
+ },
+ "Perinereis cultrifera": {
+  "marker": "COI",
+  "names_queried": [
+   "Perinereis cultrifera"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 67,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 67,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 88,
+   "per_name": {
+    "Perinereis cultrifera": {
+     "global": 67,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 88
+    }
+   }
+  }
+ },
+ "Marphysa sanguinea": {
+  "marker": "COI",
+  "names_queried": [
+   "Marphysa sanguinea"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 48,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 45,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 60,
+   "per_name": {
+    "Marphysa sanguinea": {
+     "global": 45,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 60
+    }
+   }
+  }
+ },
+ "Sabella pavonina": {
+  "marker": "COI",
+  "names_queried": [
+   "Sabella pavonina"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 6,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 14,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 16,
+   "per_name": {
+    "Sabella pavonina": {
+     "global": 14,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 16
+    }
+   }
+  }
+ },
+ "Hydroides elegans": {
+  "marker": "COI",
+  "names_queried": [
+   "Hydroides elegans"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 63,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 55,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 70,
+   "per_name": {
+    "Hydroides elegans": {
+     "global": 55,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 70
+    }
+   }
+  }
+ },
+ "Uca tangeri": {
+  "marker": "COI",
+  "names_queried": [
+   "Uca tangeri",
+   "Afruca tangeri"
+  ],
+  "worms": "superseded combination -> Afruca tangeri",
+  "ncbi": {
+   "global": 6,
+   "wa": 4,
+   "ng": 0,
+   "wa_countries": {
+    "Guinea-Bissau": 3,
+    "Ghana": 1
+   },
+   "wa_accessions": [
+    "QB044156.1",
+    "QB044155.1",
+    "QB044154.1",
+    "LC053380.1"
+   ]
+  },
+  "bold": {
+   "global": 3,
+   "wa": 1,
+   "ng": 0,
+   "all_records": 3,
+   "per_name": {
+    "Uca tangeri": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 0
+    },
+    "Afruca tangeri": {
+     "global": 3,
+     "wa": 1,
+     "ng": 0,
+     "all_records": 3
+    }
+   }
+  }
+ },
+ "Uca inversa": {
+  "marker": "COI",
+  "names_queried": [
+   "Uca inversa",
+   "Cranuca inversa"
+  ],
+  "worms": "superseded combination -> Cranuca inversa",
+  "ncbi": {
+   "global": 42,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 46,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 46,
+   "per_name": {
+    "Uca inversa": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 0
+    },
+    "Cranuca inversa": {
+     "global": 46,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 46
+    }
+   }
+  }
+ },
+ "Sesarma huzardi": {
+  "marker": "COI",
+  "names_queried": [
+   "Sesarma huzardi",
+   "Guinearma huzardi"
+  ],
+  "worms": "superseded combination -> Guinearma huzardi",
+  "ncbi": {
+   "global": 35,
+   "wa": 33,
+   "ng": 0,
+   "wa_countries": {
+    "Cameroon": 16,
+    "Ghana": 14,
+    "Gambia": 3
+   },
+   "wa_accessions": [
+    "MW490657.1",
+    "MW490676.1",
+    "MW490675.1",
+    "MW490674.1",
+    "MW490673.1",
+    "MW490672.1",
+    "MW490671.1",
+    "MW490670.1",
+    "MW490669.1",
+    "MW490668.1",
+    "MW490667.1",
+    "MW490666.1",
+    "MW490665.1",
+    "MW490664.1",
+    "MW490662.1",
+    "MW490661.1",
+    "MW490660.1",
+    "MW490659.1",
+    "MW490658.1",
+    "MW490656.1",
+    "MW490655.1",
+    "MW490654.1",
+    "MW490653.1",
+    "MW490652.1",
+    "MW490651.1",
+    "MW490650.1",
+    "MW490649.1",
+    "MW490648.1",
+    "MW490647.1",
+    "MW490645.1",
+    "MW490644.1",
+    "KX400920.1",
+    "KX400919.1"
+   ]
+  },
+  "bold": {
+   "global": 35,
+   "wa": 33,
+   "ng": 0,
+   "all_records": 35,
+   "per_name": {
+    "Sesarma huzardi": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 0
+    },
+    "Guinearma huzardi": {
+     "global": 35,
+     "wa": 33,
+     "ng": 0,
+     "all_records": 35
+    }
+   }
+  }
+ },
+ "Goniopsis pelii": {
+  "marker": "COI",
+  "names_queried": [
+   "Goniopsis pelii"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 1,
+   "wa": 1,
+   "ng": 0,
+   "wa_countries": {
+    "Ghana": 1
+   },
+   "wa_accessions": [
+    "KU313190.1"
+   ]
+  },
+  "bold": {
+   "global": 1,
+   "wa": 1,
+   "ng": 0,
+   "all_records": 1,
+   "per_name": {
+    "Goniopsis pelii": {
+     "global": 1,
+     "wa": 1,
+     "ng": 0,
+     "all_records": 1
+    }
+   }
+  }
+ },
+ "Cardisoma armatum": {
+  "marker": "COI",
+  "names_queried": [
+   "Cardisoma armatum"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 2,
+   "wa": 1,
+   "ng": 1,
+   "wa_countries": {
+    "Nigeria": 1
+   },
+   "wa_accessions": [
+    "AB999646.1"
+   ]
+  },
+  "bold": {
+   "global": 2,
+   "wa": 1,
+   "ng": 1,
+   "all_records": 2,
+   "per_name": {
+    "Cardisoma armatum": {
+     "global": 2,
+     "wa": 1,
+     "ng": 1,
+     "all_records": 2
+    }
+   }
+  }
+ },
+ "Callinectes pallidus": {
+  "marker": "COI",
+  "names_queried": [
+   "Callinectes pallidus"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 3,
+   "wa": 1,
+   "ng": 0,
+   "wa_countries": {
+    "Ghana": 1
+   },
+   "wa_accessions": [
+    "MG462536.1"
+   ]
+  },
+  "bold": {
+   "global": 1,
+   "wa": 1,
+   "ng": 0,
+   "all_records": 1,
+   "per_name": {
+    "Callinectes pallidus": {
+     "global": 1,
+     "wa": 1,
+     "ng": 0,
+     "all_records": 1
+    }
+   }
+  }
+ },
+ "Thunnus albacares": {
+  "marker": "12S",
+  "names_queried": [
+   "Thunnus albacares"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 22,
+   "wa": 1,
+   "ng": 0,
+   "wa_countries": {
+    "Senegal": 1
+   },
+   "wa_accessions": [
+    "KT724724.1"
+   ]
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 769,
+   "per_name": {
+    "Thunnus albacares": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 769
+    }
+   }
+  }
+ },
+ "Katsuwonus pelamis": {
+  "marker": "12S",
+  "names_queried": [
+   "Katsuwonus pelamis"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 18,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 297,
+   "per_name": {
+    "Katsuwonus pelamis": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 297
+    }
+   }
+  }
+ },
+ "Thunnus obesus": {
+  "marker": "12S",
+  "names_queried": [
+   "Thunnus obesus"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 168,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 188,
+   "per_name": {
+    "Thunnus obesus": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 188
+    }
+   }
+  }
+ },
+ "Xiphias gladius": {
+  "marker": "12S",
+  "names_queried": [
+   "Xiphias gladius"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 13,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 341,
+   "per_name": {
+    "Xiphias gladius": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 341
+    }
+   }
+  }
+ },
+ "Coryphaena hippurus": {
+  "marker": "12S",
+  "names_queried": [
+   "Coryphaena hippurus"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 24,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 1,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 596,
+   "per_name": {
+    "Coryphaena hippurus": {
+     "global": 1,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 596
+    }
+   }
+  }
+ },
+ "Scomber japonicus": {
+  "marker": "12S",
+  "names_queried": [
+   "Scomber japonicus"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 28,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 4,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 318,
+   "per_name": {
+    "Scomber japonicus": {
+     "global": 4,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 318
+    }
+   }
+  }
+ },
+ "Scomberomorus tritor": {
+  "marker": "12S",
+  "names_queried": [
+   "Scomberomorus tritor"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 4,
+   "wa": 3,
+   "ng": 0,
+   "wa_countries": {
+    "Guinea-Bissau": 3
+   },
+   "wa_accessions": [
+    "PQ628826.1",
+    "PQ628825.1",
+    "PQ628824.1"
+   ]
+  },
+  "bold": {
+   "global": 3,
+   "wa": 3,
+   "ng": 0,
+   "all_records": 11,
+   "per_name": {
+    "Scomberomorus tritor": {
+     "global": 3,
+     "wa": 3,
+     "ng": 0,
+     "all_records": 11
+    }
+   }
+  }
+ },
+ "Caranx hippos": {
+  "marker": "12S",
+  "names_queried": [
+   "Caranx hippos"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 6,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 89,
+   "per_name": {
+    "Caranx hippos": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 89
+    }
+   }
+  }
+ },
+ "Trichiurus lepturus": {
+  "marker": "12S",
+  "names_queried": [
+   "Trichiurus lepturus"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 23,
+   "wa": 1,
+   "ng": 0,
+   "wa_countries": {
+    "Guinea-Bissau": 1
+   },
+   "wa_accessions": [
+    "PQ628832.1"
+   ]
+  },
+  "bold": {
+   "global": 1,
+   "wa": 1,
+   "ng": 0,
+   "all_records": 504,
+   "per_name": {
+    "Trichiurus lepturus": {
+     "global": 1,
+     "wa": 1,
+     "ng": 0,
+     "all_records": 504
+    }
+   }
+  }
+ },
+ "Dentex angolensis": {
+  "marker": "12S",
+  "names_queried": [
+   "Dentex angolensis"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 1,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 17,
+   "per_name": {
+    "Dentex angolensis": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 17
+    }
+   }
+  }
+ },
+ "Pagellus bellottii": {
+  "marker": "12S",
+  "names_queried": [
+   "Pagellus bellottii"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 4,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 21,
+   "per_name": {
+    "Pagellus bellottii": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 21
+    }
+   }
+  }
+ },
+ "Epinephelus aeneus": {
+  "marker": "12S",
+  "names_queried": [
+   "Epinephelus aeneus"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 7,
+   "wa": 3,
+   "ng": 0,
+   "wa_countries": {
+    "Guinea-Bissau": 3
+   },
+   "wa_accessions": [
+    "PQ628763.1",
+    "PQ628762.1",
+    "PQ628761.1"
+   ]
+  },
+  "bold": {
+   "global": 3,
+   "wa": 3,
+   "ng": 0,
+   "all_records": 78,
+   "per_name": {
+    "Epinephelus aeneus": {
+     "global": 3,
+     "wa": 3,
+     "ng": 0,
+     "all_records": 78
+    }
+   }
+  }
+ },
+ "Sparus caeruleostictus": {
+  "marker": "12S",
+  "names_queried": [
+   "Sparus caeruleostictus",
+   "Pagrus caeruleostictus"
+  ],
+  "worms": "unaccepted -> Pagrus caeruleostictus",
+  "ncbi": {
+   "global": 3,
+   "wa": 3,
+   "ng": 0,
+   "wa_countries": {
+    "Guinea-Bissau": 2,
+    "Ghana": 1
+   },
+   "wa_accessions": [
+    "PQ628789.1",
+    "PQ628788.1",
+    "MN319701.1"
+   ]
+  },
+  "bold": {
+   "global": 2,
+   "wa": 2,
+   "ng": 0,
+   "all_records": 37,
+   "per_name": {
+    "Sparus caeruleostictus": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 0
+    },
+    "Pagrus caeruleostictus": {
+     "global": 2,
+     "wa": 2,
+     "ng": 0,
+     "all_records": 37
+    }
+   }
+  }
+ },
+ "Pseudupeneus prayensis": {
+  "marker": "12S",
+  "names_queried": [
+   "Pseudupeneus prayensis"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 5,
+   "per_name": {
+    "Pseudupeneus prayensis": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 5
+    }
+   }
+  }
+ },
+ "Pteroscion peli": {
+  "marker": "12S",
+  "names_queried": [
+   "Pteroscion peli"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 8,
+   "per_name": {
+    "Pteroscion peli": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 8
+    }
+   }
+  }
+ },
+ "Pomadasys rogerii": {
+  "marker": "12S",
+  "names_queried": [
+   "Pomadasys rogerii"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 1,
+   "wa": 1,
+   "ng": 0,
+   "wa_countries": {
+    "Guinea-Bissau": 1
+   },
+   "wa_accessions": [
+    "PQ628800.1"
+   ]
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 0,
+   "per_name": {
+    "Pomadasys rogerii": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 0
+    }
+   }
+  }
+ },
+ "Lutjanus goreensis": {
+  "marker": "12S",
+  "names_queried": [
+   "Lutjanus goreensis"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 2,
+   "wa": 2,
+   "ng": 0,
+   "wa_countries": {
+    "Guinea-Bissau": 2
+   },
+   "wa_accessions": [
+    "PQ628782.1",
+    "PQ628781.1"
+   ]
+  },
+  "bold": {
+   "global": 4,
+   "wa": 4,
+   "ng": 0,
+   "all_records": 20,
+   "per_name": {
+    "Lutjanus goreensis": {
+     "global": 4,
+     "wa": 4,
+     "ng": 0,
+     "all_records": 20
+    }
+   }
+  }
+ },
+ "Acropora palmata": {
+  "marker": "COI",
+  "names_queried": [
+   "Acropora palmata"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 33,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 5,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 17,
+   "per_name": {
+    "Acropora palmata": {
+     "global": 5,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 17
+    }
+   }
+  }
+ },
+ "Porites porites": {
+  "marker": "COI",
+  "names_queried": [
+   "Porites porites"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 4,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 4,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 16,
+   "per_name": {
+    "Porites porites": {
+     "global": 4,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 16
+    }
+   }
+  }
+ },
+ "Holothuria atra": {
+  "marker": "COI",
+  "names_queried": [
+   "Holothuria atra"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 401,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 400,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 400,
+   "per_name": {
+    "Holothuria atra": {
+     "global": 400,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 400
+    }
+   }
+  }
+ },
+ "Holothuria scabra": {
+  "marker": "COI",
+  "names_queried": [
+   "Holothuria scabra"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 205,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 104,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 114,
+   "per_name": {
+    "Holothuria scabra": {
+     "global": 104,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 114
+    }
+   }
+  }
+ },
+ "Diadema antillarum": {
+  "marker": "COI",
+  "names_queried": [
+   "Diadema antillarum"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 15,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 14,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 14,
+   "per_name": {
+    "Diadema antillarum": {
+     "global": 14,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 14
+    }
+   }
+  }
+ },
+ "Echinometra lucunter": {
+  "marker": "COI",
+  "names_queried": [
+   "Echinometra lucunter"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 74,
+   "wa": 3,
+   "ng": 0,
+   "wa_countries": {
+    "Senegal": 3
+   },
+   "wa_accessions": [
+    "AF255480.1",
+    "AF255479.1",
+    "AF255478.1"
+   ]
+  },
+  "bold": {
+   "global": 53,
+   "wa": 3,
+   "ng": 0,
+   "all_records": 87,
+   "per_name": {
+    "Echinometra lucunter": {
+     "global": 53,
+     "wa": 3,
+     "ng": 0,
+     "all_records": 87
+    }
+   }
+  }
+ },
+ "Ophiura ophiura": {
+  "marker": "COI",
+  "names_queried": [
+   "Ophiura ophiura"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 46,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 71,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 73,
+   "per_name": {
+    "Ophiura ophiura": {
+     "global": 71,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 73
+    }
+   }
+  }
+ },
+ "Octopus vulgaris": {
+  "marker": "COI",
+  "names_queried": [
+   "Octopus vulgaris"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 605,
+   "wa": 13,
+   "ng": 0,
+   "wa_countries": {
+    "Cape Verde": 13
+   },
+   "wa_accessions": [
+    "MN705310.1",
+    "MN705309.1",
+    "MN705308.1",
+    "MN705307.1",
+    "MN705297.1",
+    "MN705296.1",
+    "MN705295.1",
+    "MN705294.1",
+    "MN705293.1",
+    "MN705292.1",
+    "MN705291.1",
+    "MN705290.1",
+    "MN705289.1"
+   ]
+  },
+  "bold": {
+   "global": 727,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 740,
+   "per_name": {
+    "Octopus vulgaris": {
+     "global": 727,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 740
+    }
+   }
+  }
+ },
+ "Sepia officinalis": {
+  "marker": "COI",
+  "names_queried": [
+   "Sepia officinalis"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 518,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 402,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 420,
+   "per_name": {
+    "Sepia officinalis": {
+     "global": 402,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 420
+    }
+   }
+  }
+ },
+ "Loligo vulgaris": {
+  "marker": "COI",
+  "names_queried": [
+   "Loligo vulgaris"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 218,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 237,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 241,
+   "per_name": {
+    "Loligo vulgaris": {
+     "global": 237,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 241
+    }
+   }
+  }
+ },
+ "Charonia variegata": {
+  "marker": "COI",
+  "names_queried": [
+   "Charonia variegata"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 1,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 1,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 4,
+   "per_name": {
+    "Charonia variegata": {
+     "global": 1,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 4
+    }
+   }
+  }
+ },
+ "Strombus latus": {
+  "marker": "COI",
+  "names_queried": [
+   "Strombus latus",
+   "Thetystrombus latus"
+  ],
+  "worms": "unaccepted -> Thetystrombus latus",
+  "ncbi": {
+   "global": 3,
+   "wa": 2,
+   "ng": 0,
+   "wa_countries": {
+    "Senegal": 2
+   },
+   "wa_accessions": [
+    "OR911245.1",
+    "OR910983.1"
+   ]
+  },
+  "bold": {
+   "global": 3,
+   "wa": 2,
+   "ng": 0,
+   "all_records": 3,
+   "per_name": {
+    "Strombus latus": {
+     "global": 1,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 1
+    },
+    "Thetystrombus latus": {
+     "global": 2,
+     "wa": 2,
+     "ng": 0,
+     "all_records": 2
+    }
+   }
+  }
+ },
+ "Murex brandaris": {
+  "marker": "COI",
+  "names_queried": [
+   "Murex brandaris",
+   "Bolinus brandaris"
+  ],
+  "worms": "superseded combination -> Bolinus brandaris",
+  "ncbi": {
+   "global": 4,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 3,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 15,
+   "per_name": {
+    "Murex brandaris": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 0
+    },
+    "Bolinus brandaris": {
+     "global": 3,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 15
+    }
+   }
+  }
+ },
+ "Penaeus kerathurus": {
+  "marker": "COI",
+  "names_queried": [
+   "Penaeus kerathurus",
+   "Penaeus (Melicertus) kerathurus"
+  ],
+  "worms": "superseded combination -> Penaeus (Melicertus) kerathurus",
+  "ncbi": {
+   "global": 112,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 115,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 116,
+   "per_name": {
+    "Penaeus kerathurus": {
+     "global": 115,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 116
+    },
+    "Penaeus (Melicertus) kerathurus": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 0
+    }
+   }
+  }
+ },
+ "Halophila stipulacea": {
+  "marker": "rbcL",
+  "names_queried": [
+   "Halophila stipulacea"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 17,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 5,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 19,
+   "per_name": {
+    "Halophila stipulacea": {
+     "global": 5,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 19
+    }
+   }
+  }
+ },
+ "Thalassia testudinum": {
+  "marker": "rbcL",
+  "names_queried": [
+   "Thalassia testudinum"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 127,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 2,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 2,
+   "per_name": {
+    "Thalassia testudinum": {
+     "global": 2,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 2
+    }
+   }
+  }
+ },
+ "Sargassum natans": {
+  "marker": "rbcL",
+  "names_queried": [
+   "Sargassum natans"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 4,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 2,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 6,
+   "per_name": {
+    "Sargassum natans": {
+     "global": 2,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 6
+    }
+   }
+  }
+ },
+ "Sargassum fluitans": {
+  "marker": "rbcL",
+  "names_queried": [
+   "Sargassum fluitans"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 8,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 1,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 7,
+   "per_name": {
+    "Sargassum fluitans": {
+     "global": 1,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 7
+    }
+   }
+  }
+ },
+ "Ulva lactuca": {
+  "marker": "rbcL",
+  "names_queried": [
+   "Ulva lactuca"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 241,
+   "wa": 6,
+   "ng": 0,
+   "wa_countries": {
+    "Senegal": 6
+   },
+   "wa_accessions": [
+    "PP819425.1",
+    "PP819424.1",
+    "PP819423.1",
+    "PP819422.1",
+    "PP819421.1",
+    "PP819420.1"
+   ]
+  },
+  "bold": {
+   "global": 64,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 130,
+   "per_name": {
+    "Ulva lactuca": {
+     "global": 64,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 130
+    }
+   }
+  }
+ },
+ "Gracilaria corticata": {
+  "marker": "rbcL",
+  "names_queried": [
+   "Gracilaria corticata"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 13,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 1,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 11,
+   "per_name": {
+    "Gracilaria corticata": {
+     "global": 1,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 11
+    }
+   }
+  }
+ },
+ "Megaptera novaeangliae": {
+  "marker": "COI",
+  "names_queried": [
+   "Megaptera novaeangliae"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 34,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 30,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 40,
+   "per_name": {
+    "Megaptera novaeangliae": {
+     "global": 30,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 40
+    }
+   }
+  }
+ },
+ "Physeter macrocephalus": {
+  "marker": "COI",
+  "names_queried": [
+   "Physeter macrocephalus"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 106,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 4,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 4,
+   "per_name": {
+    "Physeter macrocephalus": {
+     "global": 4,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 4
+    }
+   }
+  }
+ },
+ "Stenella frontalis": {
+  "marker": "COI",
+  "names_queried": [
+   "Stenella frontalis"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 24,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 23,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 23,
+   "per_name": {
+    "Stenella frontalis": {
+     "global": 23,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 23
+    }
+   }
+  }
+ },
+ "Balaenoptera brydei": {
+  "marker": "COI",
+  "names_queried": [
+   "Balaenoptera brydei"
+  ],
+  "worms": "taxon inquirendum",
+  "ncbi": {
+   "global": 39,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 36,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 47,
+   "per_name": {
+    "Balaenoptera brydei": {
+     "global": 36,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 47
+    }
+   }
+  }
+ },
+ "Orcinus orca": {
+  "marker": "COI",
+  "names_queried": [
+   "Orcinus orca"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 180,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 169,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 192,
+   "per_name": {
+    "Orcinus orca": {
+     "global": 169,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 192
+    }
+   }
+  }
+ },
+ "Nereis diversicolor": {
+  "marker": "COI",
+  "names_queried": [
+   "Nereis diversicolor",
+   "Hediste diversicolor"
+  ],
+  "worms": "unaccepted -> Hediste diversicolor",
+  "ncbi": {
+   "global": 418,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 366,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 478,
+   "per_name": {
+    "Nereis diversicolor": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 0
+    },
+    "Hediste diversicolor": {
+     "global": 366,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 478
+    }
+   }
+  }
+ },
+ "NEMATODE:Chromadora": {
+  "genus": "Chromadora",
+  "names_queried": [
+   "Chromadora"
+  ],
+  "worms": "accepted",
+  "ncbi_18s": {
+   "global": 8,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 2,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 6,
+  "silva_lsu_r138_2": 1
+ },
+ "NEMATODE:Chromadorita": {
+  "genus": "Chromadorita",
+  "names_queried": [
+   "Chromadorita"
+  ],
+  "worms": "accepted",
+  "ncbi_18s": {
+   "global": 107,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 57,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 66,
+  "silva_lsu_r138_2": 51
+ },
+ "NEMATODE:Ptycholaimellus": {
+  "genus": "Ptycholaimellus",
+  "names_queried": [
+   "Ptycholaimellus"
+  ],
+  "worms": "accepted",
+  "ncbi_18s": {
+   "global": 73,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 14,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 55,
+  "silva_lsu_r138_2": 0
+ },
+ "NEMATODE:Dichromadora": {
+  "genus": "Dichromadora",
+  "names_queried": [
+   "Dichromadora"
+  ],
+  "worms": "accepted",
+  "ncbi_18s": {
+   "global": 55,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 6,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 38,
+  "silva_lsu_r138_2": 2
+ },
+ "NEMATODE:Innocuonema": {
+  "genus": "Innocuonema",
+  "names_queried": [
+   "Innocuonema"
+  ],
+  "worms": "accepted",
+  "ncbi_18s": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 2,
+  "silva_lsu_r138_2": 0
+ },
+ "NEMATODE:Desmodora": {
+  "genus": "Desmodora",
+  "names_queried": [
+   "Desmodora"
+  ],
+  "worms": "accepted",
+  "ncbi_18s": {
+   "global": 42,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 16,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 37,
+  "silva_lsu_r138_2": 2
+ },
+ "NEMATODE:Spirinia": {
+  "genus": "Spirinia",
+  "names_queried": [
+   "Spirinia"
+  ],
+  "worms": "accepted",
+  "ncbi_18s": {
+   "global": 26,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 17,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 20,
+  "silva_lsu_r138_2": 3
+ },
+ "NEMATODE:Metachromadora": {
+  "genus": "Metachromadora",
+  "names_queried": [
+   "Metachromadora"
+  ],
+  "worms": "accepted",
+  "ncbi_18s": {
+   "global": 29,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 13,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 27,
+  "silva_lsu_r138_2": 3
+ },
+ "NEMATODE:Monhystera": {
+  "genus": "Monhystera",
+  "names_queried": [
+   "Monhystera"
+  ],
+  "worms": "accepted",
+  "ncbi_18s": {
+   "global": 29,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 39,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 26,
+  "silva_lsu_r138_2": 38
+ },
+ "NEMATODE:Terschellingia": {
+  "genus": "Terschellingia",
+  "names_queried": [
+   "Terschellingia"
+  ],
+  "worms": "accepted",
+  "ncbi_18s": {
+   "global": 194,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 13,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 182,
+  "silva_lsu_r138_2": 0
+ },
+ "NEMATODE:Diplolaimelloides": {
+  "genus": "Diplolaimelloides",
+  "names_queried": [
+   "Diplolaimelloides"
+  ],
+  "worms": "accepted",
+  "ncbi_18s": {
+   "global": 181,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 138,
+  "silva_lsu_r138_2": 0
+ },
+ "NEMATODE:Sphaerolaimus": {
+  "genus": "Sphaerolaimus",
+  "names_queried": [
+   "Sphaerolaimus"
+  ],
+  "worms": "accepted",
+  "ncbi_18s": {
+   "global": 57,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 15,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 60,
+  "silva_lsu_r138_2": 3
+ },
+ "NEMATODE:Enoplus": {
+  "genus": "Enoplus",
+  "names_queried": [
+   "Enoplus"
+  ],
+  "worms": "accepted",
+  "ncbi_18s": {
+   "global": 21,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 3,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 19,
+  "silva_lsu_r138_2": 2
+ },
+ "NEMATODE:Thoracostoma": {
+  "genus": "Thoracostoma",
+  "names_queried": [
+   "Thoracostoma"
+  ],
+  "worms": "accepted",
+  "ncbi_18s": {
+   "global": 6,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 8,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 2,
+  "silva_lsu_r138_2": 6
+ },
+ "NEMATODE:Eurystomina": {
+  "genus": "Eurystomina",
+  "names_queried": [
+   "Eurystomina"
+  ],
+  "worms": "accepted",
+  "ncbi_18s": {
+   "global": 11,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 1,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 10,
+  "silva_lsu_r138_2": 0
+ },
+ "NEMATODE:Oxystomina": {
+  "genus": "Oxystomina",
+  "names_queried": [
+   "Oxystomina"
+  ],
+  "worms": "accepted",
+  "ncbi_18s": {
+   "global": 51,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 26,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 42,
+  "silva_lsu_r138_2": 22
+ },
+ "NEMATODE:Axonolaimus": {
+  "genus": "Axonolaimus",
+  "names_queried": [
+   "Axonolaimus"
+  ],
+  "worms": "accepted",
+  "ncbi_18s": {
+   "global": 39,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 6,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 17,
+  "silva_lsu_r138_2": 2
+ },
+ "NEMATODE:Odontophora": {
+  "genus": "Odontophora",
+  "names_queried": [
+   "Odontophora"
+  ],
+  "worms": "accepted",
+  "ncbi_18s": {
+   "global": 17,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 11,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 12,
+  "silva_lsu_r138_2": 7
+ },
+ "NEMATODE:Campylaimus": {
+  "genus": "Campylaimus",
+  "names_queried": [
+   "Campylaimus"
+  ],
+  "worms": "accepted",
+  "ncbi_18s": {
+   "global": 5,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 1,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 4,
+  "silva_lsu_r138_2": 0
+ },
+ "NEMATODE:Desmoscolex": {
+  "genus": "Desmoscolex",
+  "names_queried": [
+   "Desmoscolex"
+  ],
+  "worms": "accepted",
+  "ncbi_18s": {
+   "global": 20,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 17,
+  "silva_lsu_r138_2": 0
+ },
+ "NEMATODE:Quadricoma": {
+  "genus": "Quadricoma",
+  "names_queried": [
+   "Quadricoma",
+   "Tricoma (Quadricoma)"
+  ],
+  "worms": "unaccepted -> Tricoma (Quadricoma)",
+  "ncbi_18s": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 0,
+  "silva_lsu_r138_2": 0
+ },
+ "NEMATODE:Aphanolaimus": {
+  "genus": "Aphanolaimus",
+  "names_queried": [
+   "Aphanolaimus"
+  ],
+  "worms": "accepted",
+  "ncbi_18s": {
+   "global": 3,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 5,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 3,
+  "silva_lsu_r138_2": 4
+ },
+ "NEMATODE:Stylotheristus": {
+  "genus": "Stylotheristus",
+  "names_queried": [
+   "Stylotheristus"
+  ],
+  "worms": "accepted",
+  "ncbi_18s": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 0,
+  "silva_lsu_r138_2": 0
+ },
+ "NEMATODE:Pellioditis": {
+  "genus": "Pellioditis",
+  "names_queried": [
+   "Pellioditis"
+  ],
+  "worms": "accepted",
+  "ncbi_18s": {
+   "global": 128,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 62,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 37,
+  "silva_lsu_r138_2": 45
+ },
+ "NEMATODE:Plectus": {
+  "genus": "Plectus",
+  "names_queried": [
+   "Plectus"
+  ],
+  "worms": "accepted",
+  "ncbi_18s": {
+   "global": 214,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 93,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 181,
+  "silva_lsu_r138_2": 77
+ },
+ "ALLREC:Ethmalosa fimbriata": {
+  "taxon": "Ethmalosa fimbriata",
+  "ncbi_all_records": 56
+ },
+ "ALLREC:Sardinella maderensis": {
+  "taxon": "Sardinella maderensis",
+  "ncbi_all_records": 51
+ },
+ "ALLREC:Sardinella aurita": {
+  "taxon": "Sardinella aurita",
+  "ncbi_all_records": 1857
+ },
+ "ALLREC:Pseudotolithus senegalensis": {
+  "taxon": "Pseudotolithus senegalensis",
+  "ncbi_all_records": 44
+ },
+ "ALLREC:Pseudotolithus elongatus": {
+  "taxon": "Pseudotolithus elongatus",
+  "ncbi_all_records": 42
+ },
+ "ALLREC:Cynoglossus senegalensis": {
+  "taxon": "Cynoglossus senegalensis",
+  "ncbi_all_records": 52
+ },
+ "ALLREC:Galeoides decadactylus": {
+  "taxon": "Galeoides decadactylus",
+  "ncbi_all_records": 5
+ },
+ "ALLREC:Polydactylus quadrifilis": {
+  "taxon": "Polydactylus quadrifilis",
+  "ncbi_all_records": 5
+ },
+ "ALLREC:Lutjanus agennes": {
+  "taxon": "Lutjanus agennes",
+  "ncbi_all_records": 2
+ },
+ "ALLREC:Arius latiscutatus": {
+  "taxon": "Arius latiscutatus",
+  "ncbi_all_records": 12
+ },
+ "ALLREC:Brachydeuterus auritus": {
+  "taxon": "Brachydeuterus auritus",
+  "ncbi_all_records": 8
+ },
+ "ALLREC:Pomadasys jubelini": {
+  "taxon": "Pomadasys jubelini",
+  "ncbi_all_records": 0
+ },
+ "ALLREC:Elops lacerta": {
+  "taxon": "Elops lacerta",
+  "ncbi_all_records": 3
+ },
+ "ALLREC:Drepane africana": {
+  "taxon": "Drepane africana",
+  "ncbi_all_records": 46
+ },
+ "ALLREC:Mugil cephalus": {
+  "taxon": "Mugil cephalus",
+  "ncbi_all_records": 2392
+ },
+ "ALLREC:Chrysichthys nigrodigitatus": {
+  "taxon": "Chrysichthys nigrodigitatus",
+  "ncbi_all_records": 31
+ },
+ "ALLREC:Rhizoprionodon acutus": {
+  "taxon": "Rhizoprionodon acutus",
+  "ncbi_all_records": 274
+ },
+ "ALLREC:Rhinobatos rhinobatos": {
+  "taxon": "Rhinobatos rhinobatos",
+  "ncbi_all_records": 5
+ },
+ "ALLREC:Hypanus marianae": {
+  "taxon": "Hypanus marianae",
+  "ncbi_all_records": 154
+ },
+ "ALLREC:Carcharhinus leucas": {
+  "taxon": "Carcharhinus leucas",
+  "ncbi_all_records": 655
+ },
+ "ALLREC:Sphyrna lewini": {
+  "taxon": "Sphyrna lewini",
+  "ncbi_all_records": 1557
+ },
+ "ALLREC:Penaeus notialis": {
+  "taxon": "Penaeus notialis",
+  "ncbi_all_records": 92
+ },
+ "ALLREC:Callinectes amnicola": {
+  "taxon": "Callinectes amnicola",
+  "ncbi_all_records": 6
+ },
+ "ALLREC:Parapenaeus longirostris": {
+  "taxon": "Parapenaeus longirostris",
+  "ncbi_all_records": 48
+ },
+ "ALLREC:Macrobrachium vollenhovenii": {
+  "taxon": "Macrobrachium vollenhovenii",
+  "ncbi_all_records": 14
+ },
+ "ALLREC:Trichechus senegalensis": {
+  "taxon": "Trichechus senegalensis",
+  "ncbi_all_records": 9
+ },
+ "ALLREC:Sousa teuszii": {
+  "taxon": "Sousa teuszii",
+  "ncbi_all_records": 5
+ },
+ "ALLREC:Tursiops truncatus": {
+  "taxon": "Tursiops truncatus",
+  "ncbi_all_records": 71852
+ },
+ "ALLREC:Chelonia mydas": {
+  "taxon": "Chelonia mydas",
+  "ncbi_all_records": 142315
+ },
+ "ALLREC:Dermochelys coriacea": {
+  "taxon": "Dermochelys coriacea",
+  "ncbi_all_records": 18891
+ },
+ "ALLREC:Lepidochelys olivacea": {
+  "taxon": "Lepidochelys olivacea",
+  "ncbi_all_records": 474
+ },
+ "ALLREC:Harpacticoida": {
+  "taxon": "Harpacticoida",
+  "ncbi_all_records": 163707
+ },
+ "ALLREC:Ostracoda": {
+  "taxon": "Ostracoda",
+  "ncbi_all_records": 354680
+ },
+ "ALLREC:Tardigrada": {
+  "taxon": "Tardigrada",
+  "ncbi_all_records": 185248
+ },
+ "ALLREC:Gastrotricha": {
+  "taxon": "Gastrotricha",
+  "ncbi_all_records": 2077
+ },
+ "ALLREC:Kinorhyncha": {
+  "taxon": "Kinorhyncha",
+  "ncbi_all_records": 1195
+ },
+ "ALLREC:Foraminifera": {
+  "taxon": "Foraminifera",
+  "ncbi_all_records": 315001
+ },
+ "ALLREC:Ciliophora": {
+  "taxon": "Ciliophora",
+  "ncbi_all_records": 1217705
+ },
+ "ALLREC:Bacillariophyta": {
+  "taxon": "Bacillariophyta",
+  "ncbi_all_records": 4568158
+ },
+ "ALLREC:Polychaeta": {
+  "taxon": "Polychaeta",
+  "ncbi_all_records": 828260
+ },
+ "ALLREC:Tympanotonos fuscatus": {
+  "taxon": "Tympanotonos fuscatus",
+  "ncbi_all_records": 8
+ },
+ "ALLREC:Tympanotonos radula": {
+  "taxon": "Tympanotonos radula",
+  "ncbi_all_records": 8
+ },
+ "ALLREC:Pachymelania aurita": {
+  "taxon": "Pachymelania aurita",
+  "ncbi_all_records": 0
+ },
+ "ALLREC:Pachymelania fusca": {
+  "taxon": "Pachymelania fusca",
+  "ncbi_all_records": 0
+ },
+ "ALLREC:Telescopium telescopium": {
+  "taxon": "Telescopium telescopium",
+  "ncbi_all_records": 78
+ },
+ "ALLREC:Neritina glabrata": {
+  "taxon": "Neritina glabrata",
+  "ncbi_all_records": 0
+ },
+ "ALLREC:Lanistes varicus": {
+  "taxon": "Lanistes varicus",
+  "ncbi_all_records": 8
+ },
+ "ALLREC:Crassostrea gasar": {
+  "taxon": "Crassostrea gasar",
+  "ncbi_all_records": 84
+ },
+ "ALLREC:Egeria radiata": {
+  "taxon": "Egeria radiata",
+  "ncbi_all_records": 64
+ },
+ "ALLREC:Senilia senilis": {
+  "taxon": "Senilia senilis",
+  "ncbi_all_records": 1
+ },
+ "ALLREC:Mytilaster minimus": {
+  "taxon": "Mytilaster minimus",
+  "ncbi_all_records": 21
+ },
+ "ALLREC:Corbula trigona": {
+  "taxon": "Corbula trigona",
+  "ncbi_all_records": 0
+ },
+ "ALLREC:Sphaerium nodicostatum": {
+  "taxon": "Sphaerium nodicostatum",
+  "ncbi_all_records": 0
+ },
+ "ALLREC:Capitella capitata": {
+  "taxon": "Capitella capitata",
+  "ncbi_all_records": 129
+ },
+ "ALLREC:Nereis diversicolor": {
+  "taxon": "Nereis diversicolor",
+  "ncbi_all_records": 756
+ },
+ "ALLREC:Perinereis cultrifera": {
+  "taxon": "Perinereis cultrifera",
+  "ncbi_all_records": 85
+ },
+ "ALLREC:Marphysa sanguinea": {
+  "taxon": "Marphysa sanguinea",
+  "ncbi_all_records": 70
+ },
+ "ALLREC:Sabella pavonina": {
+  "taxon": "Sabella pavonina",
+  "ncbi_all_records": 13
+ },
+ "ALLREC:Hydroides elegans": {
+  "taxon": "Hydroides elegans",
+  "ncbi_all_records": 402
+ },
+ "ALLREC:Uca tangeri": {
+  "taxon": "Uca tangeri",
+  "ncbi_all_records": 15
+ },
+ "ALLREC:Uca inversa": {
+  "taxon": "Uca inversa",
+  "ncbi_all_records": 50
+ },
+ "ALLREC:Sesarma huzardi": {
+  "taxon": "Sesarma huzardi",
+  "ncbi_all_records": 49
+ },
+ "ALLREC:Goniopsis pelii": {
+  "taxon": "Goniopsis pelii",
+  "ncbi_all_records": 4
+ },
+ "ALLREC:Cardisoma armatum": {
+  "taxon": "Cardisoma armatum",
+  "ncbi_all_records": 16
+ },
+ "ALLREC:Callinectes pallidus": {
+  "taxon": "Callinectes pallidus",
+  "ncbi_all_records": 7
+ },
+ "ALLREC:Thunnus albacares": {
+  "taxon": "Thunnus albacares",
+  "ncbi_all_records": 2690
+ },
+ "ALLREC:Katsuwonus pelamis": {
+  "taxon": "Katsuwonus pelamis",
+  "ncbi_all_records": 1820
+ },
+ "ALLREC:Thunnus obesus": {
+  "taxon": "Thunnus obesus",
+  "ncbi_all_records": 2230
+ },
+ "ALLREC:Xiphias gladius": {
+  "taxon": "Xiphias gladius",
+  "ncbi_all_records": 2527
+ },
+ "ALLREC:Coryphaena hippurus": {
+  "taxon": "Coryphaena hippurus",
+  "ncbi_all_records": 1380
+ },
+ "ALLREC:Scomber japonicus": {
+  "taxon": "Scomber japonicus",
+  "ncbi_all_records": 2054
+ },
+ "ALLREC:Scomberomorus tritor": {
+  "taxon": "Scomberomorus tritor",
+  "ncbi_all_records": 16
+ },
+ "ALLREC:Caranx hippos": {
+  "taxon": "Caranx hippos",
+  "ncbi_all_records": 145
+ },
+ "ALLREC:Trichiurus lepturus": {
+  "taxon": "Trichiurus lepturus",
+  "ncbi_all_records": 2120
+ },
+ "ALLREC:Dentex angolensis": {
+  "taxon": "Dentex angolensis",
+  "ncbi_all_records": 12
+ },
+ "ALLREC:Pagellus bellottii": {
+  "taxon": "Pagellus bellottii",
+  "ncbi_all_records": 35
+ },
+ "ALLREC:Epinephelus aeneus": {
+  "taxon": "Epinephelus aeneus",
+  "ncbi_all_records": 160
+ },
+ "ALLREC:Sparus caeruleostictus": {
+  "taxon": "Sparus caeruleostictus",
+  "ncbi_all_records": 54
+ },
+ "ALLREC:Pseudupeneus prayensis": {
+  "taxon": "Pseudupeneus prayensis",
+  "ncbi_all_records": 7
+ },
+ "ALLREC:Pteroscion peli": {
+  "taxon": "Pteroscion peli",
+  "ncbi_all_records": 9
+ },
+ "ALLREC:Pomadasys rogerii": {
+  "taxon": "Pomadasys rogerii",
+  "ncbi_all_records": 3
+ },
+ "ALLREC:Lutjanus goreensis": {
+  "taxon": "Lutjanus goreensis",
+  "ncbi_all_records": 5
+ },
+ "ALLREC:Acropora palmata": {
+  "taxon": "Acropora palmata",
+  "ncbi_all_records": 43510
+ },
+ "ALLREC:Porites porites": {
+  "taxon": "Porites porites",
+  "ncbi_all_records": 192
+ },
+ "ALLREC:Holothuria atra": {
+  "taxon": "Holothuria atra",
+  "ncbi_all_records": 699
+ },
+ "ALLREC:Holothuria scabra": {
+  "taxon": "Holothuria scabra",
+  "ncbi_all_records": 445
+ },
+ "ALLREC:Diadema antillarum": {
+  "taxon": "Diadema antillarum",
+  "ncbi_all_records": 321
+ },
+ "ALLREC:Echinometra lucunter": {
+  "taxon": "Echinometra lucunter",
+  "ncbi_all_records": 304
+ },
+ "ALLREC:Ophiura ophiura": {
+  "taxon": "Ophiura ophiura",
+  "ncbi_all_records": 51
+ },
+ "ALLREC:Octopus vulgaris": {
+  "taxon": "Octopus vulgaris",
+  "ncbi_all_records": 33866
+ },
+ "ALLREC:Sepia officinalis": {
+  "taxon": "Sepia officinalis",
+  "ncbi_all_records": 44640
+ },
+ "ALLREC:Loligo vulgaris": {
+  "taxon": "Loligo vulgaris",
+  "ncbi_all_records": 256
+ },
+ "ALLREC:Charonia variegata": {
+  "taxon": "Charonia variegata",
+  "ncbi_all_records": 4
+ },
+ "ALLREC:Strombus latus": {
+  "taxon": "Strombus latus",
+  "ncbi_all_records": 10
+ },
+ "ALLREC:Murex brandaris": {
+  "taxon": "Murex brandaris",
+  "ncbi_all_records": 49
+ },
+ "ALLREC:Penaeus kerathurus": {
+  "taxon": "Penaeus kerathurus",
+  "ncbi_all_records": 258
+ },
+ "ALLREC:Halophila stipulacea": {
+  "taxon": "Halophila stipulacea",
+  "ncbi_all_records": 128
+ },
+ "ALLREC:Thalassia testudinum": {
+  "taxon": "Thalassia testudinum",
+  "ncbi_all_records": 239
+ },
+ "ALLREC:Sargassum natans": {
+  "taxon": "Sargassum natans",
+  "ncbi_all_records": 1088
+ },
+ "ALLREC:Sargassum fluitans": {
+  "taxon": "Sargassum fluitans",
+  "ncbi_all_records": 241
+ },
+ "ALLREC:Ulva lactuca": {
+  "taxon": "Ulva lactuca",
+  "ncbi_all_records": 653
+ },
+ "ALLREC:Gracilaria corticata": {
+  "taxon": "Gracilaria corticata",
+  "ncbi_all_records": 61
+ },
+ "ALLREC:Megaptera novaeangliae": {
+  "taxon": "Megaptera novaeangliae",
+  "ncbi_all_records": 3296
+ },
+ "ALLREC:Physeter macrocephalus": {
+  "taxon": "Physeter macrocephalus",
+  "ncbi_all_records": 16385
+ },
+ "ALLREC:Stenella frontalis": {
+  "taxon": "Stenella frontalis",
+  "ncbi_all_records": 428
+ },
+ "ALLREC:Balaenoptera brydei": {
+  "taxon": "Balaenoptera brydei",
+  "ncbi_all_records": 179
+ },
+ "ALLREC:Orcinus orca": {
+  "taxon": "Orcinus orca",
+  "ncbi_all_records": 1462
+ },
+ "MAMMALWA:Sousa": {
+  "genus": "Sousa",
+  "candidates": 3,
+  "wa_records": [
+   {
+    "accession": "MN365274.1",
+    "organism": "Sousa teuszii",
+    "country": "Senegal",
+    "length": 16384,
+    "title": "Sousa teuszii voucher USNM:MAMM:605133 mitochondrion, complete genome"
+   },
+   {
+    "accession": "EU380409.1",
+    "organism": "Sousa teuszii",
+    "country": "Mauritania",
+    "length": 335,
+    "title": "Sousa teuszii haplotype M001 control region, partial sequence; mitochondrial"
+   }
+  ]
+ },
+ "MAMMALWA:Trichechus": {
+  "genus": "Trichechus",
+  "candidates": 0,
+  "wa_records": []
+ },
+ "Fontitrygon margarita": {
+  "marker": "12S",
+  "names_queried": [
+   "Fontitrygon margarita"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 1,
+   "wa": 1,
+   "ng": 0,
+   "wa_countries": {
+    "Senegal": 1
+   },
+   "wa_accessions": [
+    "MZ489632.1"
+   ]
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 18,
+   "per_name": {
+    "Fontitrygon margarita": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 18
+    }
+   }
+  }
+ },
+ "Littoraria angulifera": {
+  "marker": "COI",
+  "names_queried": [
+   "Littoraria angulifera"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 8,
+   "wa": 2,
+   "ng": 0,
+   "wa_countries": {
+    "Ghana": 1,
+    "Senegal": 1
+   },
+   "wa_accessions": [
+    "FN557074.1",
+    "FN557073.1"
+   ]
+  },
+  "bold": {
+   "global": 10,
+   "wa": 2,
+   "ng": 0,
+   "all_records": 10,
+   "per_name": {
+    "Littoraria angulifera": {
+     "global": 10,
+     "wa": 2,
+     "ng": 0,
+     "all_records": 10
+    }
+   }
+  }
+ },
+ "Scomber colias": {
+  "marker": "12S",
+  "names_queried": [
+   "Scomber colias"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 8,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 112,
+   "per_name": {
+    "Scomber colias": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 112
+    }
+   }
+  }
+ },
+ "Siderastrea radians": {
+  "marker": "COI",
+  "names_queried": [
+   "Siderastrea radians"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 6,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 6,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 16,
+   "per_name": {
+    "Siderastrea radians": {
+     "global": 6,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 16
+    }
+   }
+  }
+ },
+ "Holothuria dakarensis": {
+  "marker": "COI",
+  "names_queried": [
+   "Holothuria dakarensis"
+  ],
+  "worms": "not in WoRMS",
+  "ncbi": {
+   "global": 2,
+   "wa": 1,
+   "ng": 0,
+   "wa_countries": {
+    "Cape Verde": 1
+   },
+   "wa_accessions": [
+    "PV105519.1"
+   ]
+  },
+  "bold": {
+   "global": 2,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 2,
+   "per_name": {
+    "Holothuria dakarensis": {
+     "global": 2,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 2
+    }
+   }
+  }
+ },
+ "Isostichopus maculatus": {
+  "marker": "COI",
+  "names_queried": [
+   "Isostichopus maculatus"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 16,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 0,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 0,
+   "per_name": {
+    "Isostichopus maculatus": {
+     "global": 0,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 0
+    }
+   }
+  }
+ },
+ "Diadema africanum": {
+  "marker": "COI",
+  "names_queried": [
+   "Diadema africanum"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 244,
+   "wa": 12,
+   "ng": 0,
+   "wa_countries": {
+    "Cape Verde": 12
+   },
+   "wa_accessions": [
+    "OP494596.1",
+    "OP494595.1",
+    "OP494594.1",
+    "OP494593.1",
+    "OP494592.1",
+    "OP494591.1",
+    "OP494590.1",
+    "OP494589.1",
+    "OP494588.1",
+    "OP494587.1",
+    "OP494586.1",
+    "OP494585.1"
+   ]
+  },
+  "bold": {
+   "global": 244,
+   "wa": 12,
+   "ng": 0,
+   "all_records": 244,
+   "per_name": {
+    "Diadema africanum": {
+     "global": 244,
+     "wa": 12,
+     "ng": 0,
+     "all_records": 244
+    }
+   }
+  }
+ },
+ "Ruppia maritima": {
+  "marker": "rbcL",
+  "names_queried": [
+   "Ruppia maritima"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 68,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 54,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 102,
+   "per_name": {
+    "Ruppia maritima": {
+     "global": 54,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 102
+    }
+   }
+  }
+ },
+ "Halodule wrightii": {
+  "marker": "rbcL",
+  "names_queried": [
+   "Halodule wrightii"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 7,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "bold": {
+   "global": 5,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 6,
+   "per_name": {
+    "Halodule wrightii": {
+     "global": 5,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 6
+    }
+   }
+  }
+ },
+ "Hypnea musciformis": {
+  "marker": "rbcL",
+  "names_queried": [
+   "Hypnea musciformis"
+  ],
+  "worms": "accepted",
+  "ncbi": {
+   "global": 64,
+   "wa": 3,
+   "ng": 0,
+   "wa_countries": {
+    "Cape Verde": 3
+   },
+   "wa_accessions": [
+    "MK410553.1",
+    "MK410552.1",
+    "MK410551.1"
+   ]
+  },
+  "bold": {
+   "global": 18,
+   "wa": 0,
+   "ng": 0,
+   "all_records": 104,
+   "per_name": {
+    "Hypnea musciformis": {
+     "global": 18,
+     "wa": 0,
+     "ng": 0,
+     "all_records": 104
+    }
+   }
+  }
+ },
+ "ALLREC:Fontitrygon margarita": {
+  "taxon": "Fontitrygon margarita",
+  "ncbi_all_records": 17
+ },
+ "ALLREC:Littoraria angulifera": {
+  "taxon": "Littoraria angulifera",
+  "ncbi_all_records": 16
+ },
+ "ALLREC:Scomber colias": {
+  "taxon": "Scomber colias",
+  "ncbi_all_records": 969
+ },
+ "ALLREC:Siderastrea radians": {
+  "taxon": "Siderastrea radians",
+  "ncbi_all_records": 109
+ },
+ "ALLREC:Holothuria dakarensis": {
+  "taxon": "Holothuria dakarensis",
+  "ncbi_all_records": 4
+ },
+ "ALLREC:Isostichopus maculatus": {
+  "taxon": "Isostichopus maculatus",
+  "ncbi_all_records": 32
+ },
+ "ALLREC:Diadema africanum": {
+  "taxon": "Diadema africanum",
+  "ncbi_all_records": 258
+ },
+ "ALLREC:Ruppia maritima": {
+  "taxon": "Ruppia maritima",
+  "ncbi_all_records": 431
+ },
+ "ALLREC:Halodule wrightii": {
+  "taxon": "Halodule wrightii",
+  "ncbi_all_records": 249
+ },
+ "ALLREC:Hypnea musciformis": {
+  "taxon": "Hypnea musciformis",
+  "ncbi_all_records": 290
+ },
+ "NEMATODE:Sabatieria": {
+  "genus": "Sabatieria",
+  "names_queried": [
+   "Sabatieria"
+  ],
+  "worms": "accepted",
+  "ncbi_18s": {
+   "global": 315,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 96,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 228,
+  "silva_lsu_r138_2": 41
+ },
+ "NEMATODE:Daptonema": {
+  "genus": "Daptonema",
+  "names_queried": [
+   "Daptonema"
+  ],
+  "worms": "accepted",
+  "ncbi_18s": {
+   "global": 128,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 24,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 101,
+  "silva_lsu_r138_2": 7
+ },
+ "NEMATODE:Theristus": {
+  "genus": "Theristus",
+  "names_queried": [
+   "Theristus"
+  ],
+  "worms": "accepted",
+  "ncbi_18s": {
+   "global": 102,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 33,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 60,
+  "silva_lsu_r138_2": 1
+ },
+ "NEMATODE:Paracomesoma": {
+  "genus": "Paracomesoma",
+  "names_queried": [
+   "Paracomesoma"
+  ],
+  "worms": "accepted",
+  "ncbi_18s": {
+   "global": 26,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 1,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 18,
+  "silva_lsu_r138_2": 1
+ },
+ "NEMATODE:Dorylaimopsis": {
+  "genus": "Dorylaimopsis",
+  "names_queried": [
+   "Dorylaimopsis"
+  ],
+  "worms": "accepted",
+  "ncbi_18s": {
+   "global": 30,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 4,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 21,
+  "silva_lsu_r138_2": 2
+ },
+ "NEMATODE:Halalaimus": {
+  "genus": "Halalaimus",
+  "names_queried": [
+   "Halalaimus"
+  ],
+  "worms": "accepted",
+  "ncbi_18s": {
+   "global": 94,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 46,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 79,
+  "silva_lsu_r138_2": 42
+ },
+ "NEMATODE:Viscosia": {
+  "genus": "Viscosia",
+  "names_queried": [
+   "Viscosia"
+  ],
+  "worms": "accepted",
+  "ncbi_18s": {
+   "global": 64,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "ncbi_28s": {
+   "global": 24,
+   "wa": 0,
+   "ng": 0,
+   "wa_countries": {},
+   "wa_accessions": []
+  },
+  "silva_ssu_r144": 44,
+  "silva_lsu_r138_2": 18
+ }
+}
