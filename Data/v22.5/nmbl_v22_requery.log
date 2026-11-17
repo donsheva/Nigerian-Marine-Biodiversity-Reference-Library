@@ -1,0 +1,9 @@
+23:29:38 [N26/32] Sabatieria           accepted                       SILVA SSU 228 LSU 41  NCBI 18S 315/0/0  28S 96/0/0
+23:29:48 [N27/32] Daptonema            accepted                       SILVA SSU 101 LSU 7  NCBI 18S 128/0/0  28S 24/0/0
+23:29:58 [N28/32] Theristus            accepted                       SILVA SSU 60 LSU 1  NCBI 18S 102/0/0  28S 33/0/0
+23:30:07 [N29/32] Paracomesoma         accepted                       SILVA SSU 18 LSU 1  NCBI 18S 26/0/0  28S 1/0/0
+23:30:15 [N30/32] Dorylaimopsis        accepted                       SILVA SSU 21 LSU 2  NCBI 18S 30/0/0  28S 4/0/0
+23:30:23 [N31/32] Halalaimus           accepted                       SILVA SSU 79 LSU 42  NCBI 18S 94/0/0  28S 46/0/0
+23:30:32 [N32/32] Viscosia             accepted                       SILVA SSU 44 LSU 18  NCBI 18S 64/0/0  28S 24/0/0
+23:30:32 Done. 139/139 taxa (107 species/higher taxa + 25 nematode genera). All taxa complete.
+23:30:32 Send nmbl_v22_requery_results.json back to Claude to apply to the site.
