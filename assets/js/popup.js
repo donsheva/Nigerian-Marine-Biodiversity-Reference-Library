@@ -96,7 +96,8 @@ function openPopup(idx) {
   if (hab) rows.push(['Habitat', _esc(hab)]);
   if (s.extra && s.extra.endemic) rows.push(['Range', '<span style="color:var(--blue);">West African endemic</span>']);
   if (s.extra && s.extra.order) rows.push(['Nematode order', _esc(s.extra.order)]);
-  if (s.extra && s.extra.response) rows.push(['Pollution response', _esc(s.extra.response)]);
+  if (s.extra && s.extra.response) rows.push(['Pollution response', _esc(s.extra.response) + (s.extra.cp ? ' (c-p ' + _esc(s.extra.cp) + ')' : '')]);
+  if (s.extra && s.extra.evidence) rows.push(['Response evidence', s.extra.evidence]);
   html += '<div class="pp-h">Details</div><div class="pp-grid">'
        + rows.map(([l, v]) => '<div class="pp-k">' + l + '</div><div class="pp-v">' + v + '</div>').join('') + '</div>';
 

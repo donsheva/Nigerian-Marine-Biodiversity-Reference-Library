@@ -186,8 +186,8 @@ function renderNemaTable() {
   data.sort((a,b)=>nSortDir*(nSortCol==="genus"?a.genus.localeCompare(b.genus):0));
   document.getElementById("nema-count").textContent=data.length;
 
-  const responseColor = r => r==="tolerant"?"color:var(--red)":r==="sensitive"?"color:var(--green)":r==="indicator"?"color:var(--amber)":"color:var(--text3)";
-  const responseLabel = r => r==="tolerant"?"increases w/ pollution":r==="sensitive"?"decreases w/ pollution":r==="indicator"?"enrichment indicator":"generalist";
+  const responseColor = r => r==="tolerant"?"color:var(--red)":r==="sensitive"?"color:var(--green)":r==="intermediate"?"color:var(--amber)":"color:var(--text3)";
+  const responseLabel = r => r==="tolerant"?"tolerant (increases)":r==="sensitive"?"sensitive (decreases)":r==="intermediate"?"intermediate / mixed":"not assessed";
 
   document.getElementById("nema-tbody").innerHTML = data.map(n => {
     const gst = nemaGapStatus(n);
@@ -205,13 +205,13 @@ function renderNemaTable() {
     return `<tr style="${rowBg}">
       <td class="species-name">${n.genus}</td>
       <td style="font-size:11px;color:var(--text2);">${n.order}</td>
-      <td><span style="font-size:11px;${responseColor(n.response)}">${responseLabel(n.response)}</span></td>
+      <td><span style="font-size:11px;${responseColor(n.response)}">${responseLabel(n.response)}</span>${n.cp?`<br><span style="font-size:10px;color:var(--text3);">c-p ${n.cp}</span>`:""}</td>
       <td style="font-size:12px;text-align:center;">${fmtGlobal(n.global18s)}</td>
       <td style="font-size:12px;text-align:center;">${fmtWA(n.wa18s)}</td>
       <td style="font-size:12px;text-align:center;">${fmtNg(n.ng18s)}</td>
       <td style="font-size:12px;text-align:center;">${fmtGlobal(n.global28s)}</td>
       <td>${gapBadge}</td>
-      <td class="eco-role">${n.role}</td>
+      <td class="eco-role">${n.role}<br><span style="font-size:10px;color:var(--text3);">${n.evidence}</span></td>
     </tr>`;
   }).join("");
 }
@@ -225,8 +225,9 @@ function exportCSV() {
 }
 
 function exportNemaCSV() {
-  const h = ["genus","order","pollution_response","global_18S","wa_18S","ng_18S","global_28S","ng_28S","gap_status","ecological_role"];
-  const rows = NEMATODES.map(n=>[n.genus,n.order,n.response,n.global18s,n.wa18s,n.ng18s,n.global28s,n.ng28s,nemaGapStatus(n),n.role].map(v=>`"${v}"`).join(","));
+  const h = ["genus","order","pollution_response","cp_class","response_evidence","global_18S","wa_18S","ng_18S","global_28S","ng_28S","gap_status","ecological_role"];
+  const strip = v => String(v??"").replace(/<[^>]+>/g,"").replace(/&amp;/g,"&");
+  const rows = NEMATODES.map(n=>[n.genus,n.order,n.response,n.cp||"",strip(n.evidence),n.global18s,n.wa18s,n.ng18s,n.global28s,n.ng28s,nemaGapStatus(n),n.role].map(v=>`"${strip(v)}"`).join(","));
   const blob = new Blob([[h.join(","),...rows].join("\n")],{type:"text/csv"});
   Object.assign(document.createElement("a"),{href:URL.createObjectURL(blob),download:"nematode_gap_report.csv"}).click();
 }

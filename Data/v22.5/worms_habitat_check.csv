@@ -1,0 +1,44 @@
+taxon,list,worms_status,isMarine,isBrackish,isFreshwater,isTerrestrial,family,verdict
+Chromadora,nematode,accepted,1,1,1,1,Chromadoridae,keep (marine/brackish)
+Chromadorita,nematode,accepted,1,1,1,1,Chromadoridae,keep (marine/brackish)
+Ptycholaimellus,nematode,accepted,1,1,,,Chromadoridae,keep
+Dichromadora,nematode,accepted,1,1,1,,Chromadoridae,keep
+Innocuonema,nematode,accepted,1,,,,Chromadoridae,keep
+Desmodora,nematode,accepted,1,,,,Desmodoridae,keep
+Spirinia,nematode,accepted,1,,,,Desmodoridae,keep
+Metachromadora,nematode,accepted,1,,,,Desmodoridae,keep
+Terschellingia,nematode,accepted,1,1,1,,Linhomoeidae,keep
+Diplolaimelloides,nematode,accepted,1,1,,,Monhysteridae,keep
+Sphaerolaimus,nematode,accepted,1,1,,,Sphaerolaimidae,keep
+Enoplus,nematode,accepted,1,1,,,Enoplidae,keep
+Thoracostoma,nematode,accepted,1,,,,Leptosomatidae,keep
+Eurystomina,nematode,accepted,1,1,1,,Enchelidiidae,keep
+Oxystomina,nematode,accepted,1,1,1,,Oxystominidae,keep
+Axonolaimus,nematode,accepted,1,1,,,Axonolaimidae,keep
+Odontophora,nematode,accepted,1,,,,Axonolaimidae,keep
+Campylaimus,nematode,accepted,1,1,,,Diplopeltidae,keep
+Desmoscolex,nematode,accepted,1,1,1,1,Desmoscolecidae,keep
+Quadricoma,nematode,unaccepted -> Tricoma (Quadricoma),1,,,,Desmoscolecidae,keep
+Stylotheristus,nematode,accepted,1,,,,Xyalidae,keep
+Pellioditis,nematode,accepted,1,1,1,1,Rhabditidae,keep (P. marina is marine)
+Sabatieria,nematode,accepted,1,1,,,Comesomatidae,keep
+Daptonema,nematode,accepted,1,1,1,,Xyalidae,keep
+Theristus,nematode,accepted,1,1,1,1,Xyalidae,keep
+Paracomesoma,nematode,accepted,1,0,0,0,Comesomatidae,keep
+Dorylaimopsis,nematode,accepted,1,1,,,Comesomatidae,keep
+Halalaimus,nematode,accepted,1,1,1,1,Oxystominidae,keep
+Viscosia,nematode,accepted,1,1,1,,Oncholaimidae,keep
+Harpacticoida,meiofauna,accepted,1,1,1,1,(order),keep - counts include non-marine sequences
+Ostracoda,meiofauna,accepted,1,1,1,1,(class),keep - counts include non-marine sequences
+Tardigrada,meiofauna,accepted,1,1,1,1,(phylum),keep - counts include non-marine sequences
+Gastrotricha,meiofauna,accepted,1,1,1,0,(phylum),keep - counts include non-marine sequences
+Kinorhyncha,meiofauna,accepted,1,1,,,(phylum),keep
+Foraminifera,protist,accepted,1,1,1,1,(phylum),keep - counts include non-marine sequences
+Ciliophora,protist,accepted,1,1,1,1,(phylum),keep - counts include non-marine sequences
+Bacillariophyta,protist,accepted,1,,,,(phylum),keep - counts include non-marine sequences
+Polychaeta,meiofauna,accepted,1,1,1,1,(class),keep
+Lanistes varicus,macrobenthos,accepted,0,0,1,0,Ampullariidae,STRICTLY FRESHWATER - flagged
+Sphaerium (genus of S. nodicostatum; species not in WoRMS),macrobenthos,accepted,0,0,1,0,Sphaeriidae,STRICTLY FRESHWATER - flagged
+Chrysichthys nigrodigitatus,vertebrate,accepted,0,0,1,0,Bagridae,WoRMS freshwater only but documented euryhaline in Lagos/Lekki lagoons - keep
+Macrobrachium vollenhovenii,vertebrate list (crustacean),accepted,0,1,1,0,Palaemonidae,brackish - keep
+Galatea paradoxa (Egeria radiata),macrobenthos,accepted,0,1,1,0,Donacidae,brackish - keep

@@ -37,7 +37,7 @@ function buildSearchIndex() {
     bold:n.wa18s>=1?"present":"absent",
     priority:n.ng18s===0&&n.global18s>0?"high":n.global18s===0?"high":"med",
     notes:n.role, status:(n.wa18s>=1?"present":"absent"), section:"nematode", tab:"nematodes",
-    extra:{order:n.order, response:n.response, global18s:n.global18s, ng18s:n.ng18s}
+    extra:{order:n.order, response:n.response, cp:n.cp, evidence:n.evidence, global18s:n.global18s, ng18s:n.ng18s}
   }));
   return idx;
 }
