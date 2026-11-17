@@ -73,7 +73,9 @@ TAXA = [  # (site name, marker) - from assets/js/data.js, v22.4 (10 non-regional
 NEMATODE_GENERA = ["Chromadora","Chromadorita","Ptycholaimellus","Dichromadora","Innocuonema","Desmodora","Spirinia",
  "Metachromadora","Monhystera","Terschellingia","Diplolaimelloides","Sphaerolaimus","Enoplus","Thoracostoma","Eurystomina",
  "Oxystomina","Axonolaimus","Odontophora","Campylaimus","Desmoscolex","Quadricoma","Aphanolaimus","Stylotheristus",
- "Pellioditis","Plectus"]
+ "Pellioditis","Plectus",
+ # v22.5 additions (Nov 2026): genera typical of tropical estuarine/lagoon muds
+ "Sabatieria","Daptonema","Theristus","Paracomesoma","Dorylaimopsis","Halalaimus","Viscosia"]
 
 WA_RE = re.compile(r"^(Mauritania|Senegal|Gambia|Guinea-Bissau|Guinea|Sierra Leone|Liberia|Cote d'Ivoire|Côte d'Ivoire|Ivory Coast|"
                    r"Ghana|Togo|Benin|Nigeria|Cameroon|Cabo Verde|Cape Verde)$", re.I)
