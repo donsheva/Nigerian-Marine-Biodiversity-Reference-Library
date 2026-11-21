@@ -6,9 +6,9 @@ authors:
   affiliation: "Nigerian Institute for Oceanography and Marine Research (NIOMR)"
   orcid: "https://orcid.org/0009-0008-7670-8351"
 title: "Nigeria Marine Biodiversity Reference Library (EnviroBiotics.org)"
-version: 1.0.0
+version: "v22.5"
 doi: 10.5281/zenodo.19201628  
-date-released: 2026-03-24
+date-released: 2026-11-21
 url: "https://github.com/donsheva/Nigerian-Marine-Biodiversity-Reference-Library"
 repository-code: "https://github.com/donsheva/Nigerian-Marine-Biodiversity-Reference-Library"
 keywords:
